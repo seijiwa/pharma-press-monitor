@@ -1,0 +1,69 @@
+name: Monitor and publish official press releases
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '7,27,47 * * * *'
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: pharma-press-monitor
+  cancel-in-progress: false
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+      - run: pip install -r requirements.txt
+      - run: python -m playwright install --with-deps chromium
+      - run: python validate.py
+      - name: Check all official sources
+        id: check
+        continue-on-error: true
+        env:
+          PAGES_URL: https://seijiwa.github.io/pharma-press-monitor
+        run: python -u run.py
+      - name: Validate RSS and health output
+        run: |
+          python - <<'PY'
+          import json, pathlib, xml.etree.ElementTree as ET
+          s=json.load(open('data/status.json'))
+          assert len(s)==71
+          for p in pathlib.Path('docs').rglob('*.xml'): ET.parse(p)
+          assert len(list(pathlib.Path('docs/feeds').glob('*.xml')))==71
+          print('PASS: 71 statuses and 72 valid RSS files')
+          PY
+      - name: Save monitor history
+        run: |
+          git config user.name 'pharma-press-monitor[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/ docs/
+          git diff --cached --quiet || git commit -m 'Update official press release monitor'
+          git push
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - name: Publish site and RSS
+        id: deployment
+        uses: actions/deploy-pages@v4
+      - name: Report source failures
+        run: |
+          python - <<'PY'
+          import json, os, sys
+          s=json.load(open('data/status.json'))
+          failed={k:v for k,v in s.items() if v['status']!='OK'}
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as f:
+              f.write('## Source health: '+str(71-len(failed))+'/71 OK'+chr(10)+chr(10))
+              for k,v in failed.items(): f.write('- '+k+': '+v['detail']+chr(10))
+          sys.exit(1 if failed else 0)
+          PY
