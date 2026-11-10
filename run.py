@@ -84,29 +84,50 @@ def make_feeds(events,companies):
 
 def make_site(events,status,companies):
     failures=[s for s in status.values() if s.get('status')!='OK']
-    rows=''.join(f"<tr><td>{html.escape(e['detected_at'][:16].replace('T',' '))} UTC</td><td>{html.escape(e['company'])}</td><td><a target='_blank' href='{html.escape(e['url'])}'>{html.escape(e['title'])}</a></td></tr>" for e in reversed(events[-500:])) or '<tr><td colspan=3>No new releases detected after baseline yet.</td></tr>'
+    rows=''.join(f"<tr><td>{html.escape(e['detected_at'][:16].replace('T',' '))} UTC</td><td>{html.escape(e['company'])}</td><td><a target='_blank' href='{html.escape(e['url'])}'>{html.escape(e['title'])}</a></td></tr>" for e in reversed(events[-500:])) or '<tr><td colspan=3>基準値の保存後、新着記事はまだ検出されていません。</td></tr>'
     cards=''.join(f"<div class='card {'bad' if s.get('status')!='OK' else ''}'><b>{html.escape(c['Company'])}</b><br><span>{html.escape(s.get('status','NOT RUN'))}</span><br><small>{html.escape(s.get('checked_at',''))}</small><br><small>{html.escape(s.get('detail',''))}</small></div>" for c in companies for s in [status.get(c['Company'],{})])
-    page=f'''<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Pharma Press Monitor</title><style>body{{font:14px system-ui;margin:24px;max-width:1400px}}h1{{margin-bottom:4px}}.summary{{padding:12px;background:#f3f3f3;border-radius:8px}}.grid{{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px;margin:16px 0}}.card{{border:1px solid #ddd;padding:9px;border-radius:7px}}.bad{{border:2px solid #b00020;background:#fff1f2}}table{{border-collapse:collapse;width:100%}}td,th{{padding:8px;border-bottom:1px solid #ddd;text-align:left}}a{{color:inherit}}</style></head><body><h1>Pharma Official Press Release Monitor</h1><div class="summary"><b>Coverage:</b> {len(companies)}/{len(companies)} companies configured &nbsp; <b>Current failures:</b> {len(failures)} &nbsp; <a href="feed.xml">All-company RSS</a></div><h2>Monitor health</h2><div class="grid">{cards}</div><h2>New official releases</h2><table><tr><th>Detected</th><th>Company</th><th>Official release</th></tr>{rows}</table></body></html>'''
+    page=f'''<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>製薬会社 公式ニュース監視</title><style>body{{font:14px system-ui;margin:24px;max-width:1400px}}h1{{margin-bottom:4px}}.summary{{padding:12px;background:#f3f3f3;border-radius:8px}}.grid{{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px;margin:16px 0}}.card{{border:1px solid #ddd;padding:9px;border-radius:7px}}.bad{{border:2px solid #b00020;background:#fff1f2}}table{{border-collapse:collapse;width:100%}}td,th{{padding:8px;border-bottom:1px solid #ddd;text-align:left}}a{{color:inherit}}</style></head><body><h1>製薬会社 公式ニュース監視</h1><div class="summary"><b>登録:</b> {len(companies)}社 &nbsp; <b>公式ページ取得:</b> {sum(v.get("status")=="OK" for v in status.values())}社 &nbsp; <b>公式RSSのみ:</b> {sum(v.get("status")=="RSS_ONLY" for v in status.values())}社 &nbsp; <b>取得失敗:</b> {sum(v.get("status")=="FAIL" for v in status.values())}社 &nbsp; <a href="feed.xml">全社統合RSS</a></div><p>約20分間隔で確認。初回は基準値を保存し、その後の新規URLを配信します。OKは記事候補を抽出できた状態です。全記事の網羅は未検証です。RSS_ONLYは公式ページを取得できず、公式RSSで補完している状態です。</p><h2>会社別の取得状況</h2><div class="grid">{cards}</div><h2>検出した新着記事</h2><table><tr><th>Detected</th><th>Company</th><th>Official release</th></tr>{rows}</table></body></html>'''
     (DOCS/'index.html').write_text(page,encoding='utf-8')
 
-def collect(url):
+def collect_page(url):
     raw,final,method=fetch(url); cand=candidates(final,raw)
     if not cand and method != 'playwright':
         raw,final,method=fetch_browser(url); cand=candidates(final,raw)
     if not cand: raise RuntimeError('No release links found; source/parser needs review')
     return final,method,cand
 
+def collect(company):
+    url=company['Official/Source page'].strip()
+    try: return collect_page(url)
+    except Exception as source_error:
+        feed=company.get('Feed URL','').strip()
+        if not feed: raise
+        try:
+            import xml.etree.ElementTree as ET
+            raw,final,_=fetch_requests(feed)
+            root=ET.fromstring(raw)
+            items=[]
+            for item in root.findall('.//item'):
+                title=(item.findtext('title') or '').strip()
+                link=(item.findtext('link') or '').strip()
+                if title and link.startswith('https://'):
+                    items.append({'url':norm(link),'title':title[:300],'score':3})
+            if not items: raise RuntimeError('Official RSS contains no items')
+            return final,'official-rss-fallback (newsroom unavailable)',items
+        except Exception as feed_error:
+            raise RuntimeError(str(source_error)+'; official RSS also unavailable: '+str(feed_error)[:100])
+
 def main():
     companies=list(csv.DictReader(open(ROOT/'companies.csv',encoding='utf-8-sig')))
     state=load(STATE,{}); events=load(EVENTS,[]); status={}; first_global=not bool(state)
     pool=ThreadPoolExecutor(max_workers=6)
-    pending={c['Company']:pool.submit(collect,c['Official/Source page'].strip()) for c in companies}
+    pending={c['Company']:pool.submit(collect,c) for c in companies}
     for i,c in enumerate(companies):
         name=c['Company']; url=c['Official/Source page'].strip(); t=now()
         try:
             final,method,cand=pending[name].result()
             current={x['url']:x for x in cand}
-            previous=set(state.get(name,{}).get('urls',[])); new=set(current)-previous if previous else set()
+            previous=set(state.get(name,{}).get('urls',[])) if state.get(name,{}).get('final_url')==final else set(); new=set(current)-previous if previous else set()
             # Safety: a drastic collapse is an error signal, not "no news".
             prevn=len(previous)
             if prevn>=8 and len(current)<max(2,int(prevn*0.25)):
@@ -115,7 +136,7 @@ def main():
                 x=current[u]; eid=hashlib.sha256((name+'|'+u).encode()).hexdigest()
                 if not any(e['id']==eid for e in events): events.append({'id':eid,'company':name,'ticker':c['Ticker'],'title':x['title'],'url':u,'detected_at':t,'source_page':url})
             state[name]={'urls':sorted(current),'checked_at':t,'final_url':final,'method':method,'count':len(current)}
-            status[name]={'status':'OK','checked_at':t,'detail':f'{method}; {len(current)} release/article links; {len(new)} new'}
+            status[name]={'status':('RSS_ONLY' if method.startswith('official-rss') else 'OK'),'checked_at':now(),'detail':f'{method}; {len(current)} release/article links; {len(new)} new'}
         except Exception as e:
             status[name]={'status':'FAIL','checked_at':t,'detail':str(e)[:300]}
         print(f'{i+1}/71 {name}: {status[name]}', flush=True)

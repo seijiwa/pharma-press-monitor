@@ -1,6 +1,6 @@
 ﻿Ticker,Company,Origin,Feed URL,Official/Source page,Fallback
 ABBV,AbbVie,46-company standing watch,https://news.abbvie.com/index.php?s=2429&pagetemplate=rss,https://news.abbvie.com/,SEC/EDGAR
-9926 HK,Akeso,46-company standing watch,,https://www.akesobio.com/en/news/,HKEX
+9926 HK,Akeso,46-company standing watch,,https://akesobio.com/en/media/akeso-news/,HKEX
 ALKS,Alkermes,46-company standing watch,https://investor.alkermes.com/rss/news-releases.xml,https://investor.alkermes.com/news-releases,SEC/EDGAR
 ALMS,Alumis,46-company standing watch,https://investors.alumis.com/rss/news-releases.xml,https://investors.alumis.com/news-events/news-releases,SEC/EDGAR
 ALVO,Alvotech,46-company standing watch,,https://alvotech.gcs-web.com/news-events/news-releases,SEC/EDGAR + Nasdaq Iceland
@@ -10,7 +10,7 @@ AZN,AstraZeneca,46-company standing watch,,https://www.astrazeneca.com/media-cen
 RNA,Avidity Biosciences,Original Brave 281 bookmarks,,https://www.aviditybiosciences.com/,SEC/EDGAR
 BAYN,Bayer,Original Brave 281 bookmarks,,https://www.bayer.com/en/news-stories,Xetra/official disclosures
 BMRN,BioMarin,Original Brave 281 bookmarks,,https://investors.biomarin.com/press-releases,SEC/EDGAR
-BIIB,Biogen,46-company standing watch,,https://biogen.gcs-web.com/news/news-releases,SEC/EDGAR
+BIIB,Biogen,46-company standing watch,,https://investors.biogen.com/news/news-releases,SEC/EDGAR
 BMY,Bristol Myers Squibb,46-company standing watch,https://news.bms.com/rss/pressrelease.aspx,https://news.bms.com/news/default.aspx,SEC/EDGAR
 ,C2N Diagnostics,Original Brave 281 bookmarks,,https://c2n.com/news-releases,Official newsroom
 CSL,CSL,Original Brave 281 bookmarks,,https://newsroom.csl.com/News-Releases,ASX
@@ -28,7 +28,7 @@ FRE,Fresenius,Original Brave 281 bookmarks,,https://www.fresenius.com/news,Xetra
 GSK,GSK,46-company standing watch,https://www.gsk.com/en-gb/media/rss/,https://www.gsk.com/en-gb/media/press-releases/,LSE/SEC + newsroom
 GALD,Galderma,46-company standing watch,,https://www.galderma.com/news,SIX + newsroom
 ,Genentech,Original Brave 281 bookmarks,,https://www.gene.com/media,Roche group disclosures
-GILD,Gilead Sciences,46-company standing watch,,https://www.gilead.com/news/news-releases,SEC/EDGAR
+GILD,Gilead Sciences,46-company standing watch,,https://www.gilead.com/news,SEC/EDGAR
 GRF,Grifols,Original Brave 281 bookmarks,,https://www.grifols.com/en/newsroom,BME/CNMV
 HRMY,Harmony Biosciences,46-company standing watch,https://ir.harmonybiosciences.com/rss/news-releases.xml,https://ir.harmonybiosciences.com/news-events/news-releases,SEC/EDGAR + SEC RSS
 HIMS,Hims & Hers Health,46-company standing watch,,https://investors.hims.com/news/news-details/,SEC/EDGAR
@@ -58,7 +58,7 @@ SAN,Sanofi,46-company standing watch,,https://www.sanofi.com/en/media-room/press
 ,Santen Pharmaceutical,Original Brave 281 bookmarks,,https://www.santen.com/en/news/,TSE/official disclosures
 SRPT,Sarepta Therapeutics,46-company standing watch,https://investorrelations.sarepta.com/rss/news-releases.xml,https://investorrelations.sarepta.com/press-releases,SEC/EDGAR
 SRRK,Scholar Rock,46-company standing watch,https://investors.scholarrock.com/rss/news-releases.xml,https://investors.scholarrock.com/news-releases,SEC/EDGAR
-6990 HK,Sichuan Kelun-Biotech,46-company standing watch,,https://www.kelun-biotech.com/en/news,HKEX
+6990 HK,Sichuan Kelun-Biotech,46-company standing watch,,https://en.kelun-biotech.com/newsCenter.aspx?mid=18&sv=,HKEX
 GPCR,Structure Therapeutics,46-company standing watch,https://ir.structuretx.com/rss/news-releases.xml,https://ir.structuretx.com/press-releases,SEC/EDGAR
 ,Sumitomo Pharma,Original Brave 281 bookmarks,,https://www.sumitomo-pharma.com/news/,TSE/official disclosures
 SMMT,Summit Therapeutics,46-company standing watch,,https://www.smmttx.com/news/,SEC/EDGAR
@@ -67,6 +67,6 @@ TEVA,Teva,Original Brave 281 bookmarks,,https://www.tevapharm.com/news-and-media
 RARE,Ultragenyx,Original Brave 281 bookmarks,,https://www.ultragenyx.com/newsroom/news-and-press-releases/,SEC/EDGAR
 VERA,Vera Therapeutics,46-company standing watch,,https://ir.veratx.com/news-events/news-releases,SEC/EDGAR
 VRTX,Vertex Pharmaceuticals,46-company standing watch,https://investors.vrtx.com/rss/news-releases.xml?items=15,https://investors.vrtx.com/news-releases,SEC/EDGAR
-VKTX,Viking Therapeutics,46-company standing watch,,https://ir.vikingtherapeutics.com/news-events/news-releases,SEC/EDGAR
+VKTX,Viking Therapeutics,46-company standing watch,,https://ir.vikingtherapeutics.com/press-releases,SEC/EDGAR
 2269 HK,WuXi Biologics,46-company standing watch,,https://www.wuxibiologics.com/news/,HKEX
 ZEAL,Zealand Pharma,46-company standing watch,,https://www.zealandpharma.com/news-and-events/company-announcements/,Nasdaq Copenhagen + official site
