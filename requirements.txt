@@ -1,4 +1,4 @@
-beautifulsoup4==4.12.3
+beautifulsoup4==4.15.0
 feedgen==1.0.0
-playwright==1.48.0
-requests==2.32.3
+playwright==1.60.0
+requests==2.32.5

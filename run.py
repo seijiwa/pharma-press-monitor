@@ -21,13 +21,15 @@ def norm(u):
 
 def fetch_requests(url):
     r=requests.get(url,headers={'User-Agent':UA},timeout=35,allow_redirects=True)
-    r.raise_for_status(); return r.text, r.url, 'requests'
+    r.raise_for_status()
+    if 'charset=' not in r.headers.get('content-type','').lower(): r.encoding='utf-8'
+    return r.text, r.url, 'requests'
 
 def fetch_browser(url):
     from playwright.sync_api import sync_playwright
     with sync_playwright() as p:
         b=p.chromium.launch(headless=True)
-        page=b.new_page(user_agent=UA, viewport={'width':1440,'height':1200})
+        page=b.new_page(viewport={'width':1440,'height':1200})
         response=page.goto(url,wait_until='domcontentloaded',timeout=45000)
         if response and response.status >= 400:
             b.close(); raise RuntimeError(f'Official page HTTP {response.status}')
@@ -46,22 +48,42 @@ def fetch(url):
     return fetch_browser(url)
 
 def candidates(page_url, raw):
-    soup=BeautifulSoup(raw,'html.parser'); host=urlparse(page_url).netloc.lower().removeprefix('www.')
+    soup=BeautifulSoup(raw,'html.parser')
+    host=urlparse(page_url).netloc.lower().removeprefix('www.')
     items={}
-    for el in soup.select('nav, header, footer'): el.decompose()
+    for el in soup.select('nav, header, footer, [role="navigation"]'): el.decompose()
     for a in soup.find_all('a',href=True):
-        txt=' '.join(a.get_text(' ',strip=True).split()); href=urljoin(page_url,a['href'].strip()); n=norm(href)
-        if not txt or len(txt)<25 or not n.startswith('http'): continue
-        h=urlparse(n).netloc.lower().removeprefix('www.')
+        href=a['href'].strip()
+        if not href or href.startswith(('#','javascript:','mailto:')): continue
+        n=norm(urljoin(page_url,href)); parsed=urlparse(n)
+        if parsed.scheme not in ('http','https'): continue
+        h=parsed.netloc.lower().removeprefix('www.')
         if h!=host and not h.endswith('.'+host) and not host.endswith('.'+h): continue
-        blob=(txt+' '+n)
-        if EXCLUDE.search(blob): continue
-        # Keep likely release/article links. The source list page itself is removed later.
-        if KEYWORDS.search(blob) or re.search(r'/\d{4}/|/\d{2}/\d{2}/',n):
-            score=(2 if re.search(r'press|release|news|media|announcement',blob,re.I) else 0)+(1 if re.search(r'202[0-9]|20[0-9]{2}',blob) else 0)
-            if n not in items or score>items[n]['score']: items[n]={'url':n,'title':txt[:300],'score':score}
-    page_norm=norm(page_url)
-    return [v for k,v in items.items() if k!=page_norm]
+        path=parsed.path.lower()
+        if re.search(r'/(privacy|cookie|terms|contact|careers?|jobs?|search|subscribe|governance|sustainability|capabilities|production-systems)(/|$)',path): continue
+        # Match article routes, never the mere presence of "news" in a host/menu.
+        article=bool(re.search(r'/20[0-9]{2}[-/]\d{2}[-/]\d{2}|news-release-details/|press-release-detail/|news-details/|press-releases/detail/|pressreleasedetail\?|newsdetail|newsdetails|/node/\d+|/media/releases/med-|/news_releases/\d{4}/|/news/\d{4}/|/release/\d+',n,re.I))
+        if not article:
+            article=bool(re.search(r'/(?:news(?:room|-releases)?|press[-_]releases?|media-releases|company-announcements)/[^/?]+',path) and len(path.rstrip('/').split('/')[-1].split('-'))>=4)
+        if not article: continue
+        texts=[a.get_text(' ',strip=True),a.get('aria-label',''),a.get('title','')]
+        heading=a.find(re.compile('^h[1-6]$'))
+        if heading: texts.insert(0,heading.get_text(' ',strip=True))
+        txt=' '.join(max(texts,key=len).split())
+        txt=re.sub(r'^Read more about\s+', '', txt, flags=re.I)
+        if len(txt)<12 or re.fullmatch(r'(Read (the )?(Press Release|Media Update|more)|More|Download PDF)',txt,re.I):
+            parent=a.parent
+            for _ in range(3):
+                if parent is None: break
+                title=parent.find(re.compile('^h[1-6]$')) or parent.select_one('[class*="title"], [class*="Title"]')
+                if title and len(title.get_text(' ',strip=True))>=12:
+                    txt=' '.join(title.get_text(' ',strip=True).split()); break
+                parent=parent.parent
+        if len(txt)<12 or n==norm(page_url): continue
+        if re.fullmatch(r'(Read (the )?(Press Release|Media Update|more)|More|Download PDF)',txt,re.I): continue
+        if n not in items or len(txt)>len(items[n]['title']):
+            items[n]={'url':n,'title':txt[:500],'score':3}
+    return list(items.values())
 
 def load(p,default):
     try:return json.load(open(p,encoding='utf-8'))
@@ -127,7 +149,7 @@ def main():
         try:
             final,method,cand=pending[name].result()
             current={x['url']:x for x in cand}
-            previous=set(state.get(name,{}).get('urls',[])) if state.get(name,{}).get('final_url')==final else set(); new=set(current)-previous if previous else set()
+            previous=set(state.get(name,{}).get('urls',[])) if state.get(name,{}).get('final_url')==final and state.get(name,{}).get('parser_version')==2 else set(); new=set(current)-previous if previous else set()
             # Safety: a drastic collapse is an error signal, not "no news".
             prevn=len(previous)
             if prevn>=8 and len(current)<max(2,int(prevn*0.25)):
@@ -135,7 +157,7 @@ def main():
             for u in sorted(new):
                 x=current[u]; eid=hashlib.sha256((name+'|'+u).encode()).hexdigest()
                 if not any(e['id']==eid for e in events): events.append({'id':eid,'company':name,'ticker':c['Ticker'],'title':x['title'],'url':u,'detected_at':t,'source_page':url})
-            state[name]={'urls':sorted(current),'checked_at':t,'final_url':final,'method':method,'count':len(current)}
+            state[name]={'parser_version':2,'urls':sorted(current),'checked_at':t,'final_url':final,'method':method,'count':len(current)}
             status[name]={'status':('RSS_ONLY' if method.startswith('official-rss') else 'OK'),'checked_at':now(),'detail':f'{method}; {len(current)} release/article links; {len(new)} new'}
         except Exception as e:
             status[name]={'status':'FAIL','checked_at':t,'detail':str(e)[:300]}

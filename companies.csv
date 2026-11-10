@@ -33,13 +33,13 @@ GRF,Grifols,Original Brave 281 bookmarks,,https://www.grifols.com/en/newsroom,BM
 HRMY,Harmony Biosciences,46-company standing watch,https://ir.harmonybiosciences.com/rss/news-releases.xml,https://ir.harmonybiosciences.com/news-events/news-releases,SEC/EDGAR + SEC RSS
 HIMS,Hims & Hers Health,46-company standing watch,,https://investors.hims.com/news/news-details/,SEC/EDGAR
 IMNM,Immunome,46-company standing watch,,https://investors.immunome.com/news-releases/,SEC/EDGAR
-1801 HK,Innovent Biologics,46-company standing watch,,https://www.innoventbio.com/en/news,HKEX
+1801 HK,Innovent Biologics,46-company standing watch,,https://en.innoventbio.com/InvestorsAndMedia/PressRelease,HKEX
 IONS,Ionis Pharmaceuticals,Original Brave 281 bookmarks,,https://ir.ionis.com/news-releases,SEC/EDGAR
 JAZZ,Jazz Pharmaceuticals,46-company standing watch,https://investor.jazzpharma.com/rss/news-releases.xml,https://investor.jazzpharma.com/news-releases,SEC/EDGAR
 ,Jnana Therapeutics,Original Brave 281 bookmarks,,https://www.jnanatx.com/news/,Official/parent disclosures
 JNJ,Johnson & Johnson,46-company standing watch,https://www.jnj.com/rss-feed/all,https://www.jnj.com/media-center/press-releases,SEC/EDGAR
 KURA,Kura Oncology,46-company standing watch,https://ir.kuraoncology.com/rss/news-releases.xml,https://ir.kuraoncology.com/news-releases,SEC/EDGAR
-,Kyowa Kirin,Original Brave 281 bookmarks,,https://www.kyowakirin.com/media_center/,TSE/official disclosures
+,Kyowa Kirin,Original Brave 281 bookmarks,,https://www.kyowakirin.com/media_center/news_releases/index.html,TSE/official disclosures
 LONN,Lonza,46-company standing watch,,https://www.lonza.com/news,SIX + newsroom
 HLUN,Lundbeck,Original Brave 281 bookmarks,,https://www.lundbeck.com/global/about-us/this-is-lundbeck/news-room,Nasdaq Copenhagen
 ,Lupin,Original Brave 281 bookmarks,,https://www.lupin.com/investors/news-events/,NSE/BSE
@@ -63,7 +63,7 @@ GPCR,Structure Therapeutics,46-company standing watch,https://ir.structuretx.com
 ,Sumitomo Pharma,Original Brave 281 bookmarks,,https://www.sumitomo-pharma.com/news/,TSE/official disclosures
 SMMT,Summit Therapeutics,46-company standing watch,,https://www.smmttx.com/news/,SEC/EDGAR
 SUPN,Supernus Pharmaceuticals,46-company standing watch,https://ir.supernus.com/rss/news-releases.xml,https://ir.supernus.com/news-releases,SEC/EDGAR
-TEVA,Teva,Original Brave 281 bookmarks,,https://www.tevapharm.com/news-and-media/latest-news/,SEC/EDGAR
+TEVA,Teva,Original Brave 281 bookmarks,https://ir.tevapharm.com/rss/pressrelease.aspx,https://ir.tevapharm.com/news-and-events/press-releases/default.aspx,SEC/EDGAR
 RARE,Ultragenyx,Original Brave 281 bookmarks,,https://www.ultragenyx.com/newsroom/news-and-press-releases/,SEC/EDGAR
 VERA,Vera Therapeutics,46-company standing watch,,https://ir.veratx.com/news-events/news-releases,SEC/EDGAR
 VRTX,Vertex Pharmaceuticals,46-company standing watch,https://investors.vrtx.com/rss/news-releases.xml?items=15,https://investors.vrtx.com/news-releases,SEC/EDGAR
