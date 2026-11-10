@@ -1,357 +1,357 @@
 {
   "AbbVie": {
     "status": "OK",
-    "checked_at": "2026-11-10T23:09:59.275642+00:00",
+    "checked_at": "2026-11-10T23:19:23.253545+00:00",
     "detail": "requests; 10 release/article links; 0 new"
   },
   "Akeso": {
-    "status": "OK",
-    "checked_at": "2026-11-10T23:10:00.072353+00:00",
-    "detail": "requests; 11 release/article links; 0 new"
+    "status": "FAIL",
+    "checked_at": "2026-11-10T23:19:23.253717+00:00",
+    "detail": "No release links found; source/parser needs review"
   },
   "Alkermes": {
     "status": "FAIL",
-    "checked_at": "2026-11-10T23:10:00.072408+00:00",
+    "checked_at": "2026-11-10T23:19:29.247549+00:00",
     "detail": "Official page HTTP 403; official RSS also unavailable: 403 Client Error: Forbidden for url: https://investor.alkermes.com/rss/news-releases.xml"
   },
   "Alumis": {
     "status": "FAIL",
-    "checked_at": "2026-11-10T23:10:01.162514+00:00",
+    "checked_at": "2026-11-10T23:19:29.247590+00:00",
     "detail": "Official page HTTP 403; official RSS also unavailable: 403 Client Error: Forbidden for url: https://investors.alumis.com/rss/news-releases.xml"
   },
   "Alvotech": {
     "status": "FAIL",
-    "checked_at": "2026-11-10T23:10:01.179296+00:00",
+    "checked_at": "2026-11-10T23:19:29.247603+00:00",
     "detail": "Official page HTTP 403"
   },
   "Amgen": {
     "status": "FAIL",
-    "checked_at": "2026-11-10T23:10:01.179331+00:00",
+    "checked_at": "2026-11-10T23:19:29.247613+00:00",
     "detail": "Official page HTTP 403; official RSS also unavailable: 403 Client Error: Forbidden for url: https://investors.amgen.com/rss/news-releases.xml"
   },
   "Arrowhead Pharmaceuticals": {
     "status": "OK",
-    "checked_at": "2026-11-10T23:10:01.179854+00:00",
-    "detail": "requests; 584 release/article links; 0 new"
+    "checked_at": "2026-11-10T23:19:29.248018+00:00",
+    "detail": "requests; 615 release/article links; 0 new"
   },
   "AstraZeneca": {
     "status": "OK",
-    "checked_at": "2026-11-10T23:10:06.345295+00:00",
+    "checked_at": "2026-11-10T23:19:42.309673+00:00",
     "detail": "playwright; 6 release/article links; 0 new"
   },
   "Avidity Biosciences": {
     "status": "FAIL",
-    "checked_at": "2026-11-10T23:10:06.345348+00:00",
+    "checked_at": "2026-11-10T23:19:42.309721+00:00",
     "detail": "No release links found; source/parser needs review"
   },
   "Bayer": {
     "status": "FAIL",
-    "checked_at": "2026-11-10T23:10:06.345372+00:00",
+    "checked_at": "2026-11-10T23:19:42.309739+00:00",
     "detail": "Official page HTTP 403"
   },
   "BioMarin": {
     "status": "FAIL",
-    "checked_at": "2026-11-10T23:10:06.345391+00:00",
+    "checked_at": "2026-11-10T23:19:42.309750+00:00",
     "detail": "Official page HTTP 403"
   },
   "Biogen": {
     "status": "FAIL",
-    "checked_at": "2026-11-10T23:10:06.345410+00:00",
+    "checked_at": "2026-11-10T23:19:42.309759+00:00",
     "detail": "Official page HTTP 403"
   },
   "Bristol Myers Squibb": {
-    "status": "RSS_ONLY",
-    "checked_at": "2026-11-10T23:10:06.346497+00:00",
-    "detail": "official-rss-fallback (newsroom unavailable); 2045 release/article links; 0 new"
+    "status": "OK",
+    "checked_at": "2026-11-10T23:19:42.309899+00:00",
+    "detail": "requests; 1 release/article links; 0 new"
   },
   "C2N Diagnostics": {
     "status": "OK",
-    "checked_at": "2026-11-10T23:10:06.346583+00:00",
-    "detail": "requests; 17 release/article links; 0 new"
+    "checked_at": "2026-11-10T23:19:42.309932+00:00",
+    "detail": "requests; 19 release/article links; 0 new"
   },
   "CSL": {
     "status": "OK",
-    "checked_at": "2026-11-10T23:10:06.346634+00:00",
+    "checked_at": "2026-11-10T23:19:42.309965+00:00",
     "detail": "requests; 10 release/article links; 0 new"
   },
   "Capricor Therapeutics": {
     "status": "OK",
-    "checked_at": "2026-11-10T23:10:06.346674+00:00",
-    "detail": "requests; 9 release/article links; 0 new"
+    "checked_at": "2026-11-10T23:19:42.309984+00:00",
+    "detail": "requests; 10 release/article links; 0 new"
   },
   "Catalent": {
     "status": "OK",
-    "checked_at": "2026-11-10T23:10:06.346730+00:00",
+    "checked_at": "2026-11-10T23:19:42.310001+00:00",
     "detail": "requests; 8 release/article links; 0 new"
   },
   "Cullinan Therapeutics": {
     "status": "FAIL",
-    "checked_at": "2026-11-10T23:10:06.346752+00:00",
+    "checked_at": "2026-11-10T23:19:42.310007+00:00",
     "detail": "Official page HTTP 403"
   },
   "Daiichi Sankyo": {
-    "status": "OK",
-    "checked_at": "2026-11-10T23:10:12.492403+00:00",
-    "detail": "playwright; 1241 release/article links; 0 new"
+    "status": "FAIL",
+    "checked_at": "2026-11-10T23:19:42.310018+00:00",
+    "detail": "No release links found; source/parser needs review"
   },
   "Denali Therapeutics": {
     "status": "FAIL",
-    "checked_at": "2026-11-10T23:10:12.492454+00:00",
+    "checked_at": "2026-11-10T23:19:42.310027+00:00",
     "detail": "Official page HTTP 403"
   },
   "Eli Lilly": {
     "status": "FAIL",
-    "checked_at": "2026-11-10T23:10:12.492487+00:00",
+    "checked_at": "2026-11-10T23:19:42.310035+00:00",
     "detail": "Official page HTTP 403; official RSS also unavailable: 403 Client Error: Forbidden for url: https://investor.lilly.com/rss/news-releases.xml"
   },
   "Enanta Pharmaceuticals": {
     "status": "FAIL",
-    "checked_at": "2026-11-10T23:10:12.492734+00:00",
+    "checked_at": "2026-11-10T23:19:42.310043+00:00",
     "detail": "Official page HTTP 403"
   },
   "Erasca": {
     "status": "FAIL",
-    "checked_at": "2026-11-10T23:10:12.492767+00:00",
+    "checked_at": "2026-11-10T23:19:42.310051+00:00",
     "detail": "Official page HTTP 403; official RSS also unavailable: 403 Client Error: Forbidden for url: https://investors.erasca.com/rss/news-releases.xml"
   },
   "Exelixis": {
     "status": "FAIL",
-    "checked_at": "2026-11-10T23:10:12.492788+00:00",
+    "checked_at": "2026-11-10T23:19:42.310058+00:00",
     "detail": "Official page HTTP 403; official RSS also unavailable: 403 Client Error: Forbidden for url: https://ir.exelixis.com/rss/news-releases.xml"
   },
   "FUJIFILM Diosynth Biotechnologies": {
     "status": "OK",
-    "checked_at": "2026-11-10T23:10:12.492884+00:00",
+    "checked_at": "2026-11-10T23:19:42.310076+00:00",
     "detail": "playwright; 9 release/article links; 0 new"
   },
   "Fresenius": {
     "status": "OK",
-    "checked_at": "2026-11-10T23:10:13.470270+00:00",
-    "detail": "playwright; 2 release/article links; 0 new"
+    "checked_at": "2026-11-10T23:19:42.310109+00:00",
+    "detail": "playwright; 8 release/article links; 0 new"
   },
   "GSK": {
     "status": "OK",
-    "checked_at": "2026-11-10T23:10:13.470364+00:00",
-    "detail": "playwright; 19 release/article links; 0 new"
+    "checked_at": "2026-11-10T23:19:42.310137+00:00",
+    "detail": "playwright; 20 release/article links; 0 new"
   },
   "Galderma": {
     "status": "OK",
-    "checked_at": "2026-11-10T23:10:13.470407+00:00",
+    "checked_at": "2026-11-10T23:19:42.310158+00:00",
     "detail": "requests; 12 release/article links; 0 new"
   },
   "Genentech": {
     "status": "OK",
-    "checked_at": "2026-11-10T23:10:13.470512+00:00",
-    "detail": "requests; 92 release/article links; 0 new"
+    "checked_at": "2026-11-10T23:19:42.310189+00:00",
+    "detail": "requests; 25 release/article links; 0 new"
   },
   "Gilead Sciences": {
     "status": "OK",
-    "checked_at": "2026-11-10T23:10:14.276790+00:00",
+    "checked_at": "2026-11-10T23:19:42.310208+00:00",
     "detail": "playwright; 8 release/article links; 0 new"
   },
   "Grifols": {
     "status": "OK",
-    "checked_at": "2026-11-10T23:10:14.276867+00:00",
-    "detail": "requests; 5 release/article links; 0 new"
+    "checked_at": "2026-11-10T23:19:42.310225+00:00",
+    "detail": "requests; 6 release/article links; 0 new"
   },
   "Harmony Biosciences": {
     "status": "FAIL",
-    "checked_at": "2026-11-10T23:10:14.276883+00:00",
+    "checked_at": "2026-11-10T23:19:42.310231+00:00",
     "detail": "Official page HTTP 403; official RSS also unavailable: 403 Client Error: Forbidden for url: https://ir.harmonybiosciences.com/rss/news-releases.xml"
   },
   "Hims & Hers Health": {
     "status": "FAIL",
-    "checked_at": "2026-11-10T23:10:14.276909+00:00",
+    "checked_at": "2026-11-10T23:19:42.310246+00:00",
     "detail": "Official page HTTP 403"
   },
   "Immunome": {
-    "status": "OK",
-    "checked_at": "2026-11-10T23:10:14.276965+00:00",
-    "detail": "requests; 10 release/article links; 0 new"
+    "status": "FAIL",
+    "checked_at": "2026-11-10T23:19:42.310255+00:00",
+    "detail": "No release links found; source/parser needs review"
   },
   "Innovent Biologics": {
-    "status": "FAIL",
-    "checked_at": "2026-11-10T23:10:14.276984+00:00",
-    "detail": "No release links found; source/parser needs review"
+    "status": "OK",
+    "checked_at": "2026-11-10T23:19:42.310271+00:00",
+    "detail": "playwright; 3 release/article links; 0 new"
   },
   "Ionis Pharmaceuticals": {
     "status": "FAIL",
-    "checked_at": "2026-11-10T23:10:24.773101+00:00",
+    "checked_at": "2026-11-10T23:19:42.310276+00:00",
     "detail": "Official page HTTP 403"
   },
   "Jazz Pharmaceuticals": {
     "status": "FAIL",
-    "checked_at": "2026-11-10T23:10:24.773174+00:00",
+    "checked_at": "2026-11-10T23:19:42.310285+00:00",
     "detail": "Official page HTTP 403; official RSS also unavailable: 403 Client Error: Forbidden for url: https://investor.jazzpharma.com/rss/news-releases.xml"
   },
   "Jnana Therapeutics": {
     "status": "OK",
-    "checked_at": "2026-11-10T23:10:24.773300+00:00",
-    "detail": "playwright; 4 release/article links; 0 new"
+    "checked_at": "2026-11-10T23:19:42.310300+00:00",
+    "detail": "playwright; 1 release/article links; 0 new"
   },
   "Johnson & Johnson": {
     "status": "OK",
-    "checked_at": "2026-11-10T23:10:24.773642+00:00",
-    "detail": "requests; 10 release/article links; 0 new"
+    "checked_at": "2026-11-10T23:19:42.310320+00:00",
+    "detail": "requests; 9 release/article links; 0 new"
   },
   "Kura Oncology": {
     "status": "FAIL",
-    "checked_at": "2026-11-10T23:10:24.773657+00:00",
+    "checked_at": "2026-11-10T23:19:42.310326+00:00",
     "detail": "Official page HTTP 403; official RSS also unavailable: 403 Client Error: Forbidden for url: https://ir.kuraoncology.com/rss/news-releases.xml"
   },
   "Kyowa Kirin": {
     "status": "OK",
-    "checked_at": "2026-11-10T23:10:24.773801+00:00",
-    "detail": "requests; 2 release/article links; 0 new"
+    "checked_at": "2026-11-10T23:19:42.461556+00:00",
+    "detail": "playwright; 7 release/article links; 0 new"
   },
   "Lonza": {
     "status": "FAIL",
-    "checked_at": "2026-11-10T23:10:24.773812+00:00",
+    "checked_at": "2026-11-10T23:19:42.463117+00:00",
     "detail": "Official page HTTP 403"
   },
   "Lundbeck": {
     "status": "FAIL",
-    "checked_at": "2026-11-10T23:10:24.773827+00:00",
+    "checked_at": "2026-11-10T23:19:42.463168+00:00",
     "detail": "Official page HTTP 403"
   },
   "Lupin": {
     "status": "OK",
-    "checked_at": "2026-11-10T23:10:24.773859+00:00",
-    "detail": "requests; 5 release/article links; 0 new"
+    "checked_at": "2026-11-10T23:19:42.463208+00:00",
+    "detail": "requests; 6 release/article links; 0 new"
   },
   "Merck & Co.": {
     "status": "OK",
-    "checked_at": "2026-11-10T23:10:24.773891+00:00",
+    "checked_at": "2026-11-10T23:19:42.463233+00:00",
     "detail": "requests; 10 release/article links; 0 new"
   },
   "Neurocrine Biosciences": {
     "status": "FAIL",
-    "checked_at": "2026-11-10T23:10:24.773903+00:00",
+    "checked_at": "2026-11-10T23:19:42.463241+00:00",
     "detail": "Official page HTTP 403; official RSS also unavailable: 403 Client Error: Forbidden for url: https://neurocrine.gcs-web.com/rss/news-releases.xml"
   },
   "Novartis": {
     "status": "OK",
-    "checked_at": "2026-11-10T23:10:24.773965+00:00",
-    "detail": "requests; 42 release/article links; 0 new"
+    "checked_at": "2026-11-10T23:19:42.463288+00:00",
+    "detail": "requests; 32 release/article links; 0 new"
   },
   "Novo Nordisk": {
     "status": "FAIL",
-    "checked_at": "2026-11-10T23:10:24.773975+00:00",
+    "checked_at": "2026-11-10T23:19:42.463296+00:00",
     "detail": "No release links found; source/parser needs review"
   },
   "Oruka Therapeutics": {
     "status": "FAIL",
-    "checked_at": "2026-11-10T23:10:24.821233+00:00",
+    "checked_at": "2026-11-10T23:19:46.698879+00:00",
     "detail": "Official page HTTP 403"
   },
   "Pfizer": {
     "status": "OK",
-    "checked_at": "2026-11-10T23:10:24.821303+00:00",
+    "checked_at": "2026-11-10T23:19:46.698939+00:00",
     "detail": "requests; 5 release/article links; 0 new"
   },
   "Reata Pharmaceuticals": {
     "status": "FAIL",
-    "checked_at": "2026-11-10T23:10:24.821318+00:00",
+    "checked_at": "2026-11-10T23:19:46.698949+00:00",
     "detail": "No release links found; source/parser needs review"
   },
   "Regeneron": {
     "status": "FAIL",
-    "checked_at": "2026-11-10T23:10:24.821337+00:00",
+    "checked_at": "2026-11-10T23:19:46.698960+00:00",
     "detail": "Official page HTTP 403; official RSS also unavailable: 403 Client Error: Forbidden for url: https://investor.regeneron.com/rss/news-releases.xml?items=15"
   },
   "Revolution Medicines": {
     "status": "FAIL",
-    "checked_at": "2026-11-10T23:10:24.821356+00:00",
+    "checked_at": "2026-11-10T23:19:46.698971+00:00",
     "detail": "Official page HTTP 403; official RSS also unavailable: 403 Client Error: Forbidden for url: https://ir.revmed.com/rss/news-releases.xml"
   },
   "Roche": {
     "status": "OK",
-    "checked_at": "2026-11-10T23:10:27.729296+00:00",
-    "detail": "playwright; 10 release/article links; 0 new"
+    "checked_at": "2026-11-10T23:19:51.866599+00:00",
+    "detail": "playwright; 11 release/article links; 0 new"
   },
   "Samsung Biologics": {
-    "status": "OK",
-    "checked_at": "2026-11-10T23:10:27.729662+00:00",
-    "detail": "requests; 1 release/article links; 0 new"
+    "status": "FAIL",
+    "checked_at": "2026-11-10T23:19:51.866882+00:00",
+    "detail": "No release links found; source/parser needs review"
   },
   "Sanofi": {
     "status": "OK",
-    "checked_at": "2026-11-10T23:10:27.729711+00:00",
-    "detail": "requests; 1 release/article links; 0 new"
+    "checked_at": "2026-11-10T23:19:51.866942+00:00",
+    "detail": "requests; 20 release/article links; 0 new"
   },
   "Santen Pharmaceutical": {
     "status": "OK",
-    "checked_at": "2026-11-10T23:10:27.729758+00:00",
+    "checked_at": "2026-11-10T23:19:51.866967+00:00",
     "detail": "requests; 11 release/article links; 0 new"
   },
   "Sarepta Therapeutics": {
     "status": "FAIL",
-    "checked_at": "2026-11-10T23:10:27.729778+00:00",
+    "checked_at": "2026-11-10T23:19:51.866976+00:00",
     "detail": "Official page HTTP 403; official RSS also unavailable: 403 Client Error: Forbidden for url: https://investorrelations.sarepta.com/rss/news-releases.xml"
   },
   "Scholar Rock": {
     "status": "FAIL",
-    "checked_at": "2026-11-10T23:10:27.729804+00:00",
+    "checked_at": "2026-11-10T23:19:51.866991+00:00",
     "detail": "Official page HTTP 403; official RSS also unavailable: 403 Client Error: Forbidden for url: https://investors.scholarrock.com/rss/news-releases.xml"
   },
   "Sichuan Kelun-Biotech": {
     "status": "FAIL",
-    "checked_at": "2026-11-10T23:10:27.729830+00:00",
+    "checked_at": "2026-11-10T23:19:51.867005+00:00",
     "detail": "No release links found; source/parser needs review"
   },
   "Structure Therapeutics": {
     "status": "FAIL",
-    "checked_at": "2026-11-10T23:10:34.329610+00:00",
+    "checked_at": "2026-11-10T23:19:56.157281+00:00",
     "detail": "Official page HTTP 403; official RSS also unavailable: 403 Client Error: Forbidden for url: https://ir.structuretx.com/rss/news-releases.xml"
   },
   "Sumitomo Pharma": {
-    "status": "OK",
-    "checked_at": "2026-11-10T23:10:34.329680+00:00",
-    "detail": "playwright; 14 release/article links; 0 new"
+    "status": "FAIL",
+    "checked_at": "2026-11-10T23:19:56.157306+00:00",
+    "detail": "No release links found; source/parser needs review"
   },
   "Summit Therapeutics": {
     "status": "FAIL",
-    "checked_at": "2026-11-10T23:10:34.329695+00:00",
+    "checked_at": "2026-11-10T23:19:56.157315+00:00",
     "detail": "Official page HTTP 403"
   },
   "Supernus Pharmaceuticals": {
     "status": "FAIL",
-    "checked_at": "2026-11-10T23:10:34.329714+00:00",
+    "checked_at": "2026-11-10T23:19:56.157326+00:00",
     "detail": "Official page HTTP 403; official RSS also unavailable: 403 Client Error: Forbidden for url: https://ir.supernus.com/rss/news-releases.xml"
   },
   "Teva": {
-    "status": "FAIL",
-    "checked_at": "2026-11-10T23:10:34.329731+00:00",
-    "detail": "No release links found; source/parser needs review"
+    "status": "RSS_ONLY",
+    "checked_at": "2026-11-10T23:19:56.157360+00:00",
+    "detail": "official-rss-fallback (newsroom unavailable); 10 release/article links; 0 new"
   },
   "Ultragenyx": {
-    "status": "FAIL",
-    "checked_at": "2026-11-10T23:10:34.329747+00:00",
-    "detail": "Official page HTTP 403"
+    "status": "OK",
+    "checked_at": "2026-11-10T23:19:56.157385+00:00",
+    "detail": "requests; 10 release/article links; 0 new"
   },
   "Vera Therapeutics": {
     "status": "OK",
-    "checked_at": "2026-11-10T23:10:34.329790+00:00",
+    "checked_at": "2026-11-10T23:19:56.157410+00:00",
     "detail": "requests; 10 release/article links; 0 new"
   },
   "Vertex Pharmaceuticals": {
     "status": "FAIL",
-    "checked_at": "2026-11-10T23:10:34.329805+00:00",
+    "checked_at": "2026-11-10T23:19:56.157419+00:00",
     "detail": "Official page HTTP 403; official RSS also unavailable: 403 Client Error: Forbidden for url: https://investors.vrtx.com/rss/news-releases.xml?items=15"
   },
   "Viking Therapeutics": {
     "status": "OK",
-    "checked_at": "2026-11-10T23:10:34.329842+00:00",
+    "checked_at": "2026-11-10T23:19:56.157446+00:00",
     "detail": "requests; 5 release/article links; 0 new"
   },
   "WuXi Biologics": {
     "status": "OK",
-    "checked_at": "2026-11-10T23:10:34.329885+00:00",
-    "detail": "requests; 10 release/article links; 0 new"
+    "checked_at": "2026-11-10T23:19:56.157463+00:00",
+    "detail": "requests; 3 release/article links; 0 new"
   },
   "Zealand Pharma": {
     "status": "FAIL",
-    "checked_at": "2026-11-10T23:10:34.329903+00:00",
+    "checked_at": "2026-11-10T23:19:56.157475+00:00",
     "detail": "Official page HTTP 403"
   }
 }
