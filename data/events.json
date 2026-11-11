@@ -232,5 +232,32 @@
     "url": "https://www.novonordisk.com/news-and-media/news-and-ir-materials/news-details.html?id=920320",
     "detected_at": "2026-11-11T09:53:54.088362+00:00",
     "source_page": "https://www.novonordisk.com/news-and-media/news-and-ir-materials.html"
+  },
+  {
+    "id": "addc40d73352798d12e310b431facf09bca31939d48475dbded694facd6f92be",
+    "company": "Amgen",
+    "ticker": "AMGN",
+    "title": "AMGEN ANNOUNCES POSITIVE PHASE 3 RESULTS FOR DAZODALIBEP IN SJÖGREN'S DISEASE",
+    "url": "https://www.amgen.com/newsroom/press-releases/2026/11/amgen-announces-positive-phase-3-results-for-dazodalibep-in-sjgrens-disease",
+    "detected_at": "2026-11-11T17:50:42.421773+00:00",
+    "source_page": "https://www.amgen.com/newsroom/press-releases"
+  },
+  {
+    "id": "c481f50b0bc2b3c45f771c6a56978fc9a1c46b34e4523af90e2754b1d24c705f",
+    "company": "Teva",
+    "ticker": "TEVA",
+    "title": "Teva Shares Innovative Pipeline Updates and Unveils Path to Future Growth at R&D Day, Targeting $6–7 Billion in Innovative Medicines Revenue by 2030",
+    "url": "https://ir.tevapharm.com/news-and-events/press-releases/press-release-details/2026/Teva-Shares-Innovative-Pipeline-Updates-and-Unveils-Path-to-Future-Growth-at-RD-Day-Targeting-67-Billion-in-Innovative-Medicines-Revenue-by-2030/default.aspx",
+    "detected_at": "2026-11-11T17:51:10.764104+00:00",
+    "source_page": "https://ir.tevapharm.com/news-and-events/press-releases/default.aspx"
+  },
+  {
+    "id": "4321bec9132856f0b3bcb14f7b8afd672b9fc681875595d9b1b41436ac8b5266",
+    "company": "Ultragenyx",
+    "ticker": "RARE",
+    "title": "Ultragenyx to Participate at Investor Conferences in London",
+    "url": "https://ir.ultragenyx.com/news-releases/news-release-details/ultragenyx-participate-investor-conferences-london",
+    "detected_at": "2026-11-11T17:51:10.764171+00:00",
+    "source_page": "https://www.ultragenyx.com/newsroom/news-and-press-releases/"
   }
 ]

@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 11 Nov 2026 09:53:54 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 17:51:10 +0000</lastBuildDate>
     <item>
       <title>Amgen: AMGEN ANNOUNCES ADDITIONAL $300 MILLION U.S. MANUFACTURING INVESTMENT, TOTALING NEARLY $2 BILLION OVER THE LAST YEAR</title>
       <link>https://www.amgen.com/newsroom/press-releases/2026/05/amgen-announces-additional-300-million-us-manufacturing-investment-totaling-nearly-2-billion-over-the-last-year</link>
@@ -189,6 +189,27 @@
       <description>Official company source. Detected 2026-11-11T09:53:54.088362+00:00</description>
       <guid isPermaLink="false">402baee2a48c3d2a23d0b57d3f7afe9f452fb073fdf34dbbb1299b91f67f255a</guid>
       <pubDate>Wed, 11 Nov 2026 09:53:54 +0000</pubDate>
+    </item>
+    <item>
+      <title>Amgen: AMGEN ANNOUNCES POSITIVE PHASE 3 RESULTS FOR DAZODALIBEP IN SJÖGREN'S DISEASE</title>
+      <link>https://www.amgen.com/newsroom/press-releases/2026/11/amgen-announces-positive-phase-3-results-for-dazodalibep-in-sjgrens-disease</link>
+      <description>Official company source. Detected 2026-11-11T17:50:42.421773+00:00</description>
+      <guid isPermaLink="false">addc40d73352798d12e310b431facf09bca31939d48475dbded694facd6f92be</guid>
+      <pubDate>Wed, 11 Nov 2026 17:50:42 +0000</pubDate>
+    </item>
+    <item>
+      <title>Teva: Teva Shares Innovative Pipeline Updates and Unveils Path to Future Growth at R&amp;D Day, Targeting $6–7 Billion in Innovative Medicines Revenue by 2030</title>
+      <link>https://ir.tevapharm.com/news-and-events/press-releases/press-release-details/2026/Teva-Shares-Innovative-Pipeline-Updates-and-Unveils-Path-to-Future-Growth-at-RD-Day-Targeting-67-Billion-in-Innovative-Medicines-Revenue-by-2030/default.aspx</link>
+      <description>Official company source. Detected 2026-11-11T17:51:10.764104+00:00</description>
+      <guid isPermaLink="false">c481f50b0bc2b3c45f771c6a56978fc9a1c46b34e4523af90e2754b1d24c705f</guid>
+      <pubDate>Wed, 11 Nov 2026 17:51:10 +0000</pubDate>
+    </item>
+    <item>
+      <title>Ultragenyx: Ultragenyx to Participate at Investor Conferences in London</title>
+      <link>https://ir.ultragenyx.com/news-releases/news-release-details/ultragenyx-participate-investor-conferences-london</link>
+      <description>Official company source. Detected 2026-11-11T17:51:10.764171+00:00</description>
+      <guid isPermaLink="false">4321bec9132856f0b3bcb14f7b8afd672b9fc681875595d9b1b41436ac8b5266</guid>
+      <pubDate>Wed, 11 Nov 2026 17:51:10 +0000</pubDate>
     </item>
   </channel>
 </rss>
