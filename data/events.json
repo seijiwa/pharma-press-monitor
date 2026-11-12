@@ -313,5 +313,23 @@
     "url": "https://www.wuxibiologics.com/press-release/world-quality-day-building-client-trust-through-quality-excellence",
     "detected_at": "2026-11-12T07:44:53.792500+00:00",
     "source_page": "https://www.wuxibiologics.com/press-release/"
+  },
+  {
+    "id": "635a305289fb5ee45d2dd8a11153ad8c5b033d81a7be2fe05f486eef0d4ef6c8",
+    "company": "Gilead Sciences",
+    "ticker": "GILD",
+    "title": "Gilead Brings HIV Prevention to the 27th Annual Latin GRAMMY Awards®",
+    "url": "https://www.gilead.com/news/news-details/2026/gilead-brings-hiv-prevention-to-the-27th-annual-latin-grammy-awards",
+    "detected_at": "2026-11-12T16:18:41.569430+00:00",
+    "source_page": "https://www.gilead.com/news"
+  },
+  {
+    "id": "5efcf0058a6ac227ad91d578196b25e431e13196af7558f5989ba3395be47dd5",
+    "company": "Merck & Co.",
+    "ticker": "MRK",
+    "title": "Merck to Participate in the Jefferies Global Healthcare Conference in London",
+    "url": "https://www.merck.com/news/merck-to-participate-in-the-jefferies-global-healthcare-conference-in-london-2",
+    "detected_at": "2026-11-12T16:18:48.489303+00:00",
+    "source_page": "https://www.merck.com/media/news/"
   }
 ]

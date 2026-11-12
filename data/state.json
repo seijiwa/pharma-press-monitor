@@ -13,7 +13,7 @@
       "https://news.abbvie.com/2026-11-03-Allergan-Aesthetics-to-Present-New-Research-on-Aesthetic-Care-Following-Medical-Weight-Loss-and-Evolving-Patient-Needs-at-ASDS-2026",
       "https://news.abbvie.com/2026-11-08-Allergan-Aesthetics-Reports-Improved-Satisfaction-With-Facial-Appearance-Following-Aesthetic-Treatment-in-Two-Studies-of-Patients-on-GLP-1-Medications"
     ],
-    "checked_at": "2026-11-12T07:44:19.656091+00:00",
+    "checked_at": "2026-11-12T16:18:29.762517+00:00",
     "final_url": "https://news.abbvie.com/",
     "method": "requests",
     "count": 10,
@@ -664,7 +664,7 @@
       "https://arrowheadpharma.com/en-us/newsroom/takeda-and-arrowhead-collaborate-co-develop-and-co-commercialize",
       "https://arrowheadpharma.com/en-us/newsroom/vascular-research-further-validates-drug-development-programs"
     ],
-    "checked_at": "2026-11-12T07:44:21.929680+00:00",
+    "checked_at": "2026-11-12T16:18:40.028165+00:00",
     "final_url": "https://arrowheadpharma.com/en-us/newsroom",
     "method": "requests",
     "count": 615,
@@ -706,7 +706,7 @@
       "https://www.astrazeneca.com/media-centre/press-releases/2026/sonesitatug-vedotin-reduced-the-risk-of-death-by-42-pct-in-2nd-and-later-line-cldn182-positive-advanced-gastricgej-cancers-in-clarity-gastric01.html",
       "https://www.astrazeneca.com/media-centre/press-releases/2026/tagrisso-plus-orpathys-reduced-progression-or-death-risk-by-45-and-death-risk-by-32-in-met-driven-egfrm-nsclc-after-progression-on-tagrisso.html"
     ],
-    "checked_at": "2026-11-12T07:44:21.930183+00:00",
+    "checked_at": "2026-11-12T16:18:40.028661+00:00",
     "final_url": "https://www.astrazeneca.com/media-centre.html?type=pressrelease",
     "method": "playwright",
     "count": 6,
@@ -761,7 +761,7 @@
       "https://c2n.com/news-releases/study-highlights-how-c2ns-precivityad2-blood-biomarker-test-use-improvesnbsp-clinical-decision-making-in-the-evaluation-for-alzheimers-disease-nbspnbsp",
       "https://c2n.com/news-releases/united-kingdom-researchers-integrate-c2ns-precivityad2-blood-test-into-the-alzheimers-disease-diagnostic-care-pathway-nbspnbsp"
     ],
-    "checked_at": "2026-11-12T07:44:30.066181+00:00",
+    "checked_at": "2026-11-12T16:18:40.035987+00:00",
     "final_url": "https://c2n.com/news-releases",
     "method": "requests",
     "count": 19,
@@ -807,7 +807,7 @@
       "https://newsroom.csl.com/2026-10-04-CSL-and-Alentis-announce-global-partnership-to-develop-and-commercialise-lixudebart-for-rare-kidney-and-liver-diseases",
       "https://newsroom.csl.com/2026-10-21-CSL-appoints-Deborah-Waterhouse-as-CEO-Managing-Director"
     ],
-    "checked_at": "2026-11-12T07:44:30.066263+00:00",
+    "checked_at": "2026-11-12T16:18:40.036098+00:00",
     "final_url": "https://newsroom.csl.com/News-Releases",
     "method": "requests",
     "count": 10,
@@ -853,7 +853,7 @@
       "https://www.capricor.com/investors/news-events/press-releases/detail/358/capricors-hope-3-phase-3-cardiac-results-for-deramiocel",
       "https://www.capricor.com/investors/news-events/press-releases/detail/359/capricor-therapeutics-reports-third-quarter-2026-financial"
     ],
-    "checked_at": "2026-11-12T07:44:30.066318+00:00",
+    "checked_at": "2026-11-12T16:18:40.036145+00:00",
     "final_url": "https://www.capricor.com/investors/news-events/press-releases",
     "method": "requests",
     "count": 10,
@@ -897,7 +897,7 @@
       "https://www.catalent.com/news/catalent-launches-qai-to-reimagine-quality-assurance-for-its-manufacturing-services",
       "https://www.catalent.com/news/taysha-gene-therapies-and-catalent-expand-strategic-partnership-to-include-future-commercial"
     ],
-    "checked_at": "2026-11-12T07:44:30.066372+00:00",
+    "checked_at": "2026-11-12T16:18:40.036190+00:00",
     "final_url": "https://www.catalent.com/news",
     "method": "requests",
     "count": 8,
@@ -1286,7 +1286,7 @@
       "https://www.daiichisankyo.com/files/news/pressrelease/pdf/202610/20261030_E2.pdf",
       "https://www.daiichisankyo.com/files/news/pressrelease/pdf/202611/20261112_E.pdf"
     ],
-    "checked_at": "2026-11-12T07:44:30.066440+00:00",
+    "checked_at": "2026-11-12T16:18:40.036246+00:00",
     "final_url": "https://www.daiichisankyo.com/media/press_release/",
     "method": "playwright",
     "count": 353,
@@ -1331,7 +1331,7 @@
       "https://fujifilmbiotechnologies.fujifilm.com/about/news/fujifilm-biotechnologies-unveils-shunzymex-precision-purification-technology",
       "https://fujifilmbiotechnologies.fujifilm.com/about/news/fujifilm-to-showcase-manufacturing-innovation-and-leadership-at-cphi-2026-amid-three-award-shortlist-nominations"
     ],
-    "checked_at": "2026-11-12T07:44:33.477556+00:00",
+    "checked_at": "2026-11-12T16:18:40.215099+00:00",
     "final_url": "https://fujifilmbiotechnologies.fujifilm.com/about/news/",
     "method": "playwright",
     "count": 9,
@@ -1375,7 +1375,7 @@
       "https://www.fresenius.com/sites/default/files/2026-11/20261102_fse_pressrelease_biopharma_development_agreement.pdf",
       "https://www.fresenius.com/sites/default/files/2026-11/20261104_fse_pressrelease_q3_2026.pdf"
     ],
-    "checked_at": "2026-11-12T07:44:33.483041+00:00",
+    "checked_at": "2026-11-12T16:18:41.291156+00:00",
     "final_url": "https://www.fresenius.com/news",
     "method": "playwright",
     "count": 8,
@@ -1431,7 +1431,7 @@
       "https://www.gsk.com/en-gb/media/press-releases/ris-rez-reduced-risk-of-disease-progression-or-death-by-67-versus-chemotherapy-in-patients-with-relapsed-osteosarcoma-in-china",
       "https://www.gsk.com/en-gb/media/press-releases/viiv-healthcare-s-long-acting-hiv-treatment-cabenuva-cabotegravir-plus-rilpivirine-meets-primary-endpoint-of-superior-viral-suppression-vs-daily-oral-therapy-in-people-with-viremia"
     ],
-    "checked_at": "2026-11-12T07:44:33.494251+00:00",
+    "checked_at": "2026-11-12T16:18:41.291193+00:00",
     "final_url": "https://www.gsk.com/en-gb/media/press-releases/?ps=20&latestArticles=true",
     "method": "playwright",
     "count": 20,
@@ -1479,7 +1479,7 @@
       "https://www.galderma.com/news/the-menopausal-skin-misread",
       "https://www.galderma.com/news/unpredictable-environment-navigating-triggers-atopic-dermatitis"
     ],
-    "checked_at": "2026-11-12T07:44:34.432842+00:00",
+    "checked_at": "2026-11-12T16:18:41.569298+00:00",
     "final_url": "https://www.galderma.com/newsroom",
     "method": "requests",
     "count": 12,
@@ -1540,7 +1540,7 @@
       "https://www.gene.com/media/press-releases/15141/2026-10-25/genentechs-divarasib-demonstrated-best-i",
       "https://www.gene.com/media/press-releases/15142/2026-11-09/genentech-and-roche-present-new-data-acr"
     ],
-    "checked_at": "2026-11-12T07:44:34.432922+00:00",
+    "checked_at": "2026-11-12T16:18:41.569369+00:00",
     "final_url": "https://www.gene.com/media",
     "method": "requests",
     "count": 25,
@@ -1582,7 +1582,7 @@
       "https://www.grifols.com/en/view-news/-/news/grifols-strengthens-evidence-supporting-the-ambar-program-in-alzheimer-s-disease-with-real-world-evidence-data",
       "https://www.grifols.com/en/view-news/-/news/half-of-spaniards-are-unaware-that-plasma-can-be-donated-separately-from-blood"
     ],
-    "checked_at": "2026-11-12T07:44:35.085644+00:00",
+    "checked_at": "2026-11-12T16:18:43.174857+00:00",
     "final_url": "https://www.grifols.com/en/newsroom",
     "method": "requests",
     "count": 6,
@@ -1628,7 +1628,7 @@
       "https://investors.immunome.com/immunome-to-present-at-the-h-c-wainwright-28th-annual-global-investment-conference",
       "https://investors.immunome.com/immunome-to-present-initial-first-in-human-clinical-data-for-im-1021-in-advanced-b-cell-lymphomas-at-ash-2026"
     ],
-    "checked_at": "2026-11-12T00:30:27.192695+00:00",
+    "checked_at": "2026-11-12T16:18:45.612914+00:00",
     "final_url": "https://investors.immunome.com/news-releases/",
     "method": "requests",
     "count": 10,
@@ -1665,7 +1665,7 @@
     "urls": [
       "https://www.jnanatx.com/wp-content/uploads/2022/09/202207_NPKUA-Poster-updated.pdf"
     ],
-    "checked_at": "2026-11-12T07:44:40.896004+00:00",
+    "checked_at": "2026-11-12T16:18:47.544030+00:00",
     "final_url": "https://www.jnanatx.com/news/?pag=1",
     "method": "playwright",
     "count": 1,
@@ -1690,7 +1690,7 @@
       "https://www.jnj.com/media-center/press-releases/johnson-johnsons-novel-shockwave-javelin-coronary-ivl-catheter-delivers-positive-results-in-pivotal-forward-cad-ide-study",
       "https://www.jnj.com/media-center/press-releases/record-26-abstracts-at-tct-2026-adds-to-more-than-20-years-of-data-demonstrating-the-safety-efficacy-and-cost-effectiveness-of-impella-heart-pumps"
     ],
-    "checked_at": "2026-11-12T07:44:41.249327+00:00",
+    "checked_at": "2026-11-12T16:18:47.544059+00:00",
     "final_url": "https://www.jnj.com/media-center/press-releases",
     "method": "requests",
     "count": 9,
@@ -1733,7 +1733,7 @@
       "https://www.kyowakirin.com/media_center/news_releases/2026/pdf/e20261007_01.pdf",
       "https://www.kyowakirin.com/media_center/news_releases/2026/pdf/e20261105_01.pdf"
     ],
-    "checked_at": "2026-11-12T07:44:41.255003+00:00",
+    "checked_at": "2026-11-12T16:18:47.544136+00:00",
     "final_url": "https://www.kyowakirin.com/media_center/news_releases/index.html",
     "method": "playwright",
     "count": 7,
@@ -1775,7 +1775,7 @@
       "https://www.lupin.com/investors/press-releases/lupin-q2-fy-2027-results",
       "https://www.lupin.com/investors/press-releases/lupin-receives-u-s-fda-approval-for-amifampridine-tablets"
     ],
-    "checked_at": "2026-11-12T07:44:43.758562+00:00",
+    "checked_at": "2026-11-12T16:18:48.489265+00:00",
     "final_url": "https://www.lupin.com/investors/press-releases",
     "method": "requests",
     "count": 6,
@@ -1817,15 +1817,20 @@
       "https://www.merck.com/news/merck-co-inc-rahway-n-j-usa-announces-third-quarter-2026-financial-results-highlights-multiple-milestones-advancing-broad-diverse-pipeline",
       "https://www.merck.com/news/merck-inaugurates-state-of-the-art-advance-bioanalytical-facility-on-west-point-pennsylvania-campus",
       "https://www.merck.com/news/merck-initiates-phase-3-study-evaluating-ohtuvayre-ensifentrine-for-the-prevention-of-copd-exacerbations-in-adult-patients-receiving-standard-of-care-with-a-history-of-exacerbations",
+      "https://www.merck.com/news/merck-to-participate-in-the-jefferies-global-healthcare-conference-in-london-2",
       "https://www.merck.com/news/merck-to-present-new-data-from-its-broad-oral-hiv-portfolio-and-pipeline-at-hiv-glasgow-2026",
-      "https://www.merck.com/news/paul-j-diaz-elected-to-merck-co-inc-rahway-n-j-usa-board-of-directors",
       "https://www.merck.com/news/sacituzumab-tirumotecan-sac-tmt-reduced-the-risk-of-death-by-32-and-the-risk-of-disease-progression-or-death-by-41-compared-to-chemotherapy-in-certain-patients-with-advanced-or-recurrent-endometrial"
     ],
-    "checked_at": "2026-11-12T07:44:43.758648+00:00",
+    "checked_at": "2026-11-12T16:18:48.489303+00:00",
     "final_url": "https://www.merck.com/media/news/",
     "method": "requests",
     "count": 10,
     "samples": [
+      {
+        "url": "https://www.merck.com/news/merck-to-participate-in-the-jefferies-global-healthcare-conference-in-london-2",
+        "title": "Merck to Participate in the Jefferies Global Healthcare Conference in London",
+        "score": 3
+      },
       {
         "url": "https://www.merck.com/news/merck-announces-positive-results-from-phase-2b-trial-of-efinopegdutide-in-adults-with-metabolic-dysfunction-associated-steatohepatitis-mash-and-stage-2-3-fibrosis",
         "title": "Merck Announces Positive Results from Phase 2b Trial of Efinopegdutide in Adults with Metabolic Dysfunction-Associated Steatohepatitis (MASH) and Stage 2-3 Fibrosis",
@@ -1844,11 +1849,6 @@
       {
         "url": "https://www.merck.com/news/merck-co-inc-rahway-n-j-usa-announces-third-quarter-2026-financial-results-highlights-multiple-milestones-advancing-broad-diverse-pipeline",
         "title": "Merck & Co., Inc., Rahway, N.J., USA Announces Third-Quarter 2026 Financial Results; Highlights Multiple Milestones Advancing Broad, Diverse Pipeline",
-        "score": 3
-      },
-      {
-        "url": "https://www.merck.com/news/keytruda-pembrolizumab-as-monotherapy-reduced-the-risk-of-disease-progression-or-death-by-43-for-certain-patients-with-advanced-or-recurrent-endometrial-cancer-with-mismatch-repair-deficient",
-        "title": "KEYTRUDA® (pembrolizumab) as Monotherapy Reduced the Risk of Disease Progression or Death by 43% for Certain Patients With Advanced or Recurrent Endometrial Cancer With Mismatch Repair Deficient (dMMR) Tumors Compared to Chemotherapy",
         "score": 3
       }
     ]
@@ -1890,7 +1890,7 @@
       "https://www.novartis.com/news/vas-narasimhan-named-2025-time100-health-list",
       "https://www.novartis.com/news/violence-against-innocent-people-runs-counter-our-work-improve-human-health"
     ],
-    "checked_at": "2026-11-12T07:44:43.758903+00:00",
+    "checked_at": "2026-11-12T16:18:48.489510+00:00",
     "final_url": "https://www.novartis.com/news",
     "method": "requests",
     "count": 33,
@@ -1931,7 +1931,7 @@
       "https://www.pfizer.com/news/press-release/press-release-detail/pfizer-invites-public-view-and-listen-webcast-pfizer-28",
       "https://www.pfizer.com/news/press-release/press-release-detail/pfizer-reports-strong-third-quarter-2026-results-and-raises"
     ],
-    "checked_at": "2026-11-12T07:44:43.759167+00:00",
+    "checked_at": "2026-11-12T16:18:48.489702+00:00",
     "final_url": "https://www.pfizer.com/newsroom",
     "method": "requests",
     "count": 5,
@@ -1978,7 +1978,7 @@
       "https://www.roche.com/media/releases/med-cor-2026-10-28",
       "https://www.roche.com/media/releases/med-cor-2026-11-10"
     ],
-    "checked_at": "2026-11-12T07:44:49.346198+00:00",
+    "checked_at": "2026-11-12T16:18:53.489480+00:00",
     "final_url": "https://www.roche.com/media/releases",
     "method": "playwright",
     "count": 11,
@@ -2044,7 +2044,7 @@
       "https://samsungbiologics.com/media/company-news/samsung-biologics-reports-third-quarter-2025-financial-results",
       "https://samsungbiologics.com/media/company-news/samsung-biologics-reports-third-quarter-2026-financial-results"
     ],
-    "checked_at": "2026-11-12T07:44:51.755728+00:00",
+    "checked_at": "2026-11-12T16:18:53.726381+00:00",
     "final_url": "https://samsungbiologics.com/media/company-news",
     "method": "official-newsroom-data",
     "count": 30,
@@ -2100,7 +2100,7 @@
       "https://www.sanofi.com/en/media-room/press-releases/2026/2026-10-20-12-00-00-3384293",
       "https://www.sanofi.com/en/media-room/press-releases/2026/2026-10-30-06-30-00-3392028"
     ],
-    "checked_at": "2026-11-12T07:44:51.755827+00:00",
+    "checked_at": "2026-11-12T16:18:53.726464+00:00",
     "final_url": "https://www.sanofi.com/en/media-room/press-releases",
     "method": "requests",
     "count": 20,
@@ -2147,7 +2147,7 @@
       "https://www.santen.com/en/news/2026/2026_2/20260803",
       "https://www.santen.com/en/news/2026/2026_2/20260807"
     ],
-    "checked_at": "2026-11-12T07:44:51.755906+00:00",
+    "checked_at": "2026-11-12T16:18:53.726514+00:00",
     "final_url": "https://www.santen.com/en/news",
     "method": "requests",
     "count": 11,
@@ -2201,7 +2201,7 @@
       "https://www.sumitomo-pharma.com/news/assets/pdf/ene20261027_1.pdf",
       "https://www.sumitomo-pharma.com/news/assets/pdf/ene20261105_1.pdf"
     ],
-    "checked_at": "2026-11-12T07:44:51.756197+00:00",
+    "checked_at": "2026-11-12T16:18:54.971138+00:00",
     "final_url": "https://www.sumitomo-pharma.com/news/",
     "method": "playwright",
     "count": 18,
@@ -2247,7 +2247,7 @@
       "https://ir.veratx.com/news-releases/news-release-details/vera-therapeutics-participate-upcoming-investor-conferences-4",
       "https://ir.veratx.com/news-releases/news-release-details/vera-therapeutics-provides-business-update-and-reports-third-3"
     ],
-    "checked_at": "2026-11-12T07:44:53.791786+00:00",
+    "checked_at": "2026-11-12T16:18:57.030811+00:00",
     "final_url": "https://ir.veratx.com/news-events/press-releases",
     "method": "requests",
     "count": 10,
@@ -2292,7 +2292,7 @@
       "https://www.wuxibiologics.com/press-release/wuxi-biologics-receives-top-honor-jade-award-at-the-asset-corporate-sustainability-leadership-awards-2026",
       "https://www.wuxibiologics.com/press-release/wuxi-biologics-reports-strong-profitable-growth-in-h1-2026"
     ],
-    "checked_at": "2026-11-12T07:44:53.792500+00:00",
+    "checked_at": "2026-11-12T16:18:57.030927+00:00",
     "final_url": "https://www.wuxibiologics.com/press-release/",
     "method": "requests",
     "count": 9,
@@ -2340,7 +2340,7 @@
       "https://akesobio.com/en/media/akeso-news/261105",
       "https://akesobio.com/en/media/akeso-news/261106"
     ],
-    "checked_at": "2026-11-12T07:44:20.148858+00:00",
+    "checked_at": "2026-11-12T16:18:30.136332+00:00",
     "final_url": "https://akesobio.com/en/media/akeso-news/",
     "method": "requests",
     "count": 12,
@@ -2377,7 +2377,7 @@
     "urls": [
       "https://www.bms.com/media/press-releases/press-release-alerts-subscribe.html"
     ],
-    "checked_at": "2026-11-12T07:44:30.066141+00:00",
+    "checked_at": "2026-11-12T16:18:40.028844+00:00",
     "final_url": "https://news.bms.com/news/default.aspx",
     "method": "requests",
     "count": 1,
@@ -2393,19 +2393,24 @@
     "parser_version": 3,
     "urls": [
       "https://www.gilead.com/news/news-details/2026/gilead-and-kite-advance-leadership-with-new-data-across-pipeline-and-portfolio-at-ash-2026",
+      "https://www.gilead.com/news/news-details/2026/gilead-brings-hiv-prevention-to-the-27th-annual-latin-grammy-awards",
       "https://www.gilead.com/news/news-details/2026/gilead-sciences-announces-third-quarter-2026-financial-results",
       "https://www.gilead.com/news/news-details/2026/gilead-sciences-to-present-at-upcoming-fourth-quarter-2026-investor-conferences",
       "https://www.gilead.com/news/news-details/2026/gilead-to-acquire-investigational-oral-il-23r-inhibitor-hcxt-2001-strengthening-its-inflammation-pipeline-in-ibd",
       "https://www.gilead.com/news/news-details/2026/gilead-to-present-late-breaking-clinical-data-and-real-world-evidence-at-hiv-glasgow",
-      "https://www.gilead.com/news/news-details/2026/gilead-to-present-new-data-on-treatment-response-and-long-term-management-of-rare-liver-diseases-at-the-liver-meeting-2026",
       "https://www.gilead.com/news/news-details/2026/new-data-show-twice-yearly-lenacapavir-achieved-nearly-twice-the-one-year-persistence-of-daily-oral-ftdf-in-hiv-prevention",
       "https://www.gilead.com/news/news-details/2026/positive-phase-3-ideal-study-results-further-support-livdelzis-seladelpar-impact-on-achieving-alp-normalization-goals-in-second-line-treatment-across-a-broad-population-of-people-living-with"
     ],
-    "checked_at": "2026-11-12T07:44:34.433021+00:00",
+    "checked_at": "2026-11-12T16:18:41.569430+00:00",
     "final_url": "https://www.gilead.com/news",
     "method": "playwright",
     "count": 8,
     "samples": [
+      {
+        "url": "https://www.gilead.com/news/news-details/2026/gilead-brings-hiv-prevention-to-the-27th-annual-latin-grammy-awards",
+        "title": "Gilead Brings HIV Prevention to the 27th Annual Latin GRAMMY Awards®",
+        "score": 3
+      },
       {
         "url": "https://www.gilead.com/news/news-details/2026/new-data-show-twice-yearly-lenacapavir-achieved-nearly-twice-the-one-year-persistence-of-daily-oral-ftdf-in-hiv-prevention",
         "title": "New Data Show Twice-Yearly Lenacapavir Achieved Nearly Twice the One-Year Persistence of Daily Oral F/TDF in HIV Prevention",
@@ -2425,11 +2430,6 @@
         "url": "https://www.gilead.com/news/news-details/2026/gilead-to-present-late-breaking-clinical-data-and-real-world-evidence-at-hiv-glasgow",
         "title": "Gilead to Present Late-Breaking Clinical Data and Real-World Evidence at HIV Glasgow",
         "score": 3
-      },
-      {
-        "url": "https://www.gilead.com/news/news-details/2026/gilead-sciences-to-present-at-upcoming-fourth-quarter-2026-investor-conferences",
-        "title": "Gilead Sciences to Present at Upcoming Fourth Quarter 2026 Investor Conferences",
-        "score": 3
       }
     ]
   },
@@ -2442,7 +2442,7 @@
       "https://ir.vikingtherapeutics.com/2026-11-03-Viking-Therapeutics-to-Participate-at-Upcoming-Investor-Conferences",
       "https://ir.vikingtherapeutics.com/2026-11-09-Viking-Therapeutics-Announces-Two-Poster-Presentations-at-ObesityWeek-R-2026"
     ],
-    "checked_at": "2026-11-12T07:44:53.791972+00:00",
+    "checked_at": "2026-11-12T16:18:57.030887+00:00",
     "final_url": "https://ir.vikingtherapeutics.com/press-releases",
     "method": "requests",
     "count": 5,
@@ -2481,7 +2481,7 @@
       "https://en.innoventbio.com/InvestorsAndMedia/PressReleaseDetail?key=622",
       "https://en.innoventbio.com/InvestorsAndMedia/PressReleaseDetail?key=623"
     ],
-    "checked_at": "2026-11-12T07:44:40.884400+00:00",
+    "checked_at": "2026-11-12T16:18:45.612968+00:00",
     "final_url": "https://en.innoventbio.com/InvestorsAndMedia/PressRelease",
     "method": "playwright",
     "count": 3,
@@ -2517,7 +2517,7 @@
       "https://ir.tevapharm.com/news-and-events/press-releases/press-release-details/2026/Tevas-Pivot-to-Growth-Strategy-Delivers-33-Growth-Across-Key-Innovative-Brands-Raises-2026-Outlook-for-AUSTEDO-AJOVY-and-UZEDY-Delivers-Substantial-Gross-Margin-Expansion/default.aspx",
       "https://ir.tevapharm.com/news-and-events/press-releases/press-release-details/2026/UEG-Week-Teva-and-Sanofis-Duvakitug-Maintained-Long-Term-Positive-Outcomes-in-New-Phase-2b-Data-for-Ulcerative-Colitis-and-Crohns-Disease/default.aspx"
     ],
-    "checked_at": "2026-11-12T07:44:53.791493+00:00",
+    "checked_at": "2026-11-12T16:18:55.740508+00:00",
     "final_url": "https://ir.tevapharm.com/rss/pressrelease.aspx",
     "method": "official-rss-fallback (newsroom unavailable)",
     "count": 10,
@@ -2563,7 +2563,7 @@
       "https://ir.ultragenyx.com/news-releases/news-release-details/ultragenyx-reports-inducement-grant-under-nasdaq-listing-rule-53",
       "https://ir.ultragenyx.com/news-releases/news-release-details/ultragenyx-reports-third-quarter-2026-financial-results"
     ],
-    "checked_at": "2026-11-12T07:44:53.791686+00:00",
+    "checked_at": "2026-11-12T16:18:57.030775+00:00",
     "final_url": "https://www.ultragenyx.com/newsroom/news-and-press-releases/",
     "method": "requests",
     "count": 10,
@@ -2602,7 +2602,7 @@
       "https://investor.alkermes.com/news-releases/news-release-details/alkermes-present-upcoming-investor-conferences",
       "https://investor.alkermes.com/news-releases/news-release-details/alkermes-showcases-research-psychiatry-and-sleep-portfolios"
     ],
-    "checked_at": "2026-11-12T07:44:21.416970+00:00",
+    "checked_at": "2026-11-12T16:18:31.060561+00:00",
     "final_url": "https://www.alkermes.com/news",
     "method": "requests",
     "count": 3,
@@ -2639,7 +2639,7 @@
       "https://www.alvotech.com/newsroom/alvotech-to-report-financial-results-for-the-nine-month-period-to-september-30-2026",
       "https://www.alvotech.com/newsroom/fda-approves-additional-u-s-manufacturing-capacity-for-simlandi-alvotech-s-biosimilar-to-humira"
     ],
-    "checked_at": "2026-11-12T07:44:21.929551+00:00",
+    "checked_at": "2026-11-12T16:18:31.257165+00:00",
     "final_url": "https://www.alvotech.com/newsroom",
     "method": "requests",
     "count": 11,
@@ -2705,7 +2705,7 @@
       "https://www.amgen.com/newsroom/press-releases/2026/11/new-data-at-aha-2026-demonstrates-the-value-of-treatment-with-repatha-earlier-in-the-cardiovascular-risk-continuum",
       "https://www.amgen.com/newsroom/press-releases/2026/11/repatha-lowers-risk-of-heart-attacks-by-20-compared-with-ezetimibe-in-a-large-realworld-study"
     ],
-    "checked_at": "2026-11-11T17:50:42.421773+00:00",
+    "checked_at": "2026-11-12T16:18:31.257236+00:00",
     "final_url": "https://www.amgen.com/newsroom/press-releases",
     "method": "official-newsroom-data",
     "count": 30,
@@ -2743,7 +2743,7 @@
       "https://www.novartis.com/news/media-releases/novartis-delpacibart-braxlosiran-del-brax-phase-iii-study-facioscapulohumeral-muscular-dystrophy-fshd-meets-primary-biomarker-endpoint",
       "https://www.novartis.com/news/media-releases/novartis-provides-update-delpacibart-etedesiran-del-desiran-phase-iii-harbor-study-treatment-myotonic-dystrophy-type-1-dm1"
     ],
-    "checked_at": "2026-11-12T07:44:27.319281+00:00",
+    "checked_at": "2026-11-12T16:18:40.028718+00:00",
     "final_url": "https://www.novartis.com/news",
     "method": "requests; successor Novartis: 33 parent releases checked, keyword matches only",
     "count": 2,
@@ -2784,7 +2784,7 @@
       "https://www.biomarin.com/news/press-releases/biomarin-to-participate-in-upcoming-investor-conferences-3",
       "https://www.biomarin.com/news/press-releases/u-s-food-and-drug-administration-accepts-biomarins-supplemental-new-drug-application-for-full-approval-of-voxzogo-vosoritide-for-children-with-achondroplasia"
     ],
-    "checked_at": "2026-11-12T07:44:27.319358+00:00",
+    "checked_at": "2026-11-12T16:18:40.028768+00:00",
     "final_url": "https://www.biomarin.com/news/press-releases/",
     "method": "official-newsroom-data",
     "count": 20,
@@ -2824,7 +2824,7 @@
       "https://investors.biogen.com/news-releases/news-release-details/biogen-present-new-data-across-alzheimers-disease-portfolio-ctad",
       "https://investors.biogen.com/news-releases/news-release-details/biogen-reports-third-quarter-2026-results"
     ],
-    "checked_at": "2026-11-12T07:44:27.319421+00:00",
+    "checked_at": "2026-11-12T16:18:40.028813+00:00",
     "final_url": "https://www.biogen.com/home.html",
     "method": "playwright (official corporate latest-news index)",
     "count": 4,
@@ -2864,7 +2864,7 @@
       "https://ir.harmonybiosciences.com/news-releases/news-release-details/harmony-biosciences-report-third-quarter-2026-financial-results",
       "https://ir.harmonybiosciences.com/news-releases/news-release-details/harmony-biosciences-reports-q3-financial-results-track-achieve"
     ],
-    "checked_at": "2026-11-12T07:44:35.085890+00:00",
+    "checked_at": "2026-11-12T16:18:43.587703+00:00",
     "final_url": "https://www.harmonybiosciences.com/newsroom/",
     "method": "playwright (official corporate latest-news index)",
     "count": 9,
@@ -2903,7 +2903,7 @@
       "https://ir.kuraoncology.com/news-releases/news-release-details/kura-oncology-reports-inducement-grants-under-nasdaq-listing-25",
       "https://ir.kuraoncology.com/news-releases/news-release-details/kura-oncology-reports-third-quarter-2026-financial-results-and"
     ],
-    "checked_at": "2026-11-12T07:44:41.254870+00:00",
+    "checked_at": "2026-11-12T16:18:47.544105+00:00",
     "final_url": "https://kuraoncology.com/newsroom/",
     "method": "requests",
     "count": 3,
@@ -3029,7 +3029,7 @@
       "https://neurocrine.gcs-web.com/news-releases/news-release-details/neurocrine-biosciences-spotlight-its-scientific-journey-and",
       "https://neurocrine.gcs-web.com/news-releases/news-release-details/soleno-therapeutics-presents-new-vykatr-xr-diazoxide-choline"
     ],
-    "checked_at": "2026-11-12T07:44:43.758723+00:00",
+    "checked_at": "2026-11-12T16:18:48.489383+00:00",
     "final_url": "https://www.neurocrine.com/investors/",
     "method": "official-newsroom-data",
     "count": 100,
@@ -3115,7 +3115,7 @@
       "https://www.novonordisk.com/news-and-media/news-and-ir-materials/news-details.html?id=920158",
       "https://www.novonordisk.com/news-and-media/news-and-ir-materials/news-details.html?id=920320"
     ],
-    "checked_at": "2026-11-12T07:44:43.759031+00:00",
+    "checked_at": "2026-11-12T16:18:48.489576+00:00",
     "final_url": "https://www.novonordisk.com/news-and-media/news-and-ir-materials.html",
     "method": "official-newsroom-data",
     "count": 50,
@@ -3150,7 +3150,7 @@
   "Reata Pharmaceuticals": {
     "parser_version": 3,
     "urls": [],
-    "checked_at": "2026-11-12T07:44:43.759223+00:00",
+    "checked_at": "2026-11-12T16:18:48.489744+00:00",
     "final_url": "https://www.biogen.com/home.html",
     "method": "playwright (official corporate latest-news index); successor Biogen: 4 parent releases checked, keyword matches only",
     "count": 0,
@@ -3167,7 +3167,7 @@
       "https://www.revmed.com/media/news/13661/revolution-medicines-to-participate-in-november-2026-investor-conferences",
       "https://www.revmed.com/media/news/13691/revolution-medicines-reports-third-quarter-2026-financial-results-and-update-on-corporate-progress"
     ],
-    "checked_at": "2026-11-12T07:44:49.346137+00:00",
+    "checked_at": "2026-11-12T16:18:53.489417+00:00",
     "final_url": "https://www.revmed.com/media/",
     "method": "playwright",
     "count": 7,
@@ -3237,7 +3237,7 @@
       "https://www.sarepta.com/newsroom/when-time-muscle-one-dad-shares-his-story-advocate-duchenne-newborn-screening",
       "https://www.sarepta.com/newsroom/when-timing-matters-micahs-duchenne-story"
     ],
-    "checked_at": "2026-11-12T07:44:51.755999+00:00",
+    "checked_at": "2026-11-12T16:18:53.726549+00:00",
     "final_url": "https://www.sarepta.com/newsroom",
     "method": "requests",
     "count": 34,
@@ -3281,7 +3281,7 @@
       "https://en.kelun-biotech.com/newsCenter.aspx?mid=18#release-dce9445c2e1cb09d0c41525e5a3535b569fdfecad603460237674047677e8394",
       "https://en.kelun-biotech.com/newsCenter.aspx?mid=18#release-f8e8c22cb0c6dd814f88683cc99d3cd487402fdc68a774cc8e1445e5bfd62fd9"
     ],
-    "checked_at": "2026-11-12T07:44:51.756111+00:00",
+    "checked_at": "2026-11-12T16:18:53.726623+00:00",
     "final_url": "https://en.kelun-biotech.com/newsCenter.aspx?mid=18",
     "method": "requests",
     "count": 8,
