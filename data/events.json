@@ -277,5 +277,41 @@
     "url": "https://www.pfizer.com/news/press-release/press-release-detail/pfizer-and-blackstone-life-sciences-announce-strategic",
     "detected_at": "2026-11-12T00:30:27.193299+00:00",
     "source_page": "https://www.pfizer.com/news"
+  },
+  {
+    "id": "e31038f0aaa851e0a58c3763469b66c592da9d9aa3f0d268b90f3ed3fa835a20",
+    "company": "Daiichi Sankyo",
+    "ticker": "",
+    "title": "Enhertu® Supplemental New Drug Application Submitted in Japan for Patients with HER2 Expressing Advanced or Recurrent Uterine Carcinosarcoma(307.5KB) PDF",
+    "url": "https://www.daiichisankyo.com/files/news/pressrelease/pdf/202611/20261112_E.pdf",
+    "detected_at": "2026-11-12T07:44:30.066440+00:00",
+    "source_page": "https://www.daiichisankyo.com/media/press_release/"
+  },
+  {
+    "id": "69911807669b3bdb832758c48df60dccc48832d56c04b567ba8f22e1f4dfba77",
+    "company": "Fresenius",
+    "ticker": "FRE",
+    "title": "Fresenius completes sale of 13.4 million Fresenius Medical Care shares",
+    "url": "https://www.fresenius.com/node/7465",
+    "detected_at": "2026-11-12T07:44:33.483041+00:00",
+    "source_page": "https://www.fresenius.com/news"
+  },
+  {
+    "id": "5b0f261d36937080b1c30e4999580463f9f392fdd849c966e35ca14157f6dd9e",
+    "company": "Lupin",
+    "ticker": "",
+    "title": "Lupin Announces European Launch of Biosimilar Ranibizumab",
+    "url": "https://www.lupin.com/investors/press-releases/lupin-announces-european-launch-of-biosimilar-ranibizumab",
+    "detected_at": "2026-11-12T07:44:43.758562+00:00",
+    "source_page": "https://www.lupin.com/investors/news-events/"
+  },
+  {
+    "id": "513eb9736b999926b2468482492a5b85417ea74ac8f07cea160093432dfb4e27",
+    "company": "WuXi Biologics",
+    "ticker": "2269 HK",
+    "title": "News Nov. 12, 2026 World Quality Day | Building Client Trust Through Quality Excellence",
+    "url": "https://www.wuxibiologics.com/press-release/world-quality-day-building-client-trust-through-quality-excellence",
+    "detected_at": "2026-11-12T07:44:53.792500+00:00",
+    "source_page": "https://www.wuxibiologics.com/press-release/"
   }
 ]
