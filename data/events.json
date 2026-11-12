@@ -259,5 +259,23 @@
     "url": "https://ir.ultragenyx.com/news-releases/news-release-details/ultragenyx-participate-investor-conferences-london",
     "detected_at": "2026-11-11T17:51:10.764171+00:00",
     "source_page": "https://www.ultragenyx.com/newsroom/news-and-press-releases/"
+  },
+  {
+    "id": "74710212155c4a439b6bd51fa7efa0515dbf861f2de86edf746db089a536e4c4",
+    "company": "Alvotech",
+    "ticker": "ALVO",
+    "title": "Alvotech Announces Financial Results for the Nine Months to September 30, 2026, with a Business Update",
+    "url": "https://www.alvotech.com/newsroom/alvotech-announces-financial-results-for-the-nine-months-to-september-30-2026-with-a-business-update",
+    "detected_at": "2026-11-12T00:30:02.511260+00:00",
+    "source_page": "https://www.alvotech.com/newsroom"
+  },
+  {
+    "id": "113b6cbf7bb0e870039f621195d9ef3c483b37677e36a2937229eeeee17a9ff2",
+    "company": "Pfizer",
+    "ticker": "PFE",
+    "title": "Pfizer and Blackstone Life Sciences Announce Strategic Funding Agreement for Obesity Program",
+    "url": "https://www.pfizer.com/news/press-release/press-release-detail/pfizer-and-blackstone-life-sciences-announce-strategic",
+    "detected_at": "2026-11-12T00:30:27.193299+00:00",
+    "source_page": "https://www.pfizer.com/news"
   }
 ]
