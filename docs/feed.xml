@@ -7,7 +7,7 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 12 Nov 2026 16:18:58 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2026 22:20:44 +0000</lastBuildDate>
     <item>
       <title>Amgen: AMGEN ANNOUNCES ADDITIONAL $300 MILLION U.S. MANUFACTURING INVESTMENT, TOTALING NEARLY $2 BILLION OVER THE LAST YEAR</title>
       <link>https://www.amgen.com/newsroom/press-releases/2026/05/amgen-announces-additional-300-million-us-manufacturing-investment-totaling-nearly-2-billion-over-the-last-year</link>
@@ -266,6 +266,20 @@
       <description>Official company source. Detected 2026-11-12T16:18:48.489303+00:00</description>
       <guid isPermaLink="false">5efcf0058a6ac227ad91d578196b25e431e13196af7558f5989ba3395be47dd5</guid>
       <pubDate>Thu, 12 Nov 2026 16:18:48 +0000</pubDate>
+    </item>
+    <item>
+      <title>Arrowhead Pharmaceuticals: Arrowhead Pharmaceuticals Reports 2026 Fiscal Year-End Results</title>
+      <link>https://arrowheadpharma.com/en-us/newsroom/arrowhead-pharmaceuticals-reports-2026-fiscal-year-end-results</link>
+      <description>Official company source. Detected 2026-11-12T22:19:56.013047+00:00</description>
+      <guid isPermaLink="false">93a2c421ae7d8ffb6f119fac8a296f0ca81b850eb76ef7e913fe2bde037a79de</guid>
+      <pubDate>Thu, 12 Nov 2026 22:19:56 +0000</pubDate>
+    </item>
+    <item>
+      <title>Novartis: New long-term Rhapsido® (remibrutinib) Phase III data show sustained efficacy through week 52 in chronic inducible urticaria (CIndU)</title>
+      <link>https://www.novartis.com/news/media-releases/new-long-term-rhapsido-remibrutinib-phase-iii-data-show-sustained-efficacy-through-week-52-chronic-inducible-urticaria-cindu</link>
+      <description>Official company source. Detected 2026-11-12T22:20:07.900277+00:00</description>
+      <guid isPermaLink="false">63656ea2c82fc9a54b366459ad7b9c652aa7d076e6215ec0faf4693cd50e8f81</guid>
+      <pubDate>Thu, 12 Nov 2026 22:20:07 +0000</pubDate>
     </item>
   </channel>
 </rss>
