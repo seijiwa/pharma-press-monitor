@@ -349,5 +349,14 @@
     "url": "https://www.novartis.com/news/media-releases/new-long-term-rhapsido-remibrutinib-phase-iii-data-show-sustained-efficacy-through-week-52-chronic-inducible-urticaria-cindu",
     "detected_at": "2026-11-12T22:20:07.900277+00:00",
     "source_page": "https://www.novartis.com/news"
+  },
+  {
+    "id": "c8b7012b58ae1c642cbe60fd23dd4f6ac0ef425800b518581a265bb5bcc6575f",
+    "company": "Biogen",
+    "ticker": "BIIB",
+    "title": "LEQEMBI® Pen (Subcutaneous Formulation of LEQEMBI®) Now Available in Japan for Patients with Early Alzheimer’s Disease",
+    "url": "https://investors.biogen.com/news-releases/news-release-details/leqembir-pen-subcutaneous-formulation-leqembir-now-available",
+    "detected_at": "2026-11-12T23:57:02.095093+00:00",
+    "source_page": "https://investors.biogen.com/news/news-releases"
   }
 ]
