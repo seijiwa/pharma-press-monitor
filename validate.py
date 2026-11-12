@@ -23,6 +23,8 @@ fixture='<div class="data_row"><div class="data_title">2026.11.09</div><div clas
 assert monitor.candidates('https://en.innoventbio.com/InvestorsAndMedia/PressRelease',fixture)[0]['title']=='Innovent Announces Phase 3 Results'
 fixture='<div class="item href"><p class="time">2026-11-10</p><h3>Kelun Announces New Clinical Results</h3></div>'
 assert monitor.candidates('https://en.kelun-biotech.com/newsCenter.aspx?mid=18',fixture)[0]['key'].startswith('https://en.kelun-biotech.com/newsCenter.aspx?mid=18#release-')
+fixture='<div class="home_news"><h4>November 4, 2026</h4><p>Enanta Pharmaceuticals to Participate in Upcoming Investor Conferences</p><p><a href="https://ir.enanta.com/news-releases/news-release-details/enanta-participate-upcoming-investor">Read More »</a></p></div>'
+assert monitor.candidates('https://www.enanta.com/',fixture)[0]['title']=='Enanta Pharmaceuticals to Participate in Upcoming Investor Conferences'
 
 with tempfile.TemporaryDirectory() as directory:
     root=Path(directory)
@@ -40,6 +42,10 @@ with tempfile.TemporaryDirectory() as directory:
         with patch.object(monitor,'collect',return_value=(source,'test',[one,two])):monitor.main();monitor.main()
         assert len(json.loads(monitor.EVENTS.read_text()))==1
         assert len(ET.parse(root/'docs/feed.xml').findall('.//item'))==1
+        feed_events=[{'id':str(i),'company':'AbbVie','title':str(i),'url':f'https://example.com/{i}',
+                      'detected_at':f'2026-11-0{i+1}T00:00:00+00:00'} for i in range(3)]
+        monitor.make_feeds(feed_events,r[:1])
+        assert [x.findtext('title') for x in ET.parse(root/'docs/feed.xml').findall('.//item')]==['AbbVie: 2','AbbVie: 1','AbbVie: 0']
         before=monitor.STATE.read_text()
         with patch.object(monitor,'collect',side_effect=RuntimeError('test unavailable')):
             try:monitor.main()

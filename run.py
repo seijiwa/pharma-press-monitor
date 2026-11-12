@@ -95,6 +95,11 @@ def candidates(page_url, raw):
                 value=paragraph.get_text(' ',strip=True)
                 if len(value)>40:
                     txt=re.sub(r'^[A-Z][a-z]+ \d{1,2}, \d{4}\s*','',value); break
+        if host == 'enanta.com':
+            card=a.find_parent(class_='home_news')
+            if card:
+                title=next((p for p in card.find_all('p') if not p.find('a')),None)
+                if title: txt=title.get_text(' ',strip=True)
         if host == 'en.innoventbio.com':
             card=a.find_parent(class_='data_row')
             if card and card.select_one('.div_content'): txt=card.select_one('.div_content').get_text(' ',strip=True)
@@ -130,7 +135,7 @@ def make_feeds(events,companies):
     def build(path,title,evs):
         fg=FeedGenerator(); fg.id(base or 'urn:pharma-press-monitor'); fg.title(title); fg.description('New releases detected directly from official company newsroom/press-release pages.'); fg.link(href=(base+'/' if base else 'https://github.com/'),rel='alternate'); fg.language('en')
         for e in reversed(evs[-300:]):
-            fe=fg.add_entry(); fe.id(e['id']); fe.title(f"{e['company']}: {e['title']}"); fe.link(href=e['url']); fe.description(f"Official company source. Detected {e['detected_at']}"); fe.pubDate(datetime.fromisoformat(e['detected_at']))
+            fe=fg.add_entry(order='append'); fe.id(e['id']); fe.title(f"{e['company']}: {e['title']}"); fe.link(href=e['url']); fe.description(f"Official company source. Detected {e['detected_at']}"); fe.pubDate(datetime.fromisoformat(e['detected_at']))
         fg.rss_file(str(path),pretty=True)
     build(DOCS/'feed.xml','Pharma Official Press Releases',events)
     d=DOCS/'feeds'; d.mkdir(exist_ok=True)
@@ -149,7 +154,7 @@ def make_site(events,status,companies):
         samples=''.join(f"<li><a href='{html.escape(x['url'],quote=True)}' target='_blank' rel='noopener'>{html.escape(x['title'])}</a></li>" for x in record.get('samples',[]))
         slug=re.sub(r'[^a-z0-9]+','-',c['Company'].lower()).strip('-')
         cards+=f"<div class='card {'bad' if record.get('status')!='OK' else ''}'><b>{html.escape(c['Company'])}</b><br><span>{label}</span><br><small>{html.escape(record.get('checked_at',''))}</small><p><a href='{source}' target='_blank' rel='noopener'>公式の取得先</a> · <a href='feeds/{slug}.xml'>この会社のRSS</a></p><details><summary>取得した記事と確認情報</summary><ul>{samples}</ul><small>{html.escape(record.get('detail',''))}</small></details></div>"
-    page=f'''<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>製薬会社 公式ニュース監視</title><style>body{{font:14px system-ui;margin:24px;max-width:1400px}}h1{{margin-bottom:4px}}.summary{{padding:12px;background:#f3f3f3;border-radius:8px}}.grid{{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px;margin:16px 0}}.card{{border:1px solid #ddd;padding:9px;border-radius:7px}}.bad{{border:2px solid #b00020;background:#fff1f2}}table{{border-collapse:collapse;width:100%}}td,th{{padding:8px;border-bottom:1px solid #ddd;text-align:left}}a{{color:inherit}}</style></head><body><h1>製薬会社 公式ニュース監視</h1><div class="summary"><b>登録:</b> {len(companies)}社 &nbsp; <b>公式ページ取得:</b> {sum(v.get("status")=="OK" for v in status.values())}社 &nbsp; <b>公式RSSのみ:</b> {sum(v.get("status")=="RSS_ONLY" for v in status.values())}社 &nbsp; <b>取得失敗:</b> {sum(v.get("status")=="FAIL" for v in status.values())}社 &nbsp; <a href="feed.xml">全社統合RSS</a></div><p>約20分間隔で確認。初回は基準値を保存し、その後の新規URLを配信します。「取得できています」は公式サイトの記事候補を取得できた状態です。全記事の網羅は未検証です。公式RSSによる補完と取得失敗は区別して表示します。Kelunは記事の固定URLがないため、見出しと日付で新着を判定し、ニュース一覧にリンクします。</p><h2>会社別の取得状況</h2><div class="grid">{cards}</div><h2>検出した新着記事</h2><table><tr><th>Detected</th><th>Company</th><th>Official release</th></tr>{rows}</table></body></html>'''
+    page=f'''<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>製薬会社 公式ニュース監視</title><style>body{{font:14px system-ui;margin:24px;max-width:1400px}}h1{{margin-bottom:4px}}.summary{{padding:12px;background:#f3f3f3;border-radius:8px}}.grid{{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px;margin:16px 0}}.card{{border:1px solid #ddd;padding:9px;border-radius:7px}}.bad{{border:2px solid #b00020;background:#fff1f2}}table{{border-collapse:collapse;width:100%}}td,th{{padding:8px;border-bottom:1px solid #ddd;text-align:left}}a{{color:inherit}}</style></head><body><h1>製薬会社 公式ニュース監視</h1><div class="summary"><b>登録:</b> {len(companies)}社 &nbsp; <b>公式ページ取得:</b> {sum(v.get("status")=="OK" for v in status.values())}社 &nbsp; <b>公式RSSのみ:</b> {sum(v.get("status")=="RSS_ONLY" for v in status.values())}社 &nbsp; <b>取得失敗:</b> {sum(v.get("status")=="FAIL" for v in status.values())}社 &nbsp; <a href="feed.xml">全社統合RSS</a></div><p>20分ごとの起動を設定していますが、GitHub側の混雑等で実行が遅れることがあります。実際の最終確認時刻を確認してください。初回は基準値を保存し、その後の新規URLを配信します。「取得できています」は公式サイトの記事候補を取得できた状態です。全記事の網羅は未検証です。公式RSSによる補完と取得失敗は区別して表示します。Kelunは記事の固定URLがないため、見出しと日付で新着を判定し、ニュース一覧にリンクします。</p><p id="freshness" data-checked="{html.escape(max((v.get('checked_at','') for v in status.values()),default=''))}">最終確認: {html.escape(max((v.get('checked_at','') for v in status.values()),default='未実行'))}（UTC）</p><script>const el=document.getElementById('freshness');const stamp=new Date(el.dataset.checked);function showAge(){{const age=Math.floor((Date.now()-stamp.getTime())/60000);if(!Number.isFinite(age))return;el.textContent='最終確認: '+stamp.toLocaleString('ja-JP',{{timeZone:'Asia/Tokyo'}})+'（日本時間） / '+Math.max(0,age)+'分前';if(age>90){{el.textContent+=' — 更新が遅れています。新着なしを意味しません。';el.style.color='#b00020';el.style.fontWeight='bold';}}}}showAge();setInterval(showAge,60000);</script><h2>会社別の取得状況</h2><div class="grid">{cards}</div><h2>検出した新着記事</h2><table><tr><th>Detected</th><th>Company</th><th>Official release</th></tr>{rows}</table></body></html>'''
     (DOCS/'index.html').write_text(page,encoding='utf-8')
 
 def collect_page(url):
@@ -162,7 +167,29 @@ def collect_page(url):
 def collect_official_data(company):
     """Read public data endpoints used by the official newsroom itself."""
     name=company['Company']; page=company['Official/Source page'].strip()
-    if name == 'Amgen':
+    if name in ('Hims & Hers Health','Summit Therapeutics','Teva'):
+        # Public feed used by the company's own Q4 newsroom widget.
+        origin={'Hims & Hers Health':'https://investors.hims.com',
+                'Summit Therapeutics':'https://smmttx.com',
+                'Teva':'https://ir.tevapharm.com'}[name]
+        response=requests.get(origin+'/feed/PressRelease.svc/GetPressReleaseList',params={
+            'LanguageId':1,'bodyType':0,'pressReleaseDateFilter':3,'categoryId':'',
+            'pageSize':50,'pageNumber':0,'tagList':'','includeTags':'true','year':-1
+        },headers={'User-Agent':UA},timeout=40)
+        response.raise_for_status()
+        items=[{'url':norm(urljoin(origin,x['LinkToDetailPage'])),'title':html.unescape(x['Headline']),'score':5}
+            for x in response.json()['GetPressReleaseListResult']
+            if x.get('Headline') and x.get('LinkToDetailPage')]
+    elif name == 'Lundbeck':
+        raw,_,_=fetch_requests(page)
+        listing=BeautifulSoup(raw,'html.parser').select_one('[data-template="newsarchive"][data-url]')
+        if not listing: raise RuntimeError('Lundbeck official news index configuration missing')
+        data,_,_=fetch_requests(urljoin(page,listing['data-url']))
+        records=sorted(json.loads(data)['items'],key=lambda x:x.get('publishDate',''),reverse=True)
+        # Links are published by Lundbeck itself and may point to its Cision newsroom.
+        items=[{'url':x['url'],'title':html.unescape(x['title']),'score':5}
+            for x in records if x.get('language')=='en' and x.get('url','').startswith('https://')][:50]
+    elif name == 'Amgen':
         raw,_,_=fetch_requests(page)
         node=BeautifulSoup(raw,'html.parser').select_one('#rootId')
         if not node: raise RuntimeError('Amgen official news configuration missing')
