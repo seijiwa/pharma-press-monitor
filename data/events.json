@@ -583,5 +583,32 @@
     "url": "https://www.grifols.com/en/view-news/-/news/shareholders-approve-key-resolutions-at-the-2026-annual-general-shareholders-meeting",
     "detected_at": "2026-11-13T02:43:02.725462+00:00",
     "source_page": "https://www.grifols.com/en/newsroom"
+  },
+  {
+    "id": "5d5980a38a358837b31a51fd82af2032be9b5d756f5cd7680b93436c4527b30b",
+    "company": "GSK",
+    "ticker": "GSK",
+    "title": "Bexsero (4CMenB) receives positive CHMP opinion for one-dose Meningitis B booster for 10+ year olds",
+    "url": "https://www.gsk.com/en-gb/media/press-releases/bexsero-4cmenb-receives-positive-chmp-opinion-for-one-dose-meningitis-b-booster-for-10plus-year-olds",
+    "detected_at": "2026-11-13T09:59:57.626172+00:00",
+    "source_page": "https://www.gsk.com/en-gb/media/press-releases/"
+  },
+  {
+    "id": "8f740fabe4c755b5e26d5939d61d912489c5be64255d2c4c0e737ce2ca2d9e99",
+    "company": "Galderma",
+    "ticker": "GALD",
+    "title": "Mexico becomes the first market worldwide to receive approval for Galderma’s Restylane® Shaype™ for both chin and its first jawline indication",
+    "url": "https://www.galderma.com/news/mexico-approval-galderma-restylane-shaype",
+    "detected_at": "2026-11-13T09:59:57.626249+00:00",
+    "source_page": "https://www.galderma.com/news"
+  },
+  {
+    "id": "f37f9d7ca1b34d10afae363f96abaad0faed6dba79a5a2c37d68730847aac3f1",
+    "company": "Innovent Biologics",
+    "ticker": "1801 HK",
+    "title": "Innovent Showcases Preclinical Data of its First-in-Class IL-6 x TL1A Bispecific Antibody at ACR Convergence 2026",
+    "url": "https://en.innoventbio.com/InvestorsAndMedia/PressReleaseDetail?key=624",
+    "detected_at": "2026-11-13T09:59:57.626548+00:00",
+    "source_page": "https://en.innoventbio.com/InvestorsAndMedia/PressRelease"
   }
 ]
