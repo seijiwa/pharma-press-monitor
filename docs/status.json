@@ -1,7 +1,7 @@
 {
   "AbbVie": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:56:48.324479+00:00",
+    "checked_at": "2026-11-13T02:42:44.688231+00:00",
     "detail": "requests; 10 release/article links; 0 new",
     "source_url": "https://news.abbvie.com/",
     "samples": [
@@ -24,7 +24,7 @@
   },
   "Akeso": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:56:49.153800+00:00",
+    "checked_at": "2026-11-13T02:42:45.447876+00:00",
     "detail": "requests; 12 release/article links; 0 new",
     "source_url": "https://akesobio.com/en/media/akeso-news/",
     "samples": [
@@ -47,7 +47,7 @@
   },
   "Alkermes": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:56:49.156251+00:00",
+    "checked_at": "2026-11-13T02:42:45.448137+00:00",
     "detail": "requests; 3 release/article links; 0 new",
     "source_url": "https://www.alkermes.com/news",
     "samples": [
@@ -70,7 +70,7 @@
   },
   "Alumis": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:56:49.156291+00:00",
+    "checked_at": "2026-11-13T02:42:45.448173+00:00",
     "detail": "requests; 3 release/article links; 0 new",
     "source_url": "https://www.alumis.com/",
     "samples": [
@@ -93,7 +93,7 @@
   },
   "Alvotech": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:56:49.156332+00:00",
+    "checked_at": "2026-11-13T02:42:45.459249+00:00",
     "detail": "requests; 11 release/article links; 0 new",
     "source_url": "https://www.alvotech.com/newsroom",
     "samples": [
@@ -116,8 +116,8 @@
   },
   "Amgen": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:02.094182+00:00",
-    "detail": "official-newsroom-data; 30 release/article links; 0 new",
+    "checked_at": "2026-11-13T02:42:47.331979+00:00",
+    "detail": "official-newsroom-data; 50 release/article links; 20 new",
     "source_url": "https://www.amgen.com/newsroom/press-releases",
     "samples": [
       {
@@ -139,7 +139,7 @@
   },
   "Arrowhead Pharmaceuticals": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:02.094918+00:00",
+    "checked_at": "2026-11-13T02:42:47.332601+00:00",
     "detail": "requests; 616 release/article links; 0 new",
     "source_url": "https://arrowheadpharma.com/en-us/newsroom",
     "samples": [
@@ -162,7 +162,7 @@
   },
   "AstraZeneca": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:02.094989+00:00",
+    "checked_at": "2026-11-13T02:42:49.396043+00:00",
     "detail": "playwright; 6 release/article links; 0 new",
     "source_url": "https://www.astrazeneca.com/media-centre.html?type=pressrelease",
     "samples": [
@@ -185,7 +185,7 @@
   },
   "Avidity Biosciences": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:02.095022+00:00",
+    "checked_at": "2026-11-13T02:42:49.396118+00:00",
     "detail": "requests; successor Novartis: 34 parent releases checked, keyword matches only; 2 release/article links; 0 new",
     "source_url": "https://www.novartis.com/news",
     "samples": [
@@ -203,13 +203,13 @@
   },
   "Bayer": {
     "status": "FAIL",
-    "checked_at": "2026-11-12T23:57:02.095039+00:00",
+    "checked_at": "2026-11-13T02:42:49.396137+00:00",
     "detail": "Official page HTTP 403",
     "source_url": "https://www.bayer.com/en/news-stories"
   },
   "BioMarin": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:02.095080+00:00",
+    "checked_at": "2026-11-13T02:42:49.396185+00:00",
     "detail": "official-newsroom-data; 20 release/article links; 0 new",
     "source_url": "https://www.biomarin.com/news/press-releases/",
     "samples": [
@@ -232,8 +232,8 @@
   },
   "Biogen": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:02.095140+00:00",
-    "detail": "playwright (official corporate latest-news index); 4 release/article links; 1 new",
+    "checked_at": "2026-11-13T02:42:50.914105+00:00",
+    "detail": "playwright (official corporate latest-news index); 4 release/article links; 0 new",
     "source_url": "https://www.biogen.com/home.html",
     "samples": [
       {
@@ -255,7 +255,7 @@
   },
   "Bristol Myers Squibb": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:02.095173+00:00",
+    "checked_at": "2026-11-13T02:42:50.914189+00:00",
     "detail": "requests; 1 release/article links; 0 new",
     "source_url": "https://news.bms.com/news/default.aspx",
     "samples": [
@@ -268,7 +268,7 @@
   },
   "C2N Diagnostics": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:02.095214+00:00",
+    "checked_at": "2026-11-13T02:42:50.914236+00:00",
     "detail": "requests; 19 release/article links; 0 new",
     "source_url": "https://c2n.com/news-releases",
     "samples": [
@@ -291,7 +291,7 @@
   },
   "CSL": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:02.095248+00:00",
+    "checked_at": "2026-11-13T02:42:50.914275+00:00",
     "detail": "requests; 10 release/article links; 0 new",
     "source_url": "https://newsroom.csl.com/News-Releases",
     "samples": [
@@ -314,7 +314,7 @@
   },
   "Capricor Therapeutics": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:02.095280+00:00",
+    "checked_at": "2026-11-13T02:42:50.914305+00:00",
     "detail": "requests; 10 release/article links; 0 new",
     "source_url": "https://www.capricor.com/investors/news-events/press-releases",
     "samples": [
@@ -337,7 +337,7 @@
   },
   "Catalent": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:02.095315+00:00",
+    "checked_at": "2026-11-13T02:42:50.914338+00:00",
     "detail": "requests; 8 release/article links; 0 new",
     "source_url": "https://www.catalent.com/news",
     "samples": [
@@ -360,7 +360,7 @@
   },
   "Cullinan Therapeutics": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:02.095339+00:00",
+    "checked_at": "2026-11-13T02:42:50.914363+00:00",
     "detail": "requests; 3 release/article links; 0 new",
     "source_url": "https://cullinantherapeutics.com/",
     "samples": [
@@ -383,7 +383,7 @@
   },
   "Daiichi Sankyo": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:06.996341+00:00",
+    "checked_at": "2026-11-13T02:43:02.722468+00:00",
     "detail": "playwright; 353 release/article links; 0 new",
     "source_url": "https://www.daiichisankyo.com/media/press_release/",
     "samples": [
@@ -406,19 +406,19 @@
   },
   "Denali Therapeutics": {
     "status": "FAIL",
-    "checked_at": "2026-11-12T23:57:06.996432+00:00",
+    "checked_at": "2026-11-13T02:43:02.725040+00:00",
     "detail": "Official page HTTP 403",
     "source_url": "https://investors.denalitherapeutics.com/press-releases"
   },
   "Eli Lilly": {
     "status": "FAIL",
-    "checked_at": "2026-11-12T23:57:06.996458+00:00",
+    "checked_at": "2026-11-13T02:43:02.725087+00:00",
     "detail": "Official page HTTP 403; official RSS also unavailable: 403 Client Error: Forbidden for url: https://investor.lilly.com/rss/news-releases.xml",
     "source_url": "https://www.lilly.com/news"
   },
   "Enanta Pharmaceuticals": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:06.996500+00:00",
+    "checked_at": "2026-11-13T02:43:02.725153+00:00",
     "detail": "requests; 3 release/article links; 0 new",
     "source_url": "https://www.enanta.com/",
     "samples": [
@@ -441,7 +441,7 @@
   },
   "Erasca": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:06.996525+00:00",
+    "checked_at": "2026-11-13T02:43:02.725187+00:00",
     "detail": "requests; 2 release/article links; 0 new",
     "source_url": "https://www.erasca.com/",
     "samples": [
@@ -459,7 +459,7 @@
   },
   "Exelixis": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:06.996546+00:00",
+    "checked_at": "2026-11-13T02:43:02.725211+00:00",
     "detail": "requests; 1 release/article links; 0 new",
     "source_url": "https://www.exelixis.com/",
     "samples": [
@@ -472,7 +472,7 @@
   },
   "FUJIFILM Diosynth Biotechnologies": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:06.996578+00:00",
+    "checked_at": "2026-11-13T02:43:02.725245+00:00",
     "detail": "playwright; 9 release/article links; 0 new",
     "source_url": "https://fujifilmbiotechnologies.fujifilm.com/about/news/",
     "samples": [
@@ -495,7 +495,7 @@
   },
   "Fresenius": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:06.996616+00:00",
+    "checked_at": "2026-11-13T02:43:02.725286+00:00",
     "detail": "playwright; 8 release/article links; 0 new",
     "source_url": "https://www.fresenius.com/news",
     "samples": [
@@ -518,7 +518,7 @@
   },
   "GSK": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:06.996658+00:00",
+    "checked_at": "2026-11-13T02:43:02.725331+00:00",
     "detail": "playwright; 20 release/article links; 0 new",
     "source_url": "https://www.gsk.com/en-gb/media/press-releases/?ps=20&latestArticles=true",
     "samples": [
@@ -541,7 +541,7 @@
   },
   "Galderma": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:06.996691+00:00",
+    "checked_at": "2026-11-13T02:43:02.725367+00:00",
     "detail": "requests; 12 release/article links; 0 new",
     "source_url": "https://www.galderma.com/newsroom",
     "samples": [
@@ -564,7 +564,7 @@
   },
   "Genentech": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:06.996730+00:00",
+    "checked_at": "2026-11-13T02:43:02.725411+00:00",
     "detail": "requests; 25 release/article links; 0 new",
     "source_url": "https://www.gene.com/media",
     "samples": [
@@ -587,7 +587,7 @@
   },
   "Gilead Sciences": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:06.996765+00:00",
+    "checked_at": "2026-11-13T02:43:02.725446+00:00",
     "detail": "playwright; 8 release/article links; 0 new",
     "source_url": "https://www.gilead.com/news",
     "samples": [
@@ -610,8 +610,8 @@
   },
   "Grifols": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:06.996808+00:00",
-    "detail": "requests; 6 release/article links; 0 new",
+    "checked_at": "2026-11-13T02:43:37.765837+00:00",
+    "detail": "playwright; 12 release/article links; 6 new",
     "source_url": "https://www.grifols.com/en/newsroom",
     "samples": [
       {
@@ -633,7 +633,7 @@
   },
   "Harmony Biosciences": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:06.996841+00:00",
+    "checked_at": "2026-11-13T02:43:37.765924+00:00",
     "detail": "playwright (official corporate latest-news index); 9 release/article links; 0 new",
     "source_url": "https://www.harmonybiosciences.com/newsroom/",
     "samples": [
@@ -656,7 +656,7 @@
   },
   "Hims & Hers Health": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:06.996894+00:00",
+    "checked_at": "2026-11-13T02:43:37.765984+00:00",
     "detail": "official-newsroom-data; 50 release/article links; 0 new",
     "source_url": "https://investors.hims.com/news/default.aspx",
     "samples": [
@@ -679,7 +679,7 @@
   },
   "Immunome": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:06.996922+00:00",
+    "checked_at": "2026-11-13T02:43:37.766035+00:00",
     "detail": "requests; 10 release/article links; 0 new",
     "source_url": "https://investors.immunome.com/news-releases/",
     "samples": [
@@ -702,7 +702,7 @@
   },
   "Innovent Biologics": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:06.996946+00:00",
+    "checked_at": "2026-11-13T02:43:37.766059+00:00",
     "detail": "playwright; 3 release/article links; 0 new",
     "source_url": "https://en.innoventbio.com/InvestorsAndMedia/PressRelease",
     "samples": [
@@ -725,13 +725,13 @@
   },
   "Ionis Pharmaceuticals": {
     "status": "FAIL",
-    "checked_at": "2026-11-12T23:57:06.996960+00:00",
+    "checked_at": "2026-11-13T02:43:37.766075+00:00",
     "detail": "Official page HTTP 403",
     "source_url": "https://ir.ionis.com/news-releases"
   },
   "Jazz Pharmaceuticals": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:06.996981+00:00",
+    "checked_at": "2026-11-13T02:43:37.766103+00:00",
     "detail": "requests; 4 release/article links; 0 new",
     "source_url": "https://www.jazzpharma.com/",
     "samples": [
@@ -754,7 +754,7 @@
   },
   "Jnana Therapeutics": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:06.997000+00:00",
+    "checked_at": "2026-11-13T02:43:37.766121+00:00",
     "detail": "playwright; 1 release/article links; 0 new",
     "source_url": "https://www.jnanatx.com/news/?pag=1",
     "samples": [
@@ -767,7 +767,7 @@
   },
   "Johnson & Johnson": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:06.997027+00:00",
+    "checked_at": "2026-11-13T02:43:37.766148+00:00",
     "detail": "requests; 9 release/article links; 0 new",
     "source_url": "https://www.jnj.com/media-center/press-releases",
     "samples": [
@@ -790,7 +790,7 @@
   },
   "Kura Oncology": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:06.997051+00:00",
+    "checked_at": "2026-11-13T02:43:37.766173+00:00",
     "detail": "requests; 3 release/article links; 0 new",
     "source_url": "https://kuraoncology.com/newsroom/",
     "samples": [
@@ -813,7 +813,7 @@
   },
   "Kyowa Kirin": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:06.997075+00:00",
+    "checked_at": "2026-11-13T02:43:37.766198+00:00",
     "detail": "playwright; 7 release/article links; 0 new",
     "source_url": "https://www.kyowakirin.com/media_center/news_releases/index.html",
     "samples": [
@@ -836,19 +836,19 @@
   },
   "Lonza": {
     "status": "FAIL",
-    "checked_at": "2026-11-12T23:57:06.997088+00:00",
+    "checked_at": "2026-11-13T02:43:37.766211+00:00",
     "detail": "Official page HTTP 403",
     "source_url": "https://www.lonza.com/news-and-media/news-archive"
   },
   "Lundbeck": {
     "status": "FAIL",
-    "checked_at": "2026-11-12T23:57:06.997098+00:00",
+    "checked_at": "2026-11-13T02:43:37.766222+00:00",
     "detail": "403 Client Error: Forbidden for url: https://www.lundbeck.com/global/press/news-archive",
     "source_url": "https://www.lundbeck.com/global/press/news-archive"
   },
   "Lupin": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:06.997122+00:00",
+    "checked_at": "2026-11-13T02:43:37.766247+00:00",
     "detail": "requests; 6 release/article links; 0 new",
     "source_url": "https://www.lupin.com/investors/press-releases",
     "samples": [
@@ -871,7 +871,7 @@
   },
   "Merck & Co.": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:06.997150+00:00",
+    "checked_at": "2026-11-13T02:43:37.766275+00:00",
     "detail": "requests; 10 release/article links; 0 new",
     "source_url": "https://www.merck.com/media/news/",
     "samples": [
@@ -894,7 +894,7 @@
   },
   "Neurocrine Biosciences": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:06.997247+00:00",
+    "checked_at": "2026-11-13T02:43:37.766376+00:00",
     "detail": "official-newsroom-data; 100 release/article links; 0 new",
     "source_url": "https://www.neurocrine.com/investors/",
     "samples": [
@@ -917,7 +917,7 @@
   },
   "Novartis": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:06.997298+00:00",
+    "checked_at": "2026-11-13T02:43:37.766460+00:00",
     "detail": "requests; 34 release/article links; 0 new",
     "source_url": "https://www.novartis.com/news",
     "samples": [
@@ -940,7 +940,7 @@
   },
   "Novo Nordisk": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:06.997354+00:00",
+    "checked_at": "2026-11-13T02:43:37.766532+00:00",
     "detail": "official-newsroom-data; 50 release/article links; 0 new",
     "source_url": "https://www.novonordisk.com/news-and-media/news-and-ir-materials.html",
     "samples": [
@@ -963,7 +963,7 @@
   },
   "Oruka Therapeutics": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:06.997376+00:00",
+    "checked_at": "2026-11-13T02:43:37.766568+00:00",
     "detail": "requests; 1 release/article links; 0 new",
     "source_url": "https://orukatx.com/",
     "samples": [
@@ -976,7 +976,7 @@
   },
   "Pfizer": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:06.997396+00:00",
+    "checked_at": "2026-11-13T02:43:37.766606+00:00",
     "detail": "requests; 5 release/article links; 0 new",
     "source_url": "https://www.pfizer.com/newsroom",
     "samples": [
@@ -999,20 +999,20 @@
   },
   "Reata Pharmaceuticals": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:10.629677+00:00",
+    "checked_at": "2026-11-13T02:43:37.766642+00:00",
     "detail": "playwright (official corporate latest-news index); successor Biogen: 4 parent releases checked, keyword matches only; 0 release/article links; 0 new",
     "source_url": "https://www.biogen.com/home.html",
     "samples": []
   },
   "Regeneron": {
     "status": "FAIL",
-    "checked_at": "2026-11-12T23:57:10.629764+00:00",
+    "checked_at": "2026-11-13T02:43:37.766666+00:00",
     "detail": "Official page HTTP 403; official RSS also unavailable: 403 Client Error: Forbidden for url: https://investor.regeneron.com/rss/news-releases.xml?items=15",
     "source_url": "https://newsroom.regeneron.com/news/press-releases"
   },
   "Revolution Medicines": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:10.629815+00:00",
+    "checked_at": "2026-11-13T02:43:37.766711+00:00",
     "detail": "playwright; 7 release/article links; 0 new",
     "source_url": "https://www.revmed.com/media/",
     "samples": [
@@ -1035,7 +1035,7 @@
   },
   "Roche": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:10.719325+00:00",
+    "checked_at": "2026-11-13T02:43:37.766761+00:00",
     "detail": "playwright; 11 release/article links; 0 new",
     "source_url": "https://www.roche.com/media/releases",
     "samples": [
@@ -1058,7 +1058,7 @@
   },
   "Samsung Biologics": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:10.719834+00:00",
+    "checked_at": "2026-11-13T02:43:37.766831+00:00",
     "detail": "official-newsroom-data; 30 release/article links; 0 new",
     "source_url": "https://samsungbiologics.com/media/company-news",
     "samples": [
@@ -1081,7 +1081,7 @@
   },
   "Sanofi": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:10.721526+00:00",
+    "checked_at": "2026-11-13T02:43:37.766886+00:00",
     "detail": "requests; 20 release/article links; 0 new",
     "source_url": "https://www.sanofi.com/en/media-room/press-releases",
     "samples": [
@@ -1104,7 +1104,7 @@
   },
   "Santen Pharmaceutical": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:10.721627+00:00",
+    "checked_at": "2026-11-13T02:43:37.766929+00:00",
     "detail": "requests; 11 release/article links; 0 new",
     "source_url": "https://www.santen.com/en/news",
     "samples": [
@@ -1127,7 +1127,7 @@
   },
   "Sarepta Therapeutics": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:10.723024+00:00",
+    "checked_at": "2026-11-13T02:43:37.767009+00:00",
     "detail": "requests; 34 release/article links; 0 new",
     "source_url": "https://www.sarepta.com/newsroom",
     "samples": [
@@ -1150,13 +1150,13 @@
   },
   "Scholar Rock": {
     "status": "FAIL",
-    "checked_at": "2026-11-12T23:57:10.723046+00:00",
+    "checked_at": "2026-11-13T02:43:37.767040+00:00",
     "detail": "Official page HTTP 403; official RSS also unavailable: 403 Client Error: Forbidden for url: https://investors.scholarrock.com/rss/news-releases.xml",
     "source_url": "https://investors.scholarrock.com/investors-media/press-releases/"
   },
   "Sichuan Kelun-Biotech": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:10.723082+00:00",
+    "checked_at": "2026-11-13T02:43:37.767082+00:00",
     "detail": "requests; 8 release/article links; 0 new",
     "source_url": "https://en.kelun-biotech.com/newsCenter.aspx?mid=18",
     "samples": [
@@ -1182,13 +1182,13 @@
   },
   "Structure Therapeutics": {
     "status": "FAIL",
-    "checked_at": "2026-11-12T23:57:10.723099+00:00",
+    "checked_at": "2026-11-13T02:43:37.767113+00:00",
     "detail": "Official page HTTP 403; official RSS also unavailable: 403 Client Error: Forbidden for url: https://ir.structuretx.com/rss/news-releases.xml",
     "source_url": "https://ir.structuretx.com/press-releases"
   },
   "Sumitomo Pharma": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:14.434060+00:00",
+    "checked_at": "2026-11-13T02:43:37.767160+00:00",
     "detail": "playwright; 18 release/article links; 0 new",
     "source_url": "https://www.sumitomo-pharma.com/news/",
     "samples": [
@@ -1211,7 +1211,7 @@
   },
   "Summit Therapeutics": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:14.434163+00:00",
+    "checked_at": "2026-11-13T02:43:37.767248+00:00",
     "detail": "official-newsroom-data; 50 release/article links; 0 new",
     "source_url": "https://smmttx.com/news/press-releases/default.aspx",
     "samples": [
@@ -1234,13 +1234,13 @@
   },
   "Supernus Pharmaceuticals": {
     "status": "FAIL",
-    "checked_at": "2026-11-12T23:57:14.434182+00:00",
+    "checked_at": "2026-11-13T02:43:37.767267+00:00",
     "detail": "Official page HTTP 403; official RSS also unavailable: 403 Client Error: Forbidden for url: https://ir.supernus.com/rss/news-releases.xml",
     "source_url": "https://ir.supernus.com/press-releases"
   },
   "Teva": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:14.434251+00:00",
+    "checked_at": "2026-11-13T02:43:37.767334+00:00",
     "detail": "official-newsroom-data; 49 release/article links; 0 new",
     "source_url": "https://ir.tevapharm.com/news-and-events/press-releases/default.aspx",
     "samples": [
@@ -1263,7 +1263,7 @@
   },
   "Ultragenyx": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:14.434298+00:00",
+    "checked_at": "2026-11-13T02:43:37.767372+00:00",
     "detail": "requests; 10 release/article links; 0 new",
     "source_url": "https://www.ultragenyx.com/newsroom/news-and-press-releases/",
     "samples": [
@@ -1286,7 +1286,7 @@
   },
   "Vera Therapeutics": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:14.434333+00:00",
+    "checked_at": "2026-11-13T02:43:37.767404+00:00",
     "detail": "requests; 10 release/article links; 0 new",
     "source_url": "https://ir.veratx.com/news-events/press-releases",
     "samples": [
@@ -1309,13 +1309,13 @@
   },
   "Vertex Pharmaceuticals": {
     "status": "FAIL",
-    "checked_at": "2026-11-12T23:57:14.434346+00:00",
+    "checked_at": "2026-11-13T02:43:37.767418+00:00",
     "detail": "Official page HTTP 403; official RSS also unavailable: 403 Client Error: Forbidden for url: https://investors.vrtx.com/rss/news-releases.xml?items=15",
     "source_url": "https://investors.vrtx.com/news-releases"
   },
   "Viking Therapeutics": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:14.434375+00:00",
+    "checked_at": "2026-11-13T02:43:37.767441+00:00",
     "detail": "requests; 5 release/article links; 0 new",
     "source_url": "https://ir.vikingtherapeutics.com/press-releases",
     "samples": [
@@ -1338,7 +1338,7 @@
   },
   "WuXi Biologics": {
     "status": "OK",
-    "checked_at": "2026-11-12T23:57:14.434406+00:00",
+    "checked_at": "2026-11-13T02:43:37.767473+00:00",
     "detail": "requests; 9 release/article links; 0 new",
     "source_url": "https://www.wuxibiologics.com/press-release/",
     "samples": [
@@ -1361,7 +1361,7 @@
   },
   "Zealand Pharma": {
     "status": "FAIL",
-    "checked_at": "2026-11-12T23:57:14.434418+00:00",
+    "checked_at": "2026-11-13T02:43:37.767487+00:00",
     "detail": "Official page HTTP 403",
     "source_url": "https://www.zealandpharma.com/news-media/"
   }
