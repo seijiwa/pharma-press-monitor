@@ -97,7 +97,9 @@ def deliver(mode, now, subject, body):
     message.set_content(body)
     with smtplib.SMTP("smtp.gmail.com", 587, timeout=25) as smtp:
         smtp.starttls(context=ssl.create_default_context())
-        smtp.login(address, password)
+        smtp.ehlo()
+        smtp.user, smtp.password = address, password
+        smtp.auth("LOGIN", smtp.auth_login, initial_response_ok=False)
         if request_ref(tag + "-reserved", create=True) != 201:
             raise SystemExit("The date could not be reserved. Delivery stopped.")
         if smtp.send_message(message):
