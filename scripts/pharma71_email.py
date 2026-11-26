@@ -95,8 +95,8 @@ def deliver(mode, now, subject, body):
     message["Subject"] = f"【テスト】{subject}" if mode == "test" else subject
     message["Message-ID"] = f"<{tag}@pharma-press-monitor.github.io>"
     message.set_content(body)
-    with smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=25,
-                          context=ssl.create_default_context()) as smtp:
+    with smtplib.SMTP("smtp.gmail.com", 587, timeout=25) as smtp:
+        smtp.starttls(context=ssl.create_default_context())
         smtp.login(address, password)
         if request_ref(tag + "-reserved", create=True) != 201:
             raise SystemExit("The date could not be reserved. Delivery stopped.")
