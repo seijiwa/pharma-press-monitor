@@ -1,56 +1,61 @@
 {
   "AbbVie": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:38.669468+00:00",
-    "detail": "requests; 10 release/article links; 0 new",
+    "checked_at": "2026-11-26T01:30:48.819403+00:00",
+    "detail": "requests; 10 release/article links; 3 new",
     "source_url": "https://news.abbvie.com/",
     "samples": [
       {
-        "url": "https://news.abbvie.com/2026-11-08-Allergan-Aesthetics-Reports-Improved-Satisfaction-With-Facial-Appearance-Following-Aesthetic-Treatment-in-Two-Studies-of-Patients-on-GLP-1-Medications",
-        "title": "Allergan Aesthetics Reports Improved Satisfaction With Facial Appearance Following Aesthetic Treatment in Two Studies of Patients on GLP-1 Medications",
+        "url": "https://news.abbvie.com/2026-11-23-AbbVies-RINVOQ-R-upadacitinib-Approved-as-the-First-Systemic-Therapy-in-the-U-S-to-Treat-Adult-and-Pediatric-Patients-With-Nonsegmental-Vitiligo",
+        "title": "AbbVie's RINVOQ® (upadacitinib) Approved as the First Systemic Therapy in the U.S. to Treat Adult and Pediatric Patients With Nonsegmental Vitiligo",
         "score": 3
       },
       {
-        "url": "https://news.abbvie.com/2026-11-03-Allergan-Aesthetics-to-Present-New-Research-on-Aesthetic-Care-Following-Medical-Weight-Loss-and-Evolving-Patient-Needs-at-ASDS-2026",
-        "title": "Allergan Aesthetics to Present New Research on Aesthetic Care Following Medical Weight Loss and Evolving Patient Needs at ASDS 2026",
+        "url": "https://news.abbvie.com/2026-11-20-AbbVie-to-Present-at-the-Piper-Sandler-38th-Annual-Healthcare-Conference",
+        "title": "AbbVie to Present at the Piper Sandler 38th Annual Healthcare Conference",
         "score": 3
       },
       {
-        "url": "https://news.abbvie.com/2026-10-30-AbbVie-Reports-Third-Quarter-2026-Financial-Results",
-        "title": "AbbVie Reports Third-Quarter 2026 Financial Results",
+        "url": "https://news.abbvie.com/2026-11-19-AbbVie-to-Invest-More-than-200-Million-in-Puerto-Rico-to-Modernize-Barceloneta-Manufacturing-Campus",
+        "title": "AbbVie to Invest More than $200 Million in Puerto Rico to Modernize Barceloneta Manufacturing Campus",
         "score": 3
       }
     ]
   },
   "Akeso": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:39.378582+00:00",
-    "detail": "requests; 12 release/article links; 0 new",
+    "checked_at": "2026-11-26T01:30:49.817971+00:00",
+    "detail": "requests; 12 release/article links; 2 new",
     "source_url": "https://akesobio.com/en/media/akeso-news/",
     "samples": [
       {
+        "url": "https://akesobio.com/en/media/akeso-news/261116",
+        "title": "Akeso’s Gumokimab (IL-17A) Receives NMPA Approval for Active Ankylosing Spondylitis",
+        "score": 3
+      },
+      {
+        "url": "https://akesobio.com/en/media/akeso-news/261117",
+        "title": "Akeso Announces NMPA Acceptance of sNDA for Ivonescimab in Combination with Chemotherapy for First-Line Biliary Tract Cancer",
+        "score": 3
+      },
+      {
         "url": "https://akesobio.com/en/media/akeso-news/261105",
         "title": "Ivonescimab Receives NMPA Priority Review for First-Line Biliary Tract Cancer",
-        "score": 3
-      },
-      {
-        "url": "https://akesobio.com/en/media/akeso-news/261106",
-        "title": "Phase II Study of Ivonescimab in the Perioperative Setting for Resectable NSCLC Published in Nature Medicine",
-        "score": 3
-      },
-      {
-        "url": "https://akesobio.com/en/media/akeso-news/20261025",
-        "title": "Positive Overall Survival Results from the Phase III HARMONi-GI1 Trial of Ivonescimab Plus Chemotherapy Versus Durvalumab Plus Chemotherapy in First-Line Biliary Tract Cancer Presented at the ESMO 2026 Presidential Symposium",
         "score": 3
       }
     ]
   },
   "Alkermes": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:39.378894+00:00",
-    "detail": "requests; 3 release/article links; 0 new",
+    "checked_at": "2026-11-26T01:30:49.818144+00:00",
+    "detail": "requests; 3 release/article links; 1 new",
     "source_url": "https://www.alkermes.com/news",
     "samples": [
+      {
+        "url": "https://investor.alkermes.com/news-releases/news-release-details/alkermes-participate-9th-annual-evercore-healthcare-conference",
+        "title": "Alkermes to Participate in the 9th Annual Evercore Healthcare Conference",
+        "score": 3
+      },
       {
         "url": "https://investor.alkermes.com/news-releases/news-release-details/alkermes-showcases-research-psychiatry-and-sleep-portfolios",
         "title": "Alkermes Showcases Research From Psychiatry and Sleep Portfolios at the Neuroscience Education Institute Fall Congress",
@@ -60,17 +65,12 @@
         "url": "https://investor.alkermes.com/news-releases/news-release-details/alkermes-present-upcoming-investor-conferences",
         "title": "Alkermes to Present at Upcoming Investor Conferences",
         "score": 3
-      },
-      {
-        "url": "https://investor.alkermes.com/news-releases/news-release-details/alkermes-plc-reports-third-quarter-2026-financial-results",
-        "title": "Alkermes plc Reports Third Quarter 2026 Financial Results",
-        "score": 3
       }
     ]
   },
   "Alumis": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:39.378936+00:00",
+    "checked_at": "2026-11-26T01:30:49.818172+00:00",
     "detail": "requests; 3 release/article links; 0 new",
     "source_url": "https://www.alumis.com/",
     "samples": [
@@ -93,10 +93,15 @@
   },
   "Alvotech": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:39.378968+00:00",
-    "detail": "requests; 11 release/article links; 0 new",
+    "checked_at": "2026-11-26T01:30:49.818209+00:00",
+    "detail": "requests; 11 release/article links; 1 new",
     "source_url": "https://www.alvotech.com/newsroom",
     "samples": [
+      {
+        "url": "https://www.alvotech.com/newsroom/alvotech-to-present-at-upcoming-investor-conferences-in-december",
+        "title": "Alvotech to Present at Upcoming Investor Conferences in December",
+        "score": 3
+      },
       {
         "url": "https://www.alvotech.com/newsroom/alvotech-announces-financial-results-for-the-nine-months-to-september-30-2026-with-a-business-update",
         "title": "Alvotech Announces Financial Results for the Nine Months to September 30, 2026, with a Business Update",
@@ -106,43 +111,26 @@
         "url": "https://www.alvotech.com/newsroom/alvotech-to-present-at-upcoming-investor-conferences-in-november",
         "title": "Alvotech to Present at Upcoming Investor Conferences in November",
         "score": 3
-      },
-      {
-        "url": "https://www.alvotech.com/newsroom/alvotech-to-report-financial-results-for-the-nine-month-period-to-september-30-2026",
-        "title": "Alvotech to Report Financial Results for the Nine-Month Period to September 30, 2026",
-        "score": 3
       }
     ]
   },
   "Amgen": {
-    "status": "OK",
-    "checked_at": "2026-11-13T09:59:46.902348+00:00",
-    "detail": "official-newsroom-data; 30 release/article links; 0 new",
-    "source_url": "https://www.amgen.com/newsroom/press-releases",
-    "samples": [
-      {
-        "url": "https://www.amgen.com/newsroom/press-releases/2026/11/amgen-announces-positive-phase-3-results-for-dazodalibep-in-sjgrens-disease",
-        "title": "AMGEN ANNOUNCES POSITIVE PHASE 3 RESULTS FOR DAZODALIBEP IN SJÖGREN'S DISEASE",
-        "score": 5
-      },
-      {
-        "url": "https://www.amgen.com/newsroom/press-releases/2026/11/new-data-at-aha-2026-demonstrates-the-value-of-treatment-with-repatha-earlier-in-the-cardiovascular-risk-continuum",
-        "title": "NEW DATA AT AHA 2026 DEMONSTRATES THE VALUE OF TREATMENT WITH REPATHA® EARLIER IN THE CARDIOVASCULAR RISK CONTINUUM",
-        "score": 5
-      },
-      {
-        "url": "https://www.amgen.com/newsroom/press-releases/2026/11/repatha-lowers-risk-of-heart-attacks-by-20-compared-with-ezetimibe-in-a-large-realworld-study",
-        "title": "REPATHA® LOWERS RISK OF HEART ATTACKS BY 20% COMPARED WITH EZETIMIBE IN A LARGE REAL-WORLD STUDY",
-        "score": 5
-      }
-    ]
+    "status": "FAIL",
+    "checked_at": "2026-11-26T01:30:49.818221+00:00",
+    "detail": "candidate count collapsed 30->5; possible page/parser failure",
+    "source_url": "https://www.amgen.com/newsroom/press-releases"
   },
   "Arrowhead Pharmaceuticals": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:46.902945+00:00",
-    "detail": "requests; 616 release/article links; 0 new",
+    "checked_at": "2026-11-26T01:30:51.412416+00:00",
+    "detail": "requests; 617 release/article links; 1 new",
     "source_url": "https://arrowheadpharma.com/en-us/newsroom",
     "samples": [
+      {
+        "url": "https://arrowheadpharma.com/en-us/newsroom/arrowhead-pharmaceuticals-reports-inducement-grants-under-33",
+        "title": "Arrowhead Pharmaceuticals Reports Inducement Grants under NASDAQ Listing Rule 5635(c)(4)",
+        "score": 3
+      },
       {
         "url": "https://arrowheadpharma.com/en-us/newsroom/arrowhead-pharmaceuticals-reports-2026-fiscal-year-end-results",
         "title": "Arrowhead Pharmaceuticals Reports 2026 Fiscal Year-End Results",
@@ -152,64 +140,54 @@
         "url": "https://arrowheadpharma.com/en-us/newsroom/arrowhead-pharmaceuticals-participate-upcoming-investor-1",
         "title": "Arrowhead Pharmaceuticals to Participate in Upcoming Investor Conferences",
         "score": 3
-      },
-      {
-        "url": "https://arrowheadpharma.com/en-us/newsroom/arrowhead-pharmaceuticals-presents-plozasiran-data-highlighting",
-        "title": "Arrowhead Pharmaceuticals Presents Plozasiran Data Highlighting Sustained Triglyceride Reductions and Reduced Acute Pancreatitis Rates",
-        "score": 3
       }
     ]
   },
   "AstraZeneca": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:57.625342+00:00",
-    "detail": "playwright; 6 release/article links; 0 new",
+    "checked_at": "2026-11-26T01:30:56.322404+00:00",
+    "detail": "playwright; 6 release/article links; 5 new",
     "source_url": "https://www.astrazeneca.com/media-centre.html?type=pressrelease",
     "samples": [
       {
-        "url": "https://www.astrazeneca.com/media-centre/press-releases/2026/9m-and-q3-2026-results.html",
-        "title": "9M and Q3 2026 results 30 October 2026",
+        "url": "https://www.astrazeneca.com/media-centre/press-releases/2026/sonesitatug-vedotin-granted-priority-review-us-for-2nd-later-line-treatment-patients-with-cldn182-positive-advanced-gastric-gej-cancers.html",
+        "title": "Sonesitatug vedotin granted Priority Review in the US for 2nd and later-line treatment of patients with CLDN18.2-positive advanced gastric/GEJ cancers 19 November 2026",
         "score": 3
       },
       {
-        "url": "https://www.astrazeneca.com/media-centre/press-releases/2026/enhertu-approved-eu-for-her2-positive-ebc.html",
-        "title": "Enhertu approved in the EU as adjuvant treatment for patients with residual disease after neoadjuvant treatment for HER2-positive early breast cancer 27 October 2026",
+        "url": "https://www.astrazeneca.com/media-centre/press-releases/2026/klygefa-gefurulimab-approved-in-the-US.html",
+        "title": "Klygefa (gefurulimab) approved in the US for the treatment of generalised myasthenia gravis (gMG) in adult patients 16 November 2026",
         "score": 3
       },
       {
-        "url": "https://www.astrazeneca.com/media-centre/press-releases/2026/sonesitatug-vedotin-reduced-the-risk-of-death-by-42-pct-in-2nd-and-later-line-cldn182-positive-advanced-gastricgej-cancers-in-clarity-gastric01.html",
-        "title": "Sonesitatug vedotin reduced the risk of death by 42% in 2nd- and later-line CLDN18.2-positive advanced gastric/GEJ cancers in CLARITY-Gastric01 25 October 2026",
+        "url": "https://www.astrazeneca.com/media-centre/press-releases/2026/klygefa-gefurulimab-approved-in-the-EU.html",
+        "title": "Klygefa (gefurulimab) approved in the EU for the treatment of adults with generalised myasthenia gravis (gMG) 16 November 2026",
         "score": 3
       }
     ]
   },
   "Avidity Biosciences": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:57.625416+00:00",
-    "detail": "requests; successor Novartis: 34 parent releases checked, keyword matches only; 2 release/article links; 0 new",
+    "checked_at": "2026-11-26T01:30:56.322476+00:00",
+    "detail": "requests; successor Novartis: 18 parent releases checked, keyword matches only; 1 release/article links; 0 new",
     "source_url": "https://www.novartis.com/news",
     "samples": [
       {
         "url": "https://www.novartis.com/news/media-releases/novartis-provides-update-delpacibart-etedesiran-del-desiran-phase-iii-harbor-study-treatment-myotonic-dystrophy-type-1-dm1",
         "title": "Novartis provides update on delpacibart etedesiran (del-desiran) Phase III HARBOR study for the treatment of myotonic dystrophy type 1 (DM1)",
         "score": 3
-      },
-      {
-        "url": "https://www.novartis.com/news/media-releases/novartis-delpacibart-braxlosiran-del-brax-phase-iii-study-facioscapulohumeral-muscular-dystrophy-fshd-meets-primary-biomarker-endpoint",
-        "title": "Novartis delpacibart braxlosiran (del-brax) Phase I/II study in facioscapulohumeral muscular dystrophy (FSHD) meets primary biomarker endpoint",
-        "score": 3
       }
     ]
   },
   "Bayer": {
     "status": "FAIL",
-    "checked_at": "2026-11-13T09:59:57.625433+00:00",
+    "checked_at": "2026-11-26T01:30:56.322490+00:00",
     "detail": "Official page HTTP 403",
     "source_url": "https://www.bayer.com/en/news-stories"
   },
   "BioMarin": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:57.625483+00:00",
+    "checked_at": "2026-11-26T01:30:56.322543+00:00",
     "detail": "official-newsroom-data; 20 release/article links; 0 new",
     "source_url": "https://www.biomarin.com/news/press-releases/",
     "samples": [
@@ -232,66 +210,76 @@
   },
   "Biogen": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:57.625514+00:00",
-    "detail": "playwright (official corporate latest-news index); 4 release/article links; 0 new",
+    "checked_at": "2026-11-26T01:30:57.674000+00:00",
+    "detail": "playwright (official corporate latest-news index); 4 release/article links; 4 new",
     "source_url": "https://www.biogen.com/home.html",
     "samples": [
       {
-        "url": "https://investors.biogen.com/news-releases/news-release-details/leqembir-pen-subcutaneous-formulation-leqembir-now-available",
-        "title": "LEQEMBI® Pen (Subcutaneous Formulation of LEQEMBI®) Now Available in Japan for Patients with Early Alzheimer’s Disease",
+        "url": "https://investors.biogen.com/news-releases/news-release-details/stoke-therapeutics-and-biogen-announce-presentations-long-term",
+        "title": "Stoke Therapeutics and Biogen Announce Presentations of Long-Term Clinical Data for Zorevunersen, an Investigational Medicine for the Treatment of Dravet Syndrome, at the 2026 American Epilepsy Society Annual Meeting",
         "score": 3
       },
       {
-        "url": "https://investors.biogen.com/news-releases/news-release-details/biogen-participate-jefferies-global-healthcare-conference-0",
-        "title": "Biogen to Participate in the Jefferies Global Healthcare Conference",
+        "url": "https://investors.biogen.com/news-releases/news-release-details/biogen-participate-december-healthcare-conferences",
+        "title": "Biogen to Participate in December Healthcare Conferences",
         "score": 3
       },
       {
-        "url": "https://investors.biogen.com/news-releases/news-release-details/acr-2026-dapirolizumab-pegol-associated-greater-treatment",
-        "title": "ACR 2026: Dapirolizumab Pegol Associated with Greater Treatment Response Rates Versus Placebo in SLE Using Novel Treatment Response Measure",
+        "url": "https://investors.biogen.com/news-releases/news-release-details/clarity-ad-csf-substudy-findings-lecanemab-treatment-and",
+        "title": "Clarity AD CSF Substudy Findings on Lecanemab Treatment and α-Synuclein Co-Pathology Presented at CTAD 2026",
         "score": 3
       }
     ]
   },
   "Bristol Myers Squibb": {
-    "status": "OK",
-    "checked_at": "2026-11-13T09:59:57.625544+00:00",
-    "detail": "requests; 1 release/article links; 0 new",
-    "source_url": "https://news.bms.com/news/default.aspx",
+    "status": "RSS_ONLY",
+    "checked_at": "2026-11-26T01:30:57.676400+00:00",
+    "detail": "official-rss-fallback (newsroom unavailable); 2050 release/article links; 0 new",
+    "source_url": "https://news.bms.com/rss/pressrelease.aspx",
     "samples": [
       {
-        "url": "https://www.bms.com/media/press-releases/press-release-alerts-subscribe.html",
-        "title": "Sign up for email alerts",
+        "url": "https://news.bms.com/news/details/2026/Bristol-Myers-Squibb-Announces-Results-from-Phase-3-POETYK-SLE-1-and-POETYK-SLE-2-Trials-Evaluating-Sotyktu-deucravacitinib-in-Systemic-Lupus-Erythematosus/default.aspx",
+        "title": "Bristol Myers Squibb Announces Results from Phase 3 POETYK SLE-1 and POETYK SLE-2 Trials Evaluating Sotyktu (deucravacitinib) in Systemic Lupus Erythematosus",
+        "score": 3
+      },
+      {
+        "url": "https://news.bms.com/news/details/2026/Bristol-Myers-Squibb-Announces-Planned-Chief-Financial-Officer-Transition/default.aspx",
+        "title": "Bristol Myers Squibb Announces Planned Chief Financial Officer Transition",
+        "score": 3
+      },
+      {
+        "url": "https://news.bms.com/news/details/2026/Bristol-Myers-Squibb-Demonstrates-Breadth-and-Clinical-Momentum-Across-Blood-Cancers-and-Rare-Hematologic-Disorders-at-ASH-2026/default.aspx",
+        "title": "Bristol Myers Squibb Demonstrates Breadth and Clinical Momentum Across Blood Cancers and Rare Hematologic Disorders at ASH 2026",
         "score": 3
       }
     ]
   },
   "C2N Diagnostics": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:57.625584+00:00",
-    "detail": "requests; 19 release/article links; 0 new",
+    "checked_at": "2026-11-26T01:30:57.676587+00:00",
+    "detail": "requests; 19 release/article links; 3 new",
     "source_url": "https://c2n.com/news-releases",
     "samples": [
       {
-        "url": "https://c2n.com/news-releases/c2n-diagnostics-expands-global-partnerships-in-united-kingdom-onworld-alzheimers-day-joins-cambridge-cognition-and-the-alzheimers-trust-to-improve-alzheimers-disease-diagnosis-z68he",
-        "title": "C2N Diagnostics and LSI Medience Partner to Bring PrecivityAD2® Alzheimer’s Disease Blood Test to Japan",
+        "url": "https://c2n.com/news-releases/pharmatrophix-aided-by-c2n-diagnostics-finds-that-its-small-molecule-drug-lm11a-31-blocked-the-rise-of-an-alzheimers-disease-tau-pathology-biomarker",
+        "title": "PharmatrophiX — Aided by C2N Diagnostics — Finds That Its Small-Molecule Drug LM11A-31 Blocked the Rise of an Alzheimer's Disease Tau Pathology Biomarker",
         "score": 3
       },
       {
-        "url": "https://c2n.com/news-releases/c2n-diagnostics-expands-global-partnerships-in-united-kingdom-onworld-alzheimers-day-joins-cambridge-cognition-and-the-alzheimers-trust-to-improve-alzheimers-disease-diagnosis",
-        "title": "C2N Diagnostics Expands Global Partnerships in United Kingdom on World Alzheimer’s Day, Joins Cambridge Cognition and The Alzheimer's Trust to Improve Alzheimer's Disease Diagnosis",
+        "url": "https://c2n.com/news-releases/c2n-diagnostics-expands-portfolio-of-blood-tests-with-next-generation-brain-amyloid-assay-for-clinical-researchers-studying-alzheimers-disease-and-related-neurological-disorders",
+        "title": "C2N Diagnostics Expands Portfolio of Blood Tests with Next-Generation Brain Amyloid Assay for Clinical Researchers Studying Alzheimer’s Disease and Related Neurological Disorders",
         "score": 3
       },
       {
-        "url": "https://c2n.com/news-releases/live-long-and-prosper-nimoy-knight-foundation-selects-c2ns-ceo-andco-founder-for-prestigious-award-following-nbspalzheimers-disease-blood-test-fda-clearance",
-        "title": "‘Live Long and Prosper’: Nimoy-Knight Foundation Selects C2N’s CEO andCo-Founder for Prestigious Award Following Alzheimer’s Disease Blood Test FDA Clearance",
+        "url": "https://c2n.com/news-releases/c2n-diagnostics-fda-cleared-precivityad2-now-available-to-health-care-professionals-to-improve-diagnosis-of-alzheimers-disease-in-symptomatic-patients",
+        "title": "C2N Diagnostics’ FDA-Cleared PrecivityAD2®: Now Available to Health Care Professionals to Improve Diagnosis of Alzheimer’s Disease in Symptomatic Patients",
         "score": 3
       }
     ]
   },
   "CSL": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:57.625620+00:00",
+    "checked_at": "2026-11-26T01:30:57.676671+00:00",
     "detail": "requests; 10 release/article links; 0 new",
     "source_url": "https://newsroom.csl.com/News-Releases",
     "samples": [
@@ -314,30 +302,30 @@
   },
   "Capricor Therapeutics": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:57.625649+00:00",
-    "detail": "requests; 10 release/article links; 0 new",
+    "checked_at": "2026-11-26T01:30:57.676727+00:00",
+    "detail": "requests; 10 release/article links; 2 new",
     "source_url": "https://www.capricor.com/investors/news-events/press-releases",
     "samples": [
       {
+        "url": "https://www.capricor.com/investors/news-events/press-releases/detail/361/capricor-therapeutics-reschedules-conference-call-to",
+        "title": "Capricor Therapeutics Reschedules Conference Call to Provide Deramiocel Update",
+        "score": 3
+      },
+      {
+        "url": "https://www.capricor.com/investors/news-events/press-releases/detail/360/capricor-therapeutics-provides-regulatory-update-on",
+        "title": "Capricor Therapeutics Provides Regulatory Update on Deramiocel BLA for Duchenne Muscular Dystrophy",
+        "score": 3
+      },
+      {
         "url": "https://www.capricor.com/investors/news-events/press-releases/detail/359/capricor-therapeutics-reports-third-quarter-2026-financial",
         "title": "Capricor Therapeutics Reports Third Quarter 2026 Financial Results and Provides Corporate Update",
-        "score": 3
-      },
-      {
-        "url": "https://www.capricor.com/investors/news-events/press-releases/detail/358/capricors-hope-3-phase-3-cardiac-results-for-deramiocel",
-        "title": "Capricor’s HOPE-3 Phase 3 Cardiac Results for Deramiocel Win American Heart Association Outstanding Research Award in Pediatric Cardiology",
-        "score": 3
-      },
-      {
-        "url": "https://www.capricor.com/investors/news-events/press-releases/detail/357/capricor-therapeutics-to-report-third-quarter-2026",
-        "title": "Capricor Therapeutics to Report Third Quarter 2026 Financial Results and Provide Recent Corporate Update on November 10",
         "score": 3
       }
     ]
   },
   "Catalent": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:57.625684+00:00",
+    "checked_at": "2026-11-26T01:30:57.676764+00:00",
     "detail": "requests; 8 release/article links; 0 new",
     "source_url": "https://www.catalent.com/news",
     "samples": [
@@ -360,7 +348,7 @@
   },
   "Cullinan Therapeutics": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:57.625714+00:00",
+    "checked_at": "2026-11-26T01:30:57.676797+00:00",
     "detail": "requests; 3 release/article links; 0 new",
     "source_url": "https://cullinantherapeutics.com/",
     "samples": [
@@ -383,7 +371,7 @@
   },
   "Daiichi Sankyo": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:57.625985+00:00",
+    "checked_at": "2026-11-26T01:30:58.528338+00:00",
     "detail": "playwright; 353 release/article links; 0 new",
     "source_url": "https://www.daiichisankyo.com/media/press_release/",
     "samples": [
@@ -406,22 +394,27 @@
   },
   "Denali Therapeutics": {
     "status": "FAIL",
-    "checked_at": "2026-11-13T09:59:57.626005+00:00",
+    "checked_at": "2026-11-26T01:30:58.528396+00:00",
     "detail": "Official page HTTP 403",
     "source_url": "https://investors.denalitherapeutics.com/press-releases"
   },
   "Eli Lilly": {
     "status": "FAIL",
-    "checked_at": "2026-11-13T09:59:57.626020+00:00",
+    "checked_at": "2026-11-26T01:30:58.528412+00:00",
     "detail": "Official page HTTP 403; official RSS also unavailable: 403 Client Error: Forbidden for url: https://investor.lilly.com/rss/news-releases.xml",
     "source_url": "https://www.lilly.com/news"
   },
   "Enanta Pharmaceuticals": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:57.626050+00:00",
-    "detail": "requests; 3 release/article links; 0 new",
+    "checked_at": "2026-11-26T01:30:58.528483+00:00",
+    "detail": "requests; 3 release/article links; 1 new",
     "source_url": "https://www.enanta.com/",
     "samples": [
+      {
+        "url": "https://ir.enanta.com/news-releases/news-release-details/enanta-pharmaceuticals-reports-financial-results-its-fiscal-49",
+        "title": "Enanta Pharmaceuticals Reports Financial Results for its Fiscal Fourth Quarter and Year-Ended September 30, 2026",
+        "score": 3
+      },
       {
         "url": "https://ir.enanta.com/news-releases/news-release-details/enanta-pharmaceuticals-participate-upcoming-investor-0",
         "title": "Enanta Pharmaceuticals to Participate in Upcoming Investor Conferences",
@@ -431,48 +424,43 @@
         "url": "https://ir.enanta.com/news-releases/news-release-details/enanta-pharmaceuticals-announces-planned-retirement-longstanding",
         "title": "Enanta Pharmaceuticals Announces Planned Retirement of Longstanding Chief Executive Officer Jay R. Luly, Ph.D. After 23 Years of Company Leadership",
         "score": 3
-      },
-      {
-        "url": "https://ir.enanta.com/news-releases/news-release-details/enanta-pharmaceuticals-announces-first-patient-dosed-resolve",
-        "title": "Enanta Pharmaceuticals Announces First Patient Dosed in the RESOLVE Phase 2b/3 Study of Zelicapavir, a Potential First-in-Disease Treatment for Respiratory Syncytial Virus (RSV)",
-        "score": 3
       }
     ]
   },
   "Erasca": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:57.626072+00:00",
-    "detail": "requests; 2 release/article links; 0 new",
+    "checked_at": "2026-11-26T01:30:58.528524+00:00",
+    "detail": "requests; 2 release/article links; 2 new",
     "source_url": "https://www.erasca.com/",
     "samples": [
       {
-        "url": "https://investors.erasca.com/news-releases/news-release-details/erasca-reports-third-quarter-2026-business-updates-and-financial",
-        "title": "Erasca Reports Third Quarter 2026 Business Updates and Financial Results",
+        "url": "https://investors.erasca.com/news-releases/news-release-details/erasca-present-upcoming-conferences-december",
+        "title": "Erasca to Present at Upcoming Conferences in December",
         "score": 3
       },
       {
-        "url": "https://investors.erasca.com/news-releases/news-release-details/tango-and-erasca-initiate-phase-12-study-oral-prmt5-inhibitor",
-        "title": "Tango and Erasca Initiate Phase 1/2 Study of Oral PRMT5 Inhibitor Vopimetostat in Combination with Pan-RAS Molecular Glue ERAS-0015",
+        "url": "https://investors.erasca.com/news-releases/news-release-details/erasca-reports-broad-and-robust-phase-1-clinical-efficacy-and",
+        "title": "Erasca Reports Broad and Robust Phase 1 Clinical Efficacy and Favorable Safety Data for Pan-RAS Molecular Glue ERAS-0015",
         "score": 3
       }
     ]
   },
   "Exelixis": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:57.626089+00:00",
-    "detail": "requests; 1 release/article links; 0 new",
+    "checked_at": "2026-11-26T01:30:58.528551+00:00",
+    "detail": "requests; 1 release/article links; 1 new",
     "source_url": "https://www.exelixis.com/",
     "samples": [
       {
-        "url": "https://ir.exelixis.com/news-releases/news-release-details/exelixis-webcast-fireside-chats-part-upcoming-investor-6",
-        "title": "Exelixis to Webcast Fireside Chats as Part of Upcoming Investor Conferences in November",
+        "url": "https://ir.exelixis.com/news-releases/news-release-details/exelixis-participate-citi-2026-global-healthcare-conference",
+        "title": "Exelixis to Participate in the Citi 2026 Global Healthcare Conference",
         "score": 3
       }
     ]
   },
   "FUJIFILM Diosynth Biotechnologies": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:57.626115+00:00",
+    "checked_at": "2026-11-26T01:30:58.720602+00:00",
     "detail": "playwright; 9 release/article links; 0 new",
     "source_url": "https://fujifilmbiotechnologies.fujifilm.com/about/news/",
     "samples": [
@@ -495,56 +483,61 @@
   },
   "Fresenius": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:57.626160+00:00",
-    "detail": "playwright; 8 release/article links; 0 new",
+    "checked_at": "2026-11-26T01:31:05.367563+00:00",
+    "detail": "playwright; 9 release/article links; 3 new",
     "source_url": "https://www.fresenius.com/news",
     "samples": [
       {
-        "url": "https://www.fresenius.com/node/7465",
-        "title": "Fresenius completes sale of 13.4 million Fresenius Medical Care shares",
+        "url": "https://www.fresenius.com/node/7472",
+        "title": "Moody’s Ratings raises outlook for Fresenius to positive from stable",
         "score": 3
       },
       {
-        "url": "https://www.fresenius.com/sites/default/files/2026-11/20261104_fse_pressrelease_q3_2026.pdf",
-        "title": "(PDF, 294kB)",
+        "url": "https://www.fresenius.com/sites/default/files/2026-11/20261119_fse_pressrelease_moodys_rating.pdf",
+        "title": "(PDF, 163kB)",
         "score": 3
       },
       {
-        "url": "https://www.fresenius.com/sites/default/files/2026-11/20261102_fse_pressrelease_biopharma_development_agreement.pdf",
-        "title": "(PDF, 145kB)",
+        "url": "https://www.fresenius.com/node/7471",
+        "title": "Fresenius receives Building Public Trust Award for outstanding sustainability reporting",
         "score": 3
       }
     ]
   },
   "GSK": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:57.626237+00:00",
-    "detail": "playwright; 20 release/article links; 1 new",
+    "checked_at": "2026-11-26T01:31:05.367751+00:00",
+    "detail": "playwright; 20 release/article links; 3 new",
     "source_url": "https://www.gsk.com/en-gb/media/press-releases/?ps=20&latestArticles=true",
     "samples": [
       {
-        "url": "https://www.gsk.com/en-gb/media/press-releases/bexsero-4cmenb-receives-positive-chmp-opinion-for-one-dose-meningitis-b-booster-for-10plus-year-olds",
-        "title": "Bexsero (4CMenB) receives positive CHMP opinion for one-dose Meningitis B booster for 10+ year olds",
+        "url": "https://www.gsk.com/en-gb/media/press-releases/gsk-announces-positive-phase-iii-results-for-exdensur",
+        "title": "GSK announces positive phase III results for Exdensur (depemokimab) in eosinophilic granulomatosis with polyangiitis (EGPA)",
         "score": 3
       },
       {
-        "url": "https://www.gsk.com/en-gb/media/press-releases/gsk-showcases-progress-in-liver-portfolio-at-aasld-2026",
-        "title": "GSK showcases progress in liver portfolio at AASLD 2026",
+        "url": "https://www.gsk.com/en-gb/media/press-releases/velzatinib-granted-orphan-drug-designation-odd-in-japan-in-gist",
+        "title": "Velzatinib granted Orphan Drug Designation (ODD) in Japan in GIST",
         "score": 3
       },
       {
-        "url": "https://www.gsk.com/en-gb/media/press-releases/gsk-delivers-strong-q3-performance-and-continued-momentum",
-        "title": "GSK delivers strong Q3 performance and continued momentum",
+        "url": "https://www.gsk.com/en-gb/media/press-releases/nelkarmi-neladalkib-approved-in-the-us-for-previously-treated-advanced-alk-positive-non-small-cell-lung-cancer",
+        "title": "Nelkarmi (neladalkib) approved in the US for previously-treated advanced ALK-positive non-small cell lung cancer",
         "score": 3
       }
     ]
   },
   "Galderma": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:57.626281+00:00",
+    "checked_at": "2026-11-26T01:31:05.367807+00:00",
     "detail": "requests; 12 release/article links; 1 new",
     "source_url": "https://www.galderma.com/newsroom",
     "samples": [
+      {
+        "url": "https://www.galderma.com/news/skin-quality-looking-beyond-surface",
+        "title": "Skin quality: looking beyond the surface",
+        "score": 3
+      },
       {
         "url": "https://www.galderma.com/news/mexico-approval-galderma-restylane-shaype",
         "title": "Mexico becomes the first market worldwide to receive approval for Galderma’s Restylane® Shaype™ for both chin and its first jawline indication",
@@ -554,66 +547,66 @@
         "url": "https://www.galderma.com/news/board-appointments-and-chief-financial-officer-transition",
         "title": "Galderma announces proposed Board appointments and Chief Financial Officer transition",
         "score": 3
-      },
-      {
-        "url": "https://www.galderma.com/news/galderma-launches-alastin-restorative-eye-complex-trihextm",
-        "title": "Galderma launches ALASTIN Restorative Eye Complex with TriHex+™, bringing new science-backed innovation to the entire eye area",
-        "score": 3
       }
     ]
   },
   "Genentech": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:57.626324+00:00",
-    "detail": "requests; 25 release/article links; 0 new",
+    "checked_at": "2026-11-26T01:31:05.367874+00:00",
+    "detail": "requests; 25 release/article links; 3 new",
     "source_url": "https://www.gene.com/media",
     "samples": [
       {
-        "url": "https://www.gene.com/media/press-releases/15142/2026-11-09/genentech-and-roche-present-new-data-acr",
-        "title": "Genentech and Roche Present New Data Across Pharmaceuticals and Diagnostics From Its Growing Alzheimer’s Disease Portfolio at CTAD 2026",
+        "url": "https://www.gene.com/media/press-releases/15145/2026-11-23/fda-approves-genentechs-wilserdly-girede",
+        "title": "FDA Approves Genentech’s WILSERDLY (giredestrant) for Early-Stage ER-Positive Breast Cancer, Making it the First New Endocrine Therapy in This Setting in Over 20 Years",
         "score": 3
       },
       {
-        "url": "https://www.gene.com/media/press-releases/15141/2026-10-25/genentechs-divarasib-demonstrated-best-i",
-        "title": "Genentech’s Divarasib Demonstrated Best-In-Class Efficacy, Advancing the Standard of Care in Previously Treated KRAS G12C-Mutated Lung Cancer",
+        "url": "https://www.gene.com/media/press-releases/15144/2026-11-16/fda-approves-genentechs-wilserdly-girede",
+        "title": "FDA Approves Genentech’s WILSERDLY (Giredestrant), a Next-Generation Oral SERD, for ER-Positive, ESR1-Mutated Advanced Breast Cancer",
         "score": 3
       },
       {
-        "url": "https://www.gene.com/media/press-releases/15140/2026-10-23/genentech-presents-interim-phase-iii-dat",
-        "title": "Genentech Presents Interim Phase III Data Showing Sefaxersen Significantly Reduced Proteinuria in People With IgA Nephropathy (IgAN)",
+        "url": "https://www.gene.com/media/press-releases/15143/2026-11-15/genentechs-gazyva-becomes-the-first-fda-",
+        "title": "Genentech’s Gazyva Becomes the First FDA-Approved Treatment for Primary Membranous Nephropathy",
         "score": 3
       }
     ]
   },
   "Gilead Sciences": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:57.626358+00:00",
-    "detail": "playwright; 8 release/article links; 0 new",
+    "checked_at": "2026-11-26T01:31:05.367927+00:00",
+    "detail": "playwright; 8 release/article links; 2 new",
     "source_url": "https://www.gilead.com/news",
     "samples": [
       {
+        "url": "https://www.gilead.com/news/news-details/2026/gilead-applauds-milestone-as-first-generic-supply-for-twice-yearly-lenacapavir-for-hiv-prevention-reaches-zambia",
+        "title": "Gilead Applauds Milestone as First Generic Supply for Twice-yearly Lenacapavir for HIV Prevention Reaches Zambia",
+        "score": 3
+      },
+      {
+        "url": "https://www.gilead.com/news/news-details/2026/gilead-expands-access-to-investigational-obeldesivir-for-ebola-bundibugyo-virus-disease-through-voluntary-licensing",
+        "title": "Gilead Expands Access to Investigational Obeldesivir for Ebola Bundibugyo Virus Disease Through Voluntary Licensing",
+        "score": 3
+      },
+      {
         "url": "https://www.gilead.com/news/news-details/2026/gilead-brings-hiv-prevention-to-the-27th-annual-latin-grammy-awards",
         "title": "Gilead Brings HIV Prevention to the 27th Annual Latin GRAMMY Awards®",
-        "score": 3
-      },
-      {
-        "url": "https://www.gilead.com/news/news-details/2026/new-data-show-twice-yearly-lenacapavir-achieved-nearly-twice-the-one-year-persistence-of-daily-oral-ftdf-in-hiv-prevention",
-        "title": "New Data Show Twice-Yearly Lenacapavir Achieved Nearly Twice the One-Year Persistence of Daily Oral F/TDF in HIV Prevention",
-        "score": 3
-      },
-      {
-        "url": "https://www.gilead.com/news/news-details/2026/positive-phase-3-ideal-study-results-further-support-livdelzis-seladelpar-impact-on-achieving-alp-normalization-goals-in-second-line-treatment-across-a-broad-population-of-people-living-with",
-        "title": "Positive Phase 3 IDEAL Study Results Further Support Livdelzi®’s (Seladelpar) Impact on Achieving ALP Normalization Goals in Second-Line Treatment Across a Broad Population of People Living with Primary Biliary Cholangitis (PBC)",
         "score": 3
       }
     ]
   },
   "Grifols": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:57.626388+00:00",
-    "detail": "requests; 6 release/article links; 0 new",
+    "checked_at": "2026-11-26T01:31:05.367967+00:00",
+    "detail": "requests; 6 release/article links; 1 new",
     "source_url": "https://www.grifols.com/en/newsroom",
     "samples": [
+      {
+        "url": "https://www.grifols.com/en/view-news/-/news/grifols-presents-new-ambar-data-from-a-real-world-observational-study-in-patients-with-alzheimer-s-disease",
+        "title": "Grifols presents new AMBAR ® data from a real-world observational study in patients with Alzheimer’s disease",
+        "score": 3
+      },
       {
         "url": "https://www.grifols.com/en/view-news/-/news/grifols-increases-revenue-by-8-4-to-eur-2040-million-and-grows-net-profit-by-28-to-eur-162m-in-q326",
         "title": "Grifols increases revenue by 8.4% to EUR 2,040 million and grows net profit by 28% to EUR 162m in Q3’26",
@@ -623,43 +616,43 @@
         "url": "https://www.grifols.com/en/view-news/-/news/half-of-spaniards-are-unaware-that-plasma-can-be-donated-separately-from-blood",
         "title": "Half of Spaniards are unaware that plasma can be donated separately from blood",
         "score": 3
-      },
-      {
-        "url": "https://www.grifols.com/en/view-news/-/news/grifols-strengthens-evidence-supporting-the-ambar-program-in-alzheimer-s-disease-with-real-world-evidence-data",
-        "title": "Grifols strengthens evidence supporting the AMBAR ® program in Alzheimer’s disease with real-world evidence data",
-        "score": 3
       }
     ]
   },
   "Harmony Biosciences": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:57.626417+00:00",
-    "detail": "playwright (official corporate latest-news index); 9 release/article links; 0 new",
+    "checked_at": "2026-11-26T01:31:05.368159+00:00",
+    "detail": "playwright (official corporate latest-news index); 9 release/article links; 2 new",
     "source_url": "https://www.harmonybiosciences.com/newsroom/",
     "samples": [
       {
+        "url": "https://ir.harmonybiosciences.com/news-releases/news-release-details/harmony-biosciences-present-new-18-month-open-label-extension",
+        "title": "Harmony Biosciences to Present New 18-Month Open-Label Extension Data from the EPX-100 Phase 3 Dravet Syndrome Trial at the 2026 American Epilepsy Society Annual Meeting",
+        "score": 3
+      },
+      {
+        "url": "https://ir.harmonybiosciences.com/news-releases/news-release-details/harmony-biosciences-participate-upcoming-investor-conferences-8",
+        "title": "Harmony Biosciences to Participate in Upcoming Investor Conferences",
+        "score": 3
+      },
+      {
         "url": "https://ir.harmonybiosciences.com/news-releases/news-release-details/harmony-biosciences-reports-q3-financial-results-track-achieve",
         "title": "Harmony Biosciences Reports Q3 Financial Results on Track to Achieve More Than $1 Billion WAKIX Net Revenue and Announces Strong Multiple-Ascending Dose Data for Its Orexin Agonist BP-205, Supporting Potential Best-in-Class Profile",
-        "score": 3
-      },
-      {
-        "url": "https://ir.harmonybiosciences.com/news-releases/news-release-details/harmony-biosciences-report-third-quarter-2026-financial-results",
-        "title": "Harmony Biosciences to Report Third Quarter 2026 Financial Results on November 4, 2026",
-        "score": 3
-      },
-      {
-        "url": "https://ir.harmonybiosciences.com/news-releases/news-release-details/harmony-biosciences-announces-planned-ceo-transition-support",
-        "title": "Harmony Biosciences Announces Planned CEO Transition to Support Next Phase of Growth",
         "score": 3
       }
     ]
   },
   "Hims & Hers Health": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:57.626491+00:00",
-    "detail": "official-newsroom-data; 50 release/article links; 0 new",
+    "checked_at": "2026-11-26T01:31:05.368236+00:00",
+    "detail": "official-newsroom-data; 50 release/article links; 1 new",
     "source_url": "https://investors.hims.com/news/default.aspx",
     "samples": [
+      {
+        "url": "https://investors.hims.com/news/news-details/2026/Hims--Hers-Launches-Peptides-a-New-Clinically-Guided-Specialty-for-Access-to-Personalized-Proactive-Health/default.aspx",
+        "title": "Hims & Hers Launches Peptides+, a New Clinically-Guided Specialty for Access to Personalized, Proactive Health",
+        "score": 5
+      },
       {
         "url": "https://investors.hims.com/news/news-details/2026/Dr--Andrew-Huberman-Joins-Hims--Hers-Board-of-Directors/default.aspx",
         "title": "Dr. Andrew Huberman Joins Hims & Hers Board of Directors",
@@ -669,20 +662,20 @@
         "url": "https://investors.hims.com/news/news-details/2026/Hims--Hers-Health-Inc--Reports-Third-Quarter-2026-Financial-Results/default.aspx",
         "title": "Hims & Hers Health, Inc. Reports Third Quarter 2026 Financial Results",
         "score": 5
-      },
-      {
-        "url": "https://investors.hims.com/news/news-details/2026/Lilly-and-Hims--Hers-expand-access-to-FDA-approved-Lilly-medicines/default.aspx",
-        "title": "Lilly and Hims & Hers expand access to FDA-approved Lilly medicines",
-        "score": 5
       }
     ]
   },
   "Immunome": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:57.626531+00:00",
-    "detail": "requests; 10 release/article links; 0 new",
+    "checked_at": "2026-11-26T01:31:05.368280+00:00",
+    "detail": "requests; 10 release/article links; 1 new",
     "source_url": "https://investors.immunome.com/news-releases/",
     "samples": [
+      {
+        "url": "https://investors.immunome.com/immunome-to-present-at-upcoming-investor-conferences-4",
+        "title": "Immunome to Present at Upcoming Investor Conferences",
+        "score": 3
+      },
       {
         "url": "https://investors.immunome.com/immunome-reports-third-quarter-2026-financial-results-and-provides-business-update",
         "title": "Immunome Reports Third Quarter 2026 Financial Results and Provides Business Update",
@@ -692,46 +685,41 @@
         "url": "https://investors.immunome.com/immunome-reports-inducement-grants-under-nasdaq-listing-rule-5635c4-26",
         "title": "Immunome Reports Inducement Grants Under Nasdaq Listing Rule 5635(c)(4)",
         "score": 3
-      },
-      {
-        "url": "https://investors.immunome.com/immunome-to-present-initial-first-in-human-clinical-data-for-im-1021-in-advanced-b-cell-lymphomas-at-ash-2026",
-        "title": "Immunome to Present Initial First-in-Human Clinical Data for IM-1021 in Advanced B-Cell Lymphomas at ASH 2026",
-        "score": 3
       }
     ]
   },
   "Innovent Biologics": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:57.626576+00:00",
-    "detail": "playwright; 3 release/article links; 1 new",
+    "checked_at": "2026-11-26T01:31:05.368326+00:00",
+    "detail": "playwright; 3 release/article links; 3 new",
     "source_url": "https://en.innoventbio.com/InvestorsAndMedia/PressRelease",
     "samples": [
       {
-        "url": "https://en.innoventbio.com/InvestorsAndMedia/PressReleaseDetail?key=624",
-        "title": "Innovent Showcases Preclinical Data of its First-in-Class IL-6 x TL1A Bispecific Antibody at ACR Convergence 2026",
+        "url": "https://en.innoventbio.com/InvestorsAndMedia/PressReleaseDetail?key=628",
+        "title": "Innovent Announces Takeda Has Been Granted SAKIGAKE Designation for Arcotatug Tavatecan (TAK-921) by Japan Ministry of Health, Labour and Welfare",
         "score": 3
       },
       {
-        "url": "https://en.innoventbio.com/InvestorsAndMedia/PressReleaseDetail?key=623",
-        "title": "Innovent Announces Phase 3 CREDIT-5 Study Met Primary Endpoint, SINTBILO® (Tafolecimab Injection) as First-line Monotherapy Treatment for Hyperlipidemia Demonstrated Potent Lipid-lowering Efficacy",
+        "url": "https://en.innoventbio.com/InvestorsAndMedia/PressReleaseDetail?key=626",
+        "title": "Innovent Announces Positive CHMP Opinion, Recommending Zybrivo® (sintilimab) for First-Line Treatment of Non-squamous Non-Small Cell Lung Cancer",
         "score": 3
       },
       {
-        "url": "https://en.innoventbio.com/InvestorsAndMedia/PressReleaseDetail?key=621",
-        "title": "2026 ESMO | Innovent Presents Multiple Clinical Data Updates for IBI363/TAK-928, a PD-1/Alpha-Biased IL-2 Bispecific Fusion Protein",
+        "url": "https://en.innoventbio.com/InvestorsAndMedia/PressReleaseDetail?key=627",
+        "title": "Innovent’s Partner Ollin Biosciences and Its Next-Generation Medicines for Patients with Vision-Threatening Eye Diseases to be Acquired",
         "score": 3
       }
     ]
   },
   "Ionis Pharmaceuticals": {
     "status": "FAIL",
-    "checked_at": "2026-11-13T09:59:57.626595+00:00",
+    "checked_at": "2026-11-26T01:31:05.368342+00:00",
     "detail": "Official page HTTP 403",
     "source_url": "https://ir.ionis.com/news-releases"
   },
   "Jazz Pharmaceuticals": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:57.626627+00:00",
+    "checked_at": "2026-11-26T01:31:05.368366+00:00",
     "detail": "requests; 4 release/article links; 0 new",
     "source_url": "https://www.jazzpharma.com/",
     "samples": [
@@ -754,7 +742,7 @@
   },
   "Jnana Therapeutics": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:57.626656+00:00",
+    "checked_at": "2026-11-26T01:31:05.393601+00:00",
     "detail": "playwright; 1 release/article links; 0 new",
     "source_url": "https://www.jnanatx.com/news/?pag=1",
     "samples": [
@@ -767,33 +755,38 @@
   },
   "Johnson & Johnson": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:57.626688+00:00",
-    "detail": "requests; 9 release/article links; 0 new",
+    "checked_at": "2026-11-26T01:31:05.393731+00:00",
+    "detail": "requests; 10 release/article links; 6 new",
     "source_url": "https://www.jnj.com/media-center/press-releases",
     "samples": [
       {
-        "url": "https://www.jnj.com/media-center/press-releases/johnson-johnson-showcases-continued-hematology-leadership-and-next-generation-innovation-at-ash-2026",
-        "title": "Johnson & Johnson showcases continued hematology leadership and next-generation innovation at ASH 2026",
+        "url": "https://www.jnj.com/media-center/press-releases/johnson-johnson-data-in-psoriatic-arthritis-psa-shows-tremfya-guselkumab-is-the-only-advanced-therapy-to-demonstrate-mri-confirmed-improvements-in-spinal-pain-and-stiffness",
+        "title": "Johnson & Johnson data in psoriatic arthritis (PsA) shows TREMFYA (guselkumab) is the only advanced therapy to demonstrate MRI-confirmed improvements in spinal pain and stiffness",
         "score": 3
       },
       {
-        "url": "https://www.jnj.com/media-center/press-releases/johnson-johnson-announces-caplyta-lumateperone-shows-significant-and-rapid-improvement-in-bipolar-mania-in-second-pivotal-phase-3-study",
-        "title": "Johnson & Johnson Announces CAPLYTA (lumateperone) Shows Significant and Rapid Improvement in Bipolar Mania in Second Pivotal Phase 3 Study",
+        "url": "https://www.jnj.com/media-center/press-releases/johnson-johnson-announces-first-commercial-installation-of-the-ottava-robotic-surgical-system-at-memorial-hermann-health-system",
+        "title": "Johnson & Johnson Announces First Commercial Installation of the OTTAVA™ Robotic Surgical System at Memorial Hermann Health System",
         "score": 3
       },
       {
-        "url": "https://www.jnj.com/media-center/press-releases/johnson-johnson-reports-73-psa-response-rate-with-investigational-pasritamig-based-immunotherapy-combination-in-advanced-prostate-cancer",
-        "title": "Johnson & Johnson reports 73% PSA response rate with investigational pasritamig-based immunotherapy combination in advanced prostate cancer",
+        "url": "https://www.jnj.com/media-center/press-releases/johnson-johnson-seeks-u-s-fda-approval-for-caplyta-in-bipolar-mania-marking-fifth-potential-indication",
+        "title": "Johnson & Johnson Seeks U.S. FDA Approval for CAPLYTA in Bipolar Mania, Marking Fifth Potential Indication",
         "score": 3
       }
     ]
   },
   "Kura Oncology": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:57.626721+00:00",
-    "detail": "requests; 3 release/article links; 0 new",
+    "checked_at": "2026-11-26T01:31:05.393777+00:00",
+    "detail": "requests; 3 release/article links; 1 new",
     "source_url": "https://kuraoncology.com/newsroom/",
     "samples": [
+      {
+        "url": "https://ir.kuraoncology.com/news-releases/news-release-details/kura-oncology-participate-two-investor-conferences-november",
+        "title": "Kura Oncology to Participate in Two Investor Conferences in November",
+        "score": 3
+      },
       {
         "url": "https://ir.kuraoncology.com/news-releases/news-release-details/kura-oncology-reports-third-quarter-2026-financial-results-and",
         "title": "Kura Oncology Reports Third Quarter 2026 Financial Results and Corporate Update",
@@ -803,17 +796,12 @@
         "url": "https://ir.kuraoncology.com/news-releases/news-release-details/kura-oncology-reports-inducement-grants-under-nasdaq-listing-25",
         "title": "Kura Oncology Reports Inducement Grants Under Nasdaq Listing Rule 5635(c)(4)",
         "score": 3
-      },
-      {
-        "url": "https://ir.kuraoncology.com/news-releases/news-release-details/kura-oncology-and-kyowa-kirin-present-first-ziftomenib-flt3",
-        "title": "Kura Oncology and Kyowa Kirin to Present First Ziftomenib-FLT3 Inhibitor Clinical Data at ASH 2026",
-        "score": 3
       }
     ]
   },
   "Kyowa Kirin": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:57.626757+00:00",
+    "checked_at": "2026-11-26T01:31:05.871094+00:00",
     "detail": "playwright; 7 release/article links; 0 new",
     "source_url": "https://www.kyowakirin.com/media_center/news_releases/index.html",
     "samples": [
@@ -836,22 +824,44 @@
   },
   "Lonza": {
     "status": "FAIL",
-    "checked_at": "2026-11-13T09:59:57.626770+00:00",
+    "checked_at": "2026-11-26T01:31:05.871154+00:00",
     "detail": "Official page HTTP 403",
     "source_url": "https://www.lonza.com/news-and-media/news-archive"
   },
   "Lundbeck": {
-    "status": "FAIL",
-    "checked_at": "2026-11-13T09:59:57.626780+00:00",
-    "detail": "403 Client Error: Forbidden for url: https://www.lundbeck.com/global/press/news-archive",
-    "source_url": "https://www.lundbeck.com/global/press/news-archive"
+    "status": "OK",
+    "checked_at": "2026-11-26T01:31:05.871222+00:00",
+    "detail": "official-newsroom-data; 50 release/article links; 0 new",
+    "source_url": "https://www.lundbeck.com/global/press/news-archive",
+    "samples": [
+      {
+        "url": "https://news.cision.com/h--lundbeck-a-s/r/lundbeck-to-present-new-clinical-trial-analyses-and-broader-bexicaserin-research-at-aes-2026,c4428379",
+        "title": "Lundbeck to present new clinical trial analyses and broader bexicaserin research at AES 2026",
+        "score": 5
+      },
+      {
+        "url": "https://news.cision.com/h--lundbeck-a-s/r/lundbeck-raises-full-year-guidance-as-9m-revenue-grows--13--cer--11--cer-underlying--and-adjusted-eb,c4422511",
+        "title": "Lundbeck raises full-year guidance as 9M revenue grows +13% CER (+11% CER underlying) and adjusted EBITDA +19% CER, led by Vyepti[®]",
+        "score": 5
+      },
+      {
+        "url": "https://news.cision.com/h--lundbeck-a-s/r/lundbeck-raises-financial-guidance-for-2026,c4422508",
+        "title": "Lundbeck raises financial guidance for 2026",
+        "score": 5
+      }
+    ]
   },
   "Lupin": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:57.626804+00:00",
-    "detail": "requests; 6 release/article links; 0 new",
+    "checked_at": "2026-11-26T01:31:05.871319+00:00",
+    "detail": "requests; 6 release/article links; 1 new",
     "source_url": "https://www.lupin.com/investors/press-releases",
     "samples": [
+      {
+        "url": "https://www.lupin.com/investors/press-releases/lupin-receives-approval-from-u-s-fda-for-ferric-citrate-tablets",
+        "title": "Lupin Receives Approval from U.S. FDA for Ferric Citrate Tablets",
+        "score": 3
+      },
       {
         "url": "https://www.lupin.com/investors/press-releases/lupin-announces-european-launch-of-biosimilar-ranibizumab",
         "title": "Lupin Announces European Launch of Biosimilar Ranibizumab",
@@ -861,40 +871,35 @@
         "url": "https://www.lupin.com/investors/press-releases/akhil-gupta-joins-lupin-board-as-independent-director",
         "title": "Akhil Gupta Joins Lupin Board as Independent Director",
         "score": 3
-      },
-      {
-        "url": "https://www.lupin.com/investors/press-releases/lupin-q2-fy-2027-results",
-        "title": "Lupin Q2 FY2027 Results",
-        "score": 3
       }
     ]
   },
   "Merck & Co.": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:57.626835+00:00",
-    "detail": "requests; 10 release/article links; 0 new",
+    "checked_at": "2026-11-26T01:31:05.871433+00:00",
+    "detail": "requests; 10 release/article links; 9 new",
     "source_url": "https://www.merck.com/media/news/",
     "samples": [
       {
-        "url": "https://www.merck.com/news/merck-to-participate-in-the-jefferies-global-healthcare-conference-in-london-2",
-        "title": "Merck to Participate in the Jefferies Global Healthcare Conference in London",
+        "url": "https://www.merck.com/news/merck-to-participate-in-the-citi-2026-global-healthcare-conference",
+        "title": "Merck to Participate in the Citi 2026 Global Healthcare Conference",
         "score": 3
       },
       {
-        "url": "https://www.merck.com/news/merck-announces-positive-results-from-phase-2b-trial-of-efinopegdutide-in-adults-with-metabolic-dysfunction-associated-steatohepatitis-mash-and-stage-2-3-fibrosis",
-        "title": "Merck Announces Positive Results from Phase 2b Trial of Efinopegdutide in Adults with Metabolic Dysfunction-Associated Steatohepatitis (MASH) and Stage 2-3 Fibrosis",
+        "url": "https://www.merck.com/news/merck-to-participate-in-the-9th-annual-evercore-healthcare-conference",
+        "title": "Merck to Participate in the 9th Annual Evercore Healthcare Conference",
         "score": 3
       },
       {
-        "url": "https://www.merck.com/news/merck-initiates-phase-3-study-evaluating-ohtuvayre-ensifentrine-for-the-prevention-of-copd-exacerbations-in-adult-patients-receiving-standard-of-care-with-a-history-of-exacerbations",
-        "title": "Merck Initiates Phase 3 Study Evaluating OHTUVAYRE® (ensifentrine) for the Prevention of COPD Exacerbations in Adult Patients Receiving Standard of Care With a History of Exacerbations",
+        "url": "https://www.merck.com/news/merck-announces-trofuse-015-trial-evaluating-sacituzumab-tirumotecan-sac-tmt-met-primary-endpoint-of-overall-survival-os-in-third-line-or-later-locally-advanced-unresectable-or-metastatic-gastroes",
+        "title": "Merck Announces TroFuse-015 Trial Evaluating Sacituzumab Tirumotecan (Sac-TMT) Met Primary Endpoint of Overall Survival (OS) in Third-Line or Later Locally Advanced Unresectable or Metastatic Gastroesophageal Adenocarcinoma",
         "score": 3
       }
     ]
   },
   "Neurocrine Biosciences": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:57.626924+00:00",
+    "checked_at": "2026-11-26T01:31:05.871533+00:00",
     "detail": "official-newsroom-data; 100 release/article links; 0 new",
     "source_url": "https://www.neurocrine.com/investors/",
     "samples": [
@@ -917,53 +922,53 @@
   },
   "Novartis": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:57.626978+00:00",
-    "detail": "requests; 34 release/article links; 0 new",
+    "checked_at": "2026-11-26T01:31:05.871650+00:00",
+    "detail": "requests; 18 release/article links; 5 new",
     "source_url": "https://www.novartis.com/news",
     "samples": [
       {
-        "url": "https://www.novartis.com/news/media-releases/new-long-term-rhapsido-remibrutinib-phase-iii-data-show-sustained-efficacy-through-week-52-chronic-inducible-urticaria-cindu",
-        "title": "New long-term Rhapsido® (remibrutinib) Phase III data show sustained efficacy through week 52 in chronic inducible urticaria (CIndU)",
+        "url": "https://www.novartis.com/news/media-releases/twice-yearly-leqvio-inclisiran-reduced-cardiovascular-event-risk-first-outcomes-study-sirna-therapy-ascvd",
+        "title": "Twice-yearly* Leqvio® (inclisiran) reduced cardiovascular event risk in first outcomes study of an siRNA therapy in ASCVD",
         "score": 3
       },
       {
-        "url": "https://www.novartis.com/news/media-releases/novartis-ianalumab-two-year-data-acr-show-further-improvements-sjogrens-disease-activity",
-        "title": "Novartis ianalumab two-year data at ACR show further improvements in Sjögren’s disease activity",
+        "url": "https://www.novartis.com/news/media-releases/novartis-projects-5-cc1-sales-cagr-through-2031-and-sustained-mid-single-digit-growth-over-long-term",
+        "title": "Novartis projects +5% cc¹ sales CAGR through 2031 and sustained mid-single-digit growth over the long term",
         "score": 3
       },
       {
-        "url": "https://www.novartis.com/news/media-releases/novartis-ranks-first-place-2026-access-medicine-index",
-        "title": "Novartis ranks first place in 2026 Access to Medicine Index",
+        "url": "https://www.novartis.com/news/media-releases/novartis-showcases-hematology-momentum-and-continued-breast-cancer-leadership-ash-and-sabcs",
+        "title": "Novartis showcases hematology momentum and continued breast cancer leadership at ASH and SABCS",
         "score": 3
       }
     ]
   },
   "Novo Nordisk": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:57.627035+00:00",
-    "detail": "official-newsroom-data; 50 release/article links; 0 new",
+    "checked_at": "2026-11-26T01:31:05.871805+00:00",
+    "detail": "official-newsroom-data; 50 release/article links; 9 new",
     "source_url": "https://www.novonordisk.com/news-and-media/news-and-ir-materials.html",
     "samples": [
       {
-        "url": "https://www.novonordisk.com/news-and-media/news-and-ir-materials/news-details.html?id=920320",
-        "title": "Novo commits USD 200 million over 10 years to support the World Diabetes Foundation to strengthen diabetes prevention and care",
-        "score": 5
-      },
-      {
-        "url": "https://www.novonordisk.com/news-and-media/news-and-ir-materials/news-details.html?id=920158",
+        "url": "https://www.novonordisk.com/news-and-media/news-and-ir-materials/news-details.html?id=921288",
         "title": "Novo Nordisk A/S - share repurchase programme",
         "score": 5
       },
       {
-        "url": "https://www.novonordisk.com/news-and-media/news-and-ir-materials/news-details.html?id=920080",
-        "title": "Novo post hoc analysis finds Wegovy 2.4 mg was associated with improvements in liver markers in adults with MASH with liver scarring and a BMI less than 27 kg/m2, presented at The Liver Meeting® (AASLD) 2026",
+        "url": "https://www.novonordisk.com/news-and-media/news-and-ir-materials/news-details.html?id=920733",
+        "title": "Novo presents preclinical and human data suggesting a role for amylin and calcitonin receptor activation in preserving bone during weight loss at ObesityWeek®",
+        "score": 5
+      },
+      {
+        "url": "https://www.novonordisk.com/news-and-media/news-and-ir-materials/news-details.html?id=920731",
+        "title": "Wegovy® resulted in a BMI reduction of 10% or more in almost 80% of children with obesity aged 6 to under 12, compared to 0% with placebo in STEP Young trial, published in The New England Journal of Medicine",
         "score": 5
       }
     ]
   },
   "Oruka Therapeutics": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:57.627060+00:00",
+    "checked_at": "2026-11-26T01:31:05.871842+00:00",
     "detail": "requests; 1 release/article links; 0 new",
     "source_url": "https://orukatx.com/",
     "samples": [
@@ -976,10 +981,15 @@
   },
   "Pfizer": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:57.627080+00:00",
-    "detail": "requests; 5 release/article links; 0 new",
+    "checked_at": "2026-11-26T01:31:05.871881+00:00",
+    "detail": "requests; 5 release/article links; 1 new",
     "source_url": "https://www.pfizer.com/newsroom",
     "samples": [
+      {
+        "url": "https://www.pfizer.com/news/press-release/press-release-detail/pfizer-enters-exclusive-licensing-agreement-starna",
+        "title": "Pfizer Enters into Exclusive Licensing Agreement with Starna Therapeutics for Autoimmune Diseases",
+        "score": 3
+      },
       {
         "url": "https://www.pfizer.com/news/press-release/press-release-detail/pfizer-and-blackstone-life-sciences-announce-strategic",
         "title": "Pfizer and Blackstone Life Sciences Announce Strategic Funding Agreement for Obesity Program",
@@ -989,76 +999,71 @@
         "url": "https://www.pfizer.com/news/press-release/press-release-detail/pfizer-invites-public-view-and-listen-webcast-pfizer-28",
         "title": "Pfizer Invites Public to View and Listen to Webcast of Pfizer Discussion at Healthcare Conference",
         "score": 3
-      },
-      {
-        "url": "https://www.pfizer.com/news/press-release/press-release-detail/pfizer-reports-strong-third-quarter-2026-results-and-raises",
-        "title": "Pfizer Reports Strong Third-Quarter 2026 Results And Raises 2026 Guidance",
-        "score": 3
       }
     ]
   },
   "Reata Pharmaceuticals": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:59.849013+00:00",
+    "checked_at": "2026-11-26T01:31:10.968577+00:00",
     "detail": "playwright (official corporate latest-news index); successor Biogen: 4 parent releases checked, keyword matches only; 0 release/article links; 0 new",
     "source_url": "https://www.biogen.com/home.html",
     "samples": []
   },
   "Regeneron": {
     "status": "FAIL",
-    "checked_at": "2026-11-13T09:59:59.849104+00:00",
+    "checked_at": "2026-11-26T01:31:10.968649+00:00",
     "detail": "Official page HTTP 403; official RSS also unavailable: 403 Client Error: Forbidden for url: https://investor.regeneron.com/rss/news-releases.xml?items=15",
     "source_url": "https://newsroom.regeneron.com/news/press-releases"
   },
   "Revolution Medicines": {
     "status": "OK",
-    "checked_at": "2026-11-13T09:59:59.849163+00:00",
-    "detail": "playwright; 7 release/article links; 0 new",
+    "checked_at": "2026-11-26T01:31:10.968778+00:00",
+    "detail": "playwright; 7 release/article links; 2 new",
     "source_url": "https://www.revmed.com/media/",
     "samples": [
       {
+        "url": "https://www.revmed.com/media/news/13771/revolution-medicines-presents-updated-phase-1-2-data-for-rasonque-daraxonrasib-plus-chemotherapy-in-first-line-metastatic-pancreatic-cancer-at-ena-2026",
+        "title": "Revolution Medicines Presents Updated Phase 1/2 Data for RASONQUE® (daraxonrasib) Plus Chemotherapy in First-Line Metastatic Pancreatic Cancer at ENA 2026",
+        "score": 3
+      },
+      {
+        "url": "https://www.revmed.com/media/news/13736/european-commission-approves-revolution-medicines-rasonque-daraxonrasib-the-first-broad-ras-targeted-medicine-in-metastatic-pancreatic-cancer",
+        "title": "European Commission Approves Revolution Medicines’ RASONQUE® (daraxonrasib), the First Broad RAS-Targeted Medicine in Metastatic Pancreatic Cancer",
+        "score": 3
+      },
+      {
         "url": "https://www.revmed.com/media/news/13691/revolution-medicines-reports-third-quarter-2026-financial-results-and-update-on-corporate-progress",
         "title": "Revolution Medicines Reports Third Quarter 2026 Financial Results and Update on Corporate Progress",
-        "score": 3
-      },
-      {
-        "url": "https://www.revmed.com/media/news/13661/revolution-medicines-to-participate-in-november-2026-investor-conferences",
-        "title": "Revolution Medicines to Participate in November 2026 Investor Conferences",
-        "score": 3
-      },
-      {
-        "url": "https://www.revmed.com/media/news/13651/revolution-medicines-presents-overall-survival-data-for-rasonquetm-daraxonrasib-across-subgroups-in-previously-treated-metastatic-pancreatic-cancer-at-esmo-2026",
-        "title": "Revolution Medicines Presents Overall Survival Data for RASONQUE™ (daraxonrasib) Across Subgroups in Previously Treated Metastatic Pancreatic Cancer at ESMO 2026",
         "score": 3
       }
     ]
   },
   "Roche": {
     "status": "OK",
-    "checked_at": "2026-11-13T10:00:01.465709+00:00",
-    "detail": "playwright; 11 release/article links; 0 new",
+    "checked_at": "2026-11-26T01:31:10.968876+00:00",
+    "detail": "playwright; 11 release/article links; 4 new",
     "source_url": "https://www.roche.com/media/releases",
     "samples": [
       {
-        "url": "https://www.roche.com/media/releases/med-cor-2026-11-10",
-        "title": "Roche presents new data across pharmaceuticals and diagnostics from its growing Alzheimer’s disease portfolio at CTAD 2026",
+        "url": "https://www.roche.com/media/releases/med-cor-2026-11-23",
+        "title": "FDA approves Roche’s Wilserdly (giredestrant) for early-stage ER-positive breast cancer, making it the first new endocrine therapy in this setting in over 20 years",
         "score": 3
       },
       {
-        "url": "https://www.roche.com/media/releases/med-cor-2026-10-28",
-        "title": "Roche strengthens cancer diagnostic portfolio with launch of test for differential diagnosis of mesothelioma",
+        "url": "https://www.roche.com/media/releases/med-cor-2026-11-16b",
+        "title": "FDA approves Roche’s Wilserdly (giredestrant), a next-generation oral SERD, for ER-positive, ESR1-mutated advanced breast cancer",
         "score": 3
       },
       {
-        "url": "https://www.roche.com/media/releases/med-cor-2026-10-27",
-        "title": "Roche receives CE Mark for cobas® smart e immunoanalyser, completing a portfolio that brings central-lab precision to healthcare settings ranging from small clinics to large hospital laboratories",
+        "url": "https://www.roche.com/media/releases/med-cor-2026-11-16",
+        "title": "Roche’s Gazyva/Gazyvaro becomes the first FDA-approved treatment for primary membranous nephropathy",
         "score": 3
       }
     ]
   },
   "Samsung Biologics": {
     "status": "OK",
-    "checked_at": "2026-11-13T10:00:01.465826+00:00",
+    "checked_at": "2026-11-26T01:31:10.968942+00:00",
     "detail": "official-newsroom-data; 30 release/article links; 0 new",
     "source_url": "https://samsungbiologics.com/media/company-news",
     "samples": [
@@ -1081,30 +1086,30 @@
   },
   "Sanofi": {
     "status": "OK",
-    "checked_at": "2026-11-13T10:00:01.465885+00:00",
-    "detail": "requests; 20 release/article links; 0 new",
+    "checked_at": "2026-11-26T01:31:10.969021+00:00",
+    "detail": "requests; 20 release/article links; 3 new",
     "source_url": "https://www.sanofi.com/en/media-room/press-releases",
     "samples": [
       {
-        "url": "https://www.sanofi.com/en/media-room/press-releases/2026/2026-10-30-06-30-00-3392028",
-        "title": "Press Release: Q3 2026: double-digit growth in sales and business EPS FY 2026: guidance upgraded",
+        "url": "https://www.sanofi.com/en/media-room/press-releases/2026/2026-11-24-06-30-00-3409002",
+        "title": "Press Release: Sanofi to acquire Insmed in strategic step that strengthens long-term future",
         "score": 3
       },
       {
-        "url": "https://www.sanofi.com/en/media-room/press-releases/2026/2026-10-20-12-00-00-3384293",
-        "title": "Media Update: UEG Week: Sanofi and Teva’s duvakitug maintained long-term positive outcomes in new phase 2b data for ulcerative colitis and Crohn’s disease",
+        "url": "https://www.sanofi.com/en/media-room/press-releases/2026/2026-11-19-06-00-00-3406292",
+        "title": "Press Release: Sanofi’s next-generation rabies vaccine, VaxRabeo, approved in the EU for all ages",
         "score": 3
       },
       {
-        "url": "https://www.sanofi.com/en/media-room/press-releases/2026/2026-10-19-10-30-00-3383205",
-        "title": "Press Release: Sanofi breaks ground on new state-of-the-art insulin manufacturing facility in Germany",
+        "url": "https://www.sanofi.com/en/media-room/press-releases/2026/2026-11-18-22-19-06-3406209",
+        "title": "Press Release: Sanofi’s Infilbray approved in the US as the first medicine to treat neurological manifestations of Type 3 Gaucher disease",
         "score": 3
       }
     ]
   },
   "Santen Pharmaceutical": {
     "status": "OK",
-    "checked_at": "2026-11-13T10:00:01.465922+00:00",
+    "checked_at": "2026-11-26T01:31:10.969060+00:00",
     "detail": "requests; 11 release/article links; 0 new",
     "source_url": "https://www.santen.com/en/news",
     "samples": [
@@ -1127,8 +1132,8 @@
   },
   "Sarepta Therapeutics": {
     "status": "OK",
-    "checked_at": "2026-11-13T10:00:01.465973+00:00",
-    "detail": "requests; 34 release/article links; 0 new",
+    "checked_at": "2026-11-26T01:31:10.969141+00:00",
+    "detail": "requests; 34 release/article links; 2 new",
     "source_url": "https://www.sarepta.com/newsroom",
     "samples": [
       {
@@ -1150,13 +1155,13 @@
   },
   "Scholar Rock": {
     "status": "FAIL",
-    "checked_at": "2026-11-13T10:00:01.465983+00:00",
+    "checked_at": "2026-11-26T01:31:10.969157+00:00",
     "detail": "Official page HTTP 403; official RSS also unavailable: 403 Client Error: Forbidden for url: https://investors.scholarrock.com/rss/news-releases.xml",
     "source_url": "https://investors.scholarrock.com/investors-media/press-releases/"
   },
   "Sichuan Kelun-Biotech": {
     "status": "OK",
-    "checked_at": "2026-11-13T10:00:01.466009+00:00",
+    "checked_at": "2026-11-26T01:31:10.969189+00:00",
     "detail": "requests; 8 release/article links; 0 new",
     "source_url": "https://en.kelun-biotech.com/newsCenter.aspx?mid=18",
     "samples": [
@@ -1182,16 +1187,21 @@
   },
   "Structure Therapeutics": {
     "status": "FAIL",
-    "checked_at": "2026-11-13T10:00:01.466025+00:00",
+    "checked_at": "2026-11-26T01:31:10.969216+00:00",
     "detail": "Official page HTTP 403; official RSS also unavailable: 403 Client Error: Forbidden for url: https://ir.structuretx.com/rss/news-releases.xml",
     "source_url": "https://ir.structuretx.com/press-releases"
   },
   "Sumitomo Pharma": {
     "status": "OK",
-    "checked_at": "2026-11-13T10:00:04.390978+00:00",
-    "detail": "playwright; 18 release/article links; 0 new",
+    "checked_at": "2026-11-26T01:31:12.594836+00:00",
+    "detail": "playwright; 18 release/article links; 1 new",
     "source_url": "https://www.sumitomo-pharma.com/news/",
     "samples": [
+      {
+        "url": "https://www.sumitomo-pharma.com/news/20261125-1.html",
+        "title": "Update on Patient Enrollment in Phase 2 Study of Enzomenib for Acute Myeloid Leukemia with NPM1 Mutation",
+        "score": 3
+      },
       {
         "url": "https://www.sumitomo-pharma.com/news/assets/pdf/ene20261105_1.pdf",
         "title": "20261105 Nov. 05, 2026 R&D Sumitomo Pharma America to Present New Clinical Data on Enzomenib and Nuvisertib at the 2026 American Society of Hematology Annual Meeting",
@@ -1201,95 +1211,78 @@
         "url": "https://www.sumitomo-pharma.com/news/20261102-1.html",
         "title": "Notice Regarding the Execution of Definitive Agreement for the Succession of the GMP-Compliant Cell Processing CDMO Business by S-RACMO",
         "score": 3
-      },
-      {
-        "url": "https://www.sumitomo-pharma.com/news/assets/pdf/eir20261030.pdf",
-        "title": "20261030 Oct. 30, 2026 Finances Presentation Material (Conference on Q2 FY2026 Financial Results )",
-        "score": 3
       }
     ]
   },
   "Summit Therapeutics": {
     "status": "OK",
-    "checked_at": "2026-11-13T10:00:04.391091+00:00",
-    "detail": "official-newsroom-data; 50 release/article links; 0 new",
+    "checked_at": "2026-11-26T01:31:12.594981+00:00",
+    "detail": "official-newsroom-data; 50 release/article links; 3 new",
     "source_url": "https://smmttx.com/news/press-releases/default.aspx",
     "samples": [
       {
-        "url": "https://smmttx.com/news/press-releases/news-details/2026/Summit-Therapeutics-Reports-Financial-Results-and-Operational-Progress-for-the-Third-Quarter-and-Nine-Months-Ended-September-30-2026/default.aspx",
-        "title": "Summit Therapeutics Reports Financial Results and Operational Progress for the Third Quarter and Nine Months Ended September 30, 2026",
+        "url": "https://smmttx.com/news/press-releases/news-details/2026/Summit-Therapeutics-to-Host-Corporate-Update-and-Operational-Progress-Call-on-November-30-2026/default.aspx",
+        "title": "Summit Therapeutics to Host Corporate Update and Operational Progress Call on November 30, 2026",
         "score": 5
       },
       {
-        "url": "https://smmttx.com/news/press-releases/news-details/2026/Ivonescimab-Plus-Chemotherapy-Demonstrates-Overall-Survival-Superiority-Compared-to-Durvalumab-Plus-Chemotherapy-in-First-Line-Treatment-of-Patients-with-Advanced-Biliary-Tract-Cancer-in-HARMONi-GI1-Study-Conducted-by-Akeso-in-China/default.aspx",
-        "title": "Ivonescimab Plus Chemotherapy Demonstrates Overall Survival Superiority Compared to Durvalumab Plus Chemotherapy in First-Line Treatment of Patients with Advanced Biliary Tract Cancer in HARMONi-GI1 Study Conducted by Akeso in China",
+        "url": "https://smmttx.com/news/press-releases/news-details/2026/Summit-Therapeutics-Further-Expands-Ivonescimab-Global-Development-Program-with-Phase-III-HARMONi-10-Study-in-Unresectable-Stage-III-Non-Small-Cell-Lung-Cancer/default.aspx",
+        "title": "Summit Therapeutics Further Expands Ivonescimab Global Development Program with Phase III HARMONi-10 Study in Unresectable Stage III Non-Small Cell Lung Cancer",
         "score": 5
       },
       {
-        "url": "https://smmttx.com/news/press-releases/news-details/2026/Summit-Therapeutics-and-Lunit-Announce-Agreement-to-Apply-AI-powered-SCOPE-IO-Platform-for-Tumor-Microenvironment-Analysis-in-Immuno-Oncology-Development/default.aspx",
-        "title": "Summit Therapeutics and Lunit Announce Agreement to Apply AI-powered SCOPE IO Platform for Tumor Microenvironment Analysis in Immuno-Oncology Development",
+        "url": "https://smmttx.com/news/press-releases/news-details/2026/Summit-Therapeutics-Provides-Update-Regarding-Ivonescimab-Biologics-License-Application/default.aspx",
+        "title": "Summit Therapeutics Provides Update Regarding Ivonescimab Biologics License Application",
         "score": 5
       }
     ]
   },
   "Supernus Pharmaceuticals": {
     "status": "FAIL",
-    "checked_at": "2026-11-13T10:00:04.391111+00:00",
+    "checked_at": "2026-11-26T01:31:12.594997+00:00",
     "detail": "Official page HTTP 403; official RSS also unavailable: 403 Client Error: Forbidden for url: https://ir.supernus.com/rss/news-releases.xml",
     "source_url": "https://ir.supernus.com/press-releases"
   },
   "Teva": {
     "status": "OK",
-    "checked_at": "2026-11-13T10:00:04.391195+00:00",
-    "detail": "official-newsroom-data; 49 release/article links; 0 new",
+    "checked_at": "2026-11-26T01:31:12.595098+00:00",
+    "detail": "official-newsroom-data; 49 release/article links; 3 new",
     "source_url": "https://ir.tevapharm.com/news-and-events/press-releases/default.aspx",
     "samples": [
       {
-        "url": "https://ir.tevapharm.com/news-and-events/press-releases/press-release-details/2026/Teva-Shares-Innovative-Pipeline-Updates-and-Unveils-Path-to-Future-Growth-at-RD-Day-Targeting-67-Billion-in-Innovative-Medicines-Revenue-by-2030/default.aspx",
-        "title": "Teva Shares Innovative Pipeline Updates and Unveils Path to Future Growth at R&D Day, Targeting $6–7 Billion in Innovative Medicines Revenue by 2030",
+        "url": "https://ir.tevapharm.com/news-and-events/press-releases/press-release-details/2026/Teva-to-Present-at-the-9th-Annual-Evercore-Healthcare-Conference-the-Piper-Sandler-38th-Annual-Healthcare-Conference-and-Citis-2026-Global-Healthcare-Conference/default.aspx",
+        "title": "Teva to Present at the 9th Annual Evercore Healthcare Conference, the Piper Sandler 38th Annual Healthcare Conference and Citi’s 2026 Global Healthcare Conference",
         "score": 5
       },
       {
-        "url": "https://ir.tevapharm.com/news-and-events/press-releases/press-release-details/2026/Tevas-Pivot-to-Growth-Strategy-Delivers-33-Growth-Across-Key-Innovative-Brands-Raises-2026-Outlook-for-AUSTEDO-AJOVY-and-UZEDY-Delivers-Substantial-Gross-Margin-Expansion/default.aspx",
-        "title": "Teva’s Pivot to Growth Strategy Delivers 33% Growth Across Key Innovative Brands; Raises 2026 Outlook for AUSTEDO®, AJOVY® and UZEDY®; Delivers Substantial Gross Margin Expansion",
+        "url": "https://ir.tevapharm.com/news-and-events/press-releases/press-release-details/2026/Teva-Announces-RD-Leadership-Transition-Eric-Hughes-to-Depart-the-Company/default.aspx",
+        "title": "Teva Announces R&D Leadership Transition; Eric Hughes to Depart the Company",
         "score": 5
       },
       {
-        "url": "https://ir.tevapharm.com/news-and-events/press-releases/press-release-details/2026/Teva-and-Samsung-Bioepis-Announce-Agreement-to-Commercialize-Two-FDA-Approved-Biosimilars-in-the-U-S-/default.aspx",
-        "title": "Teva and Samsung Bioepis Announce Agreement to Commercialize Two FDA-Approved Biosimilars in the U.S.",
+        "url": "https://ir.tevapharm.com/news-and-events/press-releases/press-release-details/2026/U-S--FDA-Approves-IGALMI-as-First-At-Home-Acute-Treatment-for-Agitation-Associated-with-Schizophrenia-Schizoaffective-Disorder-or-Bipolar-I-or-II-Disorder-in-Adults/default.aspx",
+        "title": "U.S. FDA Approves IGALMI® as First At-Home Acute Treatment for Agitation Associated with Schizophrenia, Schizoaffective Disorder, or Bipolar I or II Disorder in Adults",
         "score": 5
       }
     ]
   },
   "Ultragenyx": {
-    "status": "OK",
-    "checked_at": "2026-11-13T10:00:04.391242+00:00",
-    "detail": "requests; 10 release/article links; 0 new",
-    "source_url": "https://www.ultragenyx.com/newsroom/news-and-press-releases/",
-    "samples": [
-      {
-        "url": "https://ir.ultragenyx.com/news-releases/news-release-details/ultragenyx-participate-investor-conferences-london",
-        "title": "Ultragenyx to Participate at Investor Conferences in London",
-        "score": 3
-      },
-      {
-        "url": "https://ir.ultragenyx.com/news-releases/news-release-details/ultragenyx-reports-third-quarter-2026-financial-results",
-        "title": "Ultragenyx Reports Third Quarter 2026 Financial Results, Announces Substantial Expense Reductions, and Reaffirms Profitability in 2027",
-        "score": 3
-      },
-      {
-        "url": "https://ir.ultragenyx.com/news-releases/news-release-details/ultragenyx-host-conference-call-third-quarter-2026-financial",
-        "title": "Ultragenyx to Host Conference Call for Third Quarter 2026 Financial Results and Corporate Update",
-        "score": 3
-      }
-    ]
+    "status": "FAIL",
+    "checked_at": "2026-11-26T01:31:12.595118+00:00",
+    "detail": "Official page HTTP 403",
+    "source_url": "https://www.ultragenyx.com/newsroom/news-and-press-releases/"
   },
   "Vera Therapeutics": {
     "status": "OK",
-    "checked_at": "2026-11-13T10:00:04.391272+00:00",
-    "detail": "requests; 10 release/article links; 0 new",
+    "checked_at": "2026-11-26T01:31:12.595155+00:00",
+    "detail": "requests; 10 release/article links; 1 new",
     "source_url": "https://ir.veratx.com/news-events/press-releases",
     "samples": [
+      {
+        "url": "https://ir.veratx.com/news-releases/news-release-details/vera-therapeutics-participate-upcoming-investor-conferences-5",
+        "title": "Vera Therapeutics to Participate at Upcoming Investor Conferences",
+        "score": 3
+      },
       {
         "url": "https://ir.veratx.com/news-releases/news-release-details/vera-therapeutics-announces-inducement-grants-under-nasdaq-15",
         "title": "Vera Therapeutics Announces Inducement Grants Under Nasdaq Listing Rule 5635(c)(4)",
@@ -1299,26 +1292,26 @@
         "url": "https://ir.veratx.com/news-releases/news-release-details/vera-therapeutics-provides-business-update-and-reports-third-3",
         "title": "Vera Therapeutics Provides Business Update and Reports Third Quarter 2026 Financial Results",
         "score": 3
-      },
-      {
-        "url": "https://ir.veratx.com/news-releases/news-release-details/vera-therapeutics-participate-guggenheim-3rd-annual-healthcare",
-        "title": "Vera Therapeutics to Participate in the Guggenheim 3rd Annual Healthcare Innovation Conference",
-        "score": 3
       }
     ]
   },
   "Vertex Pharmaceuticals": {
     "status": "FAIL",
-    "checked_at": "2026-11-13T10:00:04.391285+00:00",
+    "checked_at": "2026-11-26T01:31:12.595167+00:00",
     "detail": "Official page HTTP 403; official RSS also unavailable: 403 Client Error: Forbidden for url: https://investors.vrtx.com/rss/news-releases.xml?items=15",
     "source_url": "https://investors.vrtx.com/news-releases"
   },
   "Viking Therapeutics": {
     "status": "OK",
-    "checked_at": "2026-11-13T10:00:04.391309+00:00",
-    "detail": "requests; 5 release/article links; 0 new",
+    "checked_at": "2026-11-26T01:31:12.595196+00:00",
+    "detail": "requests; 5 release/article links; 1 new",
     "source_url": "https://ir.vikingtherapeutics.com/press-releases",
     "samples": [
+      {
+        "url": "https://ir.vikingtherapeutics.com/2026-11-15-Viking-Therapeutics-Highlights-Clinical-Data-from-VK2735-Obesity-Program-at-ObesityWeek-R-2026",
+        "title": "Viking Therapeutics Highlights Clinical Data from VK2735 Obesity Program at ObesityWeek® 2026",
+        "score": 3
+      },
       {
         "url": "https://ir.vikingtherapeutics.com/2026-11-09-Viking-Therapeutics-Announces-Two-Poster-Presentations-at-ObesityWeek-R-2026",
         "title": "Viking Therapeutics Announces Two Poster Presentations at ObesityWeek® 2026",
@@ -1328,40 +1321,35 @@
         "url": "https://ir.vikingtherapeutics.com/2026-11-03-Viking-Therapeutics-to-Participate-at-Upcoming-Investor-Conferences",
         "title": "Viking Therapeutics to Participate at Upcoming Investor Conferences",
         "score": 3
-      },
-      {
-        "url": "https://ir.vikingtherapeutics.com/2026-10-28-Viking-Therapeutics-Reports-Third-Quarter-2026-Financial-Results-and-Provides-Corporate-Update",
-        "title": "Viking Therapeutics Reports Third Quarter 2026 Financial Results and Provides Corporate Update",
-        "score": 3
       }
     ]
   },
   "WuXi Biologics": {
     "status": "OK",
-    "checked_at": "2026-11-13T10:00:04.391336+00:00",
-    "detail": "requests; 9 release/article links; 0 new",
+    "checked_at": "2026-11-26T01:31:14.053086+00:00",
+    "detail": "requests; 9 release/article links; 3 new",
     "source_url": "https://www.wuxibiologics.com/press-release/",
     "samples": [
       {
-        "url": "https://www.wuxibiologics.com/press-release/world-quality-day-building-client-trust-through-quality-excellence",
-        "title": "News Nov. 12, 2026 World Quality Day | Building Client Trust Through Quality Excellence",
+        "url": "https://www.wuxibiologics.com/press-release/wuxi-biologics-again-honored-with-frost-sullivans-global-customer-value-leadership-recognition",
+        "title": "Awards Nov. 24, 2026 WuXi Biologics Again Honored with Frost & Sullivan’s Global Customer Value Leadership Recognition",
         "score": 3
       },
       {
-        "url": "https://www.wuxibiologics.com/press-release/wuxi-biologics-receives-double-honors-at-2026-hera-for-esg-reporting-and-environmental-excellence",
-        "title": "Awards Nov. 04, 2026 WuXi Biologics Receives Double Honors at 2026 HERA for ESG Reporting and Environmental Excellence",
+        "url": "https://www.wuxibiologics.com/press-release/wuxi-biologics-u-s-site-in-new-jersey-completes-commercial-ppq-campaign",
+        "title": "News Nov. 23, 2026 WuXi Biologics’ U.S. Site in New Jersey Completes Commercial PPQ Campaign",
         "score": 3
       },
       {
-        "url": "https://www.wuxibiologics.com/press-release/wuxi-biologics-receives-top-honor-jade-award-at-the-asset-corporate-sustainability-leadership-awards-2026",
-        "title": "Awards Oct. 21, 2026 WuXi Biologics Receives Top-Honor Jade Award at The Asset Corporate Sustainability Leadership Awards 2026",
+        "url": "https://www.wuxibiologics.com/press-release/wuxi-biologics-receives-pss-procurement-success-awards-2026",
+        "title": "Awards Nov. 20, 2026 WuXi Biologics Receives PSS Procurement Success Awards 2026",
         "score": 3
       }
     ]
   },
   "Zealand Pharma": {
     "status": "FAIL",
-    "checked_at": "2026-11-13T10:00:04.391348+00:00",
+    "checked_at": "2026-11-26T01:31:14.053159+00:00",
     "detail": "Official page HTTP 403",
     "source_url": "https://www.zealandpharma.com/news-media/"
   }
