@@ -1,0 +1,497 @@
+{
+  "version": "2.0",
+  "source_registry_warning": "Candidates are unverified. A URL is not proof of coverage.",
+  "companies": [
+    {
+      "ticker": "LLY",
+      "name": "Eli Lilly",
+      "batch_id": "A",
+      "official_indexes": [
+        "https://investor.lilly.com/",
+        "https://lilly.gcs-web.com/",
+        "https://www.lilly.com/news/stories"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL",
+      "known_official_release_floor": {
+        "date": "2026-11-23",
+        "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-host-innovation-day-2026",
+        "purpose": "stale-index sanity check; not proof of daily coverage"
+      }
+    },
+    {
+      "ticker": "ABBV",
+      "name": "ABBV",
+      "batch_id": "A",
+      "official_indexes": [
+        "https://news.abbvie.com/"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL"
+    },
+    {
+      "ticker": "AMGN",
+      "name": "AMGN",
+      "batch_id": "A",
+      "official_indexes": [
+        "https://investors.amgen.com/news-releases",
+        "https://investors.amgen.com/news-and-events/press-releases"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL"
+    },
+    {
+      "ticker": "BIIB",
+      "name": "BIIB",
+      "batch_id": "A",
+      "official_indexes": [
+        "https://investors.biogen.com/news/news-releases",
+        "https://investors.biogen.com/news-releases"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL"
+    },
+    {
+      "ticker": "BMY",
+      "name": "BMY",
+      "batch_id": "A",
+      "official_indexes": [
+        "https://www.bms.com/news-and-media/press-releases.html"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL"
+    },
+    {
+      "ticker": "GILD",
+      "name": "GILD",
+      "batch_id": "A",
+      "official_indexes": [
+        "https://investors.gilead.com/news/default.aspx",
+        "https://investors.gilead.com/overview/default.aspx",
+        "https://www.gilead.com/news/news-details"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL"
+    },
+    {
+      "ticker": "JNJ",
+      "name": "JNJ",
+      "batch_id": "A",
+      "official_indexes": [
+        "https://www.jnj.com/media-center/press-releases"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL"
+    },
+    {
+      "ticker": "MRK",
+      "name": "MRK",
+      "batch_id": "A",
+      "official_indexes": [
+        "https://www.merck.com/news"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL"
+    },
+    {
+      "ticker": "PFE",
+      "name": "PFE",
+      "batch_id": "A",
+      "official_indexes": [
+        "https://www.pfizer.com/newsroom/press-releases"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL"
+    },
+    {
+      "ticker": "REGN",
+      "name": "REGN",
+      "batch_id": "A",
+      "official_indexes": [
+        "https://www.regeneron.com/newsroom"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL"
+    },
+    {
+      "ticker": "AZN",
+      "name": "AZN",
+      "batch_id": "A",
+      "official_indexes": [
+        "https://www.astrazeneca.com/media-centre/press-releases.html"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL"
+    },
+    {
+      "ticker": "GSK",
+      "name": "GSK",
+      "batch_id": "A",
+      "official_indexes": [
+        "https://www.gsk.com/en-gb/media/press-releases"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL"
+    },
+    {
+      "ticker": "NOVN",
+      "name": "NOVN",
+      "batch_id": "A",
+      "official_indexes": [
+        "https://www.novartis.com/news/media-releases"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL"
+    },
+    {
+      "ticker": "NOVOB",
+      "name": "NOVOB",
+      "batch_id": "A",
+      "official_indexes": [
+        "https://www.novonordisk.com/news-and-media/news-and-ir-materials.html"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL"
+    },
+    {
+      "ticker": "ROP",
+      "name": "Roche",
+      "batch_id": "A",
+      "official_indexes": [
+        "https://www.roche.com/media/releases"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL"
+    },
+    {
+      "ticker": "SAN",
+      "name": "SAN",
+      "batch_id": "A",
+      "official_indexes": [
+        "https://www.sanofi.com/en/media-room/press-releases"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL"
+    },
+    {
+      "ticker": "GALD",
+      "name": "GALD",
+      "batch_id": "B",
+      "official_indexes": [
+        "https://www.galderma.com/newsroom"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL"
+    },
+    {
+      "ticker": "LONN",
+      "name": "LONN",
+      "batch_id": "B",
+      "official_indexes": [
+        "https://www.lonza.com/news",
+        "https://www.lonza.com/news-and-media/news-archive"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL"
+    },
+    {
+      "ticker": "VRTX",
+      "name": "VRTX",
+      "batch_id": "B",
+      "official_indexes": [
+        "https://investors.vrtx.com/news-events/press-releases",
+        "https://investors.vrtx.com/news-releases"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL"
+    },
+    {
+      "ticker": "JAZZ",
+      "name": "Jazz Pharmaceuticals",
+      "batch_id": "B",
+      "official_indexes": [
+        "https://investor.jazzpharma.com/news/press-release-archive",
+        "https://investor.jazzpharma.com/news"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL",
+      "known_official_release_floor": {
+        "date": "2026-11-03",
+        "url": "https://investor.jazzpharma.com/news-releases/news-release-details/jazz-pharmaceuticals-participate-upcoming-investor-conferences-2/",
+        "purpose": "stale-index sanity check; not proof of daily coverage"
+      }
+    },
+    {
+      "ticker": "ALKS",
+      "name": "ALKS",
+      "batch_id": "B",
+      "official_indexes": [
+        "https://www.alkermes.com/news-releases/news-release-details",
+        "https://alkermes.gcs-web.com/news-releases"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL"
+    },
+    {
+      "ticker": "SRPT",
+      "name": "SRPT",
+      "batch_id": "B",
+      "official_indexes": [
+        "https://sarepta.gcs-web.com/news-releases"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL"
+    },
+    {
+      "ticker": "VKTX",
+      "name": "VKTX",
+      "batch_id": "B",
+      "official_indexes": [
+        "https://ir.vikingtherapeutics.com/press-releases"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL"
+    },
+    {
+      "ticker": "VERA",
+      "name": "VERA",
+      "batch_id": "B",
+      "official_indexes": [
+        "https://ir.veratx.com/news-events/press-releases"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL"
+    },
+    {
+      "ticker": "CAPR",
+      "name": "Capricor Therapeutics",
+      "batch_id": "B",
+      "official_indexes": [
+        "https://www.capricor.com/investors/news-events/press-releases",
+        "https://www.capricor.com/investors/news-events"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL",
+      "known_official_release_floor": {
+        "date": "2026-11-23",
+        "url": "https://www.capricor.com/investors/news-events/press-releases/detail/361/capricor-therapeutics-reschedules-conference-call-to",
+        "purpose": "stale-index sanity check; not proof of daily coverage"
+      }
+    },
+    {
+      "ticker": "KURA",
+      "name": "KURA",
+      "batch_id": "B",
+      "official_indexes": [
+        "https://kuraoncology.gcs-web.com/news-releases"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL"
+    },
+    {
+      "ticker": "SMMT",
+      "name": "SMMT",
+      "batch_id": "B",
+      "official_indexes": [
+        "https://www.smmttx.com/investors/news-events/press-releases"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL"
+    },
+    {
+      "ticker": "ZEAL",
+      "name": "ZEAL",
+      "batch_id": "B",
+      "official_indexes": [
+        "https://www.zealandpharma.com/news-media/"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL"
+    },
+    {
+      "ticker": "SUPN",
+      "name": "SUPN",
+      "batch_id": "B",
+      "official_indexes": [
+        "https://ir.supernus.com/",
+        "https://ir.supernus.com/news-releases"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL"
+    },
+    {
+      "ticker": "ALMS",
+      "name": "ALMS",
+      "batch_id": "B",
+      "official_indexes": [
+        "https://investors.alumis.com/news-events/news-releases",
+        "https://investors.alumis.com/news-releases"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL"
+    },
+    {
+      "ticker": "HRMY",
+      "name": "HRMY",
+      "batch_id": "B",
+      "official_indexes": [
+        "https://ir.harmonybiosciences.com/"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL"
+    },
+    {
+      "ticker": "HIMS",
+      "name": "HIMS",
+      "batch_id": "C",
+      "official_indexes": [
+        "https://investors.hims.com/news-releases"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL"
+    },
+    {
+      "ticker": "RVMD",
+      "name": "RVMD",
+      "batch_id": "C",
+      "official_indexes": [
+        "https://ir.revmed.com/press-releases"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL"
+    },
+    {
+      "ticker": "SRRK",
+      "name": "SRRK",
+      "batch_id": "C",
+      "official_indexes": [
+        "https://investors.scholarrock.com/investors-media/press-releases"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL"
+    },
+    {
+      "ticker": "ORKA",
+      "name": "ORKA",
+      "batch_id": "C",
+      "official_indexes": [
+        "https://ir.orukatx.com/news-releases"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL"
+    },
+    {
+      "ticker": "ERAS",
+      "name": "ERAS",
+      "batch_id": "C",
+      "official_indexes": [
+        "https://ir.erasca.com/news-releases"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL"
+    },
+    {
+      "ticker": "CGEM",
+      "name": "CGEM",
+      "batch_id": "C",
+      "official_indexes": [
+        "https://investors.cullinantherapeutics.com/news-releases/"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL"
+    },
+    {
+      "ticker": "IMNM",
+      "name": "IMNM",
+      "batch_id": "C",
+      "official_indexes": [
+        "https://ir.immunome.com/news-releases"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL"
+    },
+    {
+      "ticker": "GPCR",
+      "name": "GPCR",
+      "batch_id": "C",
+      "official_indexes": [
+        "https://ir.structuretx.com/press-releases"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL"
+    },
+    {
+      "ticker": "ALVO",
+      "name": "ALVO",
+      "batch_id": "C",
+      "official_indexes": [
+        "https://investors.alvotech.com/news-releases"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL"
+    },
+    {
+      "ticker": "DNLI",
+      "name": "DNLI",
+      "batch_id": "C",
+      "official_indexes": [
+        "https://investors.denalitherapeutics.com/press-releases"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "GLOBAL"
+    },
+    {
+      "ticker": "6990 HK",
+      "name": "Sichuan Kelun-Biotech",
+      "batch_id": "C",
+      "official_indexes": [
+        "https://www.kelun-biotech.com/newsCenter.aspx?mid=18",
+        "https://www.kelun-biotech.com/"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "HK"
+    },
+    {
+      "ticker": "9926 HK",
+      "name": "Akeso",
+      "batch_id": "C",
+      "official_indexes": [
+        "https://akesobio.com/en/media/akeso-news/"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "HK"
+    },
+    {
+      "ticker": "1801 HK",
+      "name": "Innovent Biologics",
+      "batch_id": "C",
+      "official_indexes": [
+        "https://www.innoventbio.com"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "HK"
+    },
+    {
+      "ticker": "2269 HK",
+      "name": "WuXi Biologics",
+      "batch_id": "C",
+      "official_indexes": [
+        "https://www.wuxibiologics.com/Press-Release/",
+        "https://www.wuxibiologics.com"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "HK"
+    },
+    {
+      "ticker": "207940 KS",
+      "name": "Samsung Biologics",
+      "batch_id": "C",
+      "official_indexes": [
+        "https://samsungbiologics.com/front/en/mediaCenter/pressReleasesList.do",
+        "https://samsungbiologics.com/media/company-news"
+      ],
+      "source_status": "CANDIDATES_NOT_VERIFIED",
+      "market": "KR"
+    }
+  ]
+}

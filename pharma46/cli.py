@@ -1,0 +1,69 @@
+"""One command runs all 46, writes A/B/C, merged audit, MD report, evidence and email status."""
+import argparse,json,logging,os,sys
+from datetime import datetime,timedelta
+from pathlib import Path
+from .engine import JST,collect,render_report,BATCHES,ORDER,validate_report
+from .delivery import send_report
+
+
+def save_json(path,obj):
+    path=Path(path);path.parent.mkdir(parents=True,exist_ok=True)
+    pending=path.with_suffix(path.suffix+'.tmp')
+    pending.write_text(json.dumps(obj,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    pending.replace(path)
+
+
+def main(argv=None):
+    ap=argparse.ArgumentParser()
+    ap.add_argument('--date',help='JST date for fixtures/manual replay; uses real clock for capture')
+    ap.add_argument('--send',action='store_true')
+    ap.add_argument('--workers',type=int,default=4)
+    ap.add_argument('--max-pages',type=int,default=12)
+    ap.add_argument('--assert-quality',action='store_true')
+    args=ap.parse_args(argv)
+    logging.basicConfig(level=logging.INFO,format='%(asctime)s %(levelname)s %(message)s')
+    now=datetime.now(JST)
+    day=now.date().isoformat()
+    if args.assert_quality:
+        audit=Path('data')/f'pharma_monitor_{day}_audit.json'
+        if not audit.exists():print('NO_AUDIT_FILE');return 2
+        d=json.loads(audit.read_text(encoding='utf-8'))
+        stats=d['summary'];delivery=d.get('delivery',{})
+        print(json.dumps({'summary':stats,'delivery_status':delivery.get('status')},ensure_ascii=False))
+        return 0 if stats['period_verified']==46 and delivery.get('status') in ('SENT','ALREADY_SENT_IMAP','ALREADY_SENT_LEDGER') else 2
+    registry=json.loads(Path('pharma46/sources.json').read_text(encoding='utf-8'))
+    if [x['ticker'] for x in registry['companies']]!=ORDER:raise RuntimeError('REGISTRY_FAILED')
+    state_file=Path('data/pharma46_state.json')
+    state=json.loads(state_file.read_text(encoding='utf-8')) if state_file.exists() else {'companies':{}}
+    data_dir=Path('data');data_dir.mkdir(exist_ok=True)
+    evidence_dir=data_dir/'evidence'/day
+    results,errors,new_state=collect(registry,state,asof=now,evidence_dir=evidence_dir,
+                                     workers=args.workers,max_pages=args.max_pages)
+    subject,body,summary=render_report(now,results,errors,'GitHub Actions direct HTTP/Playwright')
+    for batch,tickers in BATCHES.items():
+        entries=[e for e in results if e['batch_id']==batch]
+        assert [e['ticker'] for e in entries]==tickers
+        batch_data={'batch_id':batch,'audit_date_jst':day,'expected_tickers':tickers,
+                    'entries':entries,'qa_errors':[x for x in errors if x.startswith(batch+':')]}
+        save_json(data_dir/f'pharma_monitor_{day}_batch_{batch}.json',batch_data)
+    report_file=data_dir/f'pharma_monitor_{day}_report.md'
+    report_file.write_text(body,encoding='utf-8')
+    audit_path=data_dir/f'pharma_monitor_{day}_audit.json'
+    audit={'audit_date_jst':day,'start_jst':now.isoformat(),'run_id':os.getenv('GITHUB_RUN_ID'),
+           'expected_tickers':ORDER,'entries':results,'summary':summary,'qa_errors':errors,
+           'engine_status':'EXECUTED','is_live_direct_http':True,'qa_code_executed':True,
+           'qa_pass':bool(summary['period_verified']==46 and not errors),
+           'email_subject':subject,'delivery':{'status':'NOT_REQUESTED'}}
+    save_json(audit_path,audit)
+    save_json(state_file,new_state)
+    if args.send:
+        delivery=send_report(subject,body,day)
+        audit['delivery']=delivery
+        save_json(audit_path,audit)
+    print(json.dumps({'summary':summary,'email':audit['delivery'],'output':str(audit_path)},ensure_ascii=False))
+    if os.getenv('GITHUB_STEP_SUMMARY'):
+        with open(os.environ['GITHUB_STEP_SUMMARY'],'a',encoding='utf-8') as f:
+            f.write(f'## Pharma46 {day}\n\n'+body.split('## 一次原文')[0])
+    return 0
+
+if __name__=='__main__':sys.exit(main())

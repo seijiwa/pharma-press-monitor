@@ -1,0 +1,109 @@
+name: Pharma46 - dated official news audit (v2.2 staged cutover)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'pharma46/**'
+      - 'tests_pharma46/**'
+      - 'requirements-pharma46.txt'
+      - '.github/workflows/pharma46.yml'
+  workflow_dispatch:
+    inputs:
+      send_email:
+        description: 'Send report (IMAP de-duplication enforced)'
+        type: boolean
+        required: false
+        default: false
+  schedule:
+    # 02:00 JST daily. GitHub scheduled jobs may start later than their cron time.
+    - cron: '0 17 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pharma46-daily
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 150
+    env:
+      PYTHONUNBUFFERED: '1'
+      MAIL_USER: ${{ secrets.PHARMA_MAIL_USER }}
+      MAIL_APP_PASSWORD: ${{ secrets.PHARMA_MAIL_APP_PASSWORD }}
+      MAIL_TO: ${{ vars.PHARMA_REPORT_TO || secrets.PHARMA_MAIL_USER }}
+      # Prevent duplicate delivery while the legacy ChatGPT automation is still active.
+      # Only enable scheduled delivery after an observed successful dry run and cutover.
+      SHOULD_SEND_EMAIL: ${{ (github.event_name == 'workflow_dispatch' && inputs.send_email == true) || (github.event_name == 'schedule' && vars.PHARMA_ENABLE_DELIVERY == 'true' && false) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install fixed dependencies
+        run: pip install -r requirements-pharma46.txt pytest==8.4.2
+      - name: Install supported Chromium
+        continue-on-error: true
+        run: python -m playwright install --with-deps chromium
+      - name: Run fixture and schema tests before live collection
+        run: python -m pytest tests_pharma46/ -q
+      - name: Collect all 46 directly, audit and optionally email
+        id: collect
+        continue-on-error: true
+        run: |
+          if [ "$SHOULD_SEND_EMAIL" = 'true' ]; then
+            python -m pharma46.cli --send --workers 4 --max-pages 12
+          else
+            python -m pharma46.cli --workers 4 --max-pages 12
+          fi
+      - name: Upload full raw HTML evidence and reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pharma46-evidence-${{ github.run_id }}
+          path: |
+            data/evidence/
+            data/pharma_monitor_*_batch_*.json
+            data/pharma_monitor_*_audit.json
+            data/pharma_monitor_*_report.md
+          retention-days: 30
+          if-no-files-found: warn
+      - name: Commit audit data and verified baselines
+        if: steps.collect.outcome == 'success' && github.ref == 'refs/heads/main'
+        run: |
+          git config user.name 'pharma46-monitor[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/pharma46_state.json data/pharma_monitor_*_batch_*.json data/pharma_monitor_*_audit.json data/pharma_monitor_*_report.md
+          if [ -f data/pharma46_mail_ledger.json ]; then git add data/pharma46_mail_ledger.json; fi
+          if ! git diff --cached --quiet; then
+            git commit -m 'Record evidence-based pharma46 audit'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - name: Mark incomplete or unsent audits as failed
+        if: always()
+        env:
+          COLLECT_OUTCOME: ${{ steps.collect.outcome }}
+        run: |
+          python - <<'PY'
+          import json, os, sys
+          from datetime import datetime, timezone, timedelta
+          from pathlib import Path
+          now = datetime.now(timezone(timedelta(hours=9)))
+          audit=Path('data')/f'pharma_monitor_{now.date().isoformat()}_audit.json'
+          if not audit.exists():
+              print('FAIL: collection did not produce an audit file');sys.exit(2)
+          data=json.loads(audit.read_text())
+          print('Coverage:',data['summary']['period_verified'],'/46; unconfirmed:',data['summary']['unconfirmed'])
+          print('Email:',data.get('delivery',{}).get('status'))
+          if os.getenv('COLLECT_OUTCOME')!='success':sys.exit(2)
+          if data['summary']['period_verified'] != 46:sys.exit(2)
+          if os.getenv('SHOULD_SEND_EMAIL')=='true' and data.get('delivery',{}).get('status') not in ('SENT','ALREADY_SENT_IMAP','ALREADY_SENT_LEDGER'):
+              sys.exit(2)
+          PY
