@@ -1,0 +1,174 @@
+{
+  "companies": {
+    "LLY": {
+      "latest_verified_original": {
+        "date": "2026-11-25",
+        "url": "https://www.lilly.com/news/stories/care-for-caregivers",
+        "purpose": "verified original retained for stale-index detection"
+      },
+      "seen_verified_urls": [
+        "https://www.lilly.com/news/stories/care-for-caregivers"
+      ],
+      "last_verified_success_jst": "2026-11-27T08:47:28.060679+09:00"
+    },
+    "ABBV": {
+      "seen_verified_urls": []
+    },
+    "AMGN": {
+      "seen_verified_urls": []
+    },
+    "BIIB": {
+      "seen_verified_urls": []
+    },
+    "BMY": {
+      "seen_verified_urls": []
+    },
+    "GILD": {
+      "seen_verified_urls": [],
+      "last_verified_success_jst": "2026-11-27T08:47:28.580878+09:00"
+    },
+    "JNJ": {
+      "seen_verified_urls": []
+    },
+    "MRK": {
+      "seen_verified_urls": []
+    },
+    "PFE": {
+      "seen_verified_urls": [],
+      "last_verified_success_jst": "2026-11-27T08:47:23.127350+09:00"
+    },
+    "REGN": {
+      "seen_verified_urls": []
+    },
+    "AZN": {
+      "seen_verified_urls": []
+    },
+    "GSK": {
+      "latest_verified_original": {
+        "date": "2026-11-26",
+        "url": "https://www.gsk.com/en-gb/media/press-releases/hibsago-bepirovirsen-approved-in-china-as-a-first-in-class-functional-cure-for-chronic-hepatitis-b-chb/",
+        "purpose": "verified original retained for stale-index detection"
+      },
+      "seen_verified_urls": [
+        "https://www.gsk.com/en-gb/media/press-releases/hibsago-bepirovirsen-approved-in-china-as-a-first-in-class-functional-cure-for-chronic-hepatitis-b-chb/"
+      ],
+      "last_verified_success_jst": "2026-11-27T08:47:30.955499+09:00"
+    },
+    "NOVN": {
+      "seen_verified_urls": []
+    },
+    "NOVOB": {
+      "seen_verified_urls": []
+    },
+    "ROP": {
+      "seen_verified_urls": [],
+      "last_verified_success_jst": "2026-11-27T08:47:33.409986+09:00"
+    },
+    "SAN": {
+      "seen_verified_urls": [],
+      "last_verified_success_jst": "2026-11-27T08:47:29.331636+09:00"
+    },
+    "GALD": {
+      "seen_verified_urls": []
+    },
+    "LONN": {
+      "seen_verified_urls": []
+    },
+    "VRTX": {
+      "seen_verified_urls": []
+    },
+    "JAZZ": {
+      "seen_verified_urls": []
+    },
+    "ALKS": {
+      "seen_verified_urls": []
+    },
+    "SRPT": {
+      "seen_verified_urls": []
+    },
+    "VKTX": {
+      "seen_verified_urls": []
+    },
+    "VERA": {
+      "seen_verified_urls": [],
+      "last_verified_success_jst": "2026-11-27T08:47:36.000525+09:00"
+    },
+    "CAPR": {
+      "seen_verified_urls": [],
+      "last_verified_success_jst": "2026-11-27T08:47:36.251661+09:00"
+    },
+    "KURA": {
+      "seen_verified_urls": []
+    },
+    "SMMT": {
+      "seen_verified_urls": []
+    },
+    "ZEAL": {
+      "seen_verified_urls": []
+    },
+    "SUPN": {
+      "seen_verified_urls": []
+    },
+    "ALMS": {
+      "seen_verified_urls": []
+    },
+    "HRMY": {
+      "seen_verified_urls": []
+    },
+    "HIMS": {
+      "seen_verified_urls": []
+    },
+    "RVMD": {
+      "seen_verified_urls": []
+    },
+    "SRRK": {
+      "seen_verified_urls": []
+    },
+    "ORKA": {
+      "seen_verified_urls": []
+    },
+    "ERAS": {
+      "seen_verified_urls": []
+    },
+    "CGEM": {
+      "seen_verified_urls": []
+    },
+    "IMNM": {
+      "seen_verified_urls": []
+    },
+    "GPCR": {
+      "seen_verified_urls": []
+    },
+    "ALVO": {
+      "latest_verified_original": {
+        "date": "2026-11-26",
+        "url": "https://www.alvotech.com/newsroom/alvotech-to-appeal-us-preliminary-injunction-decision-relating-to-avt05",
+        "purpose": "verified original retained for stale-index detection"
+      },
+      "seen_verified_urls": [
+        "https://www.alvotech.com/newsroom/alvotech-to-appeal-us-preliminary-injunction-decision-relating-to-avt05"
+      ],
+      "last_verified_success_jst": "2026-11-27T08:47:48.259203+09:00"
+    },
+    "DNLI": {
+      "seen_verified_urls": []
+    },
+    "6990 HK": {
+      "seen_verified_urls": []
+    },
+    "9926 HK": {
+      "seen_verified_urls": [],
+      "last_verified_success_jst": "2026-11-27T08:48:02.391116+09:00"
+    },
+    "1801 HK": {
+      "seen_verified_urls": []
+    },
+    "2269 HK": {
+      "seen_verified_urls": [],
+      "last_verified_success_jst": "2026-11-27T08:48:06.932406+09:00"
+    },
+    "207940 KS": {
+      "seen_verified_urls": []
+    }
+  }
+}

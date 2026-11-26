@@ -1,0 +1,1796 @@
+{
+  "batch_id": "B",
+  "audit_date_jst": "2026-11-27",
+  "expected_tickers": [
+    "GALD",
+    "LONN",
+    "VRTX",
+    "JAZZ",
+    "ALKS",
+    "SRPT",
+    "VKTX",
+    "VERA",
+    "CAPR",
+    "KURA",
+    "SMMT",
+    "ZEAL",
+    "SUPN",
+    "ALMS",
+    "HRMY"
+  ],
+  "entries": [
+    {
+      "ticker": "GALD",
+      "company_name": "GALD",
+      "batch_id": "B",
+      "audit_date_jst": "2026-11-27",
+      "official_listing_url": "https://www.galderma.com/newsroom",
+      "official_urls_configured": [
+        "https://www.galderma.com/newsroom"
+      ],
+      "homepage_visit_status": "成功",
+      "attempt_start_jst": "2026-11-27T08:47:29.331696+09:00",
+      "attempt_end_jst": "2026-11-27T08:48:03.823944+09:00",
+      "tool_evidence_ref": "d254546b6fdf9b7efa97da318c4e360855f2390595ad334ff267b029fbb9d864",
+      "previous_success_jst": null,
+      "comparison_period": {
+        "start_jst": "2026-11-26T08:47:16.626229+09:00",
+        "end_jst": "2026-11-27T08:47:16.626229+09:00",
+        "type": "provisional_24h"
+      },
+      "status": "未確認",
+      "reason": "INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL",
+      "latest_publication_date": null,
+      "oldest_publication_date": null,
+      "listing_page_urls_checked": [
+        "https://www.galderma.com/newsroom",
+        "https://www.galderma.com/newsroom",
+        "https://www.galderma.com/newsroom?page=1",
+        "https://www.galderma.com/newsroom?page=1",
+        "https://www.galderma.com/newsroom?page=2",
+        "https://www.galderma.com/newsroom?page=2",
+        "https://www.galderma.com/newsroom?page=3",
+        "https://www.galderma.com/newsroom?page=3",
+        "https://www.galderma.com/newsroom?page=4",
+        "https://www.galderma.com/newsroom?page=4",
+        "https://www.galderma.com/newsroom?page=5",
+        "https://www.galderma.com/newsroom?page=5",
+        "https://www.galderma.com/newsroom?page=6",
+        "https://www.galderma.com/newsroom?page=6",
+        "https://www.galderma.com/newsroom?page=7",
+        "https://www.galderma.com/newsroom?page=7",
+        "https://www.galderma.com/newsroom?page=8",
+        "https://www.galderma.com/newsroom?page=8",
+        "https://www.galderma.com/newsroom?page=9",
+        "https://www.galderma.com/newsroom?page=9",
+        "https://www.galderma.com/newsroom?page=10",
+        "https://www.galderma.com/newsroom?page=10",
+        "https://www.galderma.com/newsroom?page=11",
+        "https://www.galderma.com/newsroom?page=11"
+      ],
+      "pagination_complete": false,
+      "alternative_attempts": [],
+      "primary_releases": [],
+      "new_success_jst": null,
+      "stale_cache_status": null,
+      "source_classification": "UNVERIFIED",
+      "index_attempts": [
+        {
+          "official_listing_url": "https://www.galderma.com/newsroom",
+          "fetched_any": true,
+          "page_receipts": [
+            {
+              "requested_url": "https://www.galderma.com/newsroom",
+              "final_url": "https://www.galderma.com/newsroom",
+              "http_status": 200,
+              "method": "requests",
+              "fetched_jst": "2026-11-27T08:47:29.677989+09:00",
+              "sha256": "d254546b6fdf9b7efa97da318c4e360855f2390595ad334ff267b029fbb9d864",
+              "response_date": "2026-11-26T23:47:29+00:00",
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-27/GALD/requests-d254546b6fdf9b7e-_newsroom_216e2d2e1a007b3871.html.gz"
+            },
+            {
+              "requested_url": "https://www.galderma.com/newsroom",
+              "final_url": "https://www.galderma.com/newsroom",
+              "http_status": 200,
+              "method": "playwright",
+              "fetched_jst": "2026-11-27T08:47:32.134048+09:00",
+              "sha256": "3023b83c2f3d1a50938fca0b46925794d41e7ae446e81b2e3e29e779ae4712b8",
+              "response_date": null,
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-27/GALD/playwright-3023b83c2f3d1a50-_newsroom_216e2d2e1a007b3871.html.gz"
+            },
+            {
+              "requested_url": "https://www.galderma.com/newsroom?page=1",
+              "final_url": "https://www.galderma.com/newsroom?page=1",
+              "http_status": 200,
+              "method": "requests",
+              "fetched_jst": "2026-11-27T08:47:32.537111+09:00",
+              "sha256": "e0a1b01887d76881e7174f7372e8b29f524b9dec1cd83d12ccd0cc7176aab835",
+              "response_date": "2026-11-26T23:47:32+00:00",
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-27/GALD/requests-e0a1b01887d76881-_newsroom_ab5c8e20db5d780bec.html.gz"
+            },
+            {
+              "requested_url": "https://www.galderma.com/newsroom?page=1",
+              "final_url": "https://www.galderma.com/newsroom?page=1",
+              "http_status": 200,
+              "method": "playwright",
+              "fetched_jst": "2026-11-27T08:47:35.180490+09:00",
+              "sha256": "04cd041bc20f19a1ad850b0e34378e15d5177d955637809465696697ef9b1d18",
+              "response_date": null,
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-27/GALD/playwright-04cd041bc20f19a1-_newsroom_ab5c8e20db5d780bec.html.gz"
+            },
+            {
+              "requested_url": "https://www.galderma.com/newsroom?page=2",
+              "final_url": "https://www.galderma.com/newsroom?page=2",
+              "http_status": 200,
+              "method": "requests",
+              "fetched_jst": "2026-11-27T08:47:35.565015+09:00",
+              "sha256": "6f0f07cfb4db645623d47333b4e85caaf46685e9916c013c471ded22f5014d03",
+              "response_date": "2026-11-26T23:47:35+00:00",
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-27/GALD/requests-6f0f07cfb4db6456-_newsroom_16148d2d6803a49682.html.gz"
+            },
+            {
+              "requested_url": "https://www.galderma.com/newsroom?page=2",
+              "final_url": "https://www.galderma.com/newsroom?page=2",
+              "http_status": 200,
+              "method": "playwright",
+              "fetched_jst": "2026-11-27T08:47:38.138186+09:00",
+              "sha256": "44b3af15017159b0798361de5718473da100e79faf28ac216e85776691b2e825",
+              "response_date": null,
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-27/GALD/playwright-44b3af15017159b0-_newsroom_16148d2d6803a49682.html.gz"
+            },
+            {
+              "requested_url": "https://www.galderma.com/newsroom?page=3",
+              "final_url": "https://www.galderma.com/newsroom?page=3",
+              "http_status": 200,
+              "method": "requests",
+              "fetched_jst": "2026-11-27T08:47:38.461106+09:00",
+              "sha256": "2dc8e6cdd44a9501d4d6376a5c711edebcde9af577c54e97f86e424ab1456567",
+              "response_date": "2026-11-26T23:47:38+00:00",
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-27/GALD/requests-2dc8e6cdd44a9501-_newsroom_c4642d113c1ebdfc46.html.gz"
+            },
+            {
+              "requested_url": "https://www.galderma.com/newsroom?page=3",
+              "final_url": "https://www.galderma.com/newsroom?page=3",
+              "http_status": 200,
+              "method": "playwright",
+              "fetched_jst": "2026-11-27T08:47:41.192960+09:00",
+              "sha256": "944aa167ba8889b6848998efbc52c7fc161bfae7b0c6f27da7159c991e2ed172",
+              "response_date": null,
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-27/GALD/playwright-944aa167ba8889b6-_newsroom_c4642d113c1ebdfc46.html.gz"
+            },
+            {
+              "requested_url": "https://www.galderma.com/newsroom?page=4",
+              "final_url": "https://www.galderma.com/newsroom?page=4",
+              "http_status": 200,
+              "method": "requests",
+              "fetched_jst": "2026-11-27T08:47:41.511184+09:00",
+              "sha256": "addcdd18bb4c0433d229e5291b3bc47c18b6274b2c9bc766d8cbc0d904037987",
+              "response_date": "2026-11-26T23:47:41+00:00",
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-27/GALD/requests-addcdd18bb4c0433-_newsroom_fb37046cbb77f9634e.html.gz"
+            },
+            {
+              "requested_url": "https://www.galderma.com/newsroom?page=4",
+              "final_url": "https://www.galderma.com/newsroom?page=4",
+              "http_status": 200,
+              "method": "playwright",
+              "fetched_jst": "2026-11-27T08:47:44.734117+09:00",
+              "sha256": "caebade24502c1b868c9e313ef409209a31a79c5f8cc6f425308409de0de6c2e",
+              "response_date": null,
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-27/GALD/playwright-caebade24502c1b8-_newsroom_fb37046cbb77f9634e.html.gz"
+            },
+            {
+              "requested_url": "https://www.galderma.com/newsroom?page=5",
+              "final_url": "https://www.galderma.com/newsroom?page=5",
+              "http_status": 200,
+              "method": "requests",
+              "fetched_jst": "2026-11-27T08:47:45.173800+09:00",
+              "sha256": "98cc618b14a0e291e538c253105a4a040e9107d2155ad9a71d2c5c0b69028947",
+              "response_date": "2026-11-26T23:47:45+00:00",
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-27/GALD/requests-98cc618b14a0e291-_newsroom_aabc82adf20ea038db.html.gz"
+            },
+            {
+              "requested_url": "https://www.galderma.com/newsroom?page=5",
+              "final_url": "https://www.galderma.com/newsroom?page=5",
+              "http_status": 200,
+              "method": "playwright",
+              "fetched_jst": "2026-11-27T08:47:48.134847+09:00",
+              "sha256": "d177852e043e479c7562e9dbb1db0645dfddeac62dddea0b1e9b385fa12d7ae2",
+              "response_date": null,
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-27/GALD/playwright-d177852e043e479c-_newsroom_aabc82adf20ea038db.html.gz"
+            },
+            {
+              "requested_url": "https://www.galderma.com/newsroom?page=6",
+              "final_url": "https://www.galderma.com/newsroom?page=6",
+              "http_status": 200,
+              "method": "requests",
+              "fetched_jst": "2026-11-27T08:47:48.543325+09:00",
+              "sha256": "4ea9831678fd332f69b5a2ba1231e7968aeadc682f5b2e922ba96d26ac5fb217",
+              "response_date": "2026-11-26T23:47:48+00:00",
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-27/GALD/requests-4ea9831678fd332f-_newsroom_15ad34b65c8fac78ef.html.gz"
+            },
+            {
+              "requested_url": "https://www.galderma.com/newsroom?page=6",
+              "final_url": "https://www.galderma.com/newsroom?page=6",
+              "http_status": 200,
+              "method": "playwright",
+              "fetched_jst": "2026-11-27T08:47:50.773500+09:00",
+              "sha256": "d768504f5dfdd26c75145fc16771bd485cef88c76e885ce86cfdf426b28396e6",
+              "response_date": null,
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-27/GALD/playwright-d768504f5dfdd26c-_newsroom_15ad34b65c8fac78ef.html.gz"
+            },
+            {
+              "requested_url": "https://www.galderma.com/newsroom?page=7",
+              "final_url": "https://www.galderma.com/newsroom?page=7",
+              "http_status": 200,
+              "method": "requests",
+              "fetched_jst": "2026-11-27T08:47:51.095286+09:00",
+              "sha256": "d4c4993dafe601f269d812f505dda0726cc62b88ea85599ac34d6b273d993717",
+              "response_date": "2026-11-26T23:47:51+00:00",
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-27/GALD/requests-d4c4993dafe601f2-_newsroom_5367d68c53c8b3b7a2.html.gz"
+            },
+            {
+              "requested_url": "https://www.galderma.com/newsroom?page=7",
+              "final_url": "https://www.galderma.com/newsroom?page=7",
+              "http_status": 200,
+              "method": "playwright",
+              "fetched_jst": "2026-11-27T08:47:53.582052+09:00",
+              "sha256": "3361316c5c948a7348704074c6eb581ed2062c384cd2d2f1a72983cfaed85abb",
+              "response_date": null,
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-27/GALD/playwright-3361316c5c948a73-_newsroom_5367d68c53c8b3b7a2.html.gz"
+            },
+            {
+              "requested_url": "https://www.galderma.com/newsroom?page=8",
+              "final_url": "https://www.galderma.com/newsroom?page=8",
+              "http_status": 200,
+              "method": "requests",
+              "fetched_jst": "2026-11-27T08:47:53.921054+09:00",
+              "sha256": "7ea72b1149c0e676db219ab18dba0d6c6fdddb97859fcbf04ea5991821cc1207",
+              "response_date": "2026-11-26T23:47:53+00:00",
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-27/GALD/requests-7ea72b1149c0e676-_newsroom_79e45ff400ce086c6e.html.gz"
+            },
+            {
+              "requested_url": "https://www.galderma.com/newsroom?page=8",
+              "final_url": "https://www.galderma.com/newsroom?page=8",
+              "http_status": 200,
+              "method": "playwright",
+              "fetched_jst": "2026-11-27T08:47:56.069194+09:00",
+              "sha256": "8614969c1f5e011d28edc584a98a76ee3f6c483757b7238298c22c6c686c43aa",
+              "response_date": null,
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-27/GALD/playwright-8614969c1f5e011d-_newsroom_79e45ff400ce086c6e.html.gz"
+            },
+            {
+              "requested_url": "https://www.galderma.com/newsroom?page=9",
+              "final_url": "https://www.galderma.com/newsroom?page=9",
+              "http_status": 200,
+              "method": "requests",
+              "fetched_jst": "2026-11-27T08:47:56.367157+09:00",
+              "sha256": "437c20dcd8702040ea561a17bd3e9a39366e5ce51cc6bfeef3aabce282317c9e",
+              "response_date": "2026-11-26T23:47:56+00:00",
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-27/GALD/requests-437c20dcd8702040-_newsroom_362b45ea00f9bfab4f.html.gz"
+            },
+            {
+              "requested_url": "https://www.galderma.com/newsroom?page=9",
+              "final_url": "https://www.galderma.com/newsroom?page=9",
+              "http_status": 200,
+              "method": "playwright",
+              "fetched_jst": "2026-11-27T08:47:58.520864+09:00",
+              "sha256": "58dcbca28a0e889ecbdeaf66dc830f24239dc02011e92e95a184c165e098b39f",
+              "response_date": null,
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-27/GALD/playwright-58dcbca28a0e889e-_newsroom_362b45ea00f9bfab4f.html.gz"
+            },
+            {
+              "requested_url": "https://www.galderma.com/newsroom?page=10",
+              "final_url": "https://www.galderma.com/newsroom?page=10",
+              "http_status": 200,
+              "method": "requests",
+              "fetched_jst": "2026-11-27T08:47:58.796720+09:00",
+              "sha256": "4c71b1b7be8590bbb452cc34f3ce16e507a9a0d67438567bb424b47625481a23",
+              "response_date": "2026-11-26T23:47:58+00:00",
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-27/GALD/requests-4c71b1b7be8590bb-_newsroom_c3def1547557ff95d6.html.gz"
+            },
+            {
+              "requested_url": "https://www.galderma.com/newsroom?page=10",
+              "final_url": "https://www.galderma.com/newsroom?page=10",
+              "http_status": 200,
+              "method": "playwright",
+              "fetched_jst": "2026-11-27T08:48:01.153577+09:00",
+              "sha256": "c8284a1a23bf2130565f05ffd5c37a5d504c5a05f16e10f5e75f85f4fe4b80be",
+              "response_date": null,
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-27/GALD/playwright-c8284a1a23bf2130-_newsroom_c3def1547557ff95d6.html.gz"
+            },
+            {
+              "requested_url": "https://www.galderma.com/newsroom?page=11",
+              "final_url": "https://www.galderma.com/newsroom?page=11",
+              "http_status": 200,
+              "method": "requests",
+              "fetched_jst": "2026-11-27T08:48:01.441400+09:00",
+              "sha256": "0c07e9fae9a660f56826390aa3c7ef2b16b03c67db9561772300f8512713c048",
+              "response_date": "2026-11-26T23:48:01+00:00",
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-27/GALD/requests-0c07e9fae9a660f5-_newsroom_0dd73f122f484b1b24.html.gz"
+            },
+            {
+              "requested_url": "https://www.galderma.com/newsroom?page=11",
+              "final_url": "https://www.galderma.com/newsroom?page=11",
+              "http_status": 200,
+              "method": "playwright",
+              "fetched_jst": "2026-11-27T08:48:03.772760+09:00",
+              "sha256": "f1a6d0966c7ce8946c5dedf1d9155086119ebed8f32ce434cf53460e63c1824f",
+              "response_date": null,
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-27/GALD/playwright-f1a6d0966c7ce894-_newsroom_0dd73f122f484b1b24.html.gz"
+            }
+          ],
+          "listing_page_urls_checked": [
+            "https://www.galderma.com/newsroom",
+            "https://www.galderma.com/newsroom",
+            "https://www.galderma.com/newsroom?page=1",
+            "https://www.galderma.com/newsroom?page=1",
+            "https://www.galderma.com/newsroom?page=2",
+            "https://www.galderma.com/newsroom?page=2",
+            "https://www.galderma.com/newsroom?page=3",
+            "https://www.galderma.com/newsroom?page=3",
+            "https://www.galderma.com/newsroom?page=4",
+            "https://www.galderma.com/newsroom?page=4",
+            "https://www.galderma.com/newsroom?page=5",
+            "https://www.galderma.com/newsroom?page=5",
+            "https://www.galderma.com/newsroom?page=6",
+            "https://www.galderma.com/newsroom?page=6",
+            "https://www.galderma.com/newsroom?page=7",
+            "https://www.galderma.com/newsroom?page=7",
+            "https://www.galderma.com/newsroom?page=8",
+            "https://www.galderma.com/newsroom?page=8",
+            "https://www.galderma.com/newsroom?page=9",
+            "https://www.galderma.com/newsroom?page=9",
+            "https://www.galderma.com/newsroom?page=10",
+            "https://www.galderma.com/newsroom?page=10",
+            "https://www.galderma.com/newsroom?page=11",
+            "https://www.galderma.com/newsroom?page=11"
+          ],
+          "latest_publication_date": null,
+          "oldest_publication_date": null,
+          "dated_entries_count": 0,
+          "pagination_complete": false,
+          "found_baseline_boundary": false,
+          "stale_cache": [],
+          "errors": [
+            {
+              "url": "https://www.galderma.com/newsroom",
+              "failure": "NO_DATED_ARTICLE_LISTING"
+            },
+            {
+              "url": "https://www.galderma.com/newsroom?page=1",
+              "failure": "NO_DATED_ARTICLE_LISTING"
+            },
+            {
+              "url": "https://www.galderma.com/newsroom?page=2",
+              "failure": "NO_DATED_ARTICLE_LISTING"
+            },
+            {
+              "url": "https://www.galderma.com/newsroom?page=3",
+              "failure": "NO_DATED_ARTICLE_LISTING"
+            },
+            {
+              "url": "https://www.galderma.com/newsroom?page=4",
+              "failure": "NO_DATED_ARTICLE_LISTING"
+            },
+            {
+              "url": "https://www.galderma.com/newsroom?page=5",
+              "failure": "NO_DATED_ARTICLE_LISTING"
+            },
+            {
+              "url": "https://www.galderma.com/newsroom?page=6",
+              "failure": "NO_DATED_ARTICLE_LISTING"
+            },
+            {
+              "url": "https://www.galderma.com/newsroom?page=7",
+              "failure": "NO_DATED_ARTICLE_LISTING"
+            },
+            {
+              "url": "https://www.galderma.com/newsroom?page=8",
+              "failure": "NO_DATED_ARTICLE_LISTING"
+            },
+            {
+              "url": "https://www.galderma.com/newsroom?page=9",
+              "failure": "NO_DATED_ARTICLE_LISTING"
+            },
+            {
+              "url": "https://www.galderma.com/newsroom?page=10",
+              "failure": "NO_DATED_ARTICLE_LISTING"
+            },
+            {
+              "url": "https://www.galderma.com/newsroom?page=11",
+              "failure": "NO_DATED_ARTICLE_LISTING"
+            },
+            {
+              "failure": "PAGE_LIMIT_REACHED",
+              "pages_checked": 12
+            }
+          ],
+          "page_date_bounds": [],
+          "candidate_releases": [],
+          "article_receipts": [],
+          "newer_listing_count": 0,
+          "incomplete_load_more": false,
+          "date_order_valid": true
+        }
+      ]
+    },
+    {
+      "ticker": "LONN",
+      "company_name": "LONN",
+      "batch_id": "B",
+      "audit_date_jst": "2026-11-27",
+      "official_listing_url": "https://www.lonza.com/news",
+      "official_urls_configured": [
+        "https://www.lonza.com/news",
+        "https://www.lonza.com/news-and-media/news-archive"
+      ],
+      "homepage_visit_status": "失敗",
+      "attempt_start_jst": "2026-11-27T08:47:30.955540+09:00",
+      "attempt_end_jst": "2026-11-27T08:47:33.212864+09:00",
+      "tool_evidence_ref": null,
+      "previous_success_jst": null,
+      "comparison_period": {
+        "start_jst": "2026-11-26T08:47:16.626229+09:00",
+        "end_jst": "2026-11-27T08:47:16.626229+09:00",
+        "type": "provisional_24h"
+      },
+      "status": "未確認",
+      "reason": "INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL",
+      "latest_publication_date": null,
+      "oldest_publication_date": null,
+      "listing_page_urls_checked": [],
+      "pagination_complete": false,
+      "alternative_attempts": [
+        {
+          "url": "https://www.lonza.com/news-and-media/news-archive",
+          "method": "direct_http_or_playwright",
+          "fetched_any": false,
+          "pagination_complete": false,
+          "errors": [
+            {
+              "url": "https://www.lonza.com/news-and-media/news-archive",
+              "failure": "HTTP_403 | BROWSER_RuntimeError:HTTP_403",
+              "error_class": "FETCH_ERROR"
+            }
+          ]
+        }
+      ],
+      "primary_releases": [],
+      "new_success_jst": null,
+      "stale_cache_status": null,
+      "source_classification": "UNVERIFIED",
+      "index_attempts": [
+        {
+          "official_listing_url": "https://www.lonza.com/news",
+          "fetched_any": false,
+          "page_receipts": [],
+          "listing_page_urls_checked": [],
+          "latest_publication_date": null,
+          "oldest_publication_date": null,
+          "dated_entries_count": 0,
+          "pagination_complete": false,
+          "found_baseline_boundary": false,
+          "stale_cache": [],
+          "errors": [
+            {
+              "url": "https://www.lonza.com/news",
+              "failure": "HTTP_403 | BROWSER_RuntimeError:HTTP_403",
+              "error_class": "FETCH_ERROR"
+            }
+          ],
+          "page_date_bounds": [],
+          "candidate_releases": [],
+          "article_receipts": [],
+          "newer_listing_count": 0,
+          "incomplete_load_more": false,
+          "date_order_valid": true
+        },
+        {
+          "official_listing_url": "https://www.lonza.com/news-and-media/news-archive",
+          "fetched_any": false,
+          "page_receipts": [],
+          "listing_page_urls_checked": [],
+          "latest_publication_date": null,
+          "oldest_publication_date": null,
+          "dated_entries_count": 0,
+          "pagination_complete": false,
+          "found_baseline_boundary": false,
+          "stale_cache": [],
+          "errors": [
+            {
+              "url": "https://www.lonza.com/news-and-media/news-archive",
+              "failure": "HTTP_403 | BROWSER_RuntimeError:HTTP_403",
+              "error_class": "FETCH_ERROR"
+            }
+          ],
+          "page_date_bounds": [],
+          "candidate_releases": [],
+          "article_receipts": [],
+          "newer_listing_count": 0,
+          "incomplete_load_more": false,
+          "date_order_valid": true
+        }
+      ]
+    },
+    {
+      "ticker": "VRTX",
+      "company_name": "VRTX",
+      "batch_id": "B",
+      "audit_date_jst": "2026-11-27",
+      "official_listing_url": "https://investors.vrtx.com/news-events/press-releases",
+      "official_urls_configured": [
+        "https://investors.vrtx.com/news-events/press-releases",
+        "https://investors.vrtx.com/news-releases"
+      ],
+      "homepage_visit_status": "失敗",
+      "attempt_start_jst": "2026-11-27T08:47:32.273763+09:00",
+      "attempt_end_jst": "2026-11-27T08:47:34.527344+09:00",
+      "tool_evidence_ref": null,
+      "previous_success_jst": null,
+      "comparison_period": {
+        "start_jst": "2026-11-26T08:47:16.626229+09:00",
+        "end_jst": "2026-11-27T08:47:16.626229+09:00",
+        "type": "provisional_24h"
+      },
+      "status": "未確認",
+      "reason": "INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL",
+      "latest_publication_date": null,
+      "oldest_publication_date": null,
+      "listing_page_urls_checked": [],
+      "pagination_complete": false,
+      "alternative_attempts": [
+        {
+          "url": "https://investors.vrtx.com/news-releases",
+          "method": "direct_http_or_playwright",
+          "fetched_any": false,
+          "pagination_complete": false,
+          "errors": [
+            {
+              "url": "https://investors.vrtx.com/news-releases",
+              "failure": "HTTP_403 | BROWSER_RuntimeError:HTTP_403",
+              "error_class": "FETCH_ERROR"
+            }
+          ]
+        }
+      ],
+      "primary_releases": [],
+      "new_success_jst": null,
+      "stale_cache_status": null,
+      "source_classification": "UNVERIFIED",
+      "index_attempts": [
+        {
+          "official_listing_url": "https://investors.vrtx.com/news-events/press-releases",
+          "fetched_any": false,
+          "page_receipts": [],
+          "listing_page_urls_checked": [],
+          "latest_publication_date": null,
+          "oldest_publication_date": null,
+          "dated_entries_count": 0,
+          "pagination_complete": false,
+          "found_baseline_boundary": false,
+          "stale_cache": [],
+          "errors": [
+            {
+              "url": "https://investors.vrtx.com/news-events/press-releases",
+              "failure": "HTTP_403 | BROWSER_RuntimeError:HTTP_403",
+              "error_class": "FETCH_ERROR"
+            }
+          ],
+          "page_date_bounds": [],
+          "candidate_releases": [],
+          "article_receipts": [],
+          "newer_listing_count": 0,
+          "incomplete_load_more": false,
+          "date_order_valid": true
+        },
+        {
+          "official_listing_url": "https://investors.vrtx.com/news-releases",
+          "fetched_any": false,
+          "page_receipts": [],
+          "listing_page_urls_checked": [],
+          "latest_publication_date": null,
+          "oldest_publication_date": null,
+          "dated_entries_count": 0,
+          "pagination_complete": false,
+          "found_baseline_boundary": false,
+          "stale_cache": [],
+          "errors": [
+            {
+              "url": "https://investors.vrtx.com/news-releases",
+              "failure": "HTTP_403 | BROWSER_RuntimeError:HTTP_403",
+              "error_class": "FETCH_ERROR"
+            }
+          ],
+          "page_date_bounds": [],
+          "candidate_releases": [],
+          "article_receipts": [],
+          "newer_listing_count": 0,
+          "incomplete_load_more": false,
+          "date_order_valid": true
+        }
+      ]
+    },
+    {
+      "ticker": "JAZZ",
+      "company_name": "Jazz Pharmaceuticals",
+      "batch_id": "B",
+      "audit_date_jst": "2026-11-27",
+      "official_listing_url": "https://investor.jazzpharma.com/news/press-release-archive",
+      "official_urls_configured": [
+        "https://investor.jazzpharma.com/news/press-release-archive",
+        "https://investor.jazzpharma.com/news"
+      ],
+      "homepage_visit_status": "失敗",
+      "attempt_start_jst": "2026-11-27T08:47:33.212906+09:00",
+      "attempt_end_jst": "2026-11-27T08:47:35.366852+09:00",
+      "tool_evidence_ref": null,
+      "previous_success_jst": null,
+      "comparison_period": {
+        "start_jst": "2026-11-26T08:47:16.626229+09:00",
+        "end_jst": "2026-11-27T08:47:16.626229+09:00",
+        "type": "provisional_24h"
+      },
+      "status": "未確認",
+      "reason": "INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL",
+      "latest_publication_date": null,
+      "oldest_publication_date": null,
+      "listing_page_urls_checked": [],
+      "pagination_complete": false,
+      "alternative_attempts": [
+        {
+          "url": "https://investor.jazzpharma.com/news",
+          "method": "direct_http_or_playwright",
+          "fetched_any": false,
+          "pagination_complete": false,
+          "errors": [
+            {
+              "url": "https://investor.jazzpharma.com/news",
+              "failure": "HTTP_403 | BROWSER_RuntimeError:HTTP_403",
+              "error_class": "FETCH_ERROR"
+            }
+          ]
+        }
+      ],
+      "primary_releases": [],
+      "new_success_jst": null,
+      "stale_cache_status": null,
+      "source_classification": "UNVERIFIED",
+      "index_attempts": [
+        {
+          "official_listing_url": "https://investor.jazzpharma.com/news/press-release-archive",
+          "fetched_any": false,
+          "page_receipts": [],
+          "listing_page_urls_checked": [],
+          "latest_publication_date": null,
+          "oldest_publication_date": null,
+          "dated_entries_count": 0,
+          "pagination_complete": false,
+          "found_baseline_boundary": false,
+          "stale_cache": [],
+          "errors": [
+            {
+              "url": "https://investor.jazzpharma.com/news/press-release-archive",
+              "failure": "HTTP_403 | BROWSER_RuntimeError:HTTP_403",
+              "error_class": "FETCH_ERROR"
+            }
+          ],
+          "page_date_bounds": [],
+          "candidate_releases": [],
+          "article_receipts": [],
+          "newer_listing_count": 0,
+          "incomplete_load_more": false,
+          "date_order_valid": true
+        },
+        {
+          "official_listing_url": "https://investor.jazzpharma.com/news",
+          "fetched_any": false,
+          "page_receipts": [],
+          "listing_page_urls_checked": [],
+          "latest_publication_date": null,
+          "oldest_publication_date": null,
+          "dated_entries_count": 0,
+          "pagination_complete": false,
+          "found_baseline_boundary": false,
+          "stale_cache": [],
+          "errors": [
+            {
+              "url": "https://investor.jazzpharma.com/news",
+              "failure": "HTTP_403 | BROWSER_RuntimeError:HTTP_403",
+              "error_class": "FETCH_ERROR"
+            }
+          ],
+          "page_date_bounds": [],
+          "candidate_releases": [],
+          "article_receipts": [],
+          "newer_listing_count": 0,
+          "incomplete_load_more": false,
+          "date_order_valid": true
+        }
+      ]
+    },
+    {
+      "ticker": "ALKS",
+      "company_name": "ALKS",
+      "batch_id": "B",
+      "audit_date_jst": "2026-11-27",
+      "official_listing_url": "https://www.alkermes.com/news-releases/news-release-details",
+      "official_urls_configured": [
+        "https://www.alkermes.com/news-releases/news-release-details",
+        "https://alkermes.gcs-web.com/news-releases"
+      ],
+      "homepage_visit_status": "失敗",
+      "attempt_start_jst": "2026-11-27T08:47:33.410039+09:00",
+      "attempt_end_jst": "2026-11-27T08:47:35.984079+09:00",
+      "tool_evidence_ref": null,
+      "previous_success_jst": null,
+      "comparison_period": {
+        "start_jst": "2026-11-26T08:47:16.626229+09:00",
+        "end_jst": "2026-11-27T08:47:16.626229+09:00",
+        "type": "provisional_24h"
+      },
+      "status": "未確認",
+      "reason": "INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL",
+      "latest_publication_date": null,
+      "oldest_publication_date": null,
+      "listing_page_urls_checked": [],
+      "pagination_complete": false,
+      "alternative_attempts": [
+        {
+          "url": "https://alkermes.gcs-web.com/news-releases",
+          "method": "direct_http_or_playwright",
+          "fetched_any": false,
+          "pagination_complete": false,
+          "errors": [
+            {
+              "url": "https://alkermes.gcs-web.com/news-releases",
+              "failure": "HTTP_403 | BROWSER_RuntimeError:HTTP_403",
+              "error_class": "FETCH_ERROR"
+            }
+          ]
+        }
+      ],
+      "primary_releases": [],
+      "new_success_jst": null,
+      "stale_cache_status": null,
+      "source_classification": "UNVERIFIED",
+      "index_attempts": [
+        {
+          "official_listing_url": "https://www.alkermes.com/news-releases/news-release-details",
+          "fetched_any": false,
+          "page_receipts": [],
+          "listing_page_urls_checked": [],
+          "latest_publication_date": null,
+          "oldest_publication_date": null,
+          "dated_entries_count": 0,
+          "pagination_complete": false,
+          "found_baseline_boundary": false,
+          "stale_cache": [],
+          "errors": [
+            {
+              "url": "https://www.alkermes.com/news-releases/news-release-details",
+              "failure": "HTTP_404 | BROWSER_RuntimeError:HTTP_404",
+              "error_class": "FETCH_ERROR"
+            }
+          ],
+          "page_date_bounds": [],
+          "candidate_releases": [],
+          "article_receipts": [],
+          "newer_listing_count": 0,
+          "incomplete_load_more": false,
+          "date_order_valid": true
+        },
+        {
+          "official_listing_url": "https://alkermes.gcs-web.com/news-releases",
+          "fetched_any": false,
+          "page_receipts": [],
+          "listing_page_urls_checked": [],
+          "latest_publication_date": null,
+          "oldest_publication_date": null,
+          "dated_entries_count": 0,
+          "pagination_complete": false,
+          "found_baseline_boundary": false,
+          "stale_cache": [],
+          "errors": [
+            {
+              "url": "https://alkermes.gcs-web.com/news-releases",
+              "failure": "HTTP_403 | BROWSER_RuntimeError:HTTP_403",
+              "error_class": "FETCH_ERROR"
+            }
+          ],
+          "page_date_bounds": [],
+          "candidate_releases": [],
+          "article_receipts": [],
+          "newer_listing_count": 0,
+          "incomplete_load_more": false,
+          "date_order_valid": true
+        }
+      ]
+    },
+    {
+      "ticker": "SRPT",
+      "company_name": "SRPT",
+      "batch_id": "B",
+      "audit_date_jst": "2026-11-27",
+      "official_listing_url": "https://sarepta.gcs-web.com/news-releases",
+      "official_urls_configured": [
+        "https://sarepta.gcs-web.com/news-releases"
+      ],
+      "homepage_visit_status": "失敗",
+      "attempt_start_jst": "2026-11-27T08:47:34.527422+09:00",
+      "attempt_end_jst": "2026-11-27T08:47:35.578926+09:00",
+      "tool_evidence_ref": null,
+      "previous_success_jst": null,
+      "comparison_period": {
+        "start_jst": "2026-11-26T08:47:16.626229+09:00",
+        "end_jst": "2026-11-27T08:47:16.626229+09:00",
+        "type": "provisional_24h"
+      },
+      "status": "未確認",
+      "reason": "INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL",
+      "latest_publication_date": null,
+      "oldest_publication_date": null,
+      "listing_page_urls_checked": [],
+      "pagination_complete": false,
+      "alternative_attempts": [],
+      "primary_releases": [],
+      "new_success_jst": null,
+      "stale_cache_status": null,
+      "source_classification": "UNVERIFIED",
+      "index_attempts": [
+        {
+          "official_listing_url": "https://sarepta.gcs-web.com/news-releases",
+          "fetched_any": false,
+          "page_receipts": [],
+          "listing_page_urls_checked": [],
+          "latest_publication_date": null,
+          "oldest_publication_date": null,
+          "dated_entries_count": 0,
+          "pagination_complete": false,
+          "found_baseline_boundary": false,
+          "stale_cache": [],
+          "errors": [
+            {
+              "url": "https://sarepta.gcs-web.com/news-releases",
+              "failure": "HTTP_403 | BROWSER_RuntimeError:HTTP_403",
+              "error_class": "FETCH_ERROR"
+            }
+          ],
+          "page_date_bounds": [],
+          "candidate_releases": [],
+          "article_receipts": [],
+          "newer_listing_count": 0,
+          "incomplete_load_more": false,
+          "date_order_valid": true
+        }
+      ]
+    },
+    {
+      "ticker": "VKTX",
+      "company_name": "VKTX",
+      "batch_id": "B",
+      "audit_date_jst": "2026-11-27",
+      "official_listing_url": "https://ir.vikingtherapeutics.com/press-releases",
+      "official_urls_configured": [
+        "https://ir.vikingtherapeutics.com/press-releases"
+      ],
+      "homepage_visit_status": "成功",
+      "attempt_start_jst": "2026-11-27T08:47:35.367431+09:00",
+      "attempt_end_jst": "2026-11-27T08:47:35.787929+09:00",
+      "tool_evidence_ref": "6c64d94c07837e06203d28e72a1d5da68c47ac913736903e81fd26b808c4d07d",
+      "previous_success_jst": null,
+      "comparison_period": {
+        "start_jst": "2026-11-26T08:47:16.626229+09:00",
+        "end_jst": "2026-11-27T08:47:16.626229+09:00",
+        "type": "provisional_24h"
+      },
+      "status": "未確認",
+      "reason": "INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL",
+      "latest_publication_date": "2026-10-28",
+      "oldest_publication_date": "2026-10-28",
+      "listing_page_urls_checked": [
+        "https://ir.vikingtherapeutics.com/press-releases"
+      ],
+      "pagination_complete": false,
+      "alternative_attempts": [],
+      "primary_releases": [],
+      "new_success_jst": null,
+      "stale_cache_status": null,
+      "source_classification": "UNVERIFIED",
+      "index_attempts": [
+        {
+          "official_listing_url": "https://ir.vikingtherapeutics.com/press-releases",
+          "fetched_any": true,
+          "page_receipts": [
+            {
+              "requested_url": "https://ir.vikingtherapeutics.com/press-releases",
+              "final_url": "https://ir.vikingtherapeutics.com/press-releases",
+              "http_status": 200,
+              "method": "requests",
+              "fetched_jst": "2026-11-27T08:47:35.602891+09:00",
+              "sha256": "6c64d94c07837e06203d28e72a1d5da68c47ac913736903e81fd26b808c4d07d",
+              "response_date": "2026-11-26T23:47:35+00:00",
+              "age_seconds": 0,
+              "last_modified": "2026-11-26T23:47:35+00:00",
+              "snapshot_path": "data/evidence/2026-11-27/VKTX/requests-6c64d94c07837e06-_press-releases_fe69ad67fc431e3506.html.gz"
+            }
+          ],
+          "listing_page_urls_checked": [
+            "https://ir.vikingtherapeutics.com/press-releases"
+          ],
+          "latest_publication_date": "2026-10-28",
+          "oldest_publication_date": "2026-10-28",
+          "dated_entries_count": 1,
+          "pagination_complete": false,
+          "found_baseline_boundary": true,
+          "stale_cache": [],
+          "errors": [],
+          "page_date_bounds": [
+            {
+              "url": "https://ir.vikingtherapeutics.com/press-releases",
+              "latest": "2026-10-28",
+              "oldest": "2026-10-28",
+              "count": 1,
+              "descending_order": true
+            }
+          ],
+          "candidate_releases": [],
+          "article_receipts": [],
+          "newer_listing_count": 0,
+          "incomplete_load_more": true,
+          "date_order_valid": true
+        }
+      ]
+    },
+    {
+      "ticker": "VERA",
+      "company_name": "VERA",
+      "batch_id": "B",
+      "audit_date_jst": "2026-11-27",
+      "official_listing_url": "https://ir.veratx.com/news-events/press-releases",
+      "official_urls_configured": [
+        "https://ir.veratx.com/news-events/press-releases"
+      ],
+      "homepage_visit_status": "成功",
+      "attempt_start_jst": "2026-11-27T08:47:35.578973+09:00",
+      "attempt_end_jst": "2026-11-27T08:47:36.000531+09:00",
+      "tool_evidence_ref": "43f5aa76353cc37b69aa166bdf482f6b990f8bf7167f4debe280d0417c4beb08",
+      "previous_success_jst": null,
+      "comparison_period": {
+        "start_jst": "2026-11-26T08:47:16.626229+09:00",
+        "end_jst": "2026-11-27T08:47:16.626229+09:00",
+        "type": "provisional_24h"
+      },
+      "status": "なし",
+      "reason": "COMPLETE_DATED_LISTING_NO_NEW_RELEASES",
+      "latest_publication_date": "2026-11-23",
+      "oldest_publication_date": "2026-09-01",
+      "listing_page_urls_checked": [
+        "https://ir.veratx.com/news-events/press-releases"
+      ],
+      "pagination_complete": true,
+      "alternative_attempts": [],
+      "primary_releases": [],
+      "new_success_jst": "2026-11-27T08:47:36.000525+09:00",
+      "stale_cache_status": null,
+      "source_classification": "PERIOD_VERIFIED",
+      "index_attempts": [
+        {
+          "official_listing_url": "https://ir.veratx.com/news-events/press-releases",
+          "fetched_any": true,
+          "page_receipts": [
+            {
+              "requested_url": "https://ir.veratx.com/news-events/press-releases",
+              "final_url": "https://ir.veratx.com/news-events/press-releases",
+              "http_status": 200,
+              "method": "requests",
+              "fetched_jst": "2026-11-27T08:47:35.891567+09:00",
+              "sha256": "43f5aa76353cc37b69aa166bdf482f6b990f8bf7167f4debe280d0417c4beb08",
+              "response_date": "2026-11-26T23:47:35+00:00",
+              "age_seconds": 0,
+              "last_modified": "2026-11-23T21:39:05+00:00",
+              "snapshot_path": "data/evidence/2026-11-27/VERA/requests-43f5aa76353cc37b-_news-events_press-releases_32c73aa0f43f905949.html.gz"
+            }
+          ],
+          "listing_page_urls_checked": [
+            "https://ir.veratx.com/news-events/press-releases"
+          ],
+          "latest_publication_date": "2026-11-23",
+          "oldest_publication_date": "2026-09-01",
+          "dated_entries_count": 4,
+          "pagination_complete": true,
+          "found_baseline_boundary": true,
+          "stale_cache": [],
+          "errors": [],
+          "page_date_bounds": [
+            {
+              "url": "https://ir.veratx.com/news-events/press-releases",
+              "latest": "2026-11-23",
+              "oldest": "2026-09-01",
+              "count": 4,
+              "descending_order": true
+            }
+          ],
+          "candidate_releases": [],
+          "article_receipts": [],
+          "newer_listing_count": 0,
+          "incomplete_load_more": false,
+          "date_order_valid": true
+        }
+      ]
+    },
+    {
+      "ticker": "CAPR",
+      "company_name": "Capricor Therapeutics",
+      "batch_id": "B",
+      "audit_date_jst": "2026-11-27",
+      "official_listing_url": "https://www.capricor.com/investors/news-events/press-releases",
+      "official_urls_configured": [
+        "https://www.capricor.com/investors/news-events/press-releases",
+        "https://www.capricor.com/investors/news-events"
+      ],
+      "homepage_visit_status": "成功",
+      "attempt_start_jst": "2026-11-27T08:47:35.787976+09:00",
+      "attempt_end_jst": "2026-11-27T08:47:36.251674+09:00",
+      "tool_evidence_ref": "3f1cfacfe0ee3a0695e76ec4a1aeb21488ebea92bd58ead0e967a99379d4f7a7",
+      "previous_success_jst": null,
+      "comparison_period": {
+        "start_jst": "2026-11-26T08:47:16.626229+09:00",
+        "end_jst": "2026-11-27T08:47:16.626229+09:00",
+        "type": "provisional_24h"
+      },
+      "status": "なし",
+      "reason": "COMPLETE_DATED_LISTING_NO_NEW_RELEASES",
+      "latest_publication_date": "2026-11-23",
+      "oldest_publication_date": "2026-08-10",
+      "listing_page_urls_checked": [
+        "https://www.capricor.com/investors/news-events/press-releases"
+      ],
+      "pagination_complete": true,
+      "alternative_attempts": [],
+      "primary_releases": [],
+      "new_success_jst": "2026-11-27T08:47:36.251661+09:00",
+      "stale_cache_status": null,
+      "source_classification": "PERIOD_VERIFIED",
+      "index_attempts": [
+        {
+          "official_listing_url": "https://www.capricor.com/investors/news-events/press-releases",
+          "fetched_any": true,
+          "page_receipts": [
+            {
+              "requested_url": "https://www.capricor.com/investors/news-events/press-releases",
+              "final_url": "https://www.capricor.com/investors/news-events/press-releases",
+              "http_status": 200,
+              "method": "requests",
+              "fetched_jst": "2026-11-27T08:47:36.105704+09:00",
+              "sha256": "3f1cfacfe0ee3a0695e76ec4a1aeb21488ebea92bd58ead0e967a99379d4f7a7",
+              "response_date": "2026-11-26T23:47:36+00:00",
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-27/CAPR/requests-3f1cfacfe0ee3a06-_investors_news-events_press-releases_f362f48ad5e7320218.html.gz"
+            }
+          ],
+          "listing_page_urls_checked": [
+            "https://www.capricor.com/investors/news-events/press-releases"
+          ],
+          "latest_publication_date": "2026-11-23",
+          "oldest_publication_date": "2026-08-10",
+          "dated_entries_count": 10,
+          "pagination_complete": true,
+          "found_baseline_boundary": true,
+          "stale_cache": [],
+          "errors": [],
+          "page_date_bounds": [
+            {
+              "url": "https://www.capricor.com/investors/news-events/press-releases",
+              "latest": "2026-11-23",
+              "oldest": "2026-08-10",
+              "count": 10,
+              "descending_order": true
+            }
+          ],
+          "candidate_releases": [],
+          "article_receipts": [],
+          "newer_listing_count": 0,
+          "incomplete_load_more": false,
+          "date_order_valid": true
+        }
+      ]
+    },
+    {
+      "ticker": "KURA",
+      "company_name": "KURA",
+      "batch_id": "B",
+      "audit_date_jst": "2026-11-27",
+      "official_listing_url": "https://kuraoncology.gcs-web.com/news-releases",
+      "official_urls_configured": [
+        "https://kuraoncology.gcs-web.com/news-releases"
+      ],
+      "homepage_visit_status": "失敗",
+      "attempt_start_jst": "2026-11-27T08:47:35.984133+09:00",
+      "attempt_end_jst": "2026-11-27T08:47:37.180336+09:00",
+      "tool_evidence_ref": null,
+      "previous_success_jst": null,
+      "comparison_period": {
+        "start_jst": "2026-11-26T08:47:16.626229+09:00",
+        "end_jst": "2026-11-27T08:47:16.626229+09:00",
+        "type": "provisional_24h"
+      },
+      "status": "未確認",
+      "reason": "INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL",
+      "latest_publication_date": null,
+      "oldest_publication_date": null,
+      "listing_page_urls_checked": [],
+      "pagination_complete": false,
+      "alternative_attempts": [],
+      "primary_releases": [],
+      "new_success_jst": null,
+      "stale_cache_status": null,
+      "source_classification": "UNVERIFIED",
+      "index_attempts": [
+        {
+          "official_listing_url": "https://kuraoncology.gcs-web.com/news-releases",
+          "fetched_any": false,
+          "page_receipts": [],
+          "listing_page_urls_checked": [],
+          "latest_publication_date": null,
+          "oldest_publication_date": null,
+          "dated_entries_count": 0,
+          "pagination_complete": false,
+          "found_baseline_boundary": false,
+          "stale_cache": [],
+          "errors": [
+            {
+              "url": "https://kuraoncology.gcs-web.com/news-releases",
+              "failure": "HTTP_403 | BROWSER_RuntimeError:HTTP_403",
+              "error_class": "FETCH_ERROR"
+            }
+          ],
+          "page_date_bounds": [],
+          "candidate_releases": [],
+          "article_receipts": [],
+          "newer_listing_count": 0,
+          "incomplete_load_more": false,
+          "date_order_valid": true
+        }
+      ]
+    },
+    {
+      "ticker": "SMMT",
+      "company_name": "SMMT",
+      "batch_id": "B",
+      "audit_date_jst": "2026-11-27",
+      "official_listing_url": "https://www.smmttx.com/investors/news-events/press-releases",
+      "official_urls_configured": [
+        "https://www.smmttx.com/investors/news-events/press-releases"
+      ],
+      "homepage_visit_status": "失敗",
+      "attempt_start_jst": "2026-11-27T08:47:36.000560+09:00",
+      "attempt_end_jst": "2026-11-27T08:47:39.181509+09:00",
+      "tool_evidence_ref": null,
+      "previous_success_jst": null,
+      "comparison_period": {
+        "start_jst": "2026-11-26T08:47:16.626229+09:00",
+        "end_jst": "2026-11-27T08:47:16.626229+09:00",
+        "type": "provisional_24h"
+      },
+      "status": "未確認",
+      "reason": "INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL",
+      "latest_publication_date": null,
+      "oldest_publication_date": null,
+      "listing_page_urls_checked": [],
+      "pagination_complete": false,
+      "alternative_attempts": [],
+      "primary_releases": [],
+      "new_success_jst": null,
+      "stale_cache_status": null,
+      "source_classification": "UNVERIFIED",
+      "index_attempts": [
+        {
+          "official_listing_url": "https://www.smmttx.com/investors/news-events/press-releases",
+          "fetched_any": false,
+          "page_receipts": [],
+          "listing_page_urls_checked": [],
+          "latest_publication_date": null,
+          "oldest_publication_date": null,
+          "dated_entries_count": 0,
+          "pagination_complete": false,
+          "found_baseline_boundary": false,
+          "stale_cache": [],
+          "errors": [
+            {
+              "url": "https://www.smmttx.com/investors/news-events/press-releases",
+              "failure": "HTTP_404 | BROWSER_RuntimeError:HTTP_404",
+              "error_class": "FETCH_ERROR"
+            }
+          ],
+          "page_date_bounds": [],
+          "candidate_releases": [],
+          "article_receipts": [],
+          "newer_listing_count": 0,
+          "incomplete_load_more": false,
+          "date_order_valid": true
+        }
+      ]
+    },
+    {
+      "ticker": "ZEAL",
+      "company_name": "ZEAL",
+      "batch_id": "B",
+      "audit_date_jst": "2026-11-27",
+      "official_listing_url": "https://www.zealandpharma.com/news-media/",
+      "official_urls_configured": [
+        "https://www.zealandpharma.com/news-media/"
+      ],
+      "homepage_visit_status": "成功",
+      "attempt_start_jst": "2026-11-27T08:47:36.251750+09:00",
+      "attempt_end_jst": "2026-11-27T08:48:10.339689+09:00",
+      "tool_evidence_ref": "f02abb2e3c5149653dcf81eef6781e0e9f5dbe4fa1587847c6ede0b6229ff87b",
+      "previous_success_jst": null,
+      "comparison_period": {
+        "start_jst": "2026-11-26T08:47:16.626229+09:00",
+        "end_jst": "2026-11-27T08:47:16.626229+09:00",
+        "type": "provisional_24h"
+      },
+      "status": "未確認",
+      "reason": "INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL",
+      "latest_publication_date": null,
+      "oldest_publication_date": null,
+      "listing_page_urls_checked": [
+        "https://www.zealandpharma.com/news-media/",
+        "https://www.zealandpharma.com/news-media/?&page=2",
+        "https://www.zealandpharma.com/news-media/?&page=3",
+        "https://www.zealandpharma.com/news-media/?&page=4",
+        "https://www.zealandpharma.com/news-media/?&page=5",
+        "https://www.zealandpharma.com/news-media/?&page=6",
+        "https://www.zealandpharma.com/news-media/?&page=7",
+        "https://www.zealandpharma.com/news-media/?&page=8",
+        "https://www.zealandpharma.com/news-media/?&page=9",
+        "https://www.zealandpharma.com/news-media/?&page=10",
+        "https://www.zealandpharma.com/news-media/?&page=11",
+        "https://www.zealandpharma.com/news-media/?&page=12"
+      ],
+      "pagination_complete": false,
+      "alternative_attempts": [],
+      "primary_releases": [],
+      "new_success_jst": null,
+      "stale_cache_status": null,
+      "source_classification": "UNVERIFIED",
+      "index_attempts": [
+        {
+          "official_listing_url": "https://www.zealandpharma.com/news-media/",
+          "fetched_any": true,
+          "page_receipts": [
+            {
+              "requested_url": "https://www.zealandpharma.com/news-media/",
+              "final_url": "https://www.zealandpharma.com/news-media/",
+              "http_status": 200,
+              "method": "playwright",
+              "fetched_jst": "2026-11-27T08:47:39.238421+09:00",
+              "sha256": "f02abb2e3c5149653dcf81eef6781e0e9f5dbe4fa1587847c6ede0b6229ff87b",
+              "response_date": null,
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-27/ZEAL/playwright-f02abb2e3c514965-_news-media__400b4201428abd03d0.html.gz"
+            },
+            {
+              "requested_url": "https://www.zealandpharma.com/news-media/?&page=2",
+              "final_url": "https://www.zealandpharma.com/news-media/?&page=2",
+              "http_status": 200,
+              "method": "playwright",
+              "fetched_jst": "2026-11-27T08:47:42.430906+09:00",
+              "sha256": "4327d40ed2aee248e0695a655bcf608b6d27c0c58482a3cc3f8daf8ed2101ed7",
+              "response_date": null,
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-27/ZEAL/playwright-4327d40ed2aee248-_news-media__5fa3595128a47f7a13.html.gz"
+            },
+            {
+              "requested_url": "https://www.zealandpharma.com/news-media/?&page=3",
+              "final_url": "https://www.zealandpharma.com/news-media/?&page=3",
+              "http_status": 200,
+              "method": "playwright",
+              "fetched_jst": "2026-11-27T08:47:46.826560+09:00",
+              "sha256": "885356efae61a855e74590d3141ec4f6d5e11b8df839a58525290c542f1b643d",
+              "response_date": null,
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-27/ZEAL/playwright-885356efae61a855-_news-media__cc7e811bd40d2cb37c.html.gz"
+            },
+            {
+              "requested_url": "https://www.zealandpharma.com/news-media/?&page=4",
+              "final_url": "https://www.zealandpharma.com/news-media/?&page=4",
+              "http_status": 200,
+              "method": "playwright",
+              "fetched_jst": "2026-11-27T08:47:49.617450+09:00",
+              "sha256": "2b268bf0486a4ee0b897a03965965bd84f88a888775b92a0573abf2bd59612f8",
+              "response_date": null,
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-27/ZEAL/playwright-2b268bf0486a4ee0-_news-media__cee55142014994ea58.html.gz"
+            },
+            {
+              "requested_url": "https://www.zealandpharma.com/news-media/?&page=5",
+              "final_url": "https://www.zealandpharma.com/news-media/?&page=5",
+              "http_status": 200,
+              "method": "playwright",
+              "fetched_jst": "2026-11-27T08:47:52.082202+09:00",
+              "sha256": "5a462225db359fed795d8a38d9f9bf09bda4f90a2da1b46b23938f6a6a05b004",
+              "response_date": null,
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-27/ZEAL/playwright-5a462225db359fed-_news-media__4858c521424a11f4ff.html.gz"
+            },
+            {
+              "requested_url": "https://www.zealandpharma.com/news-media/?&page=6",
+              "final_url": "https://www.zealandpharma.com/news-media/?&page=6",
+              "http_status": 200,
+              "method": "playwright",
+              "fetched_jst": "2026-11-27T08:47:54.579893+09:00",
+              "sha256": "fcdd1e3c86fac2a9d550d4ee27a33af9fa25b0af82642ff6fb3794e7cd8f0500",
+              "response_date": null,
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-27/ZEAL/playwright-fcdd1e3c86fac2a9-_news-media__61c9dec35dcfdb9f8f.html.gz"
+            },
+            {
+              "requested_url": "https://www.zealandpharma.com/news-media/?&page=7",
+              "final_url": "https://www.zealandpharma.com/news-media/?&page=7",
+              "http_status": 200,
+              "method": "playwright",
+              "fetched_jst": "2026-11-27T08:47:57.006129+09:00",
+              "sha256": "7889fa035d33dfb800a97e4dbb055a20badb7fe3cc1f5d05297065ee01a9b43c",
+              "response_date": null,
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-27/ZEAL/playwright-7889fa035d33dfb8-_news-media__6cb7a949490f528685.html.gz"
+            },
+            {
+              "requested_url": "https://www.zealandpharma.com/news-media/?&page=8",
+              "final_url": "https://www.zealandpharma.com/news-media/?&page=8",
+              "http_status": 200,
+              "method": "playwright",
+              "fetched_jst": "2026-11-27T08:47:59.727833+09:00",
+              "sha256": "0a8c80a05cd796a0e8bd001b660427017acbd4fd0a5a88d2b31e54a8f1c7c36d",
+              "response_date": null,
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-27/ZEAL/playwright-0a8c80a05cd796a0-_news-media__1ba64f9ce99edecd4f.html.gz"
+            },
+            {
+              "requested_url": "https://www.zealandpharma.com/news-media/?&page=9",
+              "final_url": "https://www.zealandpharma.com/news-media/?&page=9",
+              "http_status": 200,
+              "method": "playwright",
+              "fetched_jst": "2026-11-27T08:48:02.465521+09:00",
+              "sha256": "d19ff935ae17dc857bed4fa92afdc3e878c183864dc9e684ac608163f7435eb4",
+              "response_date": null,
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-27/ZEAL/playwright-d19ff935ae17dc85-_news-media__8578e06fe6621c2e19.html.gz"
+            },
+            {
+              "requested_url": "https://www.zealandpharma.com/news-media/?&page=10",
+              "final_url": "https://www.zealandpharma.com/news-media/?&page=10",
+              "http_status": 200,
+              "method": "playwright",
+              "fetched_jst": "2026-11-27T08:48:05.140016+09:00",
+              "sha256": "27d7986d966b1b9c6183a722ac37e53a3aa0e64aff376313a8b504e31e2b38a3",
+              "response_date": null,
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-27/ZEAL/playwright-27d7986d966b1b9c-_news-media__998919968b8d65fb86.html.gz"
+            },
+            {
+              "requested_url": "https://www.zealandpharma.com/news-media/?&page=11",
+              "final_url": "https://www.zealandpharma.com/news-media/?&page=11",
+              "http_status": 200,
+              "method": "playwright",
+              "fetched_jst": "2026-11-27T08:48:07.600351+09:00",
+              "sha256": "810e09d70c940c51ff2b94486808a02f0bd22c1f1053d0e28da5cd68390be0c4",
+              "response_date": null,
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-27/ZEAL/playwright-810e09d70c940c51-_news-media__bb01d00f557d5eb7da.html.gz"
+            },
+            {
+              "requested_url": "https://www.zealandpharma.com/news-media/?&page=12",
+              "final_url": "https://www.zealandpharma.com/news-media/?&page=12",
+              "http_status": 200,
+              "method": "playwright",
+              "fetched_jst": "2026-11-27T08:48:10.072842+09:00",
+              "sha256": "2cf880a882da797eef29a5e1b8b8e47e2f7e7d70e831a3969047ca9d48306780",
+              "response_date": null,
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-27/ZEAL/playwright-2cf880a882da797e-_news-media__b7fde3a436cce74a8b.html.gz"
+            }
+          ],
+          "listing_page_urls_checked": [
+            "https://www.zealandpharma.com/news-media/",
+            "https://www.zealandpharma.com/news-media/?&page=2",
+            "https://www.zealandpharma.com/news-media/?&page=3",
+            "https://www.zealandpharma.com/news-media/?&page=4",
+            "https://www.zealandpharma.com/news-media/?&page=5",
+            "https://www.zealandpharma.com/news-media/?&page=6",
+            "https://www.zealandpharma.com/news-media/?&page=7",
+            "https://www.zealandpharma.com/news-media/?&page=8",
+            "https://www.zealandpharma.com/news-media/?&page=9",
+            "https://www.zealandpharma.com/news-media/?&page=10",
+            "https://www.zealandpharma.com/news-media/?&page=11",
+            "https://www.zealandpharma.com/news-media/?&page=12"
+          ],
+          "latest_publication_date": null,
+          "oldest_publication_date": null,
+          "dated_entries_count": 0,
+          "pagination_complete": false,
+          "found_baseline_boundary": false,
+          "stale_cache": [],
+          "errors": [
+            {
+              "url": "https://www.zealandpharma.com/news-media/",
+              "failure": "NO_DATED_ARTICLE_LISTING"
+            },
+            {
+              "url": "https://www.zealandpharma.com/news-media/?&page=2",
+              "failure": "NO_DATED_ARTICLE_LISTING"
+            },
+            {
+              "url": "https://www.zealandpharma.com/news-media/?&page=3",
+              "failure": "NO_DATED_ARTICLE_LISTING"
+            },
+            {
+              "url": "https://www.zealandpharma.com/news-media/?&page=4",
+              "failure": "NO_DATED_ARTICLE_LISTING"
+            },
+            {
+              "url": "https://www.zealandpharma.com/news-media/?&page=5",
+              "failure": "NO_DATED_ARTICLE_LISTING"
+            },
+            {
+              "url": "https://www.zealandpharma.com/news-media/?&page=6",
+              "failure": "NO_DATED_ARTICLE_LISTING"
+            },
+            {
+              "url": "https://www.zealandpharma.com/news-media/?&page=7",
+              "failure": "NO_DATED_ARTICLE_LISTING"
+            },
+            {
+              "url": "https://www.zealandpharma.com/news-media/?&page=8",
+              "failure": "NO_DATED_ARTICLE_LISTING"
+            },
+            {
+              "url": "https://www.zealandpharma.com/news-media/?&page=9",
+              "failure": "NO_DATED_ARTICLE_LISTING"
+            },
+            {
+              "url": "https://www.zealandpharma.com/news-media/?&page=10",
+              "failure": "NO_DATED_ARTICLE_LISTING"
+            },
+            {
+              "url": "https://www.zealandpharma.com/news-media/?&page=11",
+              "failure": "NO_DATED_ARTICLE_LISTING"
+            },
+            {
+              "url": "https://www.zealandpharma.com/news-media/?&page=12",
+              "failure": "NO_DATED_ARTICLE_LISTING"
+            },
+            {
+              "failure": "PAGE_LIMIT_REACHED",
+              "pages_checked": 12
+            }
+          ],
+          "page_date_bounds": [],
+          "candidate_releases": [],
+          "article_receipts": [],
+          "newer_listing_count": 0,
+          "incomplete_load_more": false,
+          "date_order_valid": true
+        }
+      ]
+    },
+    {
+      "ticker": "SUPN",
+      "company_name": "SUPN",
+      "batch_id": "B",
+      "audit_date_jst": "2026-11-27",
+      "official_listing_url": "https://ir.supernus.com/",
+      "official_urls_configured": [
+        "https://ir.supernus.com/",
+        "https://ir.supernus.com/news-releases"
+      ],
+      "homepage_visit_status": "失敗",
+      "attempt_start_jst": "2026-11-27T08:47:37.180396+09:00",
+      "attempt_end_jst": "2026-11-27T08:47:39.073352+09:00",
+      "tool_evidence_ref": null,
+      "previous_success_jst": null,
+      "comparison_period": {
+        "start_jst": "2026-11-26T08:47:16.626229+09:00",
+        "end_jst": "2026-11-27T08:47:16.626229+09:00",
+        "type": "provisional_24h"
+      },
+      "status": "未確認",
+      "reason": "INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL",
+      "latest_publication_date": null,
+      "oldest_publication_date": null,
+      "listing_page_urls_checked": [],
+      "pagination_complete": false,
+      "alternative_attempts": [
+        {
+          "url": "https://ir.supernus.com/news-releases",
+          "method": "direct_http_or_playwright",
+          "fetched_any": false,
+          "pagination_complete": false,
+          "errors": [
+            {
+              "url": "https://ir.supernus.com/news-releases",
+              "failure": "HTTP_403 | BROWSER_RuntimeError:HTTP_403",
+              "error_class": "FETCH_ERROR"
+            }
+          ]
+        }
+      ],
+      "primary_releases": [],
+      "new_success_jst": null,
+      "stale_cache_status": null,
+      "source_classification": "UNVERIFIED",
+      "index_attempts": [
+        {
+          "official_listing_url": "https://ir.supernus.com/",
+          "fetched_any": false,
+          "page_receipts": [],
+          "listing_page_urls_checked": [],
+          "latest_publication_date": null,
+          "oldest_publication_date": null,
+          "dated_entries_count": 0,
+          "pagination_complete": false,
+          "found_baseline_boundary": false,
+          "stale_cache": [],
+          "errors": [
+            {
+              "url": "https://ir.supernus.com/",
+              "failure": "HTTP_403 | BROWSER_RuntimeError:HTTP_403",
+              "error_class": "FETCH_ERROR"
+            }
+          ],
+          "page_date_bounds": [],
+          "candidate_releases": [],
+          "article_receipts": [],
+          "newer_listing_count": 0,
+          "incomplete_load_more": false,
+          "date_order_valid": true
+        },
+        {
+          "official_listing_url": "https://ir.supernus.com/news-releases",
+          "fetched_any": false,
+          "page_receipts": [],
+          "listing_page_urls_checked": [],
+          "latest_publication_date": null,
+          "oldest_publication_date": null,
+          "dated_entries_count": 0,
+          "pagination_complete": false,
+          "found_baseline_boundary": false,
+          "stale_cache": [],
+          "errors": [
+            {
+              "url": "https://ir.supernus.com/news-releases",
+              "failure": "HTTP_403 | BROWSER_RuntimeError:HTTP_403",
+              "error_class": "FETCH_ERROR"
+            }
+          ],
+          "page_date_bounds": [],
+          "candidate_releases": [],
+          "article_receipts": [],
+          "newer_listing_count": 0,
+          "incomplete_load_more": false,
+          "date_order_valid": true
+        }
+      ]
+    },
+    {
+      "ticker": "ALMS",
+      "company_name": "ALMS",
+      "batch_id": "B",
+      "audit_date_jst": "2026-11-27",
+      "official_listing_url": "https://investors.alumis.com/news-events/news-releases",
+      "official_urls_configured": [
+        "https://investors.alumis.com/news-events/news-releases",
+        "https://investors.alumis.com/news-releases"
+      ],
+      "homepage_visit_status": "失敗",
+      "attempt_start_jst": "2026-11-27T08:47:39.073525+09:00",
+      "attempt_end_jst": "2026-11-27T08:47:40.985668+09:00",
+      "tool_evidence_ref": null,
+      "previous_success_jst": null,
+      "comparison_period": {
+        "start_jst": "2026-11-26T08:47:16.626229+09:00",
+        "end_jst": "2026-11-27T08:47:16.626229+09:00",
+        "type": "provisional_24h"
+      },
+      "status": "未確認",
+      "reason": "INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL",
+      "latest_publication_date": null,
+      "oldest_publication_date": null,
+      "listing_page_urls_checked": [],
+      "pagination_complete": false,
+      "alternative_attempts": [
+        {
+          "url": "https://investors.alumis.com/news-releases",
+          "method": "direct_http_or_playwright",
+          "fetched_any": false,
+          "pagination_complete": false,
+          "errors": [
+            {
+              "url": "https://investors.alumis.com/news-releases",
+              "failure": "HTTP_403 | BROWSER_RuntimeError:HTTP_403",
+              "error_class": "FETCH_ERROR"
+            }
+          ]
+        }
+      ],
+      "primary_releases": [],
+      "new_success_jst": null,
+      "stale_cache_status": null,
+      "source_classification": "UNVERIFIED",
+      "index_attempts": [
+        {
+          "official_listing_url": "https://investors.alumis.com/news-events/news-releases",
+          "fetched_any": false,
+          "page_receipts": [],
+          "listing_page_urls_checked": [],
+          "latest_publication_date": null,
+          "oldest_publication_date": null,
+          "dated_entries_count": 0,
+          "pagination_complete": false,
+          "found_baseline_boundary": false,
+          "stale_cache": [],
+          "errors": [
+            {
+              "url": "https://investors.alumis.com/news-events/news-releases",
+              "failure": "HTTP_403 | BROWSER_RuntimeError:HTTP_403",
+              "error_class": "FETCH_ERROR"
+            }
+          ],
+          "page_date_bounds": [],
+          "candidate_releases": [],
+          "article_receipts": [],
+          "newer_listing_count": 0,
+          "incomplete_load_more": false,
+          "date_order_valid": true
+        },
+        {
+          "official_listing_url": "https://investors.alumis.com/news-releases",
+          "fetched_any": false,
+          "page_receipts": [],
+          "listing_page_urls_checked": [],
+          "latest_publication_date": null,
+          "oldest_publication_date": null,
+          "dated_entries_count": 0,
+          "pagination_complete": false,
+          "found_baseline_boundary": false,
+          "stale_cache": [],
+          "errors": [
+            {
+              "url": "https://investors.alumis.com/news-releases",
+              "failure": "HTTP_403 | BROWSER_RuntimeError:HTTP_403",
+              "error_class": "FETCH_ERROR"
+            }
+          ],
+          "page_date_bounds": [],
+          "candidate_releases": [],
+          "article_receipts": [],
+          "newer_listing_count": 0,
+          "incomplete_load_more": false,
+          "date_order_valid": true
+        }
+      ]
+    },
+    {
+      "ticker": "HRMY",
+      "company_name": "HRMY",
+      "batch_id": "B",
+      "audit_date_jst": "2026-11-27",
+      "official_listing_url": "https://ir.harmonybiosciences.com/",
+      "official_urls_configured": [
+        "https://ir.harmonybiosciences.com/"
+      ],
+      "homepage_visit_status": "失敗",
+      "attempt_start_jst": "2026-11-27T08:47:39.183083+09:00",
+      "attempt_end_jst": "2026-11-27T08:47:40.530972+09:00",
+      "tool_evidence_ref": null,
+      "previous_success_jst": null,
+      "comparison_period": {
+        "start_jst": "2026-11-26T08:47:16.626229+09:00",
+        "end_jst": "2026-11-27T08:47:16.626229+09:00",
+        "type": "provisional_24h"
+      },
+      "status": "未確認",
+      "reason": "INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL",
+      "latest_publication_date": null,
+      "oldest_publication_date": null,
+      "listing_page_urls_checked": [],
+      "pagination_complete": false,
+      "alternative_attempts": [],
+      "primary_releases": [],
+      "new_success_jst": null,
+      "stale_cache_status": null,
+      "source_classification": "UNVERIFIED",
+      "index_attempts": [
+        {
+          "official_listing_url": "https://ir.harmonybiosciences.com/",
+          "fetched_any": false,
+          "page_receipts": [],
+          "listing_page_urls_checked": [],
+          "latest_publication_date": null,
+          "oldest_publication_date": null,
+          "dated_entries_count": 0,
+          "pagination_complete": false,
+          "found_baseline_boundary": false,
+          "stale_cache": [],
+          "errors": [
+            {
+              "url": "https://ir.harmonybiosciences.com/",
+              "failure": "HTTP_403 | BROWSER_RuntimeError:HTTP_403",
+              "error_class": "FETCH_ERROR"
+            }
+          ],
+          "page_date_bounds": [],
+          "candidate_releases": [],
+          "article_receipts": [],
+          "newer_listing_count": 0,
+          "incomplete_load_more": false,
+          "date_order_valid": true
+        }
+      ]
+    }
+  ],
+  "qa_errors": []
+}
