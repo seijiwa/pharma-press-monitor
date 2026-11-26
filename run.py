@@ -198,6 +198,9 @@ def collect_official_data(company):
         response.raise_for_status()
         items=[{'url':urljoin(page,x['Url']),'title':x['Title'],'score':5}
             for month in response.json() for x in month['NewsReleases']]
+        # The newsroom endpoint sometimes serves only its five-item preview.
+        if len(items) < 8:
+            raise RuntimeError('Amgen newsroom returned a short preview')
     elif name == 'BioMarin':
         response=requests.post('https://www.biomarin.com/wp-admin/admin-ajax.php',
             data={'press-release-year':'','search':'','paged':1,'action':'filter_press_releases'},
@@ -242,6 +245,7 @@ SUCCESSORS={
     'Reata Pharmaceuticals':('Biogen',r'reata|skyclarys|omaveloxolone'),
 }
 ALTERNATE_OFFICIAL_PAGES={
+    'Amgen':'https://investors.amgen.com/news-and-events/press-releases',
     'Biogen':'https://www.biogen.com/home.html',
     'Reata Pharmaceuticals':'https://www.biogen.com/home.html',
     'Harmony Biosciences':'https://www.harmonybiosciences.com/newsroom/',
