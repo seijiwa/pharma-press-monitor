@@ -245,6 +245,10 @@ SUCCESSORS={
     'Reata Pharmaceuticals':('Biogen',r'reata|skyclarys|omaveloxolone'),
 }
 ALTERNATE_OFFICIAL_PAGES={
+    'Denali Therapeutics':'https://investors.denalitherapeutics.com/investors',
+    'Lonza':'https://www.lonza.com/news-and-media',
+    'Regeneron':'https://investor.regeneron.com/news/press-releases',
+    'Scholar Rock':'https://scholarrock.com/investors-media/press-releases/',
     'Amgen':'https://investors.amgen.com/news-and-events/press-releases',
     'Biogen':'https://www.biogen.com/home.html',
     'Reata Pharmaceuticals':'https://www.biogen.com/home.html',
