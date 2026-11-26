@@ -28,18 +28,32 @@ jobs:
       - run: python validate.py
       - name: Check all official sources
         id: check
-        continue-on-error: true
         env:
           PAGES_URL: https://seijiwa.github.io/pharma-press-monitor
-        run: python -u run.py
+        run: |
+          rm -f data/status.json docs/status.json
+          result=0
+          python -u run.py || result=$?
+          # Exit 2 means a completed collection with source failures.
+          case "$result" in
+            0|2) ;;
+            *) exit "$result" ;;
+          esac
       - name: Validate RSS and health output
         run: |
           python - <<'PY'
-          import json, pathlib, xml.etree.ElementTree as ET
-          s=json.load(open('data/status.json'))
-          assert len(s)==71
-          for p in pathlib.Path('docs').rglob('*.xml'): ET.parse(p)
-          assert len(list(pathlib.Path('docs/feeds').glob('*.xml')))==71
+          import csv, json, pathlib, xml.etree.ElementTree as ET
+          with open('companies.csv', encoding='utf-8-sig', newline='') as watchlist:
+              companies = {row['Company'] for row in csv.DictReader(watchlist)}
+          status = json.loads(pathlib.Path('data/status.json').read_text())
+          public_status = json.loads(pathlib.Path('docs/status.json').read_text())
+          assert len(companies) == 71 and status.keys() == companies
+          assert status == public_status
+          ET.parse('docs/feed.xml')
+          feeds = list(pathlib.Path('docs/feeds').glob('*.xml'))
+          assert len(feeds) == 71
+          for feed in feeds:
+              ET.parse(feed)
           print('PASS: 71 statuses and 72 valid RSS files')
           PY
       - name: Save monitor history
