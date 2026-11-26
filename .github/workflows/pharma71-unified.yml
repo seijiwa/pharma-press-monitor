@@ -1,0 +1,52 @@
+name: Pharma71 unified audit - staging
+on:
+  push:
+    branches: [pharma71-unified-20261127]
+    paths:
+      - 'pharma46/**'
+      - 'pharma71_unified/**'
+      - 'tests_pharma71_unified/**'
+      - '.github/workflows/pharma71-unified.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pharma71-unified-staging
+  cancel-in-progress: false
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements-pharma46.txt pytest==8.4.2
+      - name: Offline tests
+        run: python -m pytest tests_pharma46 tests_pharma71_unified -q
+      - name: Install Chromium
+        continue-on-error: true
+        run: python -m playwright install --with-deps chromium
+      - name: Live audit 71 (no email)
+        run: python -m pharma71_unified.cli --workers 8 --max-pages 12
+      - name: Preserve report, original receipts and verified RSS
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pharma71-unified-evidence-${{ github.run_id }}
+          path: data/pharma71_unified/
+          if-no-files-found: warn
+          retention-days: 30
+      - name: Require complete coverage and current audit
+        if: always()
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          a=json.loads(Path('data/pharma71_unified/audit.json').read_text())
+          assert a['run_id']==os.environ['GITHUB_RUN_ID']
+          assert len(a['entries'])==71
+          print(a['summary'])
+          assert a['qa_pass'], 'Incomplete period coverage'
+          PY

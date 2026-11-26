@@ -254,12 +254,13 @@ def process_company(company,fetcher,now_dt,state,evidence_dir,max_pages=12):
     return result
 
 
-def validate_report(registry,results):
+def validate_report(registry,results,expected_order=None):
     errors=[]
     expected=[c['ticker'] for c in registry['companies']]
-    if expected!=ORDER:errors.append('REGISTRY_46_ORDER_MISMATCH')
-    if [e['ticker'] for e in results]!=ORDER:errors.append('RESULT_46_ORDER_MISMATCH')
-    if len(set(x['ticker'] for x in results))!=46:errors.append('DUPLICATE_OR_MISSING_TICKER')
+    order=ORDER if expected_order is None else list(expected_order)
+    if expected!=order:errors.append('REGISTRY_ORDER_MISMATCH')
+    if [e['ticker'] for e in results]!=order:errors.append('RESULT_ORDER_MISMATCH')
+    if len(set(x['ticker'] for x in results))!=len(order):errors.append('DUPLICATE_OR_MISSING_TICKER')
     for e in results:
         if e['status'] not in ('あり','なし','未確認'):errors.append(e['ticker']+':INVALID_STATUS')
         if e['status'] in ('あり','なし'):
@@ -276,14 +277,15 @@ def validate_report(registry,results):
 def render_report(now_dt,results,errors,engine):
     direct=sum(x['homepage_visit_status']!='未訪問' for x in results)
     passed=sum(x['status']!='未確認' for x in results)
-    unconfirmed=46-passed
+    total=len(results)
+    unconfirmed=total-passed
     originals=[p for x in results for p in x['primary_releases'] if p['original_confirmed']]
     originals=list({p['url']:p for p in originals}.values())
-    subject=f'製薬公式監視 {now_dt.date().isoformat()}【暫定・未確認{unconfirmed}社】' if (unconfirmed or errors) else f'製薬公式監視 {now_dt.date().isoformat()}【46社監査】'
+    subject=f'製薬公式監視 {now_dt.date().isoformat()}【暫定・未確認{unconfirmed}社】' if (unconfirmed or errors) else f'製薬公式監視 {now_dt.date().isoformat()}【{total}社監査】'
     lines=[f'# {subject}','',f'- レポート日付(JST): {now_dt.isoformat()}',
-        f'- 対象46社 / 直接取得試行記録 {direct}社 / 期間網羅確認 {passed}社 / 未確認 {unconfirmed}社',
+        f'- 対象{total}社 / 直接取得試行記録 {direct}社 / 期間網羅確認 {passed}社 / 未確認 {unconfirmed}社',
         f'- 一次原文で確認した発表: {len(originals)}件 / 新規、既報、初回観測を別々に表示',
-        f'- 収集エンジン: {engine} / 構造QAコード: 実行済み（エラー{len(errors)}件） / 期間網羅QA: {"合格" if passed==46 and not errors else "未達"}',
+        f'- 収集エンジン: {engine} / 構造QAコード: 実行済み（エラー{len(errors)}件） / 期間網羅QA: {"合格" if passed==total and not errors else "未達"}',
         f'- キャッシュ疑い: {sum(bool(x["stale_cache_status"]) for x in results)}社',
         '- 注意: 未確認は「新規発表なし」を意味しない。GitHub上の直接HTTP収集はweb.openのクロールキャッシュとは別。',
         '', '## 一次原文が確認できた発表（一覧QA不合格でも保持）']
@@ -292,30 +294,59 @@ def render_report(now_dt,results,errors,engine):
             lines.append(f'- {p["ticker"]} | {p.get("new_status","初回")} | {p["published_date"]} | {p["original_title"]} | {p["url"]}')
             if p.get('body_excerpt'):lines.append('  原文要旨: '+p['body_excerpt'][:280])
     else:lines.append('- なし（未確認企業の不在証明ではない）')
-    lines+=['','## 46社対応表（A→B→Cの固定順）','', '|Ticker|判定|一覧取得|最新記事|ページ網羅|原因|','|---|---|---|---|---|---|']
+    lines+=['',f'## {total}社対応表（固定順）','', '|Ticker|判定|一覧取得|最新記事|ページ網羅|原因|','|---|---|---|---|---|---|']
     for e in results:
         reason=e['reason'].replace('|','/')[:90]
         lines.append(f'|{e["ticker"]}|{e["status"]}|{e["homepage_visit_status"]}|{e["latest_publication_date"] or "null"}|{e["pagination_complete"]}|{reason}|')
     lines+=['','## QAエラー']
     lines+=['- '+s for s in errors] if errors else ['- 構造上のエラーなし。期間網羅の達成とは別。']
-    return subject,'\n'.join(lines)+'\n', {'total':46,'direct_attempts':direct,'period_verified':passed,'unconfirmed':unconfirmed,
+    return subject,'\n'.join(lines)+'\n', {'total':total,'direct_attempts':direct,'period_verified':passed,'unconfirmed':unconfirmed,
         'primary_originals':len(originals),'qa_errors':len(errors)}
 
 
-def collect(registry,state,asof=None,fetcher=None,evidence_dir='data/evidence',workers=5,max_pages=12):
+def collect(registry,state,asof=None,fetcher=None,evidence_dir='data/evidence',workers=5,max_pages=12,expected_order=None):
     """Execute all 46 direct collections, always preserve the fixed batch order."""
     now_dt=asof or datetime.now(JST)
     f=fetcher or LiveFetcher()
     companies=registry['companies']
-    if [x['ticker'] for x in companies]!=ORDER:raise ValueError('Wrong 46-company registry')
+    order=ORDER if expected_order is None else list(expected_order)
+    if len(set(order))!=len(order) or [x['ticker'] for x in companies]!=order:raise ValueError('Wrong company registry')
+    # Checkpoint each completed company before waiting for the rest. These files
+    # are included in the evidence artifact even if the later audit step fails.
+    checkpoint=Path(evidence_dir)/('checkpoints_'+now_dt.strftime('%Y%m%dT%H%M%S%f'))
+    checkpoint.mkdir(parents=True,exist_ok=True)
     with ThreadPoolExecutor(max_workers=workers) as pool:
-        tasks={pool.submit(process_company,c,f,now_dt,state,evidence_dir,max_pages):c['ticker'] for c in companies}
+        tasks={pool.submit(process_company,c,f,now_dt,state,evidence_dir,max_pages):c for c in companies}
         completed={}
         for fut in as_completed(tasks):
-            ticker=tasks[fut]
-            completed[ticker]=fut.result()
+            c=tasks[fut];ticker=c['ticker']
+            try:
+                completed[ticker]=fut.result()
+            except Exception as exc:
+                LOG.exception('Unexpected worker failure: %s',ticker)
+                previous=(state.get('companies') or {}).get(ticker,{})
+                prev=previous.get('last_verified_success_jst')
+                baseline=iso_dt(prev) or (now_dt-timedelta(hours=24))
+                completed[ticker]={'ticker':ticker,'company_name':c['name'],'batch_id':c['batch_id'],
+                    'audit_date_jst':now_dt.date().isoformat(),'official_listing_url':None,
+                    'official_urls_configured':c['official_indexes'],'homepage_visit_status':'未訪問',
+                    'attempt_start_jst':None,'attempt_end_jst':None,'tool_evidence_ref':None,
+                    'comparison_period':{'start_jst':baseline.isoformat(),'end_jst':now_dt.isoformat(),
+                        'type':'last_success' if prev else 'provisional_24h'},'previous_success_jst':prev,
+                    'status':'未確認','reason':'WORKER_EXCEPTION_NO_VERIFIABLE_RECEIPT:'+type(exc).__name__,
+                    'latest_publication_date':None,'oldest_publication_date':None,'listing_page_urls_checked':[],
+                    'pagination_complete':False,'alternative_attempts':[],'primary_releases':[],
+                    'new_success_jst':None,'stale_cache_status':None,'source_classification':'UNVERIFIED',
+                    'index_attempts':[]}
+            try:
+                path=checkpoint/(ticker.replace(' ','_')+'.json')
+                tmp=path.with_suffix('.tmp')
+                tmp.write_text(json.dumps(completed[ticker],ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+                tmp.replace(path)
+            except OSError:
+                LOG.exception('Checkpoint write failed for %s; retaining in memory',ticker)
             LOG.info('%s: %s / %s',ticker,completed[ticker]['status'],completed[ticker]['reason'])
-    results=[completed[t] for t in ORDER]
+    results=[completed[t] for t in order]
     # Persist verified original URLs even when a company's index-coverage QA fails.
     # On the first-ever baseline, 'first observed' is not equivalent to newly published.
     for e in results:
@@ -339,5 +370,5 @@ def collect(registry,state,asof=None,fetcher=None,evidence_dir='data/evidence',w
         st['seen_verified_urls']=sorted(seen)[-500:]
         if e['new_success_jst'] and e['status'] in ('あり','なし'):
             st['last_verified_success_jst']=e['new_success_jst']
-    errors=validate_report(registry,results)
+    errors=validate_report(registry,results,expected_order=order)
     return results,errors,state
