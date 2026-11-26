@@ -308,12 +308,40 @@ def collect(registry,state,asof=None,fetcher=None,evidence_dir='data/evidence',w
     f=fetcher or LiveFetcher()
     companies=registry['companies']
     if [x['ticker'] for x in companies]!=ORDER:raise ValueError('Wrong 46-company registry')
+    # Checkpoint each completed company before waiting for the rest. These files
+    # are included in the evidence artifact even if the later audit step fails.
+    checkpoint=Path(evidence_dir)/('checkpoints_'+now_dt.strftime('%Y%m%dT%H%M%S%f'))
+    checkpoint.mkdir(parents=True,exist_ok=True)
     with ThreadPoolExecutor(max_workers=workers) as pool:
-        tasks={pool.submit(process_company,c,f,now_dt,state,evidence_dir,max_pages):c['ticker'] for c in companies}
+        tasks={pool.submit(process_company,c,f,now_dt,state,evidence_dir,max_pages):c for c in companies}
         completed={}
         for fut in as_completed(tasks):
-            ticker=tasks[fut]
-            completed[ticker]=fut.result()
+            c=tasks[fut];ticker=c['ticker']
+            try:
+                completed[ticker]=fut.result()
+            except Exception as exc:
+                LOG.exception('Unexpected worker failure: %s',ticker)
+                previous=(state.get('companies') or {}).get(ticker,{})
+                prev=previous.get('last_verified_success_jst')
+                baseline=iso_dt(prev) or (now_dt-timedelta(hours=24))
+                completed[ticker]={'ticker':ticker,'company_name':c['name'],'batch_id':c['batch_id'],
+                    'audit_date_jst':now_dt.date().isoformat(),'official_listing_url':None,
+                    'official_urls_configured':c['official_indexes'],'homepage_visit_status':'未訪問',
+                    'attempt_start_jst':None,'attempt_end_jst':None,'tool_evidence_ref':None,
+                    'comparison_period':{'start_jst':baseline.isoformat(),'end_jst':now_dt.isoformat(),
+                        'type':'last_success' if prev else 'provisional_24h'},'previous_success_jst':prev,
+                    'status':'未確認','reason':'WORKER_EXCEPTION_NO_VERIFIABLE_RECEIPT:'+type(exc).__name__,
+                    'latest_publication_date':None,'oldest_publication_date':None,'listing_page_urls_checked':[],
+                    'pagination_complete':False,'alternative_attempts':[],'primary_releases':[],
+                    'new_success_jst':None,'stale_cache_status':None,'source_classification':'UNVERIFIED',
+                    'index_attempts':[]}
+            try:
+                path=checkpoint/(ticker.replace(' ','_')+'.json')
+                tmp=path.with_suffix('.tmp')
+                tmp.write_text(json.dumps(completed[ticker],ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+                tmp.replace(path)
+            except OSError:
+                LOG.exception('Checkpoint write failed for %s; retaining in memory',ticker)
             LOG.info('%s: %s / %s',ticker,completed[ticker]['status'],completed[ticker]['reason'])
     results=[completed[t] for t in ORDER]
     # Persist verified original URLs even when a company's index-coverage QA fails.

@@ -53,3 +53,20 @@ def test_all_http_errors_never_count_as_no_release(tmp_path):
     assert all(x['homepage_visit_status']=='失敗' for x in entries)
     _,_,summary=render_report(NOW,entries,errors,'SYNTHETIC FAILURE')
     assert summary['period_verified']==0 and summary['unconfirmed']==46
+
+
+def test_worker_failure_isolated_and_checkpointed(tmp_path,monkeypatch):
+    import pharma46.engine as engine
+    registry=json.loads(Path('pharma46/sources.json').read_text())
+    original=engine.process_company
+    def fault(company,*args,**kwargs):
+        if company['ticker']=='LLY':raise RuntimeError('synthetic worker crash')
+        return original(company,*args,**kwargs)
+    monkeypatch.setattr(engine,'process_company',fault)
+    entries,errors,state=collect(registry,{'companies':{}},asof=NOW,
+        fetcher=SyntheticCompanyFetcher(registry),evidence_dir=tmp_path,workers=3)
+    assert [x['ticker'] for x in entries]==ORDER
+    assert not errors and entries[0]['status']=='未確認'
+    assert entries[0]['new_success_jst'] is None
+    assert all(x['status']=='あり' for x in entries[1:])
+    assert len(list(tmp_path.glob('checkpoints_*/*.json')))==46
