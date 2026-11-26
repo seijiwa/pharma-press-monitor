@@ -1681,5 +1681,32 @@
     "url": "https://ir.ultragenyx.com/news-releases/news-release-details/ultragenyx-participate-investor-conferences-december-1",
     "detected_at": "2026-11-26T01:34:00.047125+00:00",
     "source_page": "https://www.ultragenyx.com/newsroom/news-and-press-releases/"
+  },
+  {
+    "id": "070f0e86600c22914181a0b0f8ca46e3562c45b8c5f423f886f357651f81b22e",
+    "company": "Amgen",
+    "ticker": "AMGN",
+    "title": "AMGEN SECURES PATHWAY FOR U.S. LAUNCH OF BIOSIMILAR TO OPDIVO® FOLLOWING SETTLEMENT AGREEMENT",
+    "url": "https://www.amgen.com/newsroom/press-releases/2026/11/amgen-secures-pathway-for-u-s--launch-of-biosimilar-to-opdivo-following-settlement-agreement",
+    "detected_at": "2026-11-26T01:35:57.167631+00:00",
+    "source_page": "https://www.amgen.com/newsroom/press-releases"
+  },
+  {
+    "id": "62564600dfd665ee60513c7523e4b1ba6a834019d623f922714d4376f140f51d",
+    "company": "Amgen",
+    "ticker": "AMGN",
+    "title": "AMGEN TO PRESENT AT CITI'S 2026 GLOBAL HEALTHCARE CONFERENCE",
+    "url": "https://www.amgen.com/newsroom/press-releases/2026/11/amgen-to-present-at-citis-2026-global-healthcare-conference",
+    "detected_at": "2026-11-26T01:35:57.167631+00:00",
+    "source_page": "https://www.amgen.com/newsroom/press-releases"
+  },
+  {
+    "id": "3a3a0e899a0caa7760a6036778cef1e7a30ac1b61f2d49f3054288f0c61fb3a7",
+    "company": "Amgen",
+    "ticker": "AMGN",
+    "title": "AMGEN TO PRESENT AT THE 9TH ANNUAL EVERCORE ISI HEALTHCONX CONFERENCE",
+    "url": "https://www.amgen.com/newsroom/press-releases/2026/11/amgen-to-present-at-the-9th-annual-evercore-isi-healthconx-conference",
+    "detected_at": "2026-11-26T01:35:57.167631+00:00",
+    "source_page": "https://www.amgen.com/newsroom/press-releases"
   }
 ]
