@@ -1708,5 +1708,41 @@
     "url": "https://www.amgen.com/newsroom/press-releases/2026/11/amgen-to-present-at-the-9th-annual-evercore-isi-healthconx-conference",
     "detected_at": "2026-11-26T01:35:57.167631+00:00",
     "source_page": "https://www.amgen.com/newsroom/press-releases"
+  },
+  {
+    "id": "118db4ebd40ae22af1a4edf74ab837c8b1a11592de0d0ffec9357a0d2cf7dc5e",
+    "company": "Alvotech",
+    "ticker": "ALVO",
+    "title": "Alvotech to appeal US preliminary injunction decision relating to AVT05",
+    "url": "https://www.alvotech.com/newsroom/alvotech-to-appeal-us-preliminary-injunction-decision-relating-to-avt05",
+    "detected_at": "2026-11-26T12:17:23.650078+00:00",
+    "source_page": "https://www.alvotech.com/newsroom"
+  },
+  {
+    "id": "be5b96b2d00253ff55fbd867f31581246d1a78bb51cbcd3130cc0a9cb724a345",
+    "company": "GSK",
+    "ticker": "GSK",
+    "title": "Hibsago (bepirovirsen) approved in China as a first-in-class functional cure for chronic hepatitis B (CHB)",
+    "url": "https://www.gsk.com/en-gb/media/press-releases/hibsago-bepirovirsen-approved-in-china-as-a-first-in-class-functional-cure-for-chronic-hepatitis-b-chb",
+    "detected_at": "2026-11-26T12:17:44.823278+00:00",
+    "source_page": "https://www.gsk.com/en-gb/media/press-releases/"
+  },
+  {
+    "id": "e153d782ca95a457d5fff301a9517fa67f7717817765fed3cb47bf6fa50e1ec9",
+    "company": "Lupin",
+    "ticker": "",
+    "title": "Lupin Receives Approval from U.S. FDA for Dalbavancin Injection for Single-dose Regimen Use",
+    "url": "https://www.lupin.com/investors/press-releases/lupin-receives-approval-from-u-s-fda-for-dalbavancin-injection-for-single-dose-regimen-use",
+    "detected_at": "2026-11-26T12:17:44.824203+00:00",
+    "source_page": "https://www.lupin.com/investors/news-events/"
+  },
+  {
+    "id": "aaf5906005faf8f139343b0cfefbea95a69ccb0e69f583abc0b83eaa284828e9",
+    "company": "Lupin",
+    "ticker": "",
+    "title": "Lupin Receives Approval from U.S. FDA for Sitagliptin and Metformin Hydrochloride Tablets, in the United States",
+    "url": "https://www.lupin.com/investors/press-releases/lupin-receives-approval-from-u-s-fda-for-sitagliptin-and-metformin-hydrochloride-tablets-in-the-united-states",
+    "detected_at": "2026-11-26T12:17:44.824203+00:00",
+    "source_page": "https://www.lupin.com/investors/news-events/"
   }
 ]
