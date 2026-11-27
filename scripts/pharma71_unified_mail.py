@@ -91,6 +91,14 @@ def section(now,root='unified-staging/data/pharma71_unified',csv_path='companies
         lines+=['',f'【{key.upper()}補完開示】 {r.get("status","NOT_RUN")} | 候補 {z.get("disclosure_candidates",0)}件 / 原文 {z.get("verified_originals",0)}件']
         for x in r.get('entries',[]):
             lines.append(f'・{x["ticker"]} | {x.get("published_date") or x.get("published_jst") or x.get("published_hkt_raw")} | {x.get("title")} | {"原文確認" if x.get("original_confirmed") else "候補のみ"}\n  {x.get("url") or "URL未確認"}')
+    daily=a.get('daily_newsroom_coverage',{})
+    if daily.get('window_end_jst')==a['start_jst'] and [r.get('ticker') for r in daily.get('rows',[])]==a['expected_tickers']:
+        lines+=['','【前回朝から今回取得までの連続網羅】',
+                f'{daily["window_start_jst"]} ～ {daily["window_end_jst"]} | 連続確認 {daily["verified"]}/71 | 未確認区間あり {daily["unconfirmed"]}/71',
+                '公式一覧のみの判定。SEC補完は加算しない。最終取得から配信までの区間は未確認。']
+        for r in daily['rows']:
+            if r['gaps']:lines.append('・'+r['ticker']+' | '+'; '.join(g['start_jst']+' ～ '+g['end_jst'] for g in r['gaps']))
+    else:lines+=['','【前回朝からの連続網羅】未検証。最新取得分の判定とは別。']
     lines+=['','【全71対象の判定】']
     for e,x in zip(a['entries'],scope['rows']):
         period=e['comparison_period']
