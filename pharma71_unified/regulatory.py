@@ -11,6 +11,7 @@ from .sec_exhibits import collect_exhibits,summarize
 from .sec_identity import resolve,verify_identity
 from .tdnet import run as tdnet_run
 from .hkex import run as hkex_run
+from .eqs import run as eqs_run
 
 FORMS={'8-K','8-K/A','6-K','6-K/A'}
 def parse_tickers(data):
@@ -57,6 +58,7 @@ def run(root,now=None,ua=None,session=None):
         'collected_jst':now.isoformat(),'start_date':start,'end_date':end,'newsroom_coverage_credit':False,'entries':[]}
     result['tdnet']=tdnet_run(root/'tdnet'/now.strftime('%Y%m%dT%H%M%S'),now)
     result['hkex']=hkex_run(root/'hkex'/now.strftime('%Y%m%dT%H%M%S'),now)
+    result['eqs']=eqs_run(root/'eqs'/now.strftime('%Y%m%dT%H%M%S'),now)
     ua=ua or os.getenv('SEC_USER_AGENT','')
     if not re.search(r'[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}',ua):
         result.update(status='NOT_CONFIGURED',reason='SEC_USER_AGENT_WITH_CONTACT_REQUIRED')

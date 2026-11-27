@@ -15,6 +15,7 @@ from .wire import collect_wire
 from .sec_exhibits import report_lines
 from .tdnet import report_lines as tdnet_report_lines
 from .hkex import report_lines as hkex_report_lines
+from .eqs import report as eqs_report
 from .integration import parent_scope,matrix,report as integration_report
 
 def verified_feeds(entries,folder):
@@ -78,6 +79,16 @@ def main(argv=None):
                      primary_releases=[],source_classification='PARENT_ONLY_UNVERIFIED')
             new_state['companies'].pop(e['ticker'],None)
     update_original_state(entries,new_state,prior_state)
+    # Never advance an unresolved first-run baseline; keep the unverified interval.
+    for e in entries:
+        st=new_state['companies'].setdefault(e['ticker'],{})
+        if e['status']=='未確認':
+            if not st.get('last_verified_success_jst'):
+                st['pending_baseline_jst']=e['comparison_period']['start_jst']
+        else:
+            st.pop('pending_baseline_jst',None)
+            st['last_verified_success_jst']=e['comparison_period']['end_jst']
+            e['new_success_jst']=e['comparison_period']['end_jst']
     errors=validate_report(registry,entries,expected_order=order)
     subject,body,summary=render_report(now,entries,errors,'GitHub Pharma71 unified staging')
     audit={'audit_date_jst':now.date().isoformat(),'start_jst':now.isoformat(),
@@ -108,7 +119,7 @@ def main(argv=None):
     save_json(root/'audit.json',audit)
     save_json(root/(now.strftime('%Y-%m-%dT%H%M%S')+'_audit.json'),audit)
     save_json(state_path,new_state)
-    (root/'report.md').write_text(body+report_lines(regulatory)+tdnet_report_lines(regulatory)+hkex_report_lines(regulatory)+integration_report(audit['integrated_monitoring']),encoding='utf-8')
+    (root/'report.md').write_text(body+report_lines(regulatory)+tdnet_report_lines(regulatory)+hkex_report_lines(regulatory)+eqs_report(regulatory)+integration_report(audit['integrated_monitoring']),encoding='utf-8')
     # Persist a bounded rolling original ledger. Failed or empty runs cannot
     # erase verified entries from prior runs; keep latest 500 per company.
     history_path=root/'verified_original_history.json'

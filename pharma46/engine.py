@@ -172,7 +172,8 @@ def process_company(company,fetcher,now_dt,state,evidence_dir,max_pages=12):
     ticker=company['ticker'];start=datetime.now(JST)
     previous=(state.get('companies') or {}).get(ticker,{})
     prev_success=previous.get('last_verified_success_jst')
-    baseline=iso_dt(prev_success) or (now_dt-timedelta(hours=24))
+    pending=previous.get('pending_baseline_jst')
+    baseline=iso_dt(prev_success) or iso_dt(pending) or (now_dt-timedelta(hours=24))
     result={'ticker':ticker,'company_name':company['name'],'batch_id':company['batch_id'],
             'audit_date_jst':now_dt.date().isoformat(),'official_listing_url':None,
             'official_urls_configured':company['official_indexes'],
@@ -180,7 +181,7 @@ def process_company(company,fetcher,now_dt,state,evidence_dir,max_pages=12):
             'attempt_end_jst':None,'tool_evidence_ref':None,
             'previous_success_jst':prev_success,
             'comparison_period':{'start_jst':baseline.isoformat(), 'end_jst':now_dt.isoformat(),
-                                 'type':'last_success' if prev_success else 'provisional_24h'},
+                                 'type':'last_success' if prev_success else ('unresolved_baseline' if pending else 'provisional_24h')},
             'status':'未確認','reason':'未実査','latest_publication_date':None,
             'oldest_publication_date':None,'listing_page_urls_checked':[],
             'pagination_complete':False,'alternative_attempts':[],
@@ -241,7 +242,7 @@ def process_company(company,fetcher,now_dt,state,evidence_dir,max_pages=12):
             if chosen['pagination_complete'] and not result['stale_cache_status']:
                 result['status']='あり' if chosen['newer_listing_count']>0 else 'なし'
                 result['source_classification']='PERIOD_VERIFIED'
-                result['new_success_jst']=datetime.now(JST).isoformat()
+                result['new_success_jst']=now_dt.isoformat()
                 result['reason']='COMPLETE_DATED_LISTING_AND_ORIGINALS' if result['status']=='あり' else 'COMPLETE_DATED_LISTING_NO_NEW_RELEASES'
             else:
                 result['reason']=('STALE_CACHE_OR_SOURCE_DIVERGENCE' if result['stale_cache_status'] else
@@ -329,13 +330,14 @@ def collect(registry,state,asof=None,fetcher=None,evidence_dir='data/evidence',w
                 LOG.exception('Unexpected worker failure: %s',ticker)
                 previous=(state.get('companies') or {}).get(ticker,{})
                 prev=previous.get('last_verified_success_jst')
-                baseline=iso_dt(prev) or (now_dt-timedelta(hours=24))
+                pending=previous.get('pending_baseline_jst')
+                baseline=iso_dt(prev) or iso_dt(pending) or (now_dt-timedelta(hours=24))
                 completed[ticker]={'ticker':ticker,'company_name':c['name'],'batch_id':c['batch_id'],
                     'audit_date_jst':now_dt.date().isoformat(),'official_listing_url':None,
                     'official_urls_configured':c['official_indexes'],'homepage_visit_status':'未訪問',
                     'attempt_start_jst':None,'attempt_end_jst':None,'tool_evidence_ref':None,
                     'comparison_period':{'start_jst':baseline.isoformat(),'end_jst':now_dt.isoformat(),
-                        'type':'last_success' if prev else 'provisional_24h'},'previous_success_jst':prev,
+                        'type':'last_success' if prev else ('unresolved_baseline' if pending else 'provisional_24h')},'previous_success_jst':prev,
                     'status':'未確認','reason':'WORKER_EXCEPTION_NO_VERIFIABLE_RECEIPT:'+type(exc).__name__,
                     'latest_publication_date':None,'oldest_publication_date':None,'listing_page_urls_checked':[],
                     'pagination_complete':False,'alternative_attempts':[],'primary_releases':[],
