@@ -8,6 +8,8 @@ from pharma46.fetch import JST
 from pharma46.cli import save_json
 from .registry import load_registry
 from .sec_exhibits import collect_exhibits,summarize
+from .sec_identity import resolve,verify_identity
+from .tdnet import run as tdnet_run
 
 FORMS={'8-K','8-K/A','6-K','6-K/A'}
 def parse_tickers(data):
@@ -52,6 +54,7 @@ def run(root,now=None,ua=None,session=None):
     start=(now-timedelta(days=3)).date().isoformat();end=now.date().isoformat()
     result={'scope':'SEC_8K_6K_FILING_AND_HTML_EXHIBITS','run_id':os.getenv('GITHUB_RUN_ID'),
         'collected_jst':now.isoformat(),'start_date':start,'end_date':end,'newsroom_coverage_credit':False,'entries':[]}
+    result['tdnet']=tdnet_run(root/'tdnet'/now.strftime('%Y%m%dT%H%M%S'),now)
     ua=ua or os.getenv('SEC_USER_AGENT','')
     if not re.search(r'[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}',ua):
         result.update(status='NOT_CONFIGURED',reason='SEC_USER_AGENT_WITH_CONTACT_REQUIRED')
@@ -63,14 +66,18 @@ def run(root,now=None,ua=None,session=None):
         data,receipt=fetch_json(session,'https://www.sec.gov/files/company_tickers.json',evidence,'issuer_map',ua)
         result['issuer_map_receipt']=receipt;tickers=parse_tickers(data)
         for c in load_registry()['companies']:
-            t=c['ticker'];cik=tickers.get(t)
+            t=c['ticker'];mapping=resolve(c,tickers)
             e={'ticker':t,'company_name':c['name'],'newsroom_coverage_credit':False}
             result['entries'].append(e)
-            if not cik or t in ('RNA','REATA'):
+            if not mapping:
                 e.update(status='NO_CURRENT_SEC_TICKER_MAPPING');continue
             try:
+                cik=mapping['cik'];e['sec_ticker']=mapping['sec_ticker'];e['issuer_cik']=cik
                 data,receipt=fetch_json(session,f'https://data.sec.gov/submissions/CIK{cik:010d}.json',evidence,t,ua)
-                e['receipt']=receipt;rows,boundary,count=parse_submissions(data,t,cik,start,end)
+                e['receipt']=receipt;e['sec_issuer_name']=data.get('name')
+                if not verify_identity(data,mapping):raise ValueError('SEC legal issuer name mismatch')
+                e['issuer_identity_verified']=True
+                rows,boundary,count=parse_submissions(data,mapping['sec_ticker'],cik,start,end)
                 e.update(status='FILING_METADATA_RETRIEVED' if boundary else 'FILING_WINDOW_NOT_PROVEN',
                     filings=rows,record_count=count,filing_date_boundary_reached=boundary)
                 e['exhibit_results']=[collect_exhibits(session,row,evidence/t/row['accession'],ua) for row in rows[:10]]
