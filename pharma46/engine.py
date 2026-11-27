@@ -388,6 +388,11 @@ def collect(registry,state,asof=None,fetcher=None,evidence_dir='data/evidence',w
             except Exception as exc:
                 LOG.warning('Bounded retry failed for %s: %s',ticker,type(exc).__name__)
     results=[completed[t] for t in order]
+    # Fresh issuer API calls for known dynamic archives. Never apply historical audit results.
+    if fetcher is None:
+        from .api_observations import supplement
+        for entry in results:
+            supplement(entry,now_dt,evidence_dir,state)
     # Persist verified original URLs even when a company's index-coverage QA fails.
     # On the first-ever baseline, 'first observed' is not equivalent to newly published.
     for e in results:

@@ -197,11 +197,16 @@
       "name": "LONN",
       "batch_id": "B",
       "official_indexes": [
-        "https://www.lonza.com/news",
-        "https://www.lonza.com/news-and-media/news-archive"
+        "https://www.lonza.com/news-and-media/news-archive",
+        "https://www.lonza.com/news"
       ],
       "source_status": "CANDIDATES_NOT_VERIFIED",
-      "market": "GLOBAL"
+      "market": "GLOBAL",
+      "known_official_release_floor": {
+        "date": "2026-11-12",
+        "url": "https://www.lonza.com/news-and-media/news-archive",
+        "purpose": "Previously observed dated archive entry; not current collection evidence"
+      }
     },
     {
       "ticker": "VRTX",
@@ -428,6 +433,7 @@
       "batch_id": "C",
       "official_indexes": [
         "https://investors.immunome.com/news-releases/",
+        "https://investors.immunome.com/",
         "https://ir.immunome.com/news-releases"
       ],
       "source_status": "CANDIDATES_NOT_VERIFIED",
