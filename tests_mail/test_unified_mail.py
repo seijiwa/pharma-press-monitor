@@ -188,3 +188,15 @@ class TestFreshness(unittest.TestCase):
         from pharma71_unified_mail import canonical_mapping
         self.assertEqual(canonical_mapping([{'Ticker':'ROG','Company':'Roche'},{'Ticker':'','Company':'Daiichi Sankyo'}]),{'ROP':'Roche','4568 JP':'Daiichi Sankyo'})
         with self.assertRaisesRegex(ValueError,'DUPLICATE'):canonical_mapping([{'Ticker':'ROG','Company':'Roche'},{'Ticker':'ROP','Company':'Roche duplicate'}])
+
+    def test_sec_history_is_supplemental_and_deduplicated(self):
+        from pharma71_unified_mail import sec_history_lines
+        now=datetime(2026,11,28,5,21,tzinfo=ZoneInfo('Asia/Tokyo'))
+        url='https://www.sec.gov/Archives/edgar/data/123/456/ex99.htm'
+        rec={'ticker':'LLY','url':url,'filing_date':'2026-11-27','run_id':'123','original_confirmed':True,'issuer_identity_verified':True,'description':'EX-99','receipt':{'fetched_jst':'2026-11-28T01:40:00+09:00','http_status':200,'sha256':'a'*64}}
+        a={'sec_exhibit_history':[rec,rec,dict(rec,url='https://example.org/not-sec')]}
+        text='\n'.join(sec_history_lines(a,now,set()))
+        self.assertEqual(text.count(url),1)
+        self.assertIn('今回未再確認',text)
+        self.assertNotIn('example.org',text)
+        self.assertNotIn(url,'\n'.join(sec_history_lines(a,now,{('LLY',url)})))

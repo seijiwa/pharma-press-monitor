@@ -1,6 +1,7 @@
 """Morning mail attachment text, fail closed on stale/malformed audit."""
 import csv,json,re
 from pathlib import Path
+from urllib.parse import urlparse
 from datetime import datetime,timedelta
 from zoneinfo import ZoneInfo
 TOKYO=ZoneInfo("Asia/Tokyo")
@@ -105,6 +106,28 @@ def rolling_originals(root,now,seen,warnings=None):
                 seen.add(p['url'])
     return sorted(rows,key=lambda x:x[0],reverse=True)
 
+def sec_history_lines(a,now,seen):
+    lines=['','【先行取得SEC添付資料（今回未再確認・補完のみ）】']
+    emitted=set()
+    for r in a.get('sec_exhibit_history',[]):
+        try:
+            key=(r['ticker'],r['url'])
+            url=urlparse(r['url'])
+            receipt=r['receipt']
+            stamp=datetime.fromisoformat(receipt['fetched_jst'])
+            filed=datetime.strptime(r['filing_date'],'%Y-%m-%d').date()
+            if (key in seen or key in emitted or r['original_confirmed'] is not True
+                or r['issuer_identity_verified'] is not True or not str(r['run_id']).isdigit()
+                or url.scheme!='https' or url.netloc!='www.sec.gov' or not url.path.startswith('/Archives/edgar/data/')
+                or stamp.tzinfo is None or not now-timedelta(days=7)<=stamp<=now
+                or filed>now.date() or receipt['http_status']!=200
+                or not re.fullmatch(r'[a-f0-9]{64}',receipt['sha256'],re.I)):continue
+            emitted.add(key)
+            lines.append(f'・{r["ticker"]} | 提出日 {r["filing_date"]} | 先行確認 {receipt["fetched_jst"]} | run {r["run_id"]} | {r["description"]}\n  {r["url"]}')
+        except (KeyError,ValueError,TypeError,AttributeError):continue
+    if not emitted:lines.append('今回分と重複しない保存済み原文なし（保存範囲内）。')
+    return lines
+
 def unavailable_section(now,root,csv_path,reason):
     lines=[f'統合監査: 当日分の検証済み結果を取得できませんでした ({reason})。発表なしとは判定しません。',
            '【取得済み原文の履歴（当日監査未確認、前日05:10以降の初回確認・再掲可能性あり）】']
@@ -117,6 +140,11 @@ def unavailable_section(now,root,csv_path,reason):
         if not rows:lines.append('該当原文なし（保存履歴の範囲のみ）。')
     except (OSError,ValueError,TypeError,KeyError,AttributeError):
         lines.append('原文履歴未確認。')
+    try:
+        old=json.loads((Path(root)/'audit.json').read_text(encoding='utf-8'))
+        lines.extend(sec_history_lines(old,now,set()))
+    except (OSError,ValueError,TypeError,AttributeError):
+        lines.append('SEC先行取得履歴未確認。')
     lines+=['','【全71対象の当日統合監査判定】']
     try:
         with open(csv_path,encoding='utf-8-sig',newline='') as f:names=[r['Company'] for r in csv.DictReader(f)]
@@ -186,12 +214,16 @@ def section(now,root='unified-staging/data/pharma71_unified',csv_path='companies
         lines.append('取得履歴未確認。先行取得分の完全性を保証できません。')
     lines.append('以下の企業別期間判定は最新取得分の比較期間であり、前回配信以降全体の網羅性ではありません。')
     lines+=['','【SEC提出書類・原文添付資料（会社発表とは別）】']
+    sec_seen=set()
     for e in reg.get('entries',[]):
         if not e.get('issuer_identity_verified'):continue
         for x in e.get('filings',[]):lines.append(f'・{e["ticker"]} | {x["form"]} | filing date {x["filing_date"]}\n  {x["url"]}')
         for d in e.get('exhibit_results',[]):
             for x in d.get('exhibits',[]):
-                if x.get('original_confirmed') is True:lines.append(f'  SEC提出添付資料: {x.get("description") or x.get("type","EX-99")} | {x["url"]}')
+                if x.get('original_confirmed') is True:
+                    sec_seen.add((e['ticker'],x['url']))
+                    lines.append(f'  SEC提出添付資料: {x.get("description") or x.get("type","EX-99")} | {x["url"]}')
+    lines.extend(sec_history_lines(a,now,sec_seen))
     lines+=['','【買収済み3対象の親会社限定監視】','親会社一覧・題名・抜粋の範囲であり、独立企業の網羅確認ではありません。']
     for p in scope.get('parent_scopes',[]):
         lines.append(f'・{p["ticker"]} | {p["parent_name"]} | {p["status"]}')
