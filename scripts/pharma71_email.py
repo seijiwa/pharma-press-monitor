@@ -63,6 +63,19 @@ def report(now):
     return subject, "\n".join(lines) + "\n"
 
 
+def early_send_ready(now,root='unified-staging/data/pharma71_unified'):
+    """The early 05:11 attempt waits for a later collection if possible.
+    05:21 and later still preserve timeliness using the validated earlier audit."""
+    if now.hour!=5 or now.minute>=20:return True
+    try:
+        a=json.loads((Path(root)/'audit.json').read_text())
+        stamp=datetime.fromisoformat(a['start_jst'])
+        if stamp.tzinfo is None:return False
+        stamp=stamp.astimezone(TOKYO)
+        return stamp.date()==now.date() and 4<=stamp.hour and stamp<=now
+    except (OSError,ValueError,TypeError,KeyError,AttributeError):
+        return False
+
 def request_ref(tag, create=False):
     base = f"https://api.github.com/repos/{os.environ['GITHUB_REPOSITORY']}/git"
     path = "/refs" if create else f"/ref/tags/{tag}"
@@ -143,6 +156,9 @@ if __name__ == "__main__":
         # available result rather than silently missing the whole morning.
         if not delivery_window(now):
             print('Outside 05:10–06:30 JST delivery window; no email sent.')
+            sys.exit(0)
+        if not early_send_ready(now):
+            print('Early attempt waits for the later audit; defer to 05:21.')
             sys.exit(0)
         if label == '【統合監査未確認】' and now.hour == 5 and now.minute < 25:
             print('Current audit unavailable; defer to next morning attempt.')

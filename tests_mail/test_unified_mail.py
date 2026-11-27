@@ -110,3 +110,14 @@ class TestFreshness(unittest.TestCase):
             self.assertEqual(label,'【統合監査未確認】')
             self.assertEqual(body.count('未確認（当日統合監査未検証）'),71)
             self.assertIn('https://example.org/release',body)
+
+    def test_early_delivery_prefers_recent_audit_but_does_not_block_later(self):
+        from pharma71_email import early_send_ready
+        now=datetime(2026,11,28,5,11,tzinfo=ZoneInfo('Asia/Tokyo'))
+        with tempfile.TemporaryDirectory() as t:
+            p=Path(t)/'audit.json'
+            p.write_text(json.dumps({'start_jst':'2026-11-28T03:30:00+09:00'}))
+            self.assertFalse(early_send_ready(now,t))
+            self.assertTrue(early_send_ready(now.replace(minute=21),t))
+            p.write_text(json.dumps({'start_jst':'2026-11-28T04:37:00+09:00'}))
+            self.assertTrue(early_send_ready(now,t))
