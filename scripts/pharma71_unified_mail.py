@@ -9,12 +9,14 @@ HISTORICAL={'RNA','REATA','JNANA'}
 def validated_audit(root,now,expected_names):
     root=Path(root)
     a=json.loads((root/'audit.json').read_text(encoding='utf-8'))
-    started=datetime.fromisoformat(a['start_jst']).astimezone(TOKYO)
+    started=datetime.fromisoformat(a['start_jst'])
+    if started.tzinfo is None:raise ValueError('UNZONED_AUDIT')
+    started=started.astimezone(TOKYO)
     # The daily 03:30 JST collection must be current, not an old manual run.
     if started.date()!=now.date() or started.hour<1 or started>now or now-started>timedelta(hours=5):
         raise ValueError('STALE_OR_OUTSIDE_MORNING_WINDOW')
     if a.get('audit_date_jst')!=now.date().isoformat():raise ValueError('WRONG_AUDIT_DATE')
-    if a.get('qa_errors'):raise ValueError('STRUCTURAL_QA_FAILURE')
+    if a.get('qa_errors')!=[]:raise ValueError('STRUCTURAL_QA_FAILURE')
     if not str(a.get('run_id','')).isdigit():raise ValueError('NOT_GITHUB_AUDIT')
     entries=a['entries'];order=a['expected_tickers'];names=[e['company_name'] for e in entries]
     if len(entries)!=71 or len(set(order))!=71 or [e['ticker'] for e in entries]!=order or len(set(names))!=71 or set(names)!=expected_names:raise ValueError('UNIVERSE_MISMATCH')
@@ -29,6 +31,10 @@ def validated_audit(root,now,expected_names):
     if reg.get('run_id')!=a['run_id'] or reg.get('newsroom_coverage_credit') is not False:raise ValueError('REGULATORY_RUN_MISMATCH')
     scope=a['integrated_monitoring']
     if [x['ticker'] for x in scope['rows']]!=order:raise ValueError('SCOPE_MISMATCH')
+    for e,x in zip(entries,scope['rows']):
+        if x.get('newsroom_period_verified') is not (e['status']!='未確認'):raise ValueError('SCOPE_DIRECT_MISMATCH')
+        p=e['comparison_period'];s=datetime.fromisoformat(p['start_jst']);z=datetime.fromisoformat(p['end_jst'])
+        if s.tzinfo is None or z.tzinfo is None or not s<=z<=now:raise ValueError('INVALID_COMPARISON_PERIOD')
     return a
 
 def rolling_originals(root,now,seen):

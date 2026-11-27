@@ -129,7 +129,11 @@ if __name__ == "__main__":
     except (OSError, ValueError, TypeError, KeyError) as exc:
         subject = f'【製薬71社】{now:%Y/%m/%d} 公式発表監視【従来監視未確認】'
         body = f'従来監視の集計を取得できませんでした ({type(exc).__name__})。発表なしとは判定できません。\n'
-    label, integrated = section(now)
+    try:
+        label, integrated = section(now)
+    except (OSError,ValueError,TypeError,KeyError,AttributeError,IndexError) as exc:
+        label = '【統合監査未確認】'
+        integrated = f'統合監査の表示に失敗しました ({type(exc).__name__})。未確認を発表なしと判定しません。\n'
     subject += label
     body = integrated + '\n' + body
     if mode == 'daily':

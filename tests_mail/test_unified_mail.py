@@ -25,6 +25,10 @@ class TestFreshness(unittest.TestCase):
         # for this offline test; it does not certify current-day live delivery.
         dt=datetime.fromisoformat(a['start_jst']).replace(hour=3,minute=30,second=0,microsecond=0)
         a['start_jst']=dt.isoformat()
+        # For the offline fixture, shift the comparison-period cutoff too.
+        for e in a['entries']:
+            e['comparison_period']['start_jst']=dt.replace(hour=2).isoformat()
+            e['comparison_period']['end_jst']=dt.isoformat()
         a['audit_date_jst']=dt.date().isoformat()
         with tempfile.TemporaryDirectory() as t:
             q=Path(t);(q/'audit.json').write_text(json.dumps(a))
@@ -66,3 +70,8 @@ class TestFreshness(unittest.TestCase):
             (Path(t)/'verified_original_history.json').write_text(json.dumps({'LLY':[p,p,old,future]}))
             self.assertEqual([r[2]['url'] for r in rolling_originals(t,now,set())],[p['url']])
             self.assertEqual(rolling_originals(t,now,{p['url']}),[])
+
+    def test_unzoned_audit_rejected(self):
+        with tempfile.TemporaryDirectory() as t:
+            p=Path(t);(p/'audit.json').write_text(json.dumps({'start_jst':'2026-11-28T03:30:00'}))
+            with self.assertRaisesRegex(ValueError,'UNZONED'):validated_audit(p,datetime(2026,11,28,5,21,tzinfo=ZoneInfo('Asia/Tokyo')),set())
