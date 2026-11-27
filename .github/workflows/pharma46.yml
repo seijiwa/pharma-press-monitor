@@ -41,7 +41,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          # Resolve main when this serialized job actually starts, not its queued push SHA.
+          ref: main
+          fetch-depth: 0
           persist-credentials: true
+      - name: Record checked-out revision
+        run: git rev-parse HEAD
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -105,7 +110,11 @@ jobs:
           if [ -f data/pharma46_mail_ledger.json ]; then git add data/pharma46_mail_ledger.json; fi
           if ! git diff --cached --quiet; then
             git commit -m 'Record evidence-based pharma46 audit'
-            git pull --rebase origin main
+            if ! git pull --rebase origin main; then
+              git rebase --abort
+              echo 'Audit artifact retained; concurrent repository update prevented safe baseline persistence.' >&2
+              exit 1
+            fi
             git push origin HEAD:main
           fi
       - name: Mark incomplete or unsent audits as failed
