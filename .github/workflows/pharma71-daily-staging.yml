@@ -32,7 +32,15 @@ jobs:
       - name: SEC and exchange observations
         env:
           SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
-        run: python -m pharma71_unified.regulatory --root data/pharma71_regulatory
+          SEC_APPROVED_CONTACT: ${{ secrets.PHARMA71_GMAIL_USER }}
+        run: |
+          set -euo pipefail
+          if [ -z "${SEC_USER_AGENT:-}" ] && [ -n "${SEC_APPROVED_CONTACT:-}" ]; then
+            export SEC_USER_AGENT="Pharma71Monitor/3.0 (${SEC_APPROVED_CONTACT})"
+            echo '::add-mask::'"$SEC_USER_AGENT"
+          fi
+          unset SEC_APPROVED_CONTACT
+          python -m pharma71_unified.regulatory --root data/pharma71_regulatory
       - name: Live audit 71 (no email)
         id: collect
         run: python -m pharma71_unified.cli --workers 3 --max-pages 12 --regulatory-file data/pharma71_regulatory/regulatory.json
