@@ -38,7 +38,7 @@ def main(argv=None):
     data_dir=Path('data');data_dir.mkdir(exist_ok=True)
     evidence_dir=data_dir/'evidence'/day
     results,errors,new_state=collect(registry,state,asof=now,evidence_dir=evidence_dir,
-                                     workers=args.workers,max_pages=args.max_pages)
+                                     workers=args.workers,max_pages=args.max_pages,retry_transient=True)
     subject,body,summary=render_report(now,results,errors,'GitHub Actions direct HTTP/Playwright')
     for batch,tickers in BATCHES.items():
         entries=[e for e in results if e['batch_id']==batch]

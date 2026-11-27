@@ -1,6 +1,6 @@
 {
-  "version": "2.0",
-  "source_registry_warning": "Candidates are unverified. A URL is not proof of coverage.",
+  "version": "46-20261128-source-repair",
+  "source_registry_warning": "Official candidates from prior staged audit; no coverage inherited. All 46 are fetched again independently.",
   "companies": [
     {
       "ticker": "LLY",
@@ -34,6 +34,7 @@
       "name": "AMGN",
       "batch_id": "A",
       "official_indexes": [
+        "https://www.amgen.com/newsroom/press-releases",
         "https://investors.amgen.com/news-releases",
         "https://investors.amgen.com/news-and-events/press-releases"
       ],
@@ -56,6 +57,7 @@
       "name": "BMY",
       "batch_id": "A",
       "official_indexes": [
+        "https://news.bms.com/news/default.aspx",
         "https://www.bms.com/news-and-media/press-releases.html"
       ],
       "source_status": "CANDIDATES_NOT_VERIFIED",
@@ -66,9 +68,9 @@
       "name": "GILD",
       "batch_id": "A",
       "official_indexes": [
+        "https://www.gilead.com/news",
         "https://investors.gilead.com/news/default.aspx",
-        "https://investors.gilead.com/overview/default.aspx",
-        "https://www.gilead.com/news/news-details"
+        "https://investors.gilead.com/overview/default.aspx"
       ],
       "source_status": "CANDIDATES_NOT_VERIFIED",
       "market": "GLOBAL"
@@ -88,6 +90,7 @@
       "name": "MRK",
       "batch_id": "A",
       "official_indexes": [
+        "https://www.merck.com/media/news/",
         "https://www.merck.com/news"
       ],
       "source_status": "CANDIDATES_NOT_VERIFIED",
@@ -98,6 +101,7 @@
       "name": "PFE",
       "batch_id": "A",
       "official_indexes": [
+        "https://www.pfizer.com/news",
         "https://www.pfizer.com/newsroom/press-releases"
       ],
       "source_status": "CANDIDATES_NOT_VERIFIED",
@@ -108,6 +112,7 @@
       "name": "REGN",
       "batch_id": "A",
       "official_indexes": [
+        "https://investor.regeneron.com/news/press-releases",
         "https://www.regeneron.com/newsroom"
       ],
       "source_status": "CANDIDATES_NOT_VERIFIED",
@@ -118,6 +123,7 @@
       "name": "AZN",
       "batch_id": "A",
       "official_indexes": [
+        "https://www.astrazeneca.com/media-centre.html?type=pressrelease",
         "https://www.astrazeneca.com/media-centre/press-releases.html"
       ],
       "source_status": "CANDIDATES_NOT_VERIFIED",
@@ -128,6 +134,7 @@
       "name": "GSK",
       "batch_id": "A",
       "official_indexes": [
+        "https://www.gsk.com/en-gb/media/press-releases/",
         "https://www.gsk.com/en-gb/media/press-releases"
       ],
       "source_status": "CANDIDATES_NOT_VERIFIED",
@@ -138,6 +145,7 @@
       "name": "NOVN",
       "batch_id": "A",
       "official_indexes": [
+        "https://www.novartis.com/news",
         "https://www.novartis.com/news/media-releases"
       ],
       "source_status": "CANDIDATES_NOT_VERIFIED",
@@ -178,6 +186,7 @@
       "name": "GALD",
       "batch_id": "B",
       "official_indexes": [
+        "https://www.galderma.com/news",
         "https://www.galderma.com/newsroom"
       ],
       "source_status": "CANDIDATES_NOT_VERIFIED",
@@ -211,6 +220,7 @@
       "batch_id": "B",
       "official_indexes": [
         "https://investor.jazzpharma.com/news/press-release-archive",
+        "https://www.jazzpharma.com/",
         "https://investor.jazzpharma.com/news"
       ],
       "source_status": "CANDIDATES_NOT_VERIFIED",
@@ -226,6 +236,7 @@
       "name": "ALKS",
       "batch_id": "B",
       "official_indexes": [
+        "https://www.alkermes.com/news",
         "https://www.alkermes.com/news-releases/news-release-details",
         "https://alkermes.gcs-web.com/news-releases"
       ],
@@ -237,6 +248,7 @@
       "name": "SRPT",
       "batch_id": "B",
       "official_indexes": [
+        "https://www.sarepta.com/newsroom",
         "https://sarepta.gcs-web.com/news-releases"
       ],
       "source_status": "CANDIDATES_NOT_VERIFIED",
@@ -257,6 +269,7 @@
       "name": "VERA",
       "batch_id": "B",
       "official_indexes": [
+        "https://ir.veratx.com/news-events/news-releases",
         "https://ir.veratx.com/news-events/press-releases"
       ],
       "source_status": "CANDIDATES_NOT_VERIFIED",
@@ -283,6 +296,7 @@
       "name": "KURA",
       "batch_id": "B",
       "official_indexes": [
+        "https://ir.kuraoncology.com/press-releases",
         "https://kuraoncology.gcs-web.com/news-releases"
       ],
       "source_status": "CANDIDATES_NOT_VERIFIED",
@@ -293,6 +307,7 @@
       "name": "SMMT",
       "batch_id": "B",
       "official_indexes": [
+        "https://smmttx.com/news/press-releases/default.aspx",
         "https://www.smmttx.com/investors/news-events/press-releases"
       ],
       "source_status": "CANDIDATES_NOT_VERIFIED",
@@ -324,6 +339,7 @@
       "name": "ALMS",
       "batch_id": "B",
       "official_indexes": [
+        "https://www.alumis.com/",
         "https://investors.alumis.com/news-events/news-releases",
         "https://investors.alumis.com/news-releases"
       ],
@@ -335,6 +351,7 @@
       "name": "HRMY",
       "batch_id": "B",
       "official_indexes": [
+        "https://ir.harmonybiosciences.com/news-events/news-releases",
         "https://ir.harmonybiosciences.com/"
       ],
       "source_status": "CANDIDATES_NOT_VERIFIED",
@@ -345,6 +362,7 @@
       "name": "HIMS",
       "batch_id": "C",
       "official_indexes": [
+        "https://investors.hims.com/news/default.aspx",
         "https://investors.hims.com/news-releases"
       ],
       "source_status": "CANDIDATES_NOT_VERIFIED",
@@ -355,6 +373,7 @@
       "name": "RVMD",
       "batch_id": "C",
       "official_indexes": [
+        "https://www.revmed.com/media/",
         "https://ir.revmed.com/press-releases"
       ],
       "source_status": "CANDIDATES_NOT_VERIFIED",
@@ -365,6 +384,7 @@
       "name": "SRRK",
       "batch_id": "C",
       "official_indexes": [
+        "https://scholarrock.com/investors-media/press-releases/",
         "https://investors.scholarrock.com/investors-media/press-releases"
       ],
       "source_status": "CANDIDATES_NOT_VERIFIED",
@@ -375,6 +395,7 @@
       "name": "ORKA",
       "batch_id": "C",
       "official_indexes": [
+        "https://orukatx.com/",
         "https://ir.orukatx.com/news-releases"
       ],
       "source_status": "CANDIDATES_NOT_VERIFIED",
@@ -385,6 +406,7 @@
       "name": "ERAS",
       "batch_id": "C",
       "official_indexes": [
+        "https://investors.erasca.com/news-events/news-releases",
         "https://ir.erasca.com/news-releases"
       ],
       "source_status": "CANDIDATES_NOT_VERIFIED",
@@ -405,6 +427,7 @@
       "name": "IMNM",
       "batch_id": "C",
       "official_indexes": [
+        "https://investors.immunome.com/news-releases/",
         "https://ir.immunome.com/news-releases"
       ],
       "source_status": "CANDIDATES_NOT_VERIFIED",
@@ -425,6 +448,7 @@
       "name": "ALVO",
       "batch_id": "C",
       "official_indexes": [
+        "https://www.alvotech.com/newsroom",
         "https://investors.alvotech.com/news-releases"
       ],
       "source_status": "CANDIDATES_NOT_VERIFIED",
@@ -435,6 +459,7 @@
       "name": "DNLI",
       "batch_id": "C",
       "official_indexes": [
+        "https://investors.denalitherapeutics.com/investors",
         "https://investors.denalitherapeutics.com/press-releases"
       ],
       "source_status": "CANDIDATES_NOT_VERIFIED",
@@ -466,6 +491,7 @@
       "name": "Innovent Biologics",
       "batch_id": "C",
       "official_indexes": [
+        "https://en.innoventbio.com/InvestorsAndMedia/PressRelease",
         "https://www.innoventbio.com"
       ],
       "source_status": "CANDIDATES_NOT_VERIFIED",
@@ -476,6 +502,7 @@
       "name": "WuXi Biologics",
       "batch_id": "C",
       "official_indexes": [
+        "https://www.wuxibiologics.com/press-release/",
         "https://www.wuxibiologics.com/Press-Release/",
         "https://www.wuxibiologics.com"
       ],

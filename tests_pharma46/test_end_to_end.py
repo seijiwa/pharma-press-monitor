@@ -1,6 +1,7 @@
 """Offline simulated all-46 integration, not a claim of live site coverage."""
 import json
 from pathlib import Path
+from copy import deepcopy
 from urllib.parse import urlparse
 from datetime import datetime,timedelta
 from pharma46.fetch import JST,FetchResult,FetchError
@@ -8,6 +9,19 @@ from pharma46.engine import collect,ORDER,render_report
 
 NOW=datetime(2026,11,25,8,0,tzinfo=JST)
 BODY=('A verified official newsroom article publishes the complete data from a controlled clinical study. '*8)
+
+def synthetic_registry(registry):
+    """Use reserved test domains for generic end-to-end HTML, not live-site adapters.
+
+    Live-site selectors have separate fixture tests. Never loosen a production
+    parser to accept generic mock HTML on a real company's exact newsroom URL.
+    """
+    mock=deepcopy(registry)
+    for c in mock['companies']:
+        key=c['ticker'].lower().replace(' ','-')
+        c['official_indexes']=[f'https://fixture-{key}.example/news']
+        c.pop('known_official_release_floor',None)
+    return mock
 
 class SyntheticCompanyFetcher:
     def __init__(self,registry,all_fail=False):
@@ -26,7 +40,7 @@ class SyntheticCompanyFetcher:
                            response_date='Wed, 25 Nov 2026 00:00:00 GMT',age_seconds=0)
 
 def test_full_46_offline_simulation(tmp_path):
-    registry=json.loads(Path('pharma46/sources.json').read_text())
+    registry=synthetic_registry(json.loads(Path('pharma46/sources.json').read_text()))
     fetcher=SyntheticCompanyFetcher(registry)
     entries,errors,state=collect(registry,{'companies':{}},asof=NOW,fetcher=fetcher,
                                  evidence_dir=tmp_path,workers=3)
