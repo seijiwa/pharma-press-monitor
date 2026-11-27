@@ -90,7 +90,7 @@ jobs:
           if [ "$(git rev-parse HEAD)" != "$(git rev-parse FETCH_HEAD)" ]; then
             echo "::warning::Staging branch advanced during this run. Evidence artifact retained; stale baseline publication skipped."
             echo 'Baseline publication: SUPERSEDED (evidence artifact retained)' >> "$GITHUB_STEP_SUMMARY"
-            exit 0
+            exit 1
           fi
           git add -f data/pharma71_unified/state.json data/pharma71_unified/coverage_history.json data/pharma71_unified/verified_original_history.json data/pharma71_unified/audit.json data/pharma71_unified/report.md data/pharma71_unified/feeds/
           if ! git diff --cached --quiet; then
@@ -100,7 +100,7 @@ jobs:
               if [ "$(git rev-parse HEAD^)" != "$(git rev-parse FETCH_HEAD)" ]; then
                 echo "::warning::Staging branch advanced before push; evidence artifact retained, no overwrite."
                 echo 'Baseline publication: SUPERSEDED (evidence artifact retained)' >> "$GITHUB_STEP_SUMMARY"
-                exit 0
+                exit 1
               fi
               echo "::error::Baseline publication failed without concurrent branch change"
               exit 1
