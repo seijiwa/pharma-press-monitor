@@ -14,9 +14,9 @@ HISTORICAL={'RNA','REATA','JNANA'}
 # Candidate addresses inherited from the running 71 monitor plus the actual
 # recorded FUJIFILM official relocation; audit success requires live receipts.
 ALTERNATES={
- 'BAYN':['https://www.bayer.com/media/en-us/','https://www.bayer.com/en/investors/investor-news'],
+ 'BAYN':['https://www.bayer.com/media/en-us/','https://www.bayer.com/media/en-us/investor-news'],
  'DNLI':['https://investors.denalitherapeutics.com/investors'],
- 'LONN':['https://www.lonza.com/news-and-media/news-archive','https://www.lonza.com/media','https://www.lonza.com/investors'],
+ 'LONN':['https://www.lonza.com/news-and-media/news-archive','https://www.lonza.com/news-and-media','https://www.lonza.com/investors'],
  'REGN':['https://investor.regeneron.com/news/press-releases'],
  'SRRK':['https://scholarrock.com/investors-media/press-releases/'],
  'BIIB':['https://www.biogen.com/home.html'],
@@ -61,7 +61,7 @@ def load_registry(csv_path='companies.csv', base_path='pharma46/sources.json'):
                        batch_id=company.get('batch_id','D'),source_status='CANDIDATES_NOT_VERIFIED',
                        legacy_feed_url=row['Feed URL'],legacy_fallback=row['Fallback'])
         if ticker=='JNANA':
-            company['official_indexes']=['https://www.otsuka.co.jp/en/company/newsreleases/','https://www.otsuka.co.jp/company/newsreleases/']
+            company['official_indexes']=['https://www.otsuka.com/en/group_news/index.php','https://www.otsuka-us.com/news','https://www.otsuka.co.jp/company/newsreleases/']
         if ticker in HISTORICAL:
             company['scope_note']='Historical bookmark: parent disclosure only, not independent company coverage'
         merged[ticker]=company

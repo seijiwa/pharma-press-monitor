@@ -3,8 +3,8 @@ from datetime import datetime
 import re
 
 PARENT={'RNA':('NOVN','Novartis',r'\bavidity\b|\bdel-desiran\b|\bdel-brax\b|\bdel-zota\b'),
-        'REATA':('BIIB','Biogen',r'\breata\b|\bskyclaris\b|\bomaveloxolone\b'),
-        'JNANA':(None,'Otsuka',r'\bjnana\b|\bjnt-517\b')}
+        'REATA':('BIIB','Biogen',r'\breata\b|\bskyclarys\b|\bomaveloxolone\b'),
+        'JNANA':(None,'Otsuka',r'\bjnana\b|\bjnt[- ]517\b|\brepinatrabit\b')}
 def iso(s):
     try:return datetime.fromisoformat(s)
     except (ValueError,TypeError):return None

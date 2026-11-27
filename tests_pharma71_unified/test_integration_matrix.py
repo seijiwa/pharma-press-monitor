@@ -14,3 +14,10 @@ def test_parent_window_not_silently_shortened():
     assert p[0]['status']=='PARENT_SCOPE_UNCONFIRMED'
     assert p[1]['status']=='PARENT_LISTING_VERIFIED_KEYWORD_SCOPE_LIMITED'
     assert p[2]['status']=='PARENT_SCOPE_UNCONFIRMED'
+
+
+def test_parent_asset_aliases():
+    import re
+    from pharma71_unified.integration import PARENT
+    assert re.search(PARENT['REATA'][2],'SKYCLARYS update',re.I)
+    assert re.search(PARENT['JNANA'][2],'repinatrabit phase 3',re.I)

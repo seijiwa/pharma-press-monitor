@@ -85,30 +85,5 @@ jobs:
               print('::warning::Coverage gate NOT READY; no production cutover. This is not a successful full-coverage audit.')
           PY
 
-      - name: Persist staging baselines and verified RSS (no production change)
-        if: steps.collect.outcome == 'success' && github.ref == 'refs/heads/pharma71-unified-20261127' && !cancelled()
-        run: |
-          set -euo pipefail
-          git config user.name 'pharma71-staging[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git fetch origin pharma71-unified-20261127
-          if [ "$(git rev-parse HEAD)" != "$(git rev-parse FETCH_HEAD)" ]; then
-            echo "::warning::Staging branch advanced during this run. Evidence artifact retained; stale baseline publication skipped."
-            echo 'Baseline publication: SUPERSEDED (evidence artifact retained)' >> "$GITHUB_STEP_SUMMARY"
-            exit 0
-          fi
-          git add -f data/pharma71_unified/state.json data/pharma71_unified/coverage_history.json data/pharma71_unified/verified_original_history.json data/pharma71_unified/audit.json data/pharma71_unified/report.md data/pharma71_unified/feeds/
-          if ! git diff --cached --quiet; then
-            git commit -m 'Persist staging audit and verified release history'
-            if ! git push origin HEAD:pharma71-unified-20261127; then
-              git fetch origin pharma71-unified-20261127
-              if [ "$(git rev-parse HEAD^)" != "$(git rev-parse FETCH_HEAD)" ]; then
-                echo "::warning::Staging branch advanced before push; evidence artifact retained, no overwrite."
-                echo 'Baseline publication: SUPERSEDED (evidence artifact retained)' >> "$GITHUB_STEP_SUMMARY"
-                exit 0
-              fi
-              echo "::error::Baseline publication failed without concurrent branch change"
-              exit 1
-            fi
-          fi
-          echo 'Baseline publication: SUCCESS' >> "$GITHUB_STEP_SUMMARY"
+      - name: Keep branch-triggered tests artifact-only
+        run: echo 'Branch tests do not advance the scheduled collection baseline.' >> "$GITHUB_STEP_SUMMARY"
