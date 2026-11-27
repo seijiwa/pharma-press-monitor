@@ -1,7 +1,7 @@
-# 製薬公式監視 2026-11-27【暫定・未確認20社】
+# 製薬公式監視 2026-11-27【暫定・未確認19社】
 
-- レポート日付(JST): 2026-11-27T11:47:10.335136+09:00
-- 対象71社 / 直接取得試行記録 71社 / 期間網羅確認 51社 / 未確認 20社
+- レポート日付(JST): 2026-11-27T11:53:40.613076+09:00
+- 対象71社 / 直接取得試行記録 71社 / 期間網羅確認 52社 / 未確認 19社
 - 一次原文で確認した発表: 0件 / 新規、既報、初回観測を別々に表示
 - 収集エンジン: GitHub Pharma71 unified staging / 構造QAコード: 実行済み（エラー0件） / 期間網羅QA: 未達
 - キャッシュ疑い: 0社
@@ -51,7 +51,7 @@
 |ORKA|なし|成功|2026-11-09|True|COMPLETE_DATED_LISTING_NO_NEW_RELEASES|
 |ERAS|未確認|成功|null|False|INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL|
 |CGEM|未確認|成功|null|False|INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL|
-|IMNM|未確認|失敗|null|False|INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL|
+|IMNM|なし|成功|2026-11-18|True|COMPLETE_DATED_LISTING_NO_NEW_RELEASES|
 |GPCR|未確認|失敗|null|False|INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL|
 |ALVO|なし|成功|2026-11-26|True|COMPLETE_DATED_LISTING_NO_NEW_RELEASES|
 |DNLI|未確認|失敗|null|False|INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL|
@@ -96,3 +96,6 @@
 
 ### SECで確認した添付資料（公開日は提出日と区別）
 - 確認済み添付資料なし（発表不存在の証明ではない）
+
+## TDnet補完監視（一覧候補のみ・PDF原文未確認）
+- 状態: COLLECTION_FINISHED / 取得ページ 4 / 開示候補 0件
