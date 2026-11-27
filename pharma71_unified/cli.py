@@ -18,6 +18,7 @@ from .hkex import report_lines as hkex_report_lines
 from .eqs import report as eqs_report
 from .integration import parent_scope,matrix,report as integration_report
 from .coverage_history import record,evaluate,recovery_start,report as coverage_report
+from .lonza_scope import collect_lonza_scope
 
 def verified_feeds(entries,folder):
     folder=Path(folder);folder.mkdir(parents=True,exist_ok=True)
@@ -81,6 +82,7 @@ def main(argv=None):
             collect_fallback(e,by_ticker[e['ticker']],now,root/'evidence'/now.strftime('%Y-%m-%dT%H%M%S'),state=prior_state)
         if e['ticker'] not in HISTORICAL:
             collect_wire(e,now,root/'evidence'/now.strftime('%Y-%m-%dT%H%M%S'))
+        if e['ticker']=='LONN':collect_lonza_scope(e,by_ticker[e['ticker']],now,root/'evidence'/now.strftime('%Y-%m-%dT%H%M%S'))
         if e.get('source_classification')=='PERIOD_VERIFIED_OFFICIAL_API':
             new_state['companies'].setdefault(e['ticker'],{})['last_verified_success_jst']=e['new_success_jst']
         if e['ticker'] in HISTORICAL:

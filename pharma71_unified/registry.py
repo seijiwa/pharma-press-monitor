@@ -60,6 +60,12 @@ def load_registry(csv_path='companies.csv', base_path='pharma46/sources.json'):
         company.update(ticker=ticker,name=row['Company'],official_indexes=urls[:3],
                        batch_id=company.get('batch_id','D'),source_status='CANDIDATES_NOT_VERIFIED',
                        legacy_feed_url=row['Feed URL'],legacy_fallback=row['Fallback'])
+        # Independently observed dated official originals are freshness floors,
+        # not a claim that this GitHub run fetched them.
+        if ticker=='BAYN':
+            company['known_official_release_floor']={'date':'2026-11-26','url':'https://www.bayer.com/media/en-us/bayer-to-invest-up-to-500-million-euros-in-beijing-production-site/','purpose':'official original independently observed via web; current GitHub receipt still required'}
+        if ticker=='LONN':
+            company['known_official_release_floor']={'date':'2026-11-03','url':'https://www.lonza.com/news/2026-11-03-07-00','purpose':'official news release independently indexed; current GitHub receipt still required'}
         if ticker=='JNANA':
             company['official_indexes']=['https://www.otsuka.com/en/group_news/index.php','https://www.otsuka-us.com/news','https://www.otsuka.co.jp/company/newsreleases/']
         if ticker in HISTORICAL:
