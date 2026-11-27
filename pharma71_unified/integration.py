@@ -36,8 +36,24 @@ def parent_scope(entries,prior_state,now,parent_attempts=None):
         out.append(r)
     return out
 
+def parent_regulatory_matches(parents,reg):
+    # SEC exhibits can confirm a parent-filed asset reference, not a former
+    # company's independent coverage or exhaustive keyword scope.
+    by={x['ticker']:x for x in reg.get('entries',[])}
+    for p in parents:
+        parent=p.get('parent_ticker');s=by.get(parent,{})
+        p['matched_sec_exhibits']=[]
+        if s.get('issuer_identity_verified') is not True:continue
+        pattern=PARENT[p['ticker']][2]
+        for d in s.get('exhibit_results',[]):
+            for x in d.get('exhibits',[]):
+                if x.get('original_confirmed') is True and re.search(pattern,(x.get('description') or '')+' '+(x.get('body_excerpt') or ''),re.I):
+                    p['matched_sec_exhibits'].append({'url':x['url'],'filing_date':d.get('filing_date'),'description':x.get('description'),'receipt':x.get('receipt'),'scope':'PARENT_SEC_EXHIBIT_EXCERPT_ONLY'})
+    return parents
+
 def matrix(entries,reg,parents):
     sec={e['ticker']:e for e in reg.get('entries',[])}
+    parents=parent_regulatory_matches(parents,reg)
     parent={e['ticker']:e for e in parents}
     td=reg.get('tdnet',{})
     td_candidates={}
@@ -81,5 +97,5 @@ def report(m):
     for x in m['rows']:
         lines.append(f'|{x["ticker"]}|{x["scope"]}|{x["status"]}|{x["sec_status"]}|{x["tdnet_candidates"]}|{x["hkex_candidates"]}|')
     for p in m['parent_scopes']:
-        lines.append(f'- {p["ticker"]}: 親会社 {p["parent_name"]} / {p["status"]} / 原文候補 {len(p["matched_originals"])}件')
+        lines.append(f'- {p["ticker"]}: 親会社 {p["parent_name"]} / {p["status"]} / 原文候補 {len(p["matched_originals"])}件 / SEC添付資料内の関連候補 {len(p.get("matched_sec_exhibits",[]))}件')
     return '\n'.join(lines)+'\n'

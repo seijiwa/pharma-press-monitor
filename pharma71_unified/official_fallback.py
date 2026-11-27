@@ -101,6 +101,9 @@ def collect_fallback(entry,company,now,evidence_dir,session=None,fetcher=None,st
         routes=[]
         if feed.startswith('https://') and any(host_matches(feed,x) for x in company['official_indexes']):
             routes.append(('official_rss',feed,parse_rss))
+        if ticker=='BAYN':
+            # Candidate official-host corporate RSS, separate from full coverage.
+            routes.append(('bayer_corporate_rss','https://www.bayer.com/en/rss/corporate-news',parse_rss))
         if ticker=='HLUN':
             # This exact JSON endpoint was exposed in the official archive HTML.
             routes.append(('lundbeck_official_archive_api',
