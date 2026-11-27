@@ -1,0 +1,28 @@
+name: Pharma71 SEC history preflight (no network collection)
+on:
+  push:
+    branches: [pharma71-sec-preflight-20261127]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements-pharma46.txt pytest==8.4.2
+      - run: python -m pytest tests_pharma46 tests_pharma71_unified -q
+      - run: |
+          python - <<'PY'
+          import json
+          from datetime import datetime
+          from pathlib import Path
+          from pharma71_unified.regulatory_history import merge_history
+          a=json.loads(Path('data/pharma71_unified/audit.json').read_text())
+          r=merge_history(a,{},datetime.now().astimezone())
+          assert len(r)>=2, 'actual verified SEC history missing'
+          print('REAL_AUDIT_HISTORY_PASS',len(r))
+          PY
