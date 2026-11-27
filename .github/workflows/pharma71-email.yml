@@ -44,6 +44,11 @@ jobs:
           persist-credentials: false
       - name: Test mail audit freshness and scope
         run: python3 -m unittest discover -s tests_mail -q
+      - name: Verify actual GitHub reservation collision (no mail)
+        if: github.event_name == 'push'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: PYTHONPATH=scripts python3 -c 'from pharma71_delivery_lock import live_probe; live_probe()'
       - name: Prepare or deliver report
         env:
           DELIVERY_MODE: ${{ github.event_name == 'schedule' && 'daily' || inputs.mode || 'preview' }}

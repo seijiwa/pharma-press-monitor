@@ -5,9 +5,13 @@ from urllib.error import HTTPError
 from urllib.request import Request,urlopen
 BRANCH='pharma71-delivery-ledger'
 
-def reserve(now):
-    path='delivery/'+now.strftime('%Y-%m-%d')+'.json'
-    payload={'date_jst':now.strftime('%Y-%m-%d'),'source':'github-smtp','state':'reserved','reserved_jst':now.isoformat(),'run_id':os.getenv('GITHUB_RUN_ID')}
+def delivery_window(now):
+    from datetime import time
+    from zoneinfo import ZoneInfo
+    local=now.astimezone(ZoneInfo('Asia/Tokyo'))
+    return time(5,10)<=local.time()<time(6,31)
+
+def create_once(path,payload):
     request=Request('https://api.github.com/repos/'+os.environ['GITHUB_REPOSITORY']+'/contents/'+path,
         data=json.dumps({'message':'Reserve daily Pharma71 delivery','branch':BRANCH,
              'content':base64.b64encode(json.dumps(payload).encode()).decode()}).encode(),
@@ -17,6 +21,24 @@ def reserve(now):
         with urlopen(request,timeout=20) as response:return response.status==201
     except HTTPError as exc:
         if exc.code in (409,422):
-            print('Delivery reservation already exists or conflicted. No email sent.')
+            print('Ledger path already exists or conflicted; no overwrite.')
             return False
         raise
+
+def reserve(now):
+    day=now.strftime('%Y-%m-%d')
+    return create_once('delivery/'+day+'.json',{'date_jst':day,'source':'github-smtp','state':'reserved','reserved_jst':now.isoformat(),'run_id':os.getenv('GITHUB_RUN_ID')})
+
+def mark_accepted(now,day):
+    day=day.isoformat()
+    return create_once('delivery/'+day+'-accepted.json',{'date_jst':day,'source':'github-smtp','state':'accepted','accepted_jst':now.isoformat(),'run_id':os.getenv('GITHUB_RUN_ID')})
+
+def live_probe():
+    """Real API collision probe on a test-only path. No SMTP or production reservation."""
+    import re
+    run=os.environ['GITHUB_RUN_ID'];attempt=os.environ.get('GITHUB_RUN_ATTEMPT','1')
+    if not re.fullmatch(r'\d+',run) or not re.fullmatch(r'\d+',attempt):raise ValueError('invalid test ID')
+    p='tests/lock-'+run+'-'+attempt+'.json'
+    if not create_once(p,{'state':'test-only','run_id':run}):raise RuntimeError('first reservation probe failed')
+    if create_once(p,{'state':'test-only-duplicate','run_id':run}):raise RuntimeError('duplicate unexpectedly accepted')
+    print('LIVE_LEDGER_PROBE_PASS: first creation accepted, second rejected; no email')

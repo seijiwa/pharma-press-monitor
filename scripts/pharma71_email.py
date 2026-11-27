@@ -13,7 +13,7 @@ from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
 from pharma71_unified_mail import section
-from pharma71_delivery_lock import reserve
+from pharma71_delivery_lock import reserve, delivery_window, mark_accepted
 
 TOKYO = ZoneInfo("Asia/Tokyo")
 SITE = "https://seijiwa.github.io/pharma-press-monitor/"
@@ -102,14 +102,20 @@ def deliver(mode, now, subject, body):
         smtp.ehlo()
         smtp.user, smtp.password = address, password
         smtp.auth("LOGIN", smtp.auth_login, initial_response_ok=False)
-        if mode == 'daily' and not reserve(now):
-            return
+        if mode == 'daily':
+            actual = datetime.now(TOKYO)
+            if actual.date() != now.date() or not delivery_window(actual):
+                raise SystemExit('Outside approved morning delivery window before reservation.')
+            if not reserve(actual):
+                return
         if request_ref(tag + "-reserved", create=True) != 201:
             raise SystemExit("The date could not be reserved. Delivery stopped.")
         if smtp.send_message(message):
             raise SystemExit("Gmail did not accept the recipient.")
         if request_ref(tag + "-accepted", create=True) != 201:
             raise SystemExit("Gmail accepted the message. Check Gmail before retrying.")
+        if mode == "daily" and not mark_accepted(datetime.now(TOKYO), now.date()):
+            raise SystemExit("Gmail accepted; ledger acknowledgement failed. Never resend.")
         print("Gmail accepted the message.")
 
 
@@ -129,8 +135,8 @@ if __name__ == "__main__":
     if mode == 'daily':
         # Earlier retries wait for the fresh audit; after 05:25 deliver the
         # available result rather than silently missing the whole morning.
-        if now.hour < 5 or (now.hour == 5 and now.minute < 10):
-            print('Before morning delivery window; no email sent.')
+        if not delivery_window(now):
+            print('Outside 05:10–06:30 JST delivery window; no email sent.')
             sys.exit(0)
         if label == '【統合監査未確認】' and now.hour == 5 and now.minute < 25:
             print('Current audit unavailable; defer to next morning attempt.')

@@ -31,6 +31,26 @@ def validated_audit(root,now,expected_names):
     if [x['ticker'] for x in scope['rows']]!=order:raise ValueError('SCOPE_MISMATCH')
     return a
 
+def rolling_originals(root,now,seen):
+    """Retain first observations across multiple collection runs. Date-only
+    publications are not represented as exact publication timestamps."""
+    history=json.loads((Path(root)/'verified_original_history.json').read_text(encoding='utf-8'))
+    if not isinstance(history,dict):raise ValueError('invalid original history')
+    cutoff=(now-timedelta(days=1)).replace(hour=5,minute=30,second=0,microsecond=0)
+    rows=[]
+    for ticker,items in history.items():
+        for p in items:
+            if p.get('original_confirmed') is not True or not p.get('url') or p['url'] in seen:continue
+            stamp=p.get('receipt',{}).get('fetched_jst')
+            if not stamp:continue
+            dt=datetime.fromisoformat(stamp)
+            if dt.tzinfo is None:continue
+            dt=dt.astimezone(TOKYO)
+            if cutoff<dt<=now:
+                rows.append((dt,ticker,p))
+                seen.add(p['url'])
+    return sorted(rows,key=lambda x:x[0],reverse=True)
+
 def section(now,root='unified-staging/data/pharma71_unified',csv_path='companies.csv'):
     try:
         with open(csv_path,encoding='utf-8-sig',newline='') as f:expected={r['Company'] for r in csv.DictReader(f)}
@@ -49,7 +69,16 @@ def section(now,root='unified-staging/data/pharma71_unified',csv_path='companies
         for p in e.get('primary_releases',[]):
             if p.get('original_confirmed') is not True or not p.get('url') or p['url'] in seen:continue
             seen.add(p['url']);lines.append(f'・{e["ticker"]} | {p.get("new_status","新規性未判定")} | {p.get("published_date")} | {p.get("original_title")}\n  {p["url"]}')
-    if not seen:lines.append('確認原文0件。未確認企業で発表がないことを意味しません。')
+    if not seen:lines.append('今回取得分の確認原文0件。未確認企業で発表がないことを意味しません。')
+    lines+=['','【前回朝05:30以降に初回確認した原文（先行取得分を含む）】','確認時刻を基準とした履歴です。発表日がそれ以前のものもあり、新規発表とは限りません。']
+    try:
+        earlier=rolling_originals(root,now,seen)
+        for dt,ticker,p in earlier:
+            lines.append(f'・{ticker} | 初回確認 {dt:%m/%d %H:%M} JST | 発表日 {p.get("published_date")} | {p.get("original_title")}\n  {p["url"]}')
+        if not earlier:lines.append('今回分以外の該当する確認原文なし（履歴内のみ）。')
+    except (OSError,ValueError,TypeError,KeyError,AttributeError):
+        lines.append('取得履歴未確認。先行取得分の完全性を保証できません。')
+    lines.append('以下の企業別期間判定は最新取得分の比較期間であり、前回配信以降全体の網羅性ではありません。')
     lines+=['','【SEC提出書類・原文添付資料（会社発表とは別）】']
     for e in reg.get('entries',[]):
         if not e.get('issuer_identity_verified'):continue

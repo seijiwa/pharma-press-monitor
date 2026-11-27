@@ -50,3 +50,19 @@ class TestFreshness(unittest.TestCase):
             self.assertEqual(json.loads(req.data)['branch'],'pharma71-delivery-ledger')
             op.side_effect=HTTPError(req.full_url,422,'already exists',None,None)
             self.assertFalse(reserve(now))
+
+    def test_delivery_window(self):
+        from pharma71_delivery_lock import delivery_window
+        for h,m,expected in [(5,9,False),(5,10,True),(5,24,True),(6,30,True),(6,31,False),(11,58,False)]:
+            self.assertEqual(delivery_window(datetime(2026,11,28,h,m,tzinfo=ZoneInfo('Asia/Tokyo'))),expected)
+
+    def test_overnight_history_survives_second_run(self):
+        from pharma71_unified_mail import rolling_originals
+        now=datetime(2026,11,28,5,21,tzinfo=ZoneInfo('Asia/Tokyo'))
+        p={'original_confirmed':True,'url':'https://example.org/first','receipt':{'fetched_jst':'2026-11-28T01:45:00+09:00'}}
+        old=dict(p,url='https://example.org/old',receipt={'fetched_jst':'2026-11-27T05:00:00+09:00'})
+        future=dict(p,url='https://example.org/future',receipt={'fetched_jst':'2026-11-28T06:00:00+09:00'})
+        with tempfile.TemporaryDirectory() as t:
+            (Path(t)/'verified_original_history.json').write_text(json.dumps({'LLY':[p,p,old,future]}))
+            self.assertEqual([r[2]['url'] for r in rolling_originals(t,now,set())],[p['url']])
+            self.assertEqual(rolling_originals(t,now,{p['url']}),[])
