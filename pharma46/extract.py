@@ -89,6 +89,14 @@ def _row_listing(page_url,soup):
         spec=('li:has(.date-container)','.text a[href], .pdf-link a[href]','.date-container .date','.text','mdy')
     elif host=='www.daiichisankyo.com' and '/media/press_release' in path:
         spec=('li.active:has(.newsDate)','.newsTitle a[href]','.newsDate','.newsTitle','mdy')
+    elif host=='investors.immunome.com' and path.startswith('/news-releases'):
+        spec=('.content-wrapper:has(h3 a[href])','h3 a[href]','div.dynamic','h3','mdy')
+    elif host=='www.grifols.com' and path.rstrip('/')=='/en/newsroom':
+        spec=('.card-content:has(a[href*="/en/view-news/-/news/"])','.button-row a[href]','.card-metadata','p.text-lg.text-bold','mdy')
+    elif host=='www.alkermes.com' and path.rstrip('/')=='/news':
+        spec=('div:has(> p > a[href*="investor.alkermes.com/news-releases/news-release-details/"])','p a[href*="investor.alkermes.com/news-releases/news-release-details/"]','p strong span','p','mdy')
+    elif host=='www.zealandpharma.com' and path.rstrip('/')=='/news-media':
+        spec=('.card.card-list.card-article','.card-list__cta a[href]','.card__meta time','.card-list__main h2','mdy')
     if spec is None:return None
     rows,anchor_sel,date_sel,title_sel,date_kind=spec
     nodes=soup.select(rows)
@@ -101,7 +109,13 @@ def _row_listing(page_url,soup):
         tn=row.select_one(title_sel) if title_sel else a
         if a is None or dn is None or tn is None or not a.get('href'):return []
         url=canonical(urljoin(page_url,a['href']))
-        if not host_matches(page_url,url) or url==canonical(page_url):return []
+        # Zealand's own archive directly links its published releases on
+        # GlobeNewswire. Allow those links as listing evidence only; the
+        # independent original-body verifier still enforces its host check.
+        external_zealand=(host=='www.zealandpharma.com' and
+            urlparse(url).hostname=='www.globenewswire.com' and
+            re.match(r'^/news-release/20\d{2}/\d{2}/\d{2}/\d+/0/en/zealand-pharma[-.].+',urlparse(url).path,re.I))
+        if (not host_matches(page_url,url) and not external_zealand) or url==canonical(page_url):return []
         date_text=dn.get('datetime') or dn.get_text(' ',strip=True)
         # Only this dedicated date field can supply the two-digit or spaced year.
         compact=re.sub(r'\s*([./-])\s*',r'\1',date_text)
@@ -115,6 +129,8 @@ def _row_listing(page_url,soup):
             except ValueError:return []
         else:published=parse_date(date_text)
         title=' '.join(tn.get_text(' ',strip=True).split())
+        if host=='www.alkermes.com':
+            title=title.removeprefix(' '.join(dn.get_text(' ',strip=True).split())).strip()
         if not published or not title:return []
         if url in result and result[url]['listing_date']!=published:
             return []  # inconsistent duplicated row is not coverage evidence
@@ -170,11 +186,44 @@ def next_page_urls(page_url,html):
         if not host_matches(page_url,url) or url==canonical(page_url):continue
         if 'next' in rel or label in NEXT_WORDS or 'next page' in aria:
             links.append(url)
+    if urlparse(page_url).hostname=='www.jnj.com' and urlparse(page_url).path=='/media-center/press-releases':
+        for n in soup.select('bsp-load-more[data-url]'):
+            url=canonical(urljoin(page_url,n['data-url']))
+            if (host_matches(page_url,url) and urlparse(url).path==urlparse(page_url).path and
+                re.fullmatch(r'p=\d+',urlparse(url).query) and url!=canonical(page_url)):
+                links.append(url)
     return list(dict.fromkeys(links))
 
-def page_has_unresolved_load_more(html):
-    text=BeautifulSoup(html,'html.parser').get_text(' ',strip=True).lower()
-    return any(x in text for x in ('load more', 'show more releases', 'load additional', 'view more news'))
+def page_has_unresolved_load_more(html,page_url=None,found_boundary=False):
+    soup=BeautifulSoup(html,'html.parser')
+    text=soup.get_text(' ',strip=True).lower()
+    present=any(x in text for x in ('load more', 'show more releases', 'load additional', 'view more news'))
+    if not present or not page_url:return present
+    host=urlparse(page_url).hostname
+    # The next page is explicit, not an unresolved JS-only continuation.
+    if host=='www.jnj.com' and next_page_urls(page_url,html):
+        controls=soup.select('bsp-load-more[data-url]')
+        if len(controls)==1:
+            controls[0].decompose()
+            remaining=soup.get_text(' ',strip=True).lower()
+            return any(x in remaining for x in ('load more','show more releases','load additional','view more news'))
+    # Viking has a declared offset/count on the exact chronological list.
+    # Only resolve the continuation after the audited date boundary is reached,
+    # with a complete visible page and no other unresolved load-more control.
+    if host=='ir.vikingtherapeutics.com' and found_boundary:
+        controls=soup.select('button.wd_load_more-trigger[data-limit][data-offset][data-total][data-content]')
+        if len(controls)==1:
+            control=controls[0]
+            try:
+                limit,offset,total=(int(control['data-'+k]) for k in ('limit','offset','total'))
+                rows=soup.select('.wd_item_list li.wd_item')
+                scoped=_row_listing(page_url,soup)
+                if control['data-content']=='.wd_item_list' and 0<limit==offset==len(rows)==len(scoped or [])<total:
+                    control.decompose()
+                    remaining=soup.get_text(' ',strip=True).lower()
+                    return any(x in remaining for x in ('load more','show more releases','load additional','view more news'))
+            except (ValueError,TypeError):pass
+    return present
 
 def article_details(url,html):
     soup=BeautifulSoup(html,'html.parser')

@@ -115,7 +115,7 @@ def scan_index(fetcher,company,index_url,baseline,run_dt,evidence_dir,max_pages=
             nexts=next_page_urls(res.final_url,res.html)
             for nxt in nexts:
                 if nxt not in seen and nxt not in queue:queue.append(nxt)
-            if page_has_unresolved_load_more(res.html):unknown_pagination=True
+            if page_has_unresolved_load_more(res.html,res.final_url,found_older):unknown_pagination=True
             if not items:failures.append({'url':url,'failure':'NO_DATED_ARTICLE_LISTING'})
         except FetchError as err:
             failures.append({'url':url,'failure':str(err),'error_class':'FETCH_ERROR'})

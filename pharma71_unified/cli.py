@@ -7,6 +7,7 @@ from xml.etree.ElementTree import Element,SubElement,ElementTree
 from pharma46.engine import JST,collect,render_report,validate_report
 from pharma46.cli import save_json
 from .registry import load_registry,ticker_order,HISTORICAL
+from .api_observations import supplement
 
 def verified_feeds(entries,folder):
     folder=Path(folder);folder.mkdir(parents=True,exist_ok=True)
@@ -50,6 +51,7 @@ def main(argv=None):
         evidence_dir=root/'evidence'/now.strftime('%Y-%m-%dT%H%M%S'),
         workers=args.workers,max_pages=args.max_pages,expected_order=order)
     for e in entries:
+        supplement(e,now,root/'evidence'/now.strftime('%Y-%m-%dT%H%M%S'))
         if e['ticker'] in HISTORICAL:
             e.update(status='未確認',reason='HISTORICAL_PARENT_SCOPE_NOT_INDEPENDENT',new_success_jst=None,
                      primary_releases=[],source_classification='PARENT_ONLY_UNVERIFIED')
