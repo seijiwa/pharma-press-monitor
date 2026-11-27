@@ -88,6 +88,34 @@
       "end_jst": "2026-11-27T14:05:22.508888+09:00",
       "run_id": "45943520870",
       "receipt_sha256": "bd2a906d590d2b1548e1bd2e696a8f9cdf30b87930471a1c9c5fbfe9295a55a8"
+    },
+    {
+      "start_jst": "2026-11-26T10:17:59.991267+09:00",
+      "end_jst": "2026-11-27T10:17:59.991267+09:00",
+      "run_id": "45921691329",
+      "receipt_sha256": "bd2a906d590d2b1548e1bd2e696a8f9cdf30b87930471a1c9c5fbfe9295a55a8",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T10:17:59.991267+09:00",
+      "end_jst": "2026-11-27T10:40:01.201793+09:00",
+      "run_id": "45923763658",
+      "receipt_sha256": "bd2a906d590d2b1548e1bd2e696a8f9cdf30b87930471a1c9c5fbfe9295a55a8",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T10:40:01.201793+09:00",
+      "end_jst": "2026-11-27T10:42:38.845506+09:00",
+      "run_id": "45924047490",
+      "receipt_sha256": "bd2a906d590d2b1548e1bd2e696a8f9cdf30b87930471a1c9c5fbfe9295a55a8",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T10:42:38.845506+09:00",
+      "end_jst": "2026-11-27T10:53:14.972786+09:00",
+      "run_id": "45925081075",
+      "receipt_sha256": "bd2a906d590d2b1548e1bd2e696a8f9cdf30b87930471a1c9c5fbfe9295a55a8",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
   "ROP": [
@@ -281,6 +309,34 @@
       "end_jst": "2026-11-27T14:05:22.508888+09:00",
       "run_id": "45943520870",
       "receipt_sha256": "8dc2cc2231effd60ec72faa1184039fb50ad81139770e79f304700c52f313895"
+    },
+    {
+      "start_jst": "2026-11-26T10:17:59.991267+09:00",
+      "end_jst": "2026-11-27T10:17:59.991267+09:00",
+      "run_id": "45921691329",
+      "receipt_sha256": "8dc2cc2231effd60ec72faa1184039fb50ad81139770e79f304700c52f313895",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T10:17:59.991267+09:00",
+      "end_jst": "2026-11-27T10:40:01.201793+09:00",
+      "run_id": "45923763658",
+      "receipt_sha256": "8dc2cc2231effd60ec72faa1184039fb50ad81139770e79f304700c52f313895",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T10:40:01.201793+09:00",
+      "end_jst": "2026-11-27T10:42:38.845506+09:00",
+      "run_id": "45924047490",
+      "receipt_sha256": "8dc2cc2231effd60ec72faa1184039fb50ad81139770e79f304700c52f313895",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T10:42:38.845506+09:00",
+      "end_jst": "2026-11-27T10:53:14.972786+09:00",
+      "run_id": "45925081075",
+      "receipt_sha256": "8dc2cc2231effd60ec72faa1184039fb50ad81139770e79f304700c52f313895",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
   "ARWR": [
