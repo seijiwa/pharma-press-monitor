@@ -1,0 +1,24 @@
+name: Pharma71 ten-pass preflight (no mail)
+on:
+  push:
+    branches: [pharma71-preflight-20261127]
+    paths: ['.github/workflows/pharma71-preflight.yml', 'scripts/**', 'tests_mail/**']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: pharma71-unified-20261127
+          path: unified-staging
+          persist-credentials: false
+      - name: Full regression suite (no SMTP)
+        run: python3 -m unittest discover -s tests_mail -v
+      - name: Build report without sending
+        run: python3 scripts/pharma71_email.py preview > /tmp/pharma71-preview.txt && grep -q '71対象' /tmp/pharma71-preview.txt
