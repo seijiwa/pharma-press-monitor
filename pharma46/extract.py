@@ -90,16 +90,28 @@ def _row_listing(page_url,soup):
     elif host=='www.daiichisankyo.com' and '/media/press_release' in path:
         spec=('li.active:has(.newsDate)','.newsTitle a[href]','.newsDate','.newsTitle','mdy')
     elif host=='investors.immunome.com' and path.startswith('/news-releases'):
-        spec=('.content-wrapper:has(h3 a[href])','h3 a[href]','div.dynamic','h3','mdy')
+        spec=('.content-wrapper','h3 a[href]','div.dynamic','h3','mdy')
     elif host=='www.grifols.com' and path.rstrip('/')=='/en/newsroom':
         spec=('.card-content:has(a[href*="/en/view-news/-/news/"])','.button-row a[href]','.card-metadata','p.text-lg.text-bold','mdy')
     elif host=='www.alkermes.com' and path.rstrip('/')=='/news':
-        spec=('div:has(> p > a[href*="investor.alkermes.com/news-releases/news-release-details/"])','p a[href*="investor.alkermes.com/news-releases/news-release-details/"]','p strong span','p','mdy')
+        spec=('div','p a[href*="investor.alkermes.com/news-releases/news-release-details/"]','p strong span','p','mdy')
     elif host=='www.zealandpharma.com' and path.rstrip('/')=='/news-media':
         spec=('.card.card-list.card-article','.card-list__cta a[href]','.card__meta time','.card-list__main h2','mdy')
     if spec is None:return None
     rows,anchor_sel,date_sel,title_sel,date_kind=spec
-    nodes=soup.select(rows)
+    # Avoid nested :has() selectors: SoupSieve strict-mode rejects them.
+    if host=='investors.immunome.com' and path.startswith('/news-releases'):
+        nodes=[row for row in soup.select('.content-wrapper')
+               if row.select_one('h3 a[href]')]
+    elif host=='www.alkermes.com' and path.rstrip('/')=='/news':
+        nodes=[]
+        for link in soup.select(anchor_sel):
+            p=link.parent
+            row=p.parent if p and p.name=='p' else None
+            if row is None or row.name!='div':return []
+            if not any(row is candidate for candidate in nodes):nodes.append(row)
+    else:
+        nodes=soup.select(rows)
     if not nodes:
         return None if soup.select('main article time[datetime]') else []
     result={}
@@ -107,6 +119,11 @@ def _row_listing(page_url,soup):
         a=row.select_one(anchor_sel) if anchor_sel else row
         dn=row.select_one(date_sel)
         tn=row.select_one(title_sel) if title_sel else a
+        if host=='www.alkermes.com':
+            dated=[p for p in row.find_all('p',recursive=False) if p.select_one('strong span')]
+            if len(dated)!=1:return []
+            tn=dated[0]
+            dn=tn.select_one('strong span')
         if a is None or dn is None or tn is None or not a.get('href'):return []
         url=canonical(urljoin(page_url,a['href']))
         # Zealand's own archive directly links its published releases on
