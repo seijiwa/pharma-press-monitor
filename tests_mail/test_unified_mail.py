@@ -29,6 +29,7 @@ class TestFreshness(unittest.TestCase):
         for e in a['entries']:
             e['comparison_period']['start_jst']=dt.replace(hour=2).isoformat()
             e['comparison_period']['end_jst']=dt.isoformat()
+            if e['status']!='未確認':e['new_success_jst']=dt.isoformat()
         a['audit_date_jst']=dt.date().isoformat()
         with tempfile.TemporaryDirectory() as t:
             q=Path(t);(q/'audit.json').write_text(json.dumps(a))
@@ -36,7 +37,12 @@ class TestFreshness(unittest.TestCase):
             from pharma71_unified_mail import section
             label,body=section(dt+timedelta(hours=1),q)
             self.assertIn('全71対象の判定',body)
+            self.assertIn('買収済み3対象の親会社限定監視',body)
             self.assertIn('未確認',label)
+            from pharma71_unified_mail import validate_scope_counts
+            a['integrated_monitoring']['summary']['independent_newsroom_verified']+=1
+            with self.assertRaisesRegex(ValueError,'INTEGRATED_COUNTS'):validate_scope_counts(a['integrated_monitoring'],a['summary']['period_verified'])
+            a['integrated_monitoring']['summary']['independent_newsroom_verified']-=1
             a['summary']['period_verified']+=1
             (q/'audit.json').write_text(json.dumps(a))
             with self.assertRaisesRegex(ValueError,'COUNTS'):validated_audit(q,dt+timedelta(hours=1),expected)
@@ -53,7 +59,10 @@ class TestFreshness(unittest.TestCase):
             self.assertTrue(req.full_url.endswith('/delivery/2026-11-28.json'))
             self.assertEqual(json.loads(req.data)['branch'],'pharma71-delivery-ledger')
             op.side_effect=HTTPError(req.full_url,422,'already exists',None,None)
-            self.assertFalse(reserve(now))
+            with patch('pharma71_delivery_lock.ledger_exists',return_value=True):
+                self.assertFalse(reserve(now))
+            with patch('pharma71_delivery_lock.ledger_exists',return_value=False):
+                with self.assertRaisesRegex(RuntimeError,'without confirmed reservation'):reserve(now)
 
     def test_delivery_window(self):
         from pharma71_delivery_lock import delivery_window
@@ -121,3 +130,56 @@ class TestFreshness(unittest.TestCase):
             self.assertTrue(early_send_ready(now.replace(minute=21),t))
             p.write_text(json.dumps({'start_jst':'2026-11-28T04:37:00+09:00'}))
             self.assertTrue(early_send_ready(now,t))
+
+    def test_ledger_exists_requires_file_identity(self):
+        from unittest.mock import patch
+        from pharma71_delivery_lock import ledger_exists
+        with patch.dict('os.environ',{'GITHUB_REPOSITORY':'owner/repo','GH_TOKEN':'fake'}),patch('pharma71_delivery_lock.urlopen') as op:
+            r=op.return_value.__enter__.return_value
+            r.status=200
+            r.read.return_value=json.dumps({'type':'file','path':'delivery/test.json','sha':'abc'}).encode()
+            self.assertTrue(ledger_exists('delivery/test.json'))
+            r.read.return_value=json.dumps({'type':'dir','path':'delivery/test.json','sha':'abc'}).encode()
+            with self.assertRaisesRegex(RuntimeError,'confirmed file'):ledger_exists('delivery/test.json')
+
+    def test_deadline_crossed_after_reservation_does_not_send(self):
+        from unittest.mock import patch
+        import pharma71_email as m
+        from pharma71_delivery_lock import delivery_window
+        now=datetime(2026,11,28,6,30,tzinfo=ZoneInfo('Asia/Tokyo'))
+        self.assertFalse(delivery_window(now.replace(tzinfo=None)))
+        with patch.dict('os.environ',{'PHARMA71_GMAIL_USER':'test@example.org','PHARMA71_GMAIL_APP_PASSWORD':'fake'}),patch.object(m,'datetime') as clock,patch.object(m,'request_ref',return_value=404),patch.object(m,'reserve',return_value=True),patch.object(m,'mark_accepted') as ack,patch.object(m.smtplib,'SMTP') as smtp:
+            clock.now.side_effect=[now,now.replace(minute=31)]
+            with self.assertRaisesRegex(SystemExit,'window expired'):m.deliver('daily',now,'test','body')
+            smtp.return_value.__enter__.return_value.send_message.assert_not_called()
+            ack.assert_not_called()
+
+    def test_legacy_clock_rejects_future_and_naive(self):
+        from pharma71_email import checked_timestamp
+        now=datetime(2026,11,28,5,21,tzinfo=ZoneInfo('Asia/Tokyo'))
+        self.assertEqual(checked_timestamp('2026-11-27T20:21:00+00:00',now),now)
+        for stamp in ('2026-11-28T05:22:00+09:00','2026-11-28T05:20:00'):
+            with self.assertRaises(ValueError):checked_timestamp(stamp,now)
+
+    def test_continuity_rejects_forged_gap_counts(self):
+        from pharma71_unified_mail import validate_continuity
+        order=['T'+str(i) for i in range(71)]
+        a={'start_jst':'2026-11-28T04:37:00+09:00','expected_tickers':order}
+        d={'window_start_jst':'2026-11-27T05:30:00+09:00','window_end_jst':a['start_jst'],'rows':[{'ticker':t,'status':'VERIFIED_TO_COLLECTION','gaps':[]} for t in order],'verified':71,'unconfirmed':0,'without_recovered_receipts_verified':71,'without_recovered_receipts_tickers':order}
+        self.assertTrue(validate_continuity(d,a))
+        d['verified']=70
+        self.assertFalse(validate_continuity(d,a))
+        d['verified']=71
+        d['rows'][0]['gaps']=[{'start_jst':d['window_start_jst'],'end_jst':d['window_end_jst']}]
+        self.assertFalse(validate_continuity(d,a))
+
+    def test_yesterday_early_send_overlap_and_bad_timestamp(self):
+        from pharma71_unified_mail import rolling_originals
+        now=datetime(2026,11,28,5,21,tzinfo=ZoneInfo('Asia/Tokyo'))
+        p={'original_confirmed':True,'url':'https://example.org/overlap','receipt':{'fetched_jst':'2026-11-27T05:15:00+09:00'}}
+        bad=dict(p,url='https://example.org/bad',receipt={'fetched_jst':'not-a-date'})
+        with tempfile.TemporaryDirectory() as t:
+            (Path(t)/'verified_original_history.json').write_text(json.dumps({'LLY':[bad,p]}))
+            warnings=[]
+            self.assertEqual([r[2]['url'] for r in rolling_originals(t,now,set(),warnings)],[p['url']])
+            self.assertEqual(warnings,['LLY'])

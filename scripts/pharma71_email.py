@@ -20,19 +20,26 @@ SITE = "https://seijiwa.github.io/pharma-press-monitor/"
 LABELS = {"OK": "公式ページ取得", "RSS_ONLY": "公式RSSのみ", "FAIL": "未確認（取得失敗）"}
 
 
+def checked_timestamp(value,now):
+    stamp=datetime.fromisoformat(value)
+    if stamp.tzinfo is None or stamp.utcoffset() is None or stamp>now:
+        raise ValueError('Unzoned or future legacy timestamp')
+    return stamp.astimezone(TOKYO)
+
 def report(now):
     with open("companies.csv", encoding="utf-8-sig", newline="") as file:
         companies = [row["Company"] for row in csv.DictReader(file)]
     statuses = json.loads(Path("data/status.json").read_text())
-    if len(set(companies)) != 71 or set(statuses) != set(companies):
+    if len(companies)!=71 or len(set(companies)) != 71 or set(statuses) != set(companies):
         raise ValueError("Expected a status for each of the 71 configured companies")
-    checked = [datetime.fromisoformat(row["checked_at"]) for row in statuses.values()]
-    latest = max(checked).astimezone(TOKYO)
+    checked = [checked_timestamp(row['checked_at'],now) for row in statuses.values()]
+    latest = max(checked)
+    stale_count=sum(now-x>timedelta(minutes=90) for x in checked)
     counts = Counter(row["status"] for row in statuses.values())
     if counts.keys() - LABELS.keys():
         raise ValueError("Unknown source status")
     missing = counts["FAIL"] + counts["RSS_ONLY"]
-    stale = now - latest > timedelta(minutes=90)
+    stale = stale_count>0
     subject = f"【製薬71社】{now:%Y/%m/%d} 公式発表監視"
     if missing or stale:
         subject += "【未確認・一部確認あり】"
@@ -44,7 +51,7 @@ def report(now):
         SITE,
     ]
     if stale:
-        lines.append("最新の取得記録が90分以上前です。掲載の有無は未確認です。")
+        lines.append(f"{stale_count}社の取得記録が90分以上前です。該当企業の現在の掲載状況は未確認です。")
     lines.extend(["", "直近24時間に監視が検出した掲載（発表日時とは別）"])
     events = json.loads(Path("data/events.json").read_text())
     recent = [
@@ -58,8 +65,9 @@ def report(now):
     lines.extend(["", "全71社の取得状況"])
     for company in companies:
         row = statuses[company]
-        stamp = datetime.fromisoformat(row["checked_at"]).astimezone(TOKYO)
-        lines.append(f"・{company} | {LABELS[row['status']]} | {stamp:%m/%d %H:%M} JST")
+        stamp = checked_timestamp(row['checked_at'],now)
+        freshness=' | 取得記録90分超・現状未確認' if now-stamp>timedelta(minutes=90) else ''
+        lines.append(f"・{company} | {LABELS[row['status']]} | {stamp:%m/%d %H:%M} JST{freshness}")
     return subject, "\n".join(lines) + "\n"
 
 
@@ -120,9 +128,14 @@ def deliver(mode, now, subject, body):
             if actual.date() != now.date() or not delivery_window(actual):
                 raise SystemExit('Outside approved morning delivery window before reservation.')
             if not reserve(actual):
+                print('Existing shared reservation; duplicate prevented. SMTP acceptance and Gmail receipt are not verified by this attempt.')
                 return
         if mode != 'daily' and request_ref(tag + "-reserved", create=True) != 201:
             raise SystemExit("The date could not be reserved. Delivery stopped.")
+        if mode == 'daily':
+            actual=datetime.now(TOKYO)
+            if actual.date()!=now.date() or not delivery_window(actual):
+                raise SystemExit('Reservation made, but delivery window expired before SMTP; do not resend automatically.')
         if smtp.send_message(message):
             raise SystemExit("Gmail did not accept the recipient.")
         # Shared reservation is the sole daily send lock. Write its acceptance

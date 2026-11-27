@@ -24,7 +24,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: pharma71-morning-email
+  group: pharma71-morning-email-${{ github.event_name == 'schedule' && 'daily' || 'verification' }}
   cancel-in-progress: false
 jobs:
   deliver:
@@ -43,6 +43,7 @@ jobs:
           path: unified-staging
           persist-credentials: false
       - name: Test mail audit freshness and scope
+        if: github.event_name != 'schedule'
         run: python3 -m unittest discover -s tests_mail -q
       - name: Verify actual GitHub reservation collision (no mail)
         if: github.event_name == 'push'
