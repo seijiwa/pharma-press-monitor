@@ -97,3 +97,16 @@ class TestFreshness(unittest.TestCase):
             m.deliver('daily',now,'test','body')
             smtp.return_value.__enter__.return_value.send_message.assert_not_called()
             ack.assert_not_called()
+
+    def test_stale_audit_still_preserves_history_and_71_rows(self):
+        from pharma71_unified_mail import section
+        now=datetime(2026,11,28,5,21,tzinfo=ZoneInfo('Asia/Tokyo'))
+        with tempfile.TemporaryDirectory() as t:
+            q=Path(t)
+            (q/'audit.json').write_text('broken json')
+            (q/'verified_original_history.json').write_text(json.dumps({'LLY':[{'original_confirmed':True,'url':'https://example.org/release','receipt':{'fetched_jst':'2026-11-28T02:00:00+09:00'}}]}))
+            (q/'companies.csv').write_text('Company\n'+'\n'.join('Company '+str(i) for i in range(71)))
+            label,body=section(now,q,q/'companies.csv')
+            self.assertEqual(label,'【統合監査未確認】')
+            self.assertEqual(body.count('未確認（当日統合監査未検証）'),71)
+            self.assertIn('https://example.org/release',body)

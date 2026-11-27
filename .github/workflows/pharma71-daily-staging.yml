@@ -67,6 +67,10 @@ jobs:
           print(a['summary'])
           assert not a['qa_errors'], 'Structural QA failed'
           assert len(a['integrated_monitoring']['rows'])==71
+          daily=a['daily_newsroom_coverage']
+          assert len(daily['rows'])==71 and daily['verified']+daily['unconfirmed']==71
+          assert 0<=daily['without_recovered_receipts_verified']<=daily['verified']
+          print('DAILY_CONTINUITY',daily['verified'],daily['unconfirmed'],daily['without_recovered_receipts_verified'])
           assert not a['integrated_monitoring']['production_ready'], 'Unexpected production readiness'
           with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as f:
               f.write('## Coverage gate: '+('PASS' if a['qa_pass'] else 'NOT READY')+'\n\n')

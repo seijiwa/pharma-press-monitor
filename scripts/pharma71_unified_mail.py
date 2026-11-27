@@ -57,12 +57,32 @@ def rolling_originals(root,now,seen):
                 seen.add(p['url'])
     return sorted(rows,key=lambda x:x[0],reverse=True)
 
+def unavailable_section(now,root,csv_path,reason):
+    lines=[f'統合監査: 当日分の検証済み結果を取得できませんでした ({reason})。発表なしとは判定しません。',
+           '【取得済み原文の履歴（当日監査未確認、前回朝以降の初回確認）】']
+    try:
+        rows=rolling_originals(root,now,set())
+        for stamp,ticker,p in rows:
+            lines.append(f'・{ticker} | 初回確認 {stamp:%m/%d %H:%M} JST | 発表日 {p.get("published_date")} | {p.get("original_title")}\n  {p["url"]}')
+        if not rows:lines.append('該当原文なし（保存履歴の範囲のみ）。')
+    except (OSError,ValueError,TypeError,KeyError,AttributeError):
+        lines.append('原文履歴未確認。')
+    lines+=['','【全71対象の当日統合監査判定】']
+    try:
+        with open(csv_path,encoding='utf-8-sig',newline='') as f:names=[r['Company'] for r in csv.DictReader(f)]
+        if len(names)!=71 or len(set(names))!=71:raise ValueError('invalid universe')
+        lines.extend(f'・{name} | 未確認（当日統合監査未検証）' for name in names)
+    except (OSError,ValueError,KeyError,TypeError):
+        lines.append('71対象の名簿も取得できませんでした。')
+    lines+=['','以下の従来監視は補助情報のみです。','']
+    return '\n'.join(lines)
+
 def section(now,root='unified-staging/data/pharma71_unified',csv_path='companies.csv'):
     try:
         with open(csv_path,encoding='utf-8-sig',newline='') as f:expected={r['Company'] for r in csv.DictReader(f)}
         a=validated_audit(root,now,expected)
     except (OSError,ValueError,TypeError,KeyError,AttributeError) as exc:
-        return '【統合監査未確認】',f'統合監査: 当日分の検証済み結果を取得できませんでした ({type(exc).__name__})。全社網羅を確認できません。以下の従来監視は補助情報のみです。\n\n'
+        return '【統合監査未確認】',unavailable_section(now,root,csv_path,type(exc).__name__)
     s=a['summary'];reg=a['regulatory_observations'];scope=a['integrated_monitoring'];ss=scope['summary'];rs=reg.get('summary',{})
     lines=['【当日71対象・統合監査】',f'取得基準: {a["start_jst"]} / GitHub run {a["run_id"]}',f'公式一覧期間確認 {s["period_verified"]}/71 / 未確認 {s["unconfirmed"]} / 構造QAエラー0',
            f'独立企業 {ss["independent"]}: 公式一覧 {ss["independent_newsroom_verified"]}, SECのみ {ss["independent_sec_only"]}, 両方未確認 {ss["independent_no_verified_period"]}',
@@ -101,6 +121,7 @@ def section(now,root='unified-staging/data/pharma71_unified',csv_path='companies
     if daily.get('window_end_jst')==a['start_jst'] and [r.get('ticker') for r in daily.get('rows',[])]==a['expected_tickers']:
         lines+=['','【前回朝から今回取得までの連続網羅】',
                 f'{daily["window_start_jst"]} ～ {daily["window_end_jst"]} | 連続確認 {daily["verified"]}/71 | 未確認区間あり {daily["unconfirmed"]}/71',
+                f'復元記録に依存しない連続確認: {daily.get("without_recovered_receipts_verified","未検証")}社。復元した原文の再照合は未実施。',
                 '公式一覧のみの判定。SEC補完は加算しない。最終取得から配信までの区間は未確認。']
         for r in daily['rows']:
             if r['gaps']:lines.append('・'+r['ticker']+' | '+'; '.join(g['start_jst']+' ～ '+g['end_jst'] for g in r['gaps']))

@@ -12,7 +12,7 @@ from pathlib import Path
 from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
-from pharma71_unified_mail import section
+from pharma71_unified_mail import section, unavailable_section
 from pharma71_delivery_lock import reserve, delivery_window, mark_accepted
 
 TOKYO = ZoneInfo("Asia/Tokyo")
@@ -135,7 +135,7 @@ if __name__ == "__main__":
         label, integrated = section(now)
     except (OSError,ValueError,TypeError,KeyError,AttributeError,IndexError) as exc:
         label = '【統合監査未確認】'
-        integrated = f'統合監査の表示に失敗しました ({type(exc).__name__})。未確認を発表なしと判定しません。\n'
+        integrated = unavailable_section(now,'unified-staging/data/pharma71_unified','companies.csv',type(exc).__name__)
     subject += label
     body = integrated + '\n' + body
     if mode == 'daily':
