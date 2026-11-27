@@ -32,13 +32,13 @@
         "https://www.lilly.com/news/stories"
       ],
       "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:56:24.667962+09:00",
-      "attempt_end_jst": "2026-11-28T08:56:37.312976+09:00",
-      "tool_evidence_ref": "4844fe0e9326dd0b2b7079076305c45940ea7587bae25187a6320f35d9e31156",
-      "previous_success_jst": "2026-11-28T08:53:36.409981+09:00",
+      "attempt_start_jst": "2026-11-28T08:57:57.325757+09:00",
+      "attempt_end_jst": "2026-11-28T08:58:03.980413+09:00",
+      "tool_evidence_ref": "976d21e83b37c8ccc66f8674499ab2a10fb20372044be3a2cb19fa174ae6c90c",
+      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-28T08:53:36.409981+09:00",
-        "end_jst": "2026-11-28T08:56:24.664623+09:00",
+        "start_jst": "2026-11-28T08:56:24.664623+09:00",
+        "end_jst": "2026-11-28T08:57:57.322477+09:00",
         "type": "last_success"
       },
       "status": "なし",
@@ -53,9 +53,15 @@
         {
           "url": "https://lilly.gcs-web.com/",
           "method": "direct_http_or_playwright",
-          "fetched_any": true,
+          "fetched_any": false,
           "pagination_complete": false,
-          "errors": []
+          "errors": [
+            {
+              "url": "https://lilly.gcs-web.com/",
+              "failure": "HTTP_403 | BROWSER_RuntimeError:HTTP_403",
+              "error_class": "FETCH_ERROR"
+            }
+          ]
         },
         {
           "url": "https://www.lilly.com/news/stories",
@@ -66,66 +72,29 @@
         }
       ],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "new_success_jst": "2026-11-28T08:57:57.322477+09:00",
       "stale_cache_status": null,
       "source_classification": "PERIOD_VERIFIED",
       "index_attempts": [
         {
           "official_listing_url": "https://investor.lilly.com/",
-          "fetched_any": true,
-          "page_receipts": [
-            {
-              "requested_url": "https://investor.lilly.com/",
-              "final_url": "https://investor.lilly.com/",
-              "http_status": 200,
-              "method": "requests",
-              "fetched_jst": "2026-11-28T08:56:25.033828+09:00",
-              "sha256": "91a0e075f47616f353afd7a3782917c0943c3d044272f4e0f2fee41dedbfc432",
-              "response_date": "2026-11-27T23:56:24+00:00",
-              "age_seconds": 0,
-              "last_modified": "2026-11-23T21:38:08+00:00",
-              "snapshot_path": "data/evidence/2026-11-28/LLY/requests-91a0e075f47616f3-__8fc46fb601610d7721.html.gz"
-            },
-            {
-              "requested_url": "https://investor.lilly.com/",
-              "final_url": "https://investor.lilly.com/",
-              "http_status": 200,
-              "method": "playwright",
-              "fetched_jst": "2026-11-28T08:56:29.943488+09:00",
-              "sha256": "97ef7e4fc25944b078f43ecb46d94e4cb467d011f0d3bf66732103c64a6a1361",
-              "response_date": null,
-              "age_seconds": 0,
-              "last_modified": null,
-              "snapshot_path": "data/evidence/2026-11-28/LLY/playwright-97ef7e4fc25944b0-__8fc46fb601610d7721.html.gz"
-            }
-          ],
-          "listing_page_urls_checked": [
-            "https://investor.lilly.com/",
-            "https://investor.lilly.com/"
-          ],
-          "latest_publication_date": "2026-11-23",
-          "oldest_publication_date": "2026-11-14",
-          "dated_entries_count": 3,
+          "fetched_any": false,
+          "page_receipts": [],
+          "listing_page_urls_checked": [],
+          "latest_publication_date": null,
+          "oldest_publication_date": null,
+          "dated_entries_count": 0,
           "pagination_complete": false,
-          "found_baseline_boundary": true,
-          "stale_cache": [
+          "found_baseline_boundary": false,
+          "stale_cache": [],
+          "errors": [
             {
               "url": "https://investor.lilly.com/",
-              "reason": "KNOWN_VERIFIED_ORIGINAL_NOT_IN_LISTING",
-              "floor_date": "2026-11-25",
-              "floor_url": "https://www.lilly.com/news/stories/care-for-caregivers"
+              "failure": "HTTP_403 | BROWSER_RuntimeError:HTTP_403",
+              "error_class": "FETCH_ERROR"
             }
           ],
-          "errors": [],
-          "page_date_bounds": [
-            {
-              "url": "https://investor.lilly.com/",
-              "latest": "2026-11-23",
-              "oldest": "2026-11-14",
-              "count": 3,
-              "descending_order": true
-            }
-          ],
+          "page_date_bounds": [],
           "candidate_releases": [],
           "article_receipts": [],
           "newer_listing_count": 0,
@@ -134,60 +103,23 @@
         },
         {
           "official_listing_url": "https://lilly.gcs-web.com/",
-          "fetched_any": true,
-          "page_receipts": [
-            {
-              "requested_url": "https://lilly.gcs-web.com/",
-              "final_url": "https://lilly.gcs-web.com/",
-              "http_status": 200,
-              "method": "requests",
-              "fetched_jst": "2026-11-28T08:56:30.312964+09:00",
-              "sha256": "876706aa1ee3e08ed21325be650aba6970e6cf30a22b622ef05bcc64fd6b550b",
-              "response_date": "2026-11-27T23:56:30+00:00",
-              "age_seconds": 0,
-              "last_modified": "2026-11-23T21:46:10+00:00",
-              "snapshot_path": "data/evidence/2026-11-28/LLY/requests-876706aa1ee3e08e-__c0640ec65ff3778c43.html.gz"
-            },
-            {
-              "requested_url": "https://lilly.gcs-web.com/",
-              "final_url": "https://lilly.gcs-web.com/",
-              "http_status": 200,
-              "method": "playwright",
-              "fetched_jst": "2026-11-28T08:56:32.371081+09:00",
-              "sha256": "b678c99505cb3481fc59635fa0d66b356345c33b1f602dfaccbe63bb82acb041",
-              "response_date": null,
-              "age_seconds": 0,
-              "last_modified": null,
-              "snapshot_path": "data/evidence/2026-11-28/LLY/playwright-b678c99505cb3481-__c0640ec65ff3778c43.html.gz"
-            }
-          ],
-          "listing_page_urls_checked": [
-            "https://lilly.gcs-web.com/",
-            "https://lilly.gcs-web.com/"
-          ],
-          "latest_publication_date": "2026-11-23",
-          "oldest_publication_date": "2026-11-14",
-          "dated_entries_count": 3,
+          "fetched_any": false,
+          "page_receipts": [],
+          "listing_page_urls_checked": [],
+          "latest_publication_date": null,
+          "oldest_publication_date": null,
+          "dated_entries_count": 0,
           "pagination_complete": false,
-          "found_baseline_boundary": true,
-          "stale_cache": [
+          "found_baseline_boundary": false,
+          "stale_cache": [],
+          "errors": [
             {
               "url": "https://lilly.gcs-web.com/",
-              "reason": "KNOWN_VERIFIED_ORIGINAL_NOT_IN_LISTING",
-              "floor_date": "2026-11-25",
-              "floor_url": "https://www.lilly.com/news/stories/care-for-caregivers"
+              "failure": "HTTP_403 | BROWSER_RuntimeError:HTTP_403",
+              "error_class": "FETCH_ERROR"
             }
           ],
-          "errors": [],
-          "page_date_bounds": [
-            {
-              "url": "https://lilly.gcs-web.com/",
-              "latest": "2026-11-23",
-              "oldest": "2026-11-14",
-              "count": 3,
-              "descending_order": true
-            }
-          ],
+          "page_date_bounds": [],
           "candidate_releases": [],
           "article_receipts": [],
           "newer_listing_count": 0,
@@ -203,12 +135,12 @@
               "final_url": "https://www.lilly.com/news/stories",
               "http_status": 200,
               "method": "playwright",
-              "fetched_jst": "2026-11-28T08:56:36.912159+09:00",
-              "sha256": "4844fe0e9326dd0b2b7079076305c45940ea7587bae25187a6320f35d9e31156",
+              "fetched_jst": "2026-11-28T08:58:03.592459+09:00",
+              "sha256": "976d21e83b37c8ccc66f8674499ab2a10fb20372044be3a2cb19fa174ae6c90c",
               "response_date": null,
               "age_seconds": 0,
               "last_modified": null,
-              "snapshot_path": "data/evidence/2026-11-28/LLY/playwright-4844fe0e9326dd0b-_news_stories_43dd564ae1460b6e2a.html.gz"
+              "snapshot_path": "data/evidence/2026-11-28/LLY/playwright-976d21e83b37c8cc-_news_stories_43dd564ae1460b6e2a.html.gz"
             }
           ],
           "listing_page_urls_checked": [
@@ -248,13 +180,13 @@
         "https://news.abbvie.com/"
       ],
       "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:56:24.669108+09:00",
-      "attempt_end_jst": "2026-11-28T08:56:24.915740+09:00",
-      "tool_evidence_ref": "9aace98b1f543eade9b16d03020cfc4e845042bd2cde3d1d390d6af039f10f02",
-      "previous_success_jst": "2026-11-28T08:53:36.409981+09:00",
+      "attempt_start_jst": "2026-11-28T08:57:57.326847+09:00",
+      "attempt_end_jst": "2026-11-28T08:57:57.563849+09:00",
+      "tool_evidence_ref": "914e02e2b6f2fc789d8b9b7f2f7d49e560c4940403056bb944cbcd7042021f84",
+      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-28T08:53:36.409981+09:00",
-        "end_jst": "2026-11-28T08:56:24.664623+09:00",
+        "start_jst": "2026-11-28T08:56:24.664623+09:00",
+        "end_jst": "2026-11-28T08:57:57.322477+09:00",
         "type": "last_success"
       },
       "status": "なし",
@@ -267,7 +199,7 @@
       "pagination_complete": true,
       "alternative_attempts": [],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "new_success_jst": "2026-11-28T08:57:57.322477+09:00",
       "stale_cache_status": null,
       "source_classification": "PERIOD_VERIFIED",
       "index_attempts": [
@@ -280,12 +212,12 @@
               "final_url": "https://news.abbvie.com/",
               "http_status": 200,
               "method": "requests",
-              "fetched_jst": "2026-11-28T08:56:24.736372+09:00",
-              "sha256": "9aace98b1f543eade9b16d03020cfc4e845042bd2cde3d1d390d6af039f10f02",
-              "response_date": "2026-11-27T23:56:24+00:00",
-              "age_seconds": 14341,
-              "last_modified": "2026-11-27T19:59:03+00:00",
-              "snapshot_path": "data/evidence/2026-11-28/ABBV/requests-9aace98b1f543ead-__6cdb59dcd01e49220d.html.gz"
+              "fetched_jst": "2026-11-28T08:57:57.383855+09:00",
+              "sha256": "914e02e2b6f2fc789d8b9b7f2f7d49e560c4940403056bb944cbcd7042021f84",
+              "response_date": "2026-11-27T23:57:57+00:00",
+              "age_seconds": 13797,
+              "last_modified": "2026-11-27T20:07:59+00:00",
+              "snapshot_path": "data/evidence/2026-11-28/ABBV/requests-914e02e2b6f2fc78-__6cdb59dcd01e49220d.html.gz"
             }
           ],
           "listing_page_urls_checked": [
@@ -327,13 +259,13 @@
         "https://investors.amgen.com/news-and-events/press-releases"
       ],
       "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:56:24.669881+09:00",
-      "attempt_end_jst": "2026-11-28T08:56:33.342186+09:00",
+      "attempt_start_jst": "2026-11-28T08:57:57.327671+09:00",
+      "attempt_end_jst": "2026-11-28T08:58:04.932784+09:00",
       "tool_evidence_ref": "7f219e737feeef025400a050c4dc4a1b37357918ddab12f4e46781a908e6ddff",
-      "previous_success_jst": "2026-11-28T08:53:36.409981+09:00",
+      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-28T08:53:36.409981+09:00",
-        "end_jst": "2026-11-28T08:56:24.664623+09:00",
+        "start_jst": "2026-11-28T08:56:24.664623+09:00",
+        "end_jst": "2026-11-28T08:57:57.322477+09:00",
         "type": "last_success"
       },
       "status": "なし",
@@ -347,7 +279,7 @@
       "pagination_complete": true,
       "alternative_attempts": [],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "new_success_jst": "2026-11-28T08:57:57.322477+09:00",
       "stale_cache_status": null,
       "source_classification": "PERIOD_VERIFIED",
       "index_attempts": [
@@ -360,9 +292,9 @@
               "final_url": "https://www.amgen.com/newsroom/press-releases",
               "http_status": 200,
               "method": "requests",
-              "fetched_jst": "2026-11-28T08:56:27.028694+09:00",
+              "fetched_jst": "2026-11-28T08:57:59.532697+09:00",
               "sha256": "7f219e737feeef025400a050c4dc4a1b37357918ddab12f4e46781a908e6ddff",
-              "response_date": "2026-11-27T23:56:26+00:00",
+              "response_date": "2026-11-27T23:57:58+00:00",
               "age_seconds": 0,
               "last_modified": null,
               "snapshot_path": "data/evidence/2026-11-28/AMGN/requests-7f219e737feeef02-_newsroom_press-releases_60633d89afac5377c4.html.gz"
@@ -372,12 +304,12 @@
               "final_url": "https://www.amgen.com/newsroom/press-releases",
               "http_status": 200,
               "method": "playwright",
-              "fetched_jst": "2026-11-28T08:56:32.961028+09:00",
-              "sha256": "e4968ea4b6949934044206dd372d8c9dba3846330cb22646e2521cdf0ff2566e",
+              "fetched_jst": "2026-11-28T08:58:04.741322+09:00",
+              "sha256": "8a7ef7f9847aafbae9330dffe28a8239006598856915020e4608d054d0e04ab6",
               "response_date": null,
               "age_seconds": 0,
               "last_modified": null,
-              "snapshot_path": "data/evidence/2026-11-28/AMGN/playwright-e4968ea4b6949934-_newsroom_press-releases_60633d89afac5377c4.html.gz"
+              "snapshot_path": "data/evidence/2026-11-28/AMGN/playwright-8a7ef7f9847aafba-_newsroom_press-releases_60633d89afac5377c4.html.gz"
             }
           ],
           "listing_page_urls_checked": [
@@ -418,66 +350,86 @@
         "https://investors.biogen.com/news/news-releases",
         "https://investors.biogen.com/news-releases"
       ],
-      "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:56:24.670416+09:00",
-      "attempt_end_jst": "2026-11-28T08:56:25.032065+09:00",
-      "tool_evidence_ref": "fa552dbf80f402ad8649870bef7b2a5d390209d6058b6a6e0fa6c8247ffd60e5",
-      "previous_success_jst": "2026-11-28T08:53:36.409981+09:00",
+      "homepage_visit_status": "失敗",
+      "attempt_start_jst": "2026-11-28T08:57:57.328113+09:00",
+      "attempt_end_jst": "2026-11-28T08:58:01.204048+09:00",
+      "tool_evidence_ref": null,
+      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-28T08:53:36.409981+09:00",
-        "end_jst": "2026-11-28T08:56:24.664623+09:00",
+        "start_jst": "2026-11-28T08:56:24.664623+09:00",
+        "end_jst": "2026-11-28T08:57:57.322477+09:00",
         "type": "last_success"
       },
-      "status": "なし",
-      "reason": "COMPLETE_DATED_LISTING_NO_NEW_RELEASES",
-      "latest_publication_date": "2026-11-23",
-      "oldest_publication_date": "2026-10-29",
-      "listing_page_urls_checked": [
-        "https://investors.biogen.com/news/news-releases"
+      "status": "未確認",
+      "reason": "INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL",
+      "latest_publication_date": null,
+      "oldest_publication_date": null,
+      "listing_page_urls_checked": [],
+      "pagination_complete": false,
+      "alternative_attempts": [
+        {
+          "url": "https://investors.biogen.com/news-releases",
+          "method": "direct_http_or_playwright",
+          "fetched_any": false,
+          "pagination_complete": false,
+          "errors": [
+            {
+              "url": "https://investors.biogen.com/news-releases",
+              "failure": "HTTP_403 | BROWSER_RuntimeError:HTTP_403",
+              "error_class": "FETCH_ERROR"
+            }
+          ]
+        }
       ],
-      "pagination_complete": true,
-      "alternative_attempts": [],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "new_success_jst": null,
       "stale_cache_status": null,
-      "source_classification": "PERIOD_VERIFIED",
+      "source_classification": "UNVERIFIED",
       "index_attempts": [
         {
           "official_listing_url": "https://investors.biogen.com/news/news-releases",
-          "fetched_any": true,
-          "page_receipts": [
-            {
-              "requested_url": "https://investors.biogen.com/news/news-releases",
-              "final_url": "https://investors.biogen.com/news/news-releases",
-              "http_status": 200,
-              "method": "requests",
-              "fetched_jst": "2026-11-28T08:56:24.918066+09:00",
-              "sha256": "fa552dbf80f402ad8649870bef7b2a5d390209d6058b6a6e0fa6c8247ffd60e5",
-              "response_date": "2026-11-27T23:56:24+00:00",
-              "age_seconds": 0,
-              "last_modified": "2026-11-23T13:03:01+00:00",
-              "snapshot_path": "data/evidence/2026-11-28/BIIB/requests-fa552dbf80f402ad-_news_news-releases_5fe700fe6674f69085.html.gz"
-            }
-          ],
-          "listing_page_urls_checked": [
-            "https://investors.biogen.com/news/news-releases"
-          ],
-          "latest_publication_date": "2026-11-23",
-          "oldest_publication_date": "2026-10-29",
-          "dated_entries_count": 10,
-          "pagination_complete": true,
-          "found_baseline_boundary": true,
+          "fetched_any": false,
+          "page_receipts": [],
+          "listing_page_urls_checked": [],
+          "latest_publication_date": null,
+          "oldest_publication_date": null,
+          "dated_entries_count": 0,
+          "pagination_complete": false,
+          "found_baseline_boundary": false,
           "stale_cache": [],
-          "errors": [],
-          "page_date_bounds": [
+          "errors": [
             {
               "url": "https://investors.biogen.com/news/news-releases",
-              "latest": "2026-11-23",
-              "oldest": "2026-10-29",
-              "count": 10,
-              "descending_order": true
+              "failure": "HTTP_403 | BROWSER_RuntimeError:HTTP_403",
+              "error_class": "FETCH_ERROR"
             }
           ],
+          "page_date_bounds": [],
+          "candidate_releases": [],
+          "article_receipts": [],
+          "newer_listing_count": 0,
+          "incomplete_load_more": false,
+          "date_order_valid": true
+        },
+        {
+          "official_listing_url": "https://investors.biogen.com/news-releases",
+          "fetched_any": false,
+          "page_receipts": [],
+          "listing_page_urls_checked": [],
+          "latest_publication_date": null,
+          "oldest_publication_date": null,
+          "dated_entries_count": 0,
+          "pagination_complete": false,
+          "found_baseline_boundary": false,
+          "stale_cache": [],
+          "errors": [
+            {
+              "url": "https://investors.biogen.com/news-releases",
+              "failure": "HTTP_403 | BROWSER_RuntimeError:HTTP_403",
+              "error_class": "FETCH_ERROR"
+            }
+          ],
+          "page_date_bounds": [],
           "candidate_releases": [],
           "article_receipts": [],
           "newer_listing_count": 0,
@@ -497,13 +449,13 @@
         "https://www.bms.com/news-and-media/press-releases.html"
       ],
       "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:56:24.915772+09:00",
-      "attempt_end_jst": "2026-11-28T08:56:31.604394+09:00",
+      "attempt_start_jst": "2026-11-28T08:57:57.563881+09:00",
+      "attempt_end_jst": "2026-11-28T08:58:02.821522+09:00",
       "tool_evidence_ref": "a0999768af732137e4dd035102574800956239aff52d1e256dfb6888ab4895d0",
-      "previous_success_jst": "2026-11-28T08:53:36.409981+09:00",
+      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-28T08:53:36.409981+09:00",
-        "end_jst": "2026-11-28T08:56:24.664623+09:00",
+        "start_jst": "2026-11-28T08:56:24.664623+09:00",
+        "end_jst": "2026-11-28T08:57:57.322477+09:00",
         "type": "last_success"
       },
       "status": "なし",
@@ -516,7 +468,7 @@
       "pagination_complete": true,
       "alternative_attempts": [],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "new_success_jst": "2026-11-28T08:57:57.322477+09:00",
       "stale_cache_status": null,
       "source_classification": "PERIOD_VERIFIED",
       "index_attempts": [
@@ -529,7 +481,7 @@
               "final_url": "https://news.bms.com/news/default.aspx",
               "http_status": 200,
               "method": "playwright",
-              "fetched_jst": "2026-11-28T08:56:31.481319+09:00",
+              "fetched_jst": "2026-11-28T08:58:02.699843+09:00",
               "sha256": "a0999768af732137e4dd035102574800956239aff52d1e256dfb6888ab4895d0",
               "response_date": null,
               "age_seconds": 0,
@@ -576,13 +528,13 @@
         "https://investors.gilead.com/overview/default.aspx"
       ],
       "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:56:25.032093+09:00",
-      "attempt_end_jst": "2026-11-28T08:56:29.911476+09:00",
+      "attempt_start_jst": "2026-11-28T08:58:01.204101+09:00",
+      "attempt_end_jst": "2026-11-28T08:58:05.381035+09:00",
       "tool_evidence_ref": "567ab3810ef8a872325ab3c976403fb5589b29ba16747d114cf4f0bc7bb958d3",
-      "previous_success_jst": "2026-11-28T08:53:36.409981+09:00",
+      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-28T08:53:36.409981+09:00",
-        "end_jst": "2026-11-28T08:56:24.664623+09:00",
+        "start_jst": "2026-11-28T08:56:24.664623+09:00",
+        "end_jst": "2026-11-28T08:57:57.322477+09:00",
         "type": "last_success"
       },
       "status": "なし",
@@ -596,7 +548,7 @@
       "pagination_complete": true,
       "alternative_attempts": [],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "new_success_jst": "2026-11-28T08:57:57.322477+09:00",
       "stale_cache_status": null,
       "source_classification": "PERIOD_VERIFIED",
       "index_attempts": [
@@ -609,11 +561,11 @@
               "final_url": "https://www.gilead.com/news",
               "http_status": 200,
               "method": "requests",
-              "fetched_jst": "2026-11-28T08:56:25.139096+09:00",
+              "fetched_jst": "2026-11-28T08:58:01.275657+09:00",
               "sha256": "567ab3810ef8a872325ab3c976403fb5589b29ba16747d114cf4f0bc7bb958d3",
-              "response_date": "2026-11-27T23:56:25+00:00",
-              "age_seconds": 42565,
-              "last_modified": "2026-11-27T12:30:00+00:00",
+              "response_date": "2026-11-27T23:58:01+00:00",
+              "age_seconds": 42681,
+              "last_modified": "2026-11-27T12:06:39+00:00",
               "snapshot_path": "data/evidence/2026-11-28/GILD/requests-567ab3810ef8a872-_news_190aa08935081cf962.html.gz"
             },
             {
@@ -621,12 +573,12 @@
               "final_url": "https://www.gilead.com/news",
               "http_status": 200,
               "method": "playwright",
-              "fetched_jst": "2026-11-28T08:56:29.755678+09:00",
-              "sha256": "7c4600e070f1dfe1824647f24fccce1fe1b72d101de3cde29c49412ca8b0ff6c",
+              "fetched_jst": "2026-11-28T08:58:05.202870+09:00",
+              "sha256": "0d91bb128d84af4f0ed97f53356a5645e6f2dd42fdae8dd29f0eaf230c9b7ad5",
               "response_date": null,
               "age_seconds": 0,
               "last_modified": null,
-              "snapshot_path": "data/evidence/2026-11-28/GILD/playwright-7c4600e070f1dfe1-_news_190aa08935081cf962.html.gz"
+              "snapshot_path": "data/evidence/2026-11-28/GILD/playwright-0d91bb128d84af4f-_news_190aa08935081cf962.html.gz"
             }
           ],
           "listing_page_urls_checked": [
@@ -667,13 +619,13 @@
         "https://www.jnj.com/media-center/press-releases"
       ],
       "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:56:29.911507+09:00",
-      "attempt_end_jst": "2026-11-28T08:56:31.254707+09:00",
-      "tool_evidence_ref": "641923a0cada55c04619afc670fb2bc8190a11c2a60ffaef9dc23add0f0547a4",
-      "previous_success_jst": "2026-11-28T08:53:36.409981+09:00",
+      "attempt_start_jst": "2026-11-28T08:58:02.821583+09:00",
+      "attempt_end_jst": "2026-11-28T08:58:03.435664+09:00",
+      "tool_evidence_ref": "5cd34cef734c21495518e760418858125db485feb1984745fe558d7555153ec4",
+      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-28T08:53:36.409981+09:00",
-        "end_jst": "2026-11-28T08:56:24.664623+09:00",
+        "start_jst": "2026-11-28T08:56:24.664623+09:00",
+        "end_jst": "2026-11-28T08:57:57.322477+09:00",
         "type": "last_success"
       },
       "status": "なし",
@@ -686,7 +638,7 @@
       "pagination_complete": true,
       "alternative_attempts": [],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "new_success_jst": "2026-11-28T08:57:57.322477+09:00",
       "stale_cache_status": null,
       "source_classification": "PERIOD_VERIFIED",
       "index_attempts": [
@@ -699,12 +651,12 @@
               "final_url": "https://www.jnj.com/media-center/press-releases",
               "http_status": 200,
               "method": "requests",
-              "fetched_jst": "2026-11-28T08:56:30.766084+09:00",
-              "sha256": "641923a0cada55c04619afc670fb2bc8190a11c2a60ffaef9dc23add0f0547a4",
-              "response_date": "2026-11-27T23:56:30+00:00",
+              "fetched_jst": "2026-11-28T08:58:02.937964+09:00",
+              "sha256": "5cd34cef734c21495518e760418858125db485feb1984745fe558d7555153ec4",
+              "response_date": "2026-11-27T23:58:02+00:00",
               "age_seconds": 0,
               "last_modified": null,
-              "snapshot_path": "data/evidence/2026-11-28/JNJ/requests-641923a0cada55c0-_media-center_press-releases_8903cdfc553407823d.html.gz"
+              "snapshot_path": "data/evidence/2026-11-28/JNJ/requests-5cd34cef734c2149-_media-center_press-releases_8903cdfc553407823d.html.gz"
             }
           ],
           "listing_page_urls_checked": [
@@ -745,13 +697,13 @@
         "https://www.merck.com/news"
       ],
       "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:56:31.254752+09:00",
-      "attempt_end_jst": "2026-11-28T08:56:31.449880+09:00",
+      "attempt_start_jst": "2026-11-28T08:58:03.435694+09:00",
+      "attempt_end_jst": "2026-11-28T08:58:03.538255+09:00",
       "tool_evidence_ref": "ce0833d4fb427f3b56afd9c3aa3d7163cdbdf1178dd9586b7f93ebd7d065e6e9",
-      "previous_success_jst": "2026-11-28T08:53:36.409981+09:00",
+      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-28T08:53:36.409981+09:00",
-        "end_jst": "2026-11-28T08:56:24.664623+09:00",
+        "start_jst": "2026-11-28T08:56:24.664623+09:00",
+        "end_jst": "2026-11-28T08:57:57.322477+09:00",
         "type": "last_success"
       },
       "status": "なし",
@@ -764,7 +716,7 @@
       "pagination_complete": true,
       "alternative_attempts": [],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "new_success_jst": "2026-11-28T08:57:57.322477+09:00",
       "stale_cache_status": null,
       "source_classification": "PERIOD_VERIFIED",
       "index_attempts": [
@@ -777,9 +729,9 @@
               "final_url": "https://www.merck.com/media/news/",
               "http_status": 200,
               "method": "requests",
-              "fetched_jst": "2026-11-28T08:56:31.346900+09:00",
+              "fetched_jst": "2026-11-28T08:58:03.463459+09:00",
               "sha256": "ce0833d4fb427f3b56afd9c3aa3d7163cdbdf1178dd9586b7f93ebd7d065e6e9",
-              "response_date": "2026-11-27T23:56:31+00:00",
+              "response_date": "2026-11-27T23:58:03+00:00",
               "age_seconds": 0,
               "last_modified": null,
               "snapshot_path": "data/evidence/2026-11-28/MRK/requests-ce0833d4fb427f3b-_media_news__f29800e469e20b62b5.html.gz"
@@ -823,13 +775,13 @@
         "https://www.pfizer.com/newsroom/press-releases"
       ],
       "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:56:31.449946+09:00",
-      "attempt_end_jst": "2026-11-28T08:56:31.766404+09:00",
-      "tool_evidence_ref": "a43f7626940bed92505af690ecd6863d98e897432300db5114a310b658cff124",
-      "previous_success_jst": "2026-11-28T08:53:36.409981+09:00",
+      "attempt_start_jst": "2026-11-28T08:58:03.538283+09:00",
+      "attempt_end_jst": "2026-11-28T08:58:04.067660+09:00",
+      "tool_evidence_ref": "8c0d8749f9109f7fc6fe5c3f892d0a04046ce16dadee5405234f2795e270085b",
+      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-28T08:53:36.409981+09:00",
-        "end_jst": "2026-11-28T08:56:24.664623+09:00",
+        "start_jst": "2026-11-28T08:56:24.664623+09:00",
+        "end_jst": "2026-11-28T08:57:57.322477+09:00",
         "type": "last_success"
       },
       "status": "なし",
@@ -842,7 +794,7 @@
       "pagination_complete": true,
       "alternative_attempts": [],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "new_success_jst": "2026-11-28T08:57:57.322477+09:00",
       "stale_cache_status": null,
       "source_classification": "PERIOD_VERIFIED",
       "index_attempts": [
@@ -855,12 +807,12 @@
               "final_url": "https://www.pfizer.com/newsroom",
               "http_status": 200,
               "method": "requests",
-              "fetched_jst": "2026-11-28T08:56:31.627667+09:00",
-              "sha256": "a43f7626940bed92505af690ecd6863d98e897432300db5114a310b658cff124",
-              "response_date": "2026-11-27T23:56:31+00:00",
-              "age_seconds": 52913,
+              "fetched_jst": "2026-11-28T08:58:03.879102+09:00",
+              "sha256": "8c0d8749f9109f7fc6fe5c3f892d0a04046ce16dadee5405234f2795e270085b",
+              "response_date": "2026-11-27T23:58:03+00:00",
+              "age_seconds": 53005,
               "last_modified": "2026-11-27T07:55:36+00:00",
-              "snapshot_path": "data/evidence/2026-11-28/PFE/requests-a43f7626940bed92-_newsroom_84457c11e92d33b8a8.html.gz"
+              "snapshot_path": "data/evidence/2026-11-28/PFE/requests-8c0d8749f9109f7f-_newsroom_84457c11e92d33b8a8.html.gz"
             }
           ],
           "listing_page_urls_checked": [
@@ -900,66 +852,86 @@
         "https://investor.regeneron.com/news/press-releases",
         "https://www.regeneron.com/newsroom"
       ],
-      "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:56:31.604424+09:00",
-      "attempt_end_jst": "2026-11-28T08:56:32.061509+09:00",
-      "tool_evidence_ref": "619283633fb284d4d5aca020de4ee1825611914b4123fc099414875b4adcf628",
-      "previous_success_jst": "2026-11-28T08:53:36.409981+09:00",
+      "homepage_visit_status": "失敗",
+      "attempt_start_jst": "2026-11-28T08:58:03.980443+09:00",
+      "attempt_end_jst": "2026-11-28T08:58:05.661751+09:00",
+      "tool_evidence_ref": null,
+      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-28T08:53:36.409981+09:00",
-        "end_jst": "2026-11-28T08:56:24.664623+09:00",
+        "start_jst": "2026-11-28T08:56:24.664623+09:00",
+        "end_jst": "2026-11-28T08:57:57.322477+09:00",
         "type": "last_success"
       },
-      "status": "なし",
-      "reason": "COMPLETE_DATED_LISTING_NO_NEW_RELEASES",
-      "latest_publication_date": "2026-11-19",
-      "oldest_publication_date": "2026-10-16",
-      "listing_page_urls_checked": [
-        "https://investor.regeneron.com/news/press-releases"
+      "status": "未確認",
+      "reason": "INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL",
+      "latest_publication_date": null,
+      "oldest_publication_date": null,
+      "listing_page_urls_checked": [],
+      "pagination_complete": false,
+      "alternative_attempts": [
+        {
+          "url": "https://www.regeneron.com/newsroom",
+          "method": "direct_http_or_playwright",
+          "fetched_any": false,
+          "pagination_complete": false,
+          "errors": [
+            {
+              "url": "https://www.regeneron.com/newsroom",
+              "failure": "HTTP_403 | BROWSER_RuntimeError:HTTP_404",
+              "error_class": "FETCH_ERROR"
+            }
+          ]
+        }
       ],
-      "pagination_complete": true,
-      "alternative_attempts": [],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "new_success_jst": null,
       "stale_cache_status": null,
-      "source_classification": "PERIOD_VERIFIED",
+      "source_classification": "UNVERIFIED",
       "index_attempts": [
         {
           "official_listing_url": "https://investor.regeneron.com/news/press-releases",
-          "fetched_any": true,
-          "page_receipts": [
-            {
-              "requested_url": "https://investor.regeneron.com/news/press-releases",
-              "final_url": "https://investor.regeneron.com/news/press-releases",
-              "http_status": 200,
-              "method": "requests",
-              "fetched_jst": "2026-11-28T08:56:31.991133+09:00",
-              "sha256": "619283633fb284d4d5aca020de4ee1825611914b4123fc099414875b4adcf628",
-              "response_date": "2026-11-27T23:56:31+00:00",
-              "age_seconds": 0,
-              "last_modified": "2026-11-27T07:00:28+00:00",
-              "snapshot_path": "data/evidence/2026-11-28/REGN/requests-619283633fb284d4-_news_press-releases_5ccd82ac27c889040d.html.gz"
-            }
-          ],
-          "listing_page_urls_checked": [
-            "https://investor.regeneron.com/news/press-releases"
-          ],
-          "latest_publication_date": "2026-11-19",
-          "oldest_publication_date": "2026-10-16",
-          "dated_entries_count": 10,
-          "pagination_complete": true,
-          "found_baseline_boundary": true,
+          "fetched_any": false,
+          "page_receipts": [],
+          "listing_page_urls_checked": [],
+          "latest_publication_date": null,
+          "oldest_publication_date": null,
+          "dated_entries_count": 0,
+          "pagination_complete": false,
+          "found_baseline_boundary": false,
           "stale_cache": [],
-          "errors": [],
-          "page_date_bounds": [
+          "errors": [
             {
               "url": "https://investor.regeneron.com/news/press-releases",
-              "latest": "2026-11-19",
-              "oldest": "2026-10-16",
-              "count": 10,
-              "descending_order": true
+              "failure": "HTTP_403 | BROWSER_RuntimeError:HTTP_403",
+              "error_class": "FETCH_ERROR"
             }
           ],
+          "page_date_bounds": [],
+          "candidate_releases": [],
+          "article_receipts": [],
+          "newer_listing_count": 0,
+          "incomplete_load_more": false,
+          "date_order_valid": true
+        },
+        {
+          "official_listing_url": "https://www.regeneron.com/newsroom",
+          "fetched_any": false,
+          "page_receipts": [],
+          "listing_page_urls_checked": [],
+          "latest_publication_date": null,
+          "oldest_publication_date": null,
+          "dated_entries_count": 0,
+          "pagination_complete": false,
+          "found_baseline_boundary": false,
+          "stale_cache": [],
+          "errors": [
+            {
+              "url": "https://www.regeneron.com/newsroom",
+              "failure": "HTTP_403 | BROWSER_RuntimeError:HTTP_404",
+              "error_class": "FETCH_ERROR"
+            }
+          ],
+          "page_date_bounds": [],
           "candidate_releases": [],
           "article_receipts": [],
           "newer_listing_count": 0,
@@ -979,13 +951,13 @@
         "https://www.astrazeneca.com/media-centre/press-releases.html"
       ],
       "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:56:31.766430+09:00",
-      "attempt_end_jst": "2026-11-28T08:56:34.417193+09:00",
-      "tool_evidence_ref": "186b7b5522389813dcfd321454a8208e5b3385556366902e63f31012b7205b1c",
-      "previous_success_jst": "2026-11-28T08:53:36.409981+09:00",
+      "attempt_start_jst": "2026-11-28T08:58:04.067686+09:00",
+      "attempt_end_jst": "2026-11-28T08:58:06.617587+09:00",
+      "tool_evidence_ref": "a5688ef82468d39d11bcc828083dd5369face0079091409774847a47445b3aca",
+      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-28T08:53:36.409981+09:00",
-        "end_jst": "2026-11-28T08:56:24.664623+09:00",
+        "start_jst": "2026-11-28T08:56:24.664623+09:00",
+        "end_jst": "2026-11-28T08:57:57.322477+09:00",
         "type": "last_success"
       },
       "status": "なし",
@@ -998,7 +970,7 @@
       "pagination_complete": true,
       "alternative_attempts": [],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "new_success_jst": "2026-11-28T08:57:57.322477+09:00",
       "stale_cache_status": null,
       "source_classification": "PERIOD_VERIFIED",
       "index_attempts": [
@@ -1011,12 +983,12 @@
               "final_url": "https://www.astrazeneca.com/media-centre.html?type=pressrelease",
               "http_status": 200,
               "method": "playwright",
-              "fetched_jst": "2026-11-28T08:56:34.172780+09:00",
-              "sha256": "186b7b5522389813dcfd321454a8208e5b3385556366902e63f31012b7205b1c",
+              "fetched_jst": "2026-11-28T08:58:06.239255+09:00",
+              "sha256": "a5688ef82468d39d11bcc828083dd5369face0079091409774847a47445b3aca",
               "response_date": null,
               "age_seconds": 0,
               "last_modified": null,
-              "snapshot_path": "data/evidence/2026-11-28/AZN/playwright-186b7b5522389813-_media-centre_html_7a28c8c5f19598bbda.html.gz"
+              "snapshot_path": "data/evidence/2026-11-28/AZN/playwright-a5688ef82468d39d-_media-centre_html_7a28c8c5f19598bbda.html.gz"
             }
           ],
           "listing_page_urls_checked": [
@@ -1057,13 +1029,13 @@
         "https://www.gsk.com/en-gb/media/press-releases"
       ],
       "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:56:32.061545+09:00",
-      "attempt_end_jst": "2026-11-28T08:56:35.354480+09:00",
+      "attempt_start_jst": "2026-11-28T08:58:04.932839+09:00",
+      "attempt_end_jst": "2026-11-28T08:58:07.963331+09:00",
       "tool_evidence_ref": "237f50250b8b75435a48179708478aa2bada5c51378adc465033f6d16c2447de",
-      "previous_success_jst": "2026-11-28T08:53:36.409981+09:00",
+      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-28T08:53:36.409981+09:00",
-        "end_jst": "2026-11-28T08:56:24.664623+09:00",
+        "start_jst": "2026-11-28T08:56:24.664623+09:00",
+        "end_jst": "2026-11-28T08:57:57.322477+09:00",
         "type": "last_success"
       },
       "status": "なし",
@@ -1077,7 +1049,7 @@
       "pagination_complete": true,
       "alternative_attempts": [],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "new_success_jst": "2026-11-28T08:57:57.322477+09:00",
       "stale_cache_status": null,
       "source_classification": "PERIOD_VERIFIED",
       "index_attempts": [
@@ -1090,9 +1062,9 @@
               "final_url": "https://www.gsk.com/en-gb/media/press-releases/",
               "http_status": 200,
               "method": "requests",
-              "fetched_jst": "2026-11-28T08:56:32.296346+09:00",
+              "fetched_jst": "2026-11-28T08:58:05.063769+09:00",
               "sha256": "237f50250b8b75435a48179708478aa2bada5c51378adc465033f6d16c2447de",
-              "response_date": "2026-11-27T23:56:32+00:00",
+              "response_date": "2026-11-27T23:58:05+00:00",
               "age_seconds": 0,
               "last_modified": null,
               "snapshot_path": "data/evidence/2026-11-28/GSK/requests-237f50250b8b7543-_en-gb_media_press-releases__ce5a3984ef6543a795.html.gz"
@@ -1102,12 +1074,12 @@
               "final_url": "https://www.gsk.com/en-gb/media/press-releases/?ps=20&latestArticles=true",
               "http_status": 200,
               "method": "playwright",
-              "fetched_jst": "2026-11-28T08:56:35.111166+09:00",
-              "sha256": "2831d55008806811e82ca6908d46fd5459a6ebe9e1f3df6aa2b95dfaa4ec5c4a",
+              "fetched_jst": "2026-11-28T08:58:07.676929+09:00",
+              "sha256": "ee7608f202c0f3090c398830739ad7374d8afd349d1e5cbe593667fe67b6db23",
               "response_date": null,
               "age_seconds": 0,
               "last_modified": null,
-              "snapshot_path": "data/evidence/2026-11-28/GSK/playwright-2831d55008806811-_en-gb_media_press-releases__ee5da7b10a134bbc4a.html.gz"
+              "snapshot_path": "data/evidence/2026-11-28/GSK/playwright-ee7608f202c0f309-_en-gb_media_press-releases__ee5da7b10a134bbc4a.html.gz"
             }
           ],
           "listing_page_urls_checked": [
@@ -1149,13 +1121,13 @@
         "https://www.novartis.com/news/media-releases"
       ],
       "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:56:33.342223+09:00",
-      "attempt_end_jst": "2026-11-28T08:56:33.953323+09:00",
+      "attempt_start_jst": "2026-11-28T08:58:05.381075+09:00",
+      "attempt_end_jst": "2026-11-28T08:58:05.939402+09:00",
       "tool_evidence_ref": "6d6c5249d572f0e63e42a1afe21f7c0dc6627f23346bd1499881d445d126de48",
-      "previous_success_jst": "2026-11-28T08:53:36.409981+09:00",
+      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-28T08:53:36.409981+09:00",
-        "end_jst": "2026-11-28T08:56:24.664623+09:00",
+        "start_jst": "2026-11-28T08:56:24.664623+09:00",
+        "end_jst": "2026-11-28T08:57:57.322477+09:00",
         "type": "last_success"
       },
       "status": "なし",
@@ -1168,7 +1140,7 @@
       "pagination_complete": true,
       "alternative_attempts": [],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "new_success_jst": "2026-11-28T08:57:57.322477+09:00",
       "stale_cache_status": null,
       "source_classification": "PERIOD_VERIFIED",
       "index_attempts": [
@@ -1181,11 +1153,11 @@
               "final_url": "https://www.novartis.com/news",
               "http_status": 200,
               "method": "requests",
-              "fetched_jst": "2026-11-28T08:56:33.462738+09:00",
+              "fetched_jst": "2026-11-28T08:58:05.457394+09:00",
               "sha256": "6d6c5249d572f0e63e42a1afe21f7c0dc6627f23346bd1499881d445d126de48",
-              "response_date": "2026-11-27T23:56:33+00:00",
-              "age_seconds": 19625,
-              "last_modified": "2026-11-27T18:08:51+00:00",
+              "response_date": "2026-11-27T23:58:05+00:00",
+              "age_seconds": 19767,
+              "last_modified": "2026-11-27T18:01:22+00:00",
               "snapshot_path": "data/evidence/2026-11-28/NOVN/requests-6d6c5249d572f0e6-_news_803a717424016bf0ec.html.gz"
             }
           ],
@@ -1226,14 +1198,14 @@
         "https://www.novonordisk.com/news-and-media/news-and-ir-materials.html"
       ],
       "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:56:33.953365+09:00",
-      "attempt_end_jst": "2026-11-28T08:56:37.743067+09:00",
+      "attempt_start_jst": "2026-11-28T08:58:05.661837+09:00",
+      "attempt_end_jst": "2026-11-28T08:58:09.651809+09:00",
       "tool_evidence_ref": "5eb474bd914980b65ca4da44d33eaeedb782121a1ec112a1628dfe7eac1dc872",
-      "previous_success_jst": null,
+      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-26T08:47:16.626229+09:00",
-        "end_jst": "2026-11-28T08:56:24.664623+09:00",
-        "type": "unresolved_baseline"
+        "start_jst": "2026-11-28T08:56:24.664623+09:00",
+        "end_jst": "2026-11-28T08:57:57.322477+09:00",
+        "type": "last_success"
       },
       "status": "なし",
       "reason": "OFFICIAL_API_PERIOD_VERIFIED",
@@ -1251,8 +1223,8 @@
           "http_status": 200,
           "sha256": "5eb474bd914980b65ca4da44d33eaeedb782121a1ec112a1628dfe7eac1dc872",
           "snapshot_path": "data/evidence/2026-11-28/NOVOB/official_api.json.raw",
-          "fetched_jst": "2026-11-28T08:56:55.054728+09:00",
-          "response_date": "Fri, 27 Nov 2026 23:56:55 GMT",
+          "fetched_jst": "2026-11-28T08:58:38.081084+09:00",
+          "response_date": "Fri, 27 Nov 2026 23:58:37 GMT",
           "age": null,
           "record_count": 50,
           "record_keys": [
@@ -1523,7 +1495,7 @@
         }
       ],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "new_success_jst": "2026-11-28T08:57:57.322477+09:00",
       "stale_cache_status": null,
       "source_classification": "PERIOD_VERIFIED_OFFICIAL_API",
       "index_attempts": [
@@ -1536,9 +1508,9 @@
               "final_url": "https://www.novonordisk.com/news-and-media/news-and-ir-materials.html",
               "http_status": 200,
               "method": "requests",
-              "fetched_jst": "2026-11-28T08:56:34.419237+09:00",
+              "fetched_jst": "2026-11-28T08:58:06.100725+09:00",
               "sha256": "f32581a274bc4d534892d31b1fbb8c963d29f77ce5ed51b7761c8d0f17971ab2",
-              "response_date": "2026-11-27T23:56:34+00:00",
+              "response_date": "2026-11-27T23:58:06+00:00",
               "age_seconds": 0,
               "last_modified": null,
               "snapshot_path": "data/evidence/2026-11-28/NOVOB/requests-f32581a274bc4d53-_news-and-media_news-and-ir-materials_html_58bc9f9d2d421843e3.html.gz"
@@ -1548,12 +1520,12 @@
               "final_url": "https://www.novonordisk.com/news-and-media/news-and-ir-materials.html",
               "http_status": 200,
               "method": "playwright",
-              "fetched_jst": "2026-11-28T08:56:37.685416+09:00",
-              "sha256": "12b2297ebd203b461cd3de8cba767466bab6057d85e07b1066b0c05ff0259ee7",
+              "fetched_jst": "2026-11-28T08:58:09.582394+09:00",
+              "sha256": "9a304e922523fe4ede703f7a0a64f9b626843126028ce4933d871dfc71847c25",
               "response_date": null,
               "age_seconds": 0,
               "last_modified": null,
-              "snapshot_path": "data/evidence/2026-11-28/NOVOB/playwright-12b2297ebd203b46-_news-and-media_news-and-ir-materials_html_58bc9f9d2d421843e3.html.gz"
+              "snapshot_path": "data/evidence/2026-11-28/NOVOB/playwright-9a304e922523fe4e-_news-and-media_news-and-ir-materials_html_58bc9f9d2d421843e3.html.gz"
             }
           ],
           "listing_page_urls_checked": [
@@ -1591,13 +1563,13 @@
         "https://www.roche.com/media/releases"
       ],
       "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:56:34.417229+09:00",
-      "attempt_end_jst": "2026-11-28T08:56:38.611040+09:00",
+      "attempt_start_jst": "2026-11-28T08:58:05.939451+09:00",
+      "attempt_end_jst": "2026-11-28T08:58:10.200428+09:00",
       "tool_evidence_ref": "81c93b343e7b0ecab81df8a7918c6629ea4cfad7f8b34dec79b97f2e596f691b",
-      "previous_success_jst": "2026-11-28T08:53:36.409981+09:00",
+      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-28T08:53:36.409981+09:00",
-        "end_jst": "2026-11-28T08:56:24.664623+09:00",
+        "start_jst": "2026-11-28T08:56:24.664623+09:00",
+        "end_jst": "2026-11-28T08:57:57.322477+09:00",
         "type": "last_success"
       },
       "status": "なし",
@@ -1611,7 +1583,7 @@
       "pagination_complete": true,
       "alternative_attempts": [],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "new_success_jst": "2026-11-28T08:57:57.322477+09:00",
       "stale_cache_status": null,
       "source_classification": "PERIOD_VERIFIED",
       "index_attempts": [
@@ -1624,10 +1596,10 @@
               "final_url": "https://www.roche.com/media/releases",
               "http_status": 200,
               "method": "requests",
-              "fetched_jst": "2026-11-28T08:56:34.510999+09:00",
+              "fetched_jst": "2026-11-28T08:58:06.040807+09:00",
               "sha256": "81c93b343e7b0ecab81df8a7918c6629ea4cfad7f8b34dec79b97f2e596f691b",
-              "response_date": "2026-11-27T23:56:34+00:00",
-              "age_seconds": 2905,
+              "response_date": "2026-11-27T23:58:06+00:00",
+              "age_seconds": 2254,
               "last_modified": "2026-11-25T15:14:00+00:00",
               "snapshot_path": "data/evidence/2026-11-28/ROP/requests-81c93b343e7b0eca-_media_releases_bf7cb84cba3cdedc5f.html.gz"
             },
@@ -1636,7 +1608,7 @@
               "final_url": "https://www.roche.com/media/releases",
               "http_status": 200,
               "method": "playwright",
-              "fetched_jst": "2026-11-28T08:56:38.505685+09:00",
+              "fetched_jst": "2026-11-28T08:58:10.097413+09:00",
               "sha256": "9a60f6aea6b1b4d24dfad97e4bc1c92fe4c6db1ef9ffb11b6fe9d58400506e10",
               "response_date": null,
               "age_seconds": 0,
@@ -1682,13 +1654,13 @@
         "https://www.sanofi.com/en/media-room/press-releases"
       ],
       "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:56:35.354524+09:00",
-      "attempt_end_jst": "2026-11-28T08:56:35.590161+09:00",
+      "attempt_start_jst": "2026-11-28T08:58:06.617632+09:00",
+      "attempt_end_jst": "2026-11-28T08:58:06.858631+09:00",
       "tool_evidence_ref": "79be47b5ff5a49613e6831da6e2e8b325e38575a32e594a0c6e7221e438d96ea",
-      "previous_success_jst": "2026-11-28T08:53:36.409981+09:00",
+      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-28T08:53:36.409981+09:00",
-        "end_jst": "2026-11-28T08:56:24.664623+09:00",
+        "start_jst": "2026-11-28T08:56:24.664623+09:00",
+        "end_jst": "2026-11-28T08:57:57.322477+09:00",
         "type": "last_success"
       },
       "status": "なし",
@@ -1701,7 +1673,7 @@
       "pagination_complete": true,
       "alternative_attempts": [],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "new_success_jst": "2026-11-28T08:57:57.322477+09:00",
       "stale_cache_status": null,
       "source_classification": "PERIOD_VERIFIED",
       "index_attempts": [
@@ -1714,10 +1686,10 @@
               "final_url": "https://www.sanofi.com/en/media-room/press-releases",
               "http_status": 200,
               "method": "requests",
-              "fetched_jst": "2026-11-28T08:56:35.487241+09:00",
+              "fetched_jst": "2026-11-28T08:58:06.709284+09:00",
               "sha256": "79be47b5ff5a49613e6831da6e2e8b325e38575a32e594a0c6e7221e438d96ea",
-              "response_date": "2026-11-27T23:55:06+00:00",
-              "age_seconds": 89,
+              "response_date": "2026-11-27T23:57:45+00:00",
+              "age_seconds": 21,
               "last_modified": null,
               "snapshot_path": "data/evidence/2026-11-28/SAN/requests-79be47b5ff5a4961-_en_media-room_press-releases_25e9c5013fb1ccfcd7.html.gz"
             }

@@ -30,13 +30,13 @@
         "https://investors.hims.com/news-releases"
       ],
       "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:56:42.123142+09:00",
-      "attempt_end_jst": "2026-11-28T08:56:47.594418+09:00",
+      "attempt_start_jst": "2026-11-28T08:58:13.182148+09:00",
+      "attempt_end_jst": "2026-11-28T08:58:18.635962+09:00",
       "tool_evidence_ref": "83fc5ebc9f5ad5d66b12ea1b13f398382e30bc2beb1c837a38ebbbcc40374108",
-      "previous_success_jst": "2026-11-28T08:53:36.409981+09:00",
+      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-28T08:53:36.409981+09:00",
-        "end_jst": "2026-11-28T08:56:24.664623+09:00",
+        "start_jst": "2026-11-28T08:56:24.664623+09:00",
+        "end_jst": "2026-11-28T08:57:57.322477+09:00",
         "type": "last_success"
       },
       "status": "なし",
@@ -49,7 +49,7 @@
       "pagination_complete": true,
       "alternative_attempts": [],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "new_success_jst": "2026-11-28T08:57:57.322477+09:00",
       "stale_cache_status": null,
       "source_classification": "PERIOD_VERIFIED",
       "index_attempts": [
@@ -62,7 +62,7 @@
               "final_url": "https://investors.hims.com/news/default.aspx",
               "http_status": 200,
               "method": "playwright",
-              "fetched_jst": "2026-11-28T08:56:47.516494+09:00",
+              "fetched_jst": "2026-11-28T08:58:18.484952+09:00",
               "sha256": "83fc5ebc9f5ad5d66b12ea1b13f398382e30bc2beb1c837a38ebbbcc40374108",
               "response_date": null,
               "age_seconds": 0,
@@ -108,13 +108,13 @@
         "https://ir.revmed.com/press-releases"
       ],
       "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:56:42.421481+09:00",
-      "attempt_end_jst": "2026-11-28T08:56:45.035211+09:00",
-      "tool_evidence_ref": "5e502584defbf47f700c73fad3d1cc36346babe202e51b46f900e57d02b3dffa",
-      "previous_success_jst": "2026-11-28T08:53:36.409981+09:00",
+      "attempt_start_jst": "2026-11-28T08:58:13.330495+09:00",
+      "attempt_end_jst": "2026-11-28T08:58:16.067871+09:00",
+      "tool_evidence_ref": "8ee1f7df56661fdd05b5a0d0b0ac7b7afcdeebb616ac8611a3c11a4d6ef415d6",
+      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-28T08:53:36.409981+09:00",
-        "end_jst": "2026-11-28T08:56:24.664623+09:00",
+        "start_jst": "2026-11-28T08:56:24.664623+09:00",
+        "end_jst": "2026-11-28T08:57:57.322477+09:00",
         "type": "last_success"
       },
       "status": "なし",
@@ -128,7 +128,7 @@
       "pagination_complete": true,
       "alternative_attempts": [],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "new_success_jst": "2026-11-28T08:57:57.322477+09:00",
       "stale_cache_status": null,
       "source_classification": "PERIOD_VERIFIED",
       "index_attempts": [
@@ -141,24 +141,24 @@
               "final_url": "https://www.revmed.com/media/",
               "http_status": 200,
               "method": "requests",
-              "fetched_jst": "2026-11-28T08:56:42.543041+09:00",
-              "sha256": "5e502584defbf47f700c73fad3d1cc36346babe202e51b46f900e57d02b3dffa",
-              "response_date": "2026-11-27T23:56:42+00:00",
-              "age_seconds": 166,
-              "last_modified": "2026-11-27T23:53:56+00:00",
-              "snapshot_path": "data/evidence/2026-11-28/RVMD/requests-5e502584defbf47f-_media__d1ca34cb9f3854a0e7.html.gz"
+              "fetched_jst": "2026-11-28T08:58:13.422532+09:00",
+              "sha256": "8ee1f7df56661fdd05b5a0d0b0ac7b7afcdeebb616ac8611a3c11a4d6ef415d6",
+              "response_date": "2026-11-27T23:58:13+00:00",
+              "age_seconds": 0,
+              "last_modified": "2026-11-27T23:58:13+00:00",
+              "snapshot_path": "data/evidence/2026-11-28/RVMD/requests-8ee1f7df56661fdd-_media__d1ca34cb9f3854a0e7.html.gz"
             },
             {
               "requested_url": "https://www.revmed.com/media/",
               "final_url": "https://www.revmed.com/media/",
               "http_status": 200,
               "method": "playwright",
-              "fetched_jst": "2026-11-28T08:56:44.983243+09:00",
-              "sha256": "d9b29a7d21721089a46d82b93e9bfa70f69ad8b2955e050532be5614b8422cb0",
+              "fetched_jst": "2026-11-28T08:58:15.969472+09:00",
+              "sha256": "054bae289842eaebf6ff4c547e64f3121e2c5f56a93a2fe05a07dd1d84828d03",
               "response_date": null,
               "age_seconds": 0,
               "last_modified": null,
-              "snapshot_path": "data/evidence/2026-11-28/RVMD/playwright-d9b29a7d21721089-_media__d1ca34cb9f3854a0e7.html.gz"
+              "snapshot_path": "data/evidence/2026-11-28/RVMD/playwright-054bae289842eaeb-_media__d1ca34cb9f3854a0e7.html.gz"
             }
           ],
           "listing_page_urls_checked": [
@@ -200,13 +200,13 @@
         "https://investors.scholarrock.com/investors-media/press-releases"
       ],
       "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:56:43.106171+09:00",
-      "attempt_end_jst": "2026-11-28T08:56:43.515911+09:00",
-      "tool_evidence_ref": "88944cbd0f9bb66451779815090b5e2a3276123694777657fa055c74ada05e65",
-      "previous_success_jst": "2026-11-28T08:53:36.409981+09:00",
+      "attempt_start_jst": "2026-11-28T08:58:14.296545+09:00",
+      "attempt_end_jst": "2026-11-28T08:58:14.618552+09:00",
+      "tool_evidence_ref": "f27dac4d159d6d04358d63fbaeca61df05a590e5d2fa52390a92695d7ae7d510",
+      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-28T08:53:36.409981+09:00",
-        "end_jst": "2026-11-28T08:56:24.664623+09:00",
+        "start_jst": "2026-11-28T08:56:24.664623+09:00",
+        "end_jst": "2026-11-28T08:57:57.322477+09:00",
         "type": "last_success"
       },
       "status": "なし",
@@ -219,7 +219,7 @@
       "pagination_complete": true,
       "alternative_attempts": [],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "new_success_jst": "2026-11-28T08:57:57.322477+09:00",
       "stale_cache_status": null,
       "source_classification": "PERIOD_VERIFIED",
       "index_attempts": [
@@ -232,12 +232,12 @@
               "final_url": "https://scholarrock.com/investors-media/press-releases/",
               "http_status": 200,
               "method": "requests",
-              "fetched_jst": "2026-11-28T08:56:43.288188+09:00",
-              "sha256": "88944cbd0f9bb66451779815090b5e2a3276123694777657fa055c74ada05e65",
-              "response_date": "2026-11-27T23:56:43+00:00",
-              "age_seconds": 384,
-              "last_modified": "2026-11-27T23:52:22+00:00",
-              "snapshot_path": "data/evidence/2026-11-28/SRRK/requests-88944cbd0f9bb664-_investors-media_press-releases__8ae648c7a0c0fbe613.html.gz"
+              "fetched_jst": "2026-11-28T08:58:14.392739+09:00",
+              "sha256": "f27dac4d159d6d04358d63fbaeca61df05a590e5d2fa52390a92695d7ae7d510",
+              "response_date": "2026-11-27T23:58:14+00:00",
+              "age_seconds": 0,
+              "last_modified": "2026-11-27T23:58:14+00:00",
+              "snapshot_path": "data/evidence/2026-11-28/SRRK/requests-f27dac4d159d6d04-_investors-media_press-releases__8ae648c7a0c0fbe613.html.gz"
             }
           ],
           "listing_page_urls_checked": [
@@ -278,13 +278,13 @@
         "https://ir.orukatx.com/news-releases"
       ],
       "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:56:43.387820+09:00",
-      "attempt_end_jst": "2026-11-28T08:56:43.605893+09:00",
+      "attempt_start_jst": "2026-11-28T08:58:14.553089+09:00",
+      "attempt_end_jst": "2026-11-28T08:58:14.713728+09:00",
       "tool_evidence_ref": "911dff27dfee4538a8dfcb4d57274f12f7486273305f1301b2510775e2b763ed",
-      "previous_success_jst": "2026-11-28T08:53:36.409981+09:00",
+      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-28T08:53:36.409981+09:00",
-        "end_jst": "2026-11-28T08:56:24.664623+09:00",
+        "start_jst": "2026-11-28T08:56:24.664623+09:00",
+        "end_jst": "2026-11-28T08:57:57.322477+09:00",
         "type": "last_success"
       },
       "status": "なし",
@@ -297,7 +297,7 @@
       "pagination_complete": true,
       "alternative_attempts": [],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "new_success_jst": "2026-11-28T08:57:57.322477+09:00",
       "stale_cache_status": null,
       "source_classification": "PERIOD_VERIFIED",
       "index_attempts": [
@@ -310,11 +310,11 @@
               "final_url": "https://orukatx.com/",
               "http_status": 200,
               "method": "requests",
-              "fetched_jst": "2026-11-28T08:56:43.547222+09:00",
+              "fetched_jst": "2026-11-28T08:58:14.647852+09:00",
               "sha256": "911dff27dfee4538a8dfcb4d57274f12f7486273305f1301b2510775e2b763ed",
-              "response_date": "2026-11-27T23:56:43+00:00",
-              "age_seconds": 368,
-              "last_modified": "2026-11-27T23:53:57+00:00",
+              "response_date": "2026-11-27T23:58:14+00:00",
+              "age_seconds": 460,
+              "last_modified": "2026-11-27T23:51:33+00:00",
               "snapshot_path": "data/evidence/2026-11-28/ORKA/requests-911dff27dfee4538-__add45a052d72db8ced.html.gz"
             }
           ],
@@ -355,66 +355,86 @@
         "https://investors.erasca.com/news-events/news-releases",
         "https://ir.erasca.com/news-releases"
       ],
-      "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:56:43.515986+09:00",
-      "attempt_end_jst": "2026-11-28T08:56:44.526157+09:00",
-      "tool_evidence_ref": "bb2fc7441b3bde8361b3d23ba2d72db606aea9e75259737a8e2acd29b13240d5",
-      "previous_success_jst": "2026-11-28T08:53:36.409981+09:00",
+      "homepage_visit_status": "失敗",
+      "attempt_start_jst": "2026-11-28T08:58:14.618600+09:00",
+      "attempt_end_jst": "2026-11-28T08:58:16.136639+09:00",
+      "tool_evidence_ref": null,
+      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-28T08:53:36.409981+09:00",
-        "end_jst": "2026-11-28T08:56:24.664623+09:00",
+        "start_jst": "2026-11-28T08:56:24.664623+09:00",
+        "end_jst": "2026-11-28T08:57:57.322477+09:00",
         "type": "last_success"
       },
-      "status": "なし",
-      "reason": "COMPLETE_DATED_LISTING_NO_NEW_RELEASES",
-      "latest_publication_date": "2026-11-24",
-      "oldest_publication_date": "2026-08-24",
-      "listing_page_urls_checked": [
-        "https://investors.erasca.com/news-events/news-releases"
+      "status": "未確認",
+      "reason": "INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL",
+      "latest_publication_date": null,
+      "oldest_publication_date": null,
+      "listing_page_urls_checked": [],
+      "pagination_complete": false,
+      "alternative_attempts": [
+        {
+          "url": "https://ir.erasca.com/news-releases",
+          "method": "direct_http_or_playwright",
+          "fetched_any": false,
+          "pagination_complete": false,
+          "errors": [
+            {
+              "url": "https://ir.erasca.com/news-releases",
+              "failure": "REQUEST_ConnectionError | BROWSER_Error:Page.goto: net::ERR_NAME_NOT_RESOLVED at https://ir.erasca.com/news-releases\nCall log:\n  - navigating to \"https://ir.era",
+              "error_class": "FETCH_ERROR"
+            }
+          ]
+        }
       ],
-      "pagination_complete": true,
-      "alternative_attempts": [],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "new_success_jst": null,
       "stale_cache_status": null,
-      "source_classification": "PERIOD_VERIFIED",
+      "source_classification": "UNVERIFIED",
       "index_attempts": [
         {
           "official_listing_url": "https://investors.erasca.com/news-events/news-releases",
-          "fetched_any": true,
-          "page_receipts": [
-            {
-              "requested_url": "https://investors.erasca.com/news-events/news-releases",
-              "final_url": "https://investors.erasca.com/news-events/news-releases",
-              "http_status": 200,
-              "method": "requests",
-              "fetched_jst": "2026-11-28T08:56:44.474204+09:00",
-              "sha256": "bb2fc7441b3bde8361b3d23ba2d72db606aea9e75259737a8e2acd29b13240d5",
-              "response_date": "2026-11-27T23:56:44+00:00",
-              "age_seconds": 0,
-              "last_modified": "2026-11-24T13:04:16+00:00",
-              "snapshot_path": "data/evidence/2026-11-28/ERAS/requests-bb2fc7441b3bde83-_news-events_news-releases_317789fd59bd4230ba.html.gz"
-            }
-          ],
-          "listing_page_urls_checked": [
-            "https://investors.erasca.com/news-events/news-releases"
-          ],
-          "latest_publication_date": "2026-11-24",
-          "oldest_publication_date": "2026-08-24",
-          "dated_entries_count": 10,
-          "pagination_complete": true,
-          "found_baseline_boundary": true,
+          "fetched_any": false,
+          "page_receipts": [],
+          "listing_page_urls_checked": [],
+          "latest_publication_date": null,
+          "oldest_publication_date": null,
+          "dated_entries_count": 0,
+          "pagination_complete": false,
+          "found_baseline_boundary": false,
           "stale_cache": [],
-          "errors": [],
-          "page_date_bounds": [
+          "errors": [
             {
               "url": "https://investors.erasca.com/news-events/news-releases",
-              "latest": "2026-11-24",
-              "oldest": "2026-08-24",
-              "count": 10,
-              "descending_order": true
+              "failure": "HTTP_403 | BROWSER_RuntimeError:HTTP_403",
+              "error_class": "FETCH_ERROR"
             }
           ],
+          "page_date_bounds": [],
+          "candidate_releases": [],
+          "article_receipts": [],
+          "newer_listing_count": 0,
+          "incomplete_load_more": false,
+          "date_order_valid": true
+        },
+        {
+          "official_listing_url": "https://ir.erasca.com/news-releases",
+          "fetched_any": false,
+          "page_receipts": [],
+          "listing_page_urls_checked": [],
+          "latest_publication_date": null,
+          "oldest_publication_date": null,
+          "dated_entries_count": 0,
+          "pagination_complete": false,
+          "found_baseline_boundary": false,
+          "stale_cache": [],
+          "errors": [
+            {
+              "url": "https://ir.erasca.com/news-releases",
+              "failure": "REQUEST_ConnectionError | BROWSER_Error:Page.goto: net::ERR_NAME_NOT_RESOLVED at https://ir.erasca.com/news-releases\nCall log:\n  - navigating to \"https://ir.era",
+              "error_class": "FETCH_ERROR"
+            }
+          ],
+          "page_date_bounds": [],
           "candidate_releases": [],
           "article_receipts": [],
           "newer_listing_count": 0,
@@ -432,66 +452,47 @@
       "official_urls_configured": [
         "https://investors.cullinantherapeutics.com/news-releases/"
       ],
-      "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:56:43.605999+09:00",
-      "attempt_end_jst": "2026-11-28T08:56:44.153978+09:00",
-      "tool_evidence_ref": "ffedc728cbb6363aa9ea0fcb39e7067a2f57dbe77c67f5416c4e16280d82e7c5",
-      "previous_success_jst": "2026-11-28T08:53:36.409981+09:00",
+      "homepage_visit_status": "失敗",
+      "attempt_start_jst": "2026-11-28T08:58:14.713767+09:00",
+      "attempt_end_jst": "2026-11-28T08:58:15.576763+09:00",
+      "tool_evidence_ref": null,
+      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-28T08:53:36.409981+09:00",
-        "end_jst": "2026-11-28T08:56:24.664623+09:00",
+        "start_jst": "2026-11-28T08:56:24.664623+09:00",
+        "end_jst": "2026-11-28T08:57:57.322477+09:00",
         "type": "last_success"
       },
-      "status": "なし",
-      "reason": "COMPLETE_DATED_LISTING_NO_NEW_RELEASES",
-      "latest_publication_date": "2026-11-12",
-      "oldest_publication_date": "2026-10-01",
-      "listing_page_urls_checked": [
-        "https://investors.cullinantherapeutics.com/news-releases/"
-      ],
-      "pagination_complete": true,
+      "status": "未確認",
+      "reason": "INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL",
+      "latest_publication_date": null,
+      "oldest_publication_date": null,
+      "listing_page_urls_checked": [],
+      "pagination_complete": false,
       "alternative_attempts": [],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "new_success_jst": null,
       "stale_cache_status": null,
-      "source_classification": "PERIOD_VERIFIED",
+      "source_classification": "UNVERIFIED",
       "index_attempts": [
         {
           "official_listing_url": "https://investors.cullinantherapeutics.com/news-releases/",
-          "fetched_any": true,
-          "page_receipts": [
-            {
-              "requested_url": "https://investors.cullinantherapeutics.com/news-releases/",
-              "final_url": "https://investors.cullinantherapeutics.com/news-releases/",
-              "http_status": 200,
-              "method": "requests",
-              "fetched_jst": "2026-11-28T08:56:44.049751+09:00",
-              "sha256": "ffedc728cbb6363aa9ea0fcb39e7067a2f57dbe77c67f5416c4e16280d82e7c5",
-              "response_date": "2026-11-27T23:56:44+00:00",
-              "age_seconds": 0,
-              "last_modified": "2026-11-12T22:06:13+00:00",
-              "snapshot_path": "data/evidence/2026-11-28/CGEM/requests-ffedc728cbb6363a-_news-releases__50795817108d70eb51.html.gz"
-            }
-          ],
-          "listing_page_urls_checked": [
-            "https://investors.cullinantherapeutics.com/news-releases/"
-          ],
-          "latest_publication_date": "2026-11-12",
-          "oldest_publication_date": "2026-10-01",
-          "dated_entries_count": 9,
-          "pagination_complete": true,
-          "found_baseline_boundary": true,
+          "fetched_any": false,
+          "page_receipts": [],
+          "listing_page_urls_checked": [],
+          "latest_publication_date": null,
+          "oldest_publication_date": null,
+          "dated_entries_count": 0,
+          "pagination_complete": false,
+          "found_baseline_boundary": false,
           "stale_cache": [],
-          "errors": [],
-          "page_date_bounds": [
+          "errors": [
             {
               "url": "https://investors.cullinantherapeutics.com/news-releases/",
-              "latest": "2026-11-12",
-              "oldest": "2026-10-01",
-              "count": 9,
-              "descending_order": true
+              "failure": "HTTP_403 | BROWSER_RuntimeError:HTTP_403",
+              "error_class": "FETCH_ERROR"
             }
           ],
+          "page_date_bounds": [],
           "candidate_releases": [],
           "article_receipts": [],
           "newer_listing_count": 0,
@@ -512,28 +513,79 @@
         "https://ir.immunome.com/news-releases"
       ],
       "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:56:44.154010+09:00",
-      "attempt_end_jst": "2026-11-28T08:56:44.935195+09:00",
-      "tool_evidence_ref": "c3d73c7498ada33a17cb3996ce030148c9be2047719ce2bf9ffe2ac15aaba34b",
-      "previous_success_jst": null,
+      "attempt_start_jst": "2026-11-28T08:58:15.576807+09:00",
+      "attempt_end_jst": "2026-11-28T08:58:19.330379+09:00",
+      "tool_evidence_ref": "ca910d372e2d02f706ff67e513aa938c6bb8f1e6b78271467913d90bccfda865",
+      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-26T08:47:16.626229+09:00",
-        "end_jst": "2026-11-28T08:56:24.664623+09:00",
-        "type": "unresolved_baseline"
+        "start_jst": "2026-11-28T08:56:24.664623+09:00",
+        "end_jst": "2026-11-28T08:57:57.322477+09:00",
+        "type": "last_success"
       },
-      "status": "なし",
-      "reason": "COMPLETE_DATED_LISTING_NO_NEW_RELEASES",
-      "latest_publication_date": "2026-11-18",
-      "oldest_publication_date": "2026-09-08",
+      "status": "未確認",
+      "reason": "INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL",
+      "latest_publication_date": null,
+      "oldest_publication_date": null,
       "listing_page_urls_checked": [
-        "https://investors.immunome.com/news-releases/"
+        "https://investors.immunome.com/.well-known/sgcaptcha/?r=%2Fnews-releases%2F&y=ipc:3.41.210.134:1795823896.304"
       ],
-      "pagination_complete": true,
-      "alternative_attempts": [],
+      "pagination_complete": false,
+      "alternative_attempts": [
+        {
+          "url": "https://investors.immunome.com/",
+          "method": "direct_http_or_playwright",
+          "fetched_any": true,
+          "pagination_complete": false,
+          "errors": [
+            {
+              "url": "https://investors.immunome.com/",
+              "failure": "NO_DATED_ARTICLE_LISTING"
+            }
+          ]
+        },
+        {
+          "url": "https://ir.immunome.com/news-releases",
+          "method": "direct_http_or_playwright",
+          "fetched_any": false,
+          "pagination_complete": false,
+          "errors": [
+            {
+              "url": "https://ir.immunome.com/news-releases",
+              "failure": "REQUEST_ConnectionError | BROWSER_Error:Page.goto: net::ERR_NAME_NOT_RESOLVED at https://ir.immunome.com/news-releases\nCall log:\n  - navigating to \"https://ir.i",
+              "error_class": "FETCH_ERROR"
+            }
+          ]
+        },
+        {
+          "url": "https://investors.immunome.com/",
+          "method": "direct_http_or_playwright",
+          "fetched_any": true,
+          "pagination_complete": false,
+          "errors": [
+            {
+              "url": "https://investors.immunome.com/",
+              "failure": "NO_DATED_ARTICLE_LISTING"
+            }
+          ]
+        },
+        {
+          "url": "https://ir.immunome.com/news-releases",
+          "method": "direct_http_or_playwright",
+          "fetched_any": false,
+          "pagination_complete": false,
+          "errors": [
+            {
+              "url": "https://ir.immunome.com/news-releases",
+              "failure": "REQUEST_ConnectionError | BROWSER_Error:Page.goto: net::ERR_NAME_NOT_RESOLVED at https://ir.immunome.com/news-releases\nCall log:\n  - navigating to \"https://ir.i",
+              "error_class": "FETCH_ERROR"
+            }
+          ]
+        }
+      ],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "new_success_jst": null,
       "stale_cache_status": null,
-      "source_classification": "PERIOD_VERIFIED",
+      "source_classification": "UNVERIFIED",
       "index_attempts": [
         {
           "official_listing_url": "https://investors.immunome.com/news-releases/",
@@ -541,43 +593,213 @@
           "page_receipts": [
             {
               "requested_url": "https://investors.immunome.com/news-releases/",
-              "final_url": "https://investors.immunome.com/news-releases/",
-              "http_status": 200,
-              "method": "requests",
-              "fetched_jst": "2026-11-28T08:56:44.797642+09:00",
-              "sha256": "c3d73c7498ada33a17cb3996ce030148c9be2047719ce2bf9ffe2ac15aaba34b",
-              "response_date": "2026-11-27T23:56:44+00:00",
+              "final_url": "https://investors.immunome.com/.well-known/sgcaptcha/?r=%2Fnews-releases%2F&y=ipc:3.41.210.134:1795823896.304",
+              "http_status": 202,
+              "method": "playwright",
+              "fetched_jst": "2026-11-28T08:58:17.357116+09:00",
+              "sha256": "ca910d372e2d02f706ff67e513aa938c6bb8f1e6b78271467913d90bccfda865",
+              "response_date": null,
               "age_seconds": 0,
               "last_modified": null,
-              "snapshot_path": "data/evidence/2026-11-28/IMNM/requests-c3d73c7498ada33a-_news-releases__b1eb4547ab8a5725c9.html.gz"
+              "snapshot_path": "data/evidence/2026-11-28/IMNM/playwright-ca910d372e2d02f7-_well-known_sgcaptcha__0547d5b6f9512294a0.html.gz"
             }
           ],
           "listing_page_urls_checked": [
-            "https://investors.immunome.com/news-releases/"
+            "https://investors.immunome.com/.well-known/sgcaptcha/?r=%2Fnews-releases%2F&y=ipc:3.41.210.134:1795823896.304"
           ],
-          "latest_publication_date": "2026-11-18",
-          "oldest_publication_date": "2026-09-08",
-          "dated_entries_count": 10,
-          "pagination_complete": true,
-          "found_baseline_boundary": true,
+          "latest_publication_date": null,
+          "oldest_publication_date": null,
+          "dated_entries_count": 0,
+          "pagination_complete": false,
+          "found_baseline_boundary": false,
           "stale_cache": [],
-          "errors": [],
-          "page_date_bounds": [
+          "errors": [
             {
               "url": "https://investors.immunome.com/news-releases/",
-              "latest": "2026-11-18",
-              "oldest": "2026-09-08",
-              "count": 10,
-              "descending_order": true
+              "failure": "NO_DATED_ARTICLE_LISTING"
             }
           ],
+          "page_date_bounds": [],
+          "candidate_releases": [],
+          "article_receipts": [],
+          "newer_listing_count": 0,
+          "incomplete_load_more": false,
+          "date_order_valid": true
+        },
+        {
+          "official_listing_url": "https://investors.immunome.com/",
+          "fetched_any": true,
+          "page_receipts": [
+            {
+              "requested_url": "https://investors.immunome.com/",
+              "final_url": "https://investors.immunome.com/.well-known/sgcaptcha/?r=%2F&y=ipc:3.41.210.134:1795823897.829",
+              "http_status": 202,
+              "method": "playwright",
+              "fetched_jst": "2026-11-28T08:58:18.893564+09:00",
+              "sha256": "220fd3fdaf0088fc233195247fd58d13af346b70492af4b809c368deffac7e67",
+              "response_date": null,
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-28/IMNM/playwright-220fd3fdaf0088fc-_well-known_sgcaptcha__597de64437bd7d4eea.html.gz"
+            }
+          ],
+          "listing_page_urls_checked": [
+            "https://investors.immunome.com/.well-known/sgcaptcha/?r=%2F&y=ipc:3.41.210.134:1795823897.829"
+          ],
+          "latest_publication_date": null,
+          "oldest_publication_date": null,
+          "dated_entries_count": 0,
+          "pagination_complete": false,
+          "found_baseline_boundary": false,
+          "stale_cache": [],
+          "errors": [
+            {
+              "url": "https://investors.immunome.com/",
+              "failure": "NO_DATED_ARTICLE_LISTING"
+            }
+          ],
+          "page_date_bounds": [],
+          "candidate_releases": [],
+          "article_receipts": [],
+          "newer_listing_count": 0,
+          "incomplete_load_more": false,
+          "date_order_valid": true
+        },
+        {
+          "official_listing_url": "https://ir.immunome.com/news-releases",
+          "fetched_any": false,
+          "page_receipts": [],
+          "listing_page_urls_checked": [],
+          "latest_publication_date": null,
+          "oldest_publication_date": null,
+          "dated_entries_count": 0,
+          "pagination_complete": false,
+          "found_baseline_boundary": false,
+          "stale_cache": [],
+          "errors": [
+            {
+              "url": "https://ir.immunome.com/news-releases",
+              "failure": "REQUEST_ConnectionError | BROWSER_Error:Page.goto: net::ERR_NAME_NOT_RESOLVED at https://ir.immunome.com/news-releases\nCall log:\n  - navigating to \"https://ir.i",
+              "error_class": "FETCH_ERROR"
+            }
+          ],
+          "page_date_bounds": [],
+          "candidate_releases": [],
+          "article_receipts": [],
+          "newer_listing_count": 0,
+          "incomplete_load_more": false,
+          "date_order_valid": true
+        },
+        {
+          "official_listing_url": "https://investors.immunome.com/news-releases/",
+          "fetched_any": true,
+          "page_receipts": [
+            {
+              "requested_url": "https://investors.immunome.com/news-releases/",
+              "final_url": "https://investors.immunome.com/.well-known/sgcaptcha/?r=%2Fnews-releases%2F&y=ipc:3.41.210.134:1795823913.882",
+              "http_status": 202,
+              "method": "playwright",
+              "fetched_jst": "2026-11-28T08:58:34.901745+09:00",
+              "sha256": "4c3afc0f408fabe2116b7722fb9452174ceda62f3b9758d947d193d5d249f8cd",
+              "response_date": null,
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-28/retry/IMNM/playwright-4c3afc0f408fabe2-_well-known_sgcaptcha__bd966e63307a478913.html.gz"
+            }
+          ],
+          "listing_page_urls_checked": [
+            "https://investors.immunome.com/.well-known/sgcaptcha/?r=%2Fnews-releases%2F&y=ipc:3.41.210.134:1795823913.882"
+          ],
+          "latest_publication_date": null,
+          "oldest_publication_date": null,
+          "dated_entries_count": 0,
+          "pagination_complete": false,
+          "found_baseline_boundary": false,
+          "stale_cache": [],
+          "errors": [
+            {
+              "url": "https://investors.immunome.com/news-releases/",
+              "failure": "NO_DATED_ARTICLE_LISTING"
+            }
+          ],
+          "page_date_bounds": [],
+          "candidate_releases": [],
+          "article_receipts": [],
+          "newer_listing_count": 0,
+          "incomplete_load_more": false,
+          "date_order_valid": true
+        },
+        {
+          "official_listing_url": "https://investors.immunome.com/",
+          "fetched_any": true,
+          "page_receipts": [
+            {
+              "requested_url": "https://investors.immunome.com/",
+              "final_url": "https://investors.immunome.com/",
+              "http_status": 202,
+              "method": "playwright",
+              "fetched_jst": "2026-11-28T08:58:37.149258+09:00",
+              "sha256": "fe8309e4ef55ad27488ac5a8e4dbd71a0557bcf78e9a569bdeae740e25fdef41",
+              "response_date": null,
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-28/retry/IMNM/playwright-fe8309e4ef55ad27-__b46fc3a3c72e0f3f92.html.gz"
+            }
+          ],
+          "listing_page_urls_checked": [
+            "https://investors.immunome.com/"
+          ],
+          "latest_publication_date": null,
+          "oldest_publication_date": null,
+          "dated_entries_count": 0,
+          "pagination_complete": false,
+          "found_baseline_boundary": false,
+          "stale_cache": [],
+          "errors": [
+            {
+              "url": "https://investors.immunome.com/",
+              "failure": "NO_DATED_ARTICLE_LISTING"
+            }
+          ],
+          "page_date_bounds": [],
+          "candidate_releases": [],
+          "article_receipts": [],
+          "newer_listing_count": 0,
+          "incomplete_load_more": false,
+          "date_order_valid": true
+        },
+        {
+          "official_listing_url": "https://ir.immunome.com/news-releases",
+          "fetched_any": false,
+          "page_receipts": [],
+          "listing_page_urls_checked": [],
+          "latest_publication_date": null,
+          "oldest_publication_date": null,
+          "dated_entries_count": 0,
+          "pagination_complete": false,
+          "found_baseline_boundary": false,
+          "stale_cache": [],
+          "errors": [
+            {
+              "url": "https://ir.immunome.com/news-releases",
+              "failure": "REQUEST_ConnectionError | BROWSER_Error:Page.goto: net::ERR_NAME_NOT_RESOLVED at https://ir.immunome.com/news-releases\nCall log:\n  - navigating to \"https://ir.i",
+              "error_class": "FETCH_ERROR"
+            }
+          ],
+          "page_date_bounds": [],
           "candidate_releases": [],
           "article_receipts": [],
           "newer_listing_count": 0,
           "incomplete_load_more": false,
           "date_order_valid": true
         }
-      ]
+      ],
+      "retry_observation": {
+        "first_reason": "INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL",
+        "second_reason": "INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL",
+        "second_status": "未確認",
+        "attempted": true
+      }
     },
     {
       "ticker": "GPCR",
@@ -588,66 +810,47 @@
       "official_urls_configured": [
         "https://ir.structuretx.com/press-releases"
       ],
-      "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:56:44.526188+09:00",
-      "attempt_end_jst": "2026-11-28T08:56:44.941316+09:00",
-      "tool_evidence_ref": "da9b998a78fbcfd84137b66322de247531036edce9e186a63daf77bcfc56c9f3",
-      "previous_success_jst": "2026-11-28T08:53:36.409981+09:00",
+      "homepage_visit_status": "失敗",
+      "attempt_start_jst": "2026-11-28T08:58:16.068154+09:00",
+      "attempt_end_jst": "2026-11-28T08:58:17.062637+09:00",
+      "tool_evidence_ref": null,
+      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-28T08:53:36.409981+09:00",
-        "end_jst": "2026-11-28T08:56:24.664623+09:00",
+        "start_jst": "2026-11-28T08:56:24.664623+09:00",
+        "end_jst": "2026-11-28T08:57:57.322477+09:00",
         "type": "last_success"
       },
-      "status": "なし",
-      "reason": "COMPLETE_DATED_LISTING_NO_NEW_RELEASES",
-      "latest_publication_date": "2026-11-09",
-      "oldest_publication_date": "2026-04-27",
-      "listing_page_urls_checked": [
-        "https://ir.structuretx.com/press-releases"
-      ],
-      "pagination_complete": true,
+      "status": "未確認",
+      "reason": "INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL",
+      "latest_publication_date": null,
+      "oldest_publication_date": null,
+      "listing_page_urls_checked": [],
+      "pagination_complete": false,
       "alternative_attempts": [],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "new_success_jst": null,
       "stale_cache_status": null,
-      "source_classification": "PERIOD_VERIFIED",
+      "source_classification": "UNVERIFIED",
       "index_attempts": [
         {
           "official_listing_url": "https://ir.structuretx.com/press-releases",
-          "fetched_any": true,
-          "page_receipts": [
-            {
-              "requested_url": "https://ir.structuretx.com/press-releases",
-              "final_url": "https://ir.structuretx.com/press-releases",
-              "http_status": 200,
-              "method": "requests",
-              "fetched_jst": "2026-11-28T08:56:44.792898+09:00",
-              "sha256": "da9b998a78fbcfd84137b66322de247531036edce9e186a63daf77bcfc56c9f3",
-              "response_date": "2026-11-27T23:56:44+00:00",
-              "age_seconds": 0,
-              "last_modified": "2026-11-09T21:06:33+00:00",
-              "snapshot_path": "data/evidence/2026-11-28/GPCR/requests-da9b998a78fbcfd8-_press-releases_ef5fdc27ceb4201c9f.html.gz"
-            }
-          ],
-          "listing_page_urls_checked": [
-            "https://ir.structuretx.com/press-releases"
-          ],
-          "latest_publication_date": "2026-11-09",
-          "oldest_publication_date": "2026-04-27",
-          "dated_entries_count": 10,
-          "pagination_complete": true,
-          "found_baseline_boundary": true,
+          "fetched_any": false,
+          "page_receipts": [],
+          "listing_page_urls_checked": [],
+          "latest_publication_date": null,
+          "oldest_publication_date": null,
+          "dated_entries_count": 0,
+          "pagination_complete": false,
+          "found_baseline_boundary": false,
           "stale_cache": [],
-          "errors": [],
-          "page_date_bounds": [
+          "errors": [
             {
               "url": "https://ir.structuretx.com/press-releases",
-              "latest": "2026-11-09",
-              "oldest": "2026-04-27",
-              "count": 10,
-              "descending_order": true
+              "failure": "HTTP_403 | BROWSER_RuntimeError:HTTP_403",
+              "error_class": "FETCH_ERROR"
             }
           ],
+          "page_date_bounds": [],
           "candidate_releases": [],
           "article_receipts": [],
           "newer_listing_count": 0,
@@ -667,13 +870,13 @@
         "https://investors.alvotech.com/news-releases"
       ],
       "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:56:44.935230+09:00",
-      "attempt_end_jst": "2026-11-28T08:56:45.118216+09:00",
+      "attempt_start_jst": "2026-11-28T08:58:16.136666+09:00",
+      "attempt_end_jst": "2026-11-28T08:58:16.286003+09:00",
       "tool_evidence_ref": "c5f2a52b23f80884b837781cd8bf32bc3b23657f2454a2671497be2a95eae158",
-      "previous_success_jst": "2026-11-28T08:53:36.409981+09:00",
+      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-28T08:53:36.409981+09:00",
-        "end_jst": "2026-11-28T08:56:24.664623+09:00",
+        "start_jst": "2026-11-28T08:56:24.664623+09:00",
+        "end_jst": "2026-11-28T08:57:57.322477+09:00",
         "type": "last_success"
       },
       "status": "なし",
@@ -686,7 +889,7 @@
       "pagination_complete": true,
       "alternative_attempts": [],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "new_success_jst": "2026-11-28T08:57:57.322477+09:00",
       "stale_cache_status": null,
       "source_classification": "PERIOD_VERIFIED",
       "index_attempts": [
@@ -699,10 +902,10 @@
               "final_url": "https://www.alvotech.com/newsroom",
               "http_status": 200,
               "method": "requests",
-              "fetched_jst": "2026-11-28T08:56:45.084967+09:00",
+              "fetched_jst": "2026-11-28T08:58:16.223358+09:00",
               "sha256": "c5f2a52b23f80884b837781cd8bf32bc3b23657f2454a2671497be2a95eae158",
               "response_date": "2026-11-27T22:10:27+00:00",
-              "age_seconds": 2774,
+              "age_seconds": 2865,
               "last_modified": null,
               "snapshot_path": "data/evidence/2026-11-28/ALVO/requests-c5f2a52b23f80884-_newsroom_2e023ed47c447a7eab.html.gz"
             }
@@ -744,66 +947,86 @@
         "https://investors.denalitherapeutics.com/investors",
         "https://investors.denalitherapeutics.com/press-releases"
       ],
-      "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:56:44.941344+09:00",
-      "attempt_end_jst": "2026-11-28T08:56:45.385864+09:00",
-      "tool_evidence_ref": "a72ab6c381559ab58584fd00a77ebfdf5842f6d1adbbf15189779fca70cbf25e",
-      "previous_success_jst": "2026-11-28T08:53:36.409981+09:00",
+      "homepage_visit_status": "失敗",
+      "attempt_start_jst": "2026-11-28T08:58:16.286115+09:00",
+      "attempt_end_jst": "2026-11-28T08:58:18.175614+09:00",
+      "tool_evidence_ref": null,
+      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-28T08:53:36.409981+09:00",
-        "end_jst": "2026-11-28T08:56:24.664623+09:00",
+        "start_jst": "2026-11-28T08:56:24.664623+09:00",
+        "end_jst": "2026-11-28T08:57:57.322477+09:00",
         "type": "last_success"
       },
-      "status": "なし",
-      "reason": "COMPLETE_DATED_LISTING_NO_NEW_RELEASES",
-      "latest_publication_date": "2026-11-03",
-      "oldest_publication_date": "2026-08-06",
-      "listing_page_urls_checked": [
-        "https://investors.denalitherapeutics.com/investors"
+      "status": "未確認",
+      "reason": "INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL",
+      "latest_publication_date": null,
+      "oldest_publication_date": null,
+      "listing_page_urls_checked": [],
+      "pagination_complete": false,
+      "alternative_attempts": [
+        {
+          "url": "https://investors.denalitherapeutics.com/press-releases",
+          "method": "direct_http_or_playwright",
+          "fetched_any": false,
+          "pagination_complete": false,
+          "errors": [
+            {
+              "url": "https://investors.denalitherapeutics.com/press-releases",
+              "failure": "HTTP_403 | BROWSER_RuntimeError:HTTP_403",
+              "error_class": "FETCH_ERROR"
+            }
+          ]
+        }
       ],
-      "pagination_complete": true,
-      "alternative_attempts": [],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "new_success_jst": null,
       "stale_cache_status": null,
-      "source_classification": "PERIOD_VERIFIED",
+      "source_classification": "UNVERIFIED",
       "index_attempts": [
         {
           "official_listing_url": "https://investors.denalitherapeutics.com/investors",
-          "fetched_any": true,
-          "page_receipts": [
-            {
-              "requested_url": "https://investors.denalitherapeutics.com/investors",
-              "final_url": "https://investors.denalitherapeutics.com/investors",
-              "http_status": 200,
-              "method": "requests",
-              "fetched_jst": "2026-11-28T08:56:45.292156+09:00",
-              "sha256": "a72ab6c381559ab58584fd00a77ebfdf5842f6d1adbbf15189779fca70cbf25e",
-              "response_date": "2026-11-27T23:56:45+00:00",
-              "age_seconds": 0,
-              "last_modified": "2026-11-27T23:53:59+00:00",
-              "snapshot_path": "data/evidence/2026-11-28/DNLI/requests-a72ab6c381559ab5-_investors_9016f2820600be81f7.html.gz"
-            }
-          ],
-          "listing_page_urls_checked": [
-            "https://investors.denalitherapeutics.com/investors"
-          ],
-          "latest_publication_date": "2026-11-03",
-          "oldest_publication_date": "2026-08-06",
-          "dated_entries_count": 3,
-          "pagination_complete": true,
-          "found_baseline_boundary": true,
+          "fetched_any": false,
+          "page_receipts": [],
+          "listing_page_urls_checked": [],
+          "latest_publication_date": null,
+          "oldest_publication_date": null,
+          "dated_entries_count": 0,
+          "pagination_complete": false,
+          "found_baseline_boundary": false,
           "stale_cache": [],
-          "errors": [],
-          "page_date_bounds": [
+          "errors": [
             {
               "url": "https://investors.denalitherapeutics.com/investors",
-              "latest": "2026-11-03",
-              "oldest": "2026-08-06",
-              "count": 3,
-              "descending_order": true
+              "failure": "HTTP_403 | BROWSER_RuntimeError:HTTP_403",
+              "error_class": "FETCH_ERROR"
             }
           ],
+          "page_date_bounds": [],
+          "candidate_releases": [],
+          "article_receipts": [],
+          "newer_listing_count": 0,
+          "incomplete_load_more": false,
+          "date_order_valid": true
+        },
+        {
+          "official_listing_url": "https://investors.denalitherapeutics.com/press-releases",
+          "fetched_any": false,
+          "page_receipts": [],
+          "listing_page_urls_checked": [],
+          "latest_publication_date": null,
+          "oldest_publication_date": null,
+          "dated_entries_count": 0,
+          "pagination_complete": false,
+          "found_baseline_boundary": false,
+          "stale_cache": [],
+          "errors": [
+            {
+              "url": "https://investors.denalitherapeutics.com/press-releases",
+              "failure": "HTTP_403 | BROWSER_RuntimeError:HTTP_403",
+              "error_class": "FETCH_ERROR"
+            }
+          ],
+          "page_date_bounds": [],
           "candidate_releases": [],
           "article_receipts": [],
           "newer_listing_count": 0,
@@ -823,13 +1046,13 @@
         "https://www.kelun-biotech.com/"
       ],
       "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:56:45.035239+09:00",
-      "attempt_end_jst": "2026-11-28T08:56:46.642298+09:00",
+      "attempt_start_jst": "2026-11-28T08:58:17.062682+09:00",
+      "attempt_end_jst": "2026-11-28T08:58:18.960882+09:00",
       "tool_evidence_ref": "1a76152739139d2454e7e3105f0a92072749f692569db4a77a2e1478f00370a4",
-      "previous_success_jst": "2026-11-28T08:53:36.409981+09:00",
+      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-28T08:53:36.409981+09:00",
-        "end_jst": "2026-11-28T08:56:24.664623+09:00",
+        "start_jst": "2026-11-28T08:56:24.664623+09:00",
+        "end_jst": "2026-11-28T08:57:57.322477+09:00",
         "type": "last_success"
       },
       "status": "なし",
@@ -842,7 +1065,7 @@
       "pagination_complete": true,
       "alternative_attempts": [],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "new_success_jst": "2026-11-28T08:57:57.322477+09:00",
       "stale_cache_status": null,
       "source_classification": "PERIOD_VERIFIED",
       "index_attempts": [
@@ -855,9 +1078,9 @@
               "final_url": "https://www.kelun-biotech.com/newsCenter.aspx?mid=18",
               "http_status": 200,
               "method": "requests",
-              "fetched_jst": "2026-11-28T08:56:46.589189+09:00",
+              "fetched_jst": "2026-11-28T08:58:18.911832+09:00",
               "sha256": "1a76152739139d2454e7e3105f0a92072749f692569db4a77a2e1478f00370a4",
-              "response_date": "2026-11-27T23:56:46+00:00",
+              "response_date": "2026-11-27T23:58:18+00:00",
               "age_seconds": 0,
               "last_modified": null,
               "snapshot_path": "data/evidence/2026-11-28/6990_HK/requests-1a76152739139d24-_newsCenter_aspx_13cd4a7d1905994a79.html.gz"
@@ -900,13 +1123,13 @@
         "https://akesobio.com/en/media/akeso-news/"
       ],
       "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:56:45.118244+09:00",
-      "attempt_end_jst": "2026-11-28T08:56:46.064119+09:00",
+      "attempt_start_jst": "2026-11-28T08:58:18.175658+09:00",
+      "attempt_end_jst": "2026-11-28T08:58:19.109489+09:00",
       "tool_evidence_ref": "f3f7c5937db1ff3494faa355c0ef827fce34a17ee921ea367bf08217761b6db4",
-      "previous_success_jst": "2026-11-28T08:53:36.409981+09:00",
+      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-28T08:53:36.409981+09:00",
-        "end_jst": "2026-11-28T08:56:24.664623+09:00",
+        "start_jst": "2026-11-28T08:56:24.664623+09:00",
+        "end_jst": "2026-11-28T08:57:57.322477+09:00",
         "type": "last_success"
       },
       "status": "なし",
@@ -919,7 +1142,7 @@
       "pagination_complete": true,
       "alternative_attempts": [],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "new_success_jst": "2026-11-28T08:57:57.322477+09:00",
       "stale_cache_status": null,
       "source_classification": "PERIOD_VERIFIED",
       "index_attempts": [
@@ -932,9 +1155,9 @@
               "final_url": "https://akesobio.com/en/media/akeso-news/",
               "http_status": 200,
               "method": "requests",
-              "fetched_jst": "2026-11-28T08:56:45.987884+09:00",
+              "fetched_jst": "2026-11-28T08:58:19.039709+09:00",
               "sha256": "f3f7c5937db1ff3494faa355c0ef827fce34a17ee921ea367bf08217761b6db4",
-              "response_date": "2026-11-27T23:56:45+00:00",
+              "response_date": "2026-11-27T23:58:18+00:00",
               "age_seconds": 0,
               "last_modified": null,
               "snapshot_path": "data/evidence/2026-11-28/9926_HK/requests-f3f7c5937db1ff34-_en_media_akeso-news__cf59b89efb564920e6.html.gz"
@@ -978,13 +1201,13 @@
         "https://www.innoventbio.com"
       ],
       "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:56:45.385893+09:00",
-      "attempt_end_jst": "2026-11-28T08:56:47.870867+09:00",
+      "attempt_start_jst": "2026-11-28T08:58:18.636008+09:00",
+      "attempt_end_jst": "2026-11-28T08:58:22.321720+09:00",
       "tool_evidence_ref": "64394ed30896348baa57c34ea41e2c648351f41182bb8d6a1f10f8d31ea83ce3",
-      "previous_success_jst": "2026-11-28T08:53:36.409981+09:00",
+      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-28T08:53:36.409981+09:00",
-        "end_jst": "2026-11-28T08:56:24.664623+09:00",
+        "start_jst": "2026-11-28T08:56:24.664623+09:00",
+        "end_jst": "2026-11-28T08:57:57.322477+09:00",
         "type": "last_success"
       },
       "status": "なし",
@@ -998,7 +1221,7 @@
       "pagination_complete": true,
       "alternative_attempts": [],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "new_success_jst": "2026-11-28T08:57:57.322477+09:00",
       "stale_cache_status": null,
       "source_classification": "PERIOD_VERIFIED",
       "index_attempts": [
@@ -1011,9 +1234,9 @@
               "final_url": "https://en.innoventbio.com/InvestorsAndMedia/PressRelease",
               "http_status": 200,
               "method": "requests",
-              "fetched_jst": "2026-11-28T08:56:45.794972+09:00",
+              "fetched_jst": "2026-11-28T08:58:19.150914+09:00",
               "sha256": "64394ed30896348baa57c34ea41e2c648351f41182bb8d6a1f10f8d31ea83ce3",
-              "response_date": "2026-11-27T23:56:45+00:00",
+              "response_date": "2026-11-27T23:58:19+00:00",
               "age_seconds": 0,
               "last_modified": null,
               "snapshot_path": "data/evidence/2026-11-28/1801_HK/requests-64394ed30896348b-_InvestorsAndMedia_PressRelease_a1a4c93180ec09ff37.html.gz"
@@ -1023,12 +1246,12 @@
               "final_url": "https://en.innoventbio.com/InvestorsAndMedia/PressRelease",
               "http_status": 200,
               "method": "playwright",
-              "fetched_jst": "2026-11-28T08:56:47.790822+09:00",
-              "sha256": "869a6ae10a696efd1817a3d910f64bf7d15f30c38cbe5b0b499d71f73aadd3f4",
+              "fetched_jst": "2026-11-28T08:58:22.246885+09:00",
+              "sha256": "bb6e93f775d67edfdf79c324fde12a08274eb5a19481b30ebbd97f73d71821ec",
               "response_date": null,
               "age_seconds": 0,
               "last_modified": null,
-              "snapshot_path": "data/evidence/2026-11-28/1801_HK/playwright-869a6ae10a696efd-_InvestorsAndMedia_PressRelease_a1a4c93180ec09ff37.html.gz"
+              "snapshot_path": "data/evidence/2026-11-28/1801_HK/playwright-bb6e93f775d67edf-_InvestorsAndMedia_PressRelease_a1a4c93180ec09ff37.html.gz"
             }
           ],
           "listing_page_urls_checked": [
@@ -1071,13 +1294,13 @@
         "https://www.wuxibiologics.com"
       ],
       "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:56:46.064149+09:00",
-      "attempt_end_jst": "2026-11-28T08:56:48.500818+09:00",
-      "tool_evidence_ref": "9280f9f4869923495e0d0060641c388d2d72311439b4cd6b748a4fefe6d33011",
-      "previous_success_jst": "2026-11-28T08:53:36.409981+09:00",
+      "attempt_start_jst": "2026-11-28T08:58:18.960913+09:00",
+      "attempt_end_jst": "2026-11-28T08:58:21.559170+09:00",
+      "tool_evidence_ref": "9cddfe07d252c49f9dd2983d2697d8270d60917558e0fc94245e924adf7d17a2",
+      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-28T08:53:36.409981+09:00",
-        "end_jst": "2026-11-28T08:56:24.664623+09:00",
+        "start_jst": "2026-11-28T08:56:24.664623+09:00",
+        "end_jst": "2026-11-28T08:57:57.322477+09:00",
         "type": "last_success"
       },
       "status": "なし",
@@ -1090,7 +1313,7 @@
       "pagination_complete": true,
       "alternative_attempts": [],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "new_success_jst": "2026-11-28T08:57:57.322477+09:00",
       "stale_cache_status": null,
       "source_classification": "PERIOD_VERIFIED",
       "index_attempts": [
@@ -1103,12 +1326,12 @@
               "final_url": "https://www.wuxibiologics.com/press-release/",
               "http_status": 200,
               "method": "requests",
-              "fetched_jst": "2026-11-28T08:56:48.161071+09:00",
-              "sha256": "9280f9f4869923495e0d0060641c388d2d72311439b4cd6b748a4fefe6d33011",
-              "response_date": "2026-11-27T23:56:47+00:00",
+              "fetched_jst": "2026-11-28T08:58:21.257554+09:00",
+              "sha256": "9cddfe07d252c49f9dd2983d2697d8270d60917558e0fc94245e924adf7d17a2",
+              "response_date": "2026-11-27T23:58:20+00:00",
               "age_seconds": 0,
-              "last_modified": "2026-11-27T23:56:47+00:00",
-              "snapshot_path": "data/evidence/2026-11-28/2269_HK/requests-9280f9f486992349-_press-release__a7019a6f1a44046a82.html.gz"
+              "last_modified": "2026-11-27T23:58:20+00:00",
+              "snapshot_path": "data/evidence/2026-11-28/2269_HK/requests-9cddfe07d252c49f-_press-release__a7019a6f1a44046a82.html.gz"
             }
           ],
           "listing_page_urls_checked": [
@@ -1149,14 +1372,14 @@
         "https://samsungbiologics.com/media/company-news"
       ],
       "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:56:46.642335+09:00",
-      "attempt_end_jst": "2026-11-28T08:56:54.319790+09:00",
+      "attempt_start_jst": "2026-11-28T08:58:19.109528+09:00",
+      "attempt_end_jst": "2026-11-28T08:58:33.493580+09:00",
       "tool_evidence_ref": "8dc2cc2231effd60ec72faa1184039fb50ad81139770e79f304700c52f313895",
-      "previous_success_jst": null,
+      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-26T08:47:16.626229+09:00",
-        "end_jst": "2026-11-28T08:56:24.664623+09:00",
-        "type": "unresolved_baseline"
+        "start_jst": "2026-11-28T08:56:24.664623+09:00",
+        "end_jst": "2026-11-28T08:57:57.322477+09:00",
+        "type": "last_success"
       },
       "status": "なし",
       "reason": "OFFICIAL_API_PERIOD_VERIFIED",
@@ -1186,8 +1409,8 @@
           "http_status": 200,
           "sha256": "8dc2cc2231effd60ec72faa1184039fb50ad81139770e79f304700c52f313895",
           "snapshot_path": "data/evidence/2026-11-28/207940_KS/official_api.json.raw",
-          "fetched_jst": "2026-11-28T08:56:55.970454+09:00",
-          "response_date": "Fri, 27 Nov 2026 23:56:55 GMT",
+          "fetched_jst": "2026-11-28T08:58:39.342132+09:00",
+          "response_date": "Fri, 27 Nov 2026 23:58:38 GMT",
           "age": null,
           "record_count": 30,
           "record_keys": [
@@ -1383,7 +1606,7 @@
         }
       ],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "new_success_jst": "2026-11-28T08:57:57.322477+09:00",
       "stale_cache_status": null,
       "source_classification": "PERIOD_VERIFIED_OFFICIAL_API",
       "index_attempts": [
@@ -1396,9 +1619,9 @@
               "final_url": "https://samsungbiologics.com/front/en/mediaCenter/pressReleasesList.do",
               "http_status": 200,
               "method": "requests",
-              "fetched_jst": "2026-11-28T08:56:47.452214+09:00",
+              "fetched_jst": "2026-11-28T08:58:20.129798+09:00",
               "sha256": "7a983456c77bb732c5b7cd36994db197106fde8f9ea6bee40b88a9ef5ded6e4e",
-              "response_date": "2026-11-27T23:56:47+00:00",
+              "response_date": "2026-11-27T23:58:19+00:00",
               "age_seconds": 0,
               "last_modified": null,
               "snapshot_path": "data/evidence/2026-11-28/207940_KS/requests-7a983456c77bb732-_front_en_mediaCenter_pressReleasesList_do_faf1f175e31a1dff01.html.gz"
@@ -1408,7 +1631,7 @@
               "final_url": "https://samsungbiologics.com/front/en/mediaCenter/pressReleasesList.do",
               "http_status": 200,
               "method": "playwright",
-              "fetched_jst": "2026-11-28T08:56:50.460546+09:00",
+              "fetched_jst": "2026-11-28T08:58:26.603946+09:00",
               "sha256": "acc60e58172c5b89e9e34a0ecb80fe0fa9ae88be824326b3c040f3e451ca0671",
               "response_date": null,
               "age_seconds": 0,
@@ -1448,9 +1671,9 @@
               "final_url": "https://samsungbiologics.com/media/company-news",
               "http_status": 200,
               "method": "requests",
-              "fetched_jst": "2026-11-28T08:56:51.158037+09:00",
+              "fetched_jst": "2026-11-28T08:58:28.283894+09:00",
               "sha256": "9fd7134e3f9fc25218431927ad36a34581d0a1f48d8d1591d44a73de71112c22",
-              "response_date": "2026-11-27T23:56:50+00:00",
+              "response_date": "2026-11-27T23:58:27+00:00",
               "age_seconds": 0,
               "last_modified": null,
               "snapshot_path": "data/evidence/2026-11-28/207940_KS/requests-9fd7134e3f9fc252-_media_company-news_7a58d10b9d5b7fd134.html.gz"
@@ -1460,12 +1683,12 @@
               "final_url": "https://samsungbiologics.com/media/company-news",
               "http_status": 200,
               "method": "playwright",
-              "fetched_jst": "2026-11-28T08:56:54.186064+09:00",
-              "sha256": "a851603c8f588dc43bd45c41bfacbf5cad634d993bb1b70c277d67f97455d06e",
+              "fetched_jst": "2026-11-28T08:58:33.397922+09:00",
+              "sha256": "fae78b2a532a457a3a134f4f6bda8445a7ff90328cc65e6afd1c2a6b7303a29a",
               "response_date": null,
               "age_seconds": 0,
               "last_modified": null,
-              "snapshot_path": "data/evidence/2026-11-28/207940_KS/playwright-a851603c8f588dc4-_media_company-news_7a58d10b9d5b7fd134.html.gz"
+              "snapshot_path": "data/evidence/2026-11-28/207940_KS/playwright-fae78b2a532a457a-_media_company-news_7a58d10b9d5b7fd134.html.gz"
             }
           ],
           "listing_page_urls_checked": [
