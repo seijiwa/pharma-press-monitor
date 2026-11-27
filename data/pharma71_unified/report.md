@@ -1,6 +1,6 @@
 # 製薬公式監視 2026-11-27【暫定・未確認20社】
 
-- レポート日付(JST): 2026-11-27T11:40:27.238322+09:00
+- レポート日付(JST): 2026-11-27T11:47:10.335136+09:00
 - 対象71社 / 直接取得試行記録 71社 / 期間網羅確認 51社 / 未確認 20社
 - 一次原文で確認した発表: 0件 / 新規、既報、初回観測を別々に表示
 - 収集エンジン: GitHub Pharma71 unified staging / 構造QAコード: 実行済み（エラー0件） / 期間網羅QA: 未達
@@ -51,7 +51,7 @@
 |ORKA|なし|成功|2026-11-09|True|COMPLETE_DATED_LISTING_NO_NEW_RELEASES|
 |ERAS|未確認|成功|null|False|INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL|
 |CGEM|未確認|成功|null|False|INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL|
-|IMNM|なし|成功|2026-11-18|True|COMPLETE_DATED_LISTING_NO_NEW_RELEASES|
+|IMNM|未確認|失敗|null|False|INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL|
 |GPCR|未確認|失敗|null|False|INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL|
 |ALVO|なし|成功|2026-11-26|True|COMPLETE_DATED_LISTING_NO_NEW_RELEASES|
 |DNLI|未確認|失敗|null|False|INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL|
@@ -77,7 +77,7 @@
 |IONS|未確認|失敗|null|False|INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL|
 |JNANA|未確認|成功|2022-07-09|False|INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL|
 |4151 JP|なし|成功|2026-09-01|True|COMPLETE_DATED_LISTING_NO_NEW_RELEASES|
-|HLUN|未確認|失敗|null|False|INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL|
+|HLUN|なし|成功|2026-11-24|True|OFFICIAL_LUNDBECK_API_PERIOD_VERIFIED|
 |LUPIN|なし|成功|2026-11-25|True|COMPLETE_DATED_LISTING_NO_NEW_RELEASES|
 |NBIX|未確認|成功|null|False|INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL|
 |REATA|未確認|失敗|null|False|HISTORICAL_PARENT_SCOPE_NOT_INDEPENDENT|
@@ -88,3 +88,11 @@
 
 ## QAエラー
 - 構造上のエラーなし。期間網羅の達成とは別。
+
+## SEC規制開示（独立補完経路・公式ニュース一覧の網羅判定とは別）
+- 状態: NOT_CONFIGURED / SEC対象マッピング 0 / 開示期間確認 0 / 未確認 0 / 開示 0件 / 原文添付資料 0件
+|Ticker|SEC判定|開示件数|確認済み添付資料|
+|---|---|---:|---:|
+
+### SECで確認した添付資料（公開日は提出日と区別）
+- 確認済み添付資料なし（発表不存在の証明ではない）
