@@ -36,6 +36,22 @@ def main(argv=None):
     state_file=Path('data/pharma46_state.json')
     state=json.loads(state_file.read_text(encoding='utf-8')) if state_file.exists() else {'companies':{}}
     data_dir=Path('data');data_dir.mkdir(exist_ok=True)
+    # Recover unresolved baseline from actual prior 46 audits; no coverage credit.
+    from .engine import iso_dt
+    for old_audit in sorted(data_dir.glob('pharma_monitor_*_audit.json'))[-30:]:
+        try:
+            prior=json.loads(old_audit.read_text(encoding='utf-8'))
+            if prior.get('expected_tickers')!=ORDER or not str(prior.get('run_id','')).isdigit():continue
+            if [e.get('ticker') for e in prior['entries']]!=ORDER:continue
+            for e in prior['entries']:
+                if e.get('status')!='未確認':continue
+                st=state.setdefault('companies',{}).setdefault(e['ticker'],{})
+                if st.get('last_verified_success_jst'):continue
+                start=iso_dt(e['comparison_period']['start_jst'])
+                pending=iso_dt(st.get('pending_baseline_jst'))
+                if start and start.tzinfo and start<=now and (not pending or start<pending):
+                    st['pending_baseline_jst']=start.isoformat()
+        except (OSError,ValueError,TypeError,KeyError):continue
     evidence_dir=data_dir/'evidence'/day
     results,errors,new_state=collect(registry,state,asof=now,evidence_dir=evidence_dir,
                                      workers=args.workers,max_pages=args.max_pages,retry_transient=True)

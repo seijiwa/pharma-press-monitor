@@ -411,5 +411,11 @@ def collect(registry,state,asof=None,fetcher=None,evidence_dir='data/evidence',w
         st['seen_verified_urls']=sorted(seen)[-500:]
         if e['new_success_jst'] and e['status'] in ('あり','なし'):
             st['last_verified_success_jst']=e['new_success_jst']
+            st.pop('pending_baseline_jst',None)
+        elif not st.get('last_verified_success_jst'):
+            # Never roll the initial lookback forward across unverified days.
+            start=iso_dt(e['comparison_period']['start_jst'])
+            pending=iso_dt(st.get('pending_baseline_jst'))
+            if start and (not pending or start<pending):st['pending_baseline_jst']=start.isoformat()
     errors=validate_report(registry,results,expected_order=order)
     return results,errors,state

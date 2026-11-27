@@ -67,3 +67,13 @@ def test_all_http_errors_never_count_as_no_release(tmp_path):
     assert all(x['homepage_visit_status']=='失敗' for x in entries)
     _,_,summary=render_report(NOW,entries,errors,'SYNTHETIC FAILURE')
     assert summary['period_verified']==0 and summary['unconfirmed']==46
+
+
+def test_failed_first_day_preserves_unresolved_baseline(tmp_path):
+    registry=json.loads(Path('pharma46/sources.json').read_text())
+    _,errors,state=collect(registry,{'companies':{}},asof=NOW,fetcher=SyntheticCompanyFetcher(registry,all_fail=True),evidence_dir=tmp_path,workers=3)
+    assert not errors
+    baseline=state['companies'][ORDER[0]]['pending_baseline_jst']
+    entries,errors,state=collect(registry,state,asof=NOW+timedelta(days=2),fetcher=SyntheticCompanyFetcher(registry,all_fail=True),evidence_dir=tmp_path,workers=3)
+    assert not errors
+    assert all(e['comparison_period']['start_jst']==baseline for e in entries)

@@ -35,9 +35,9 @@ jobs:
       MAIL_USER: ${{ secrets.PHARMA_MAIL_USER || secrets.PHARMA71_GMAIL_USER }}
       MAIL_APP_PASSWORD: ${{ secrets.PHARMA_MAIL_APP_PASSWORD || secrets.PHARMA71_GMAIL_APP_PASSWORD }}
       MAIL_TO: ${{ vars.PHARMA_REPORT_TO || secrets.PHARMA_MAIL_USER || secrets.PHARMA71_GMAIL_USER }}
-      # Prevent duplicate delivery while the legacy ChatGPT automation is still active.
-      # Only enable scheduled delivery after an observed successful dry run and cutover.
-      SHOULD_SEND_EMAIL: ${{ (github.event_name == 'workflow_dispatch' && inputs.send_email == true) || (github.event_name == 'schedule' && vars.PHARMA_ENABLE_DELIVERY == 'true' && false) }}
+      # Scheduled send is time-gated before the separate ChatGPT fallback; push tests never send.
+      SHOULD_SEND_EMAIL: ${{ (github.event_name == 'workflow_dispatch' && inputs.send_email == true) || (github.event_name == 'schedule' && vars.PHARMA_ENABLE_DELIVERY != 'false') }}
+      DELIVERY_MODE: ${{ github.event_name == 'schedule' && 'scheduled' || 'manual' }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -53,6 +53,28 @@ jobs:
         run: python -m playwright install --with-deps chromium
       - name: Run fixture and schema tests before live collection
         run: python -m pytest tests_pharma46/ -q
+      - name: Verify mail authentication without sending (push only)
+        if: github.event_name == 'push'
+        continue-on-error: true
+        run: |
+          python - <<'PY'
+          import os, smtplib, ssl
+          from pharma46.delivery import already_sent,JST
+          from datetime import datetime
+          user=os.getenv('MAIL_USER','').strip()
+          password=''.join(os.getenv('MAIL_APP_PASSWORD','').split())
+          if not user or not password:raise SystemExit('MAIL_CREDENTIALS_MISSING')
+          try:
+              already_sent(user,password,datetime.now(JST).strftime('%Y%m%d'))
+              with smtplib.SMTP('smtp.gmail.com',587,timeout=25) as smtp:
+                  smtp.starttls(context=ssl.create_default_context())
+                  smtp.ehlo()
+                  smtp.user,smtp.password=user,password
+                  smtp.auth('LOGIN',smtp.auth_login,initial_response_ok=False)
+          except Exception as exc:
+              raise SystemExit('MAIL_AUTH_OR_SENT_SEARCH_FAILED: '+type(exc).__name__) from None
+          print('MAIL_AUTH_AND_SENT_SEARCH_PASS (no message sent)')
+          PY
       - name: Collect all 46 directly, audit and optionally email
         id: collect
         continue-on-error: true
