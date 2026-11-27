@@ -17,7 +17,7 @@ from .tdnet import report_lines as tdnet_report_lines
 from .hkex import report_lines as hkex_report_lines
 from .eqs import report as eqs_report
 from .integration import parent_scope,matrix,report as integration_report
-from .coverage_history import record,evaluate,report as coverage_report
+from .coverage_history import record,evaluate,recovery_start,report as coverage_report
 
 def verified_feeds(entries,folder):
     folder=Path(folder);folder.mkdir(parents=True,exist_ok=True)
@@ -58,6 +58,14 @@ def main(argv=None):
     state_path=root/'state.json'
     state=json.loads(state_path.read_text()) if state_path.exists() else {'companies':{}}
     prior_state=deepcopy(state)
+    coverage_path=root/'coverage_history.json'
+    old_coverage=json.loads(coverage_path.read_text()) if coverage_path.exists() else {}
+    # A newer success does not prove an older gap. Recheck from the earliest gap.
+    for c in registry['companies']:
+        if c['ticker'] in HISTORICAL:continue
+        prior=state.get('companies',{}).get(c['ticker'],{}).get('last_verified_success_jst')
+        repair=recovery_start(old_coverage,c['ticker'],now,prior)
+        if repair:c['coverage_recovery_start_jst']=repair
     by_ticker={x['ticker']:x for x in registry['companies']}
     # Separate parent-only historical rows are explicitly unconfirmed; never
     # report a parent's release as a publication by a former independent entity.
@@ -117,8 +125,6 @@ def main(argv=None):
     audit['regulatory_observations']=regulatory
     audit['integrated_monitoring']=matrix(entries,regulatory,parent_scope(entries,prior_state,now,parent_attempts=historical_parent_attempts))
     audit['execution_environment']=os.getenv('PHARMA71_ENVIRONMENT','github-hosted-or-local')
-    coverage_path=root/'coverage_history.json'
-    old_coverage=json.loads(coverage_path.read_text()) if coverage_path.exists() else {}
     coverage=record(old_coverage,audit,now)
     audit['daily_newsroom_coverage']=evaluate(coverage,order,now)
     if not errors:save_json(coverage_path,coverage)

@@ -67,3 +67,13 @@ def report(x):
     for r in x['rows']:
         if r['gaps']:lines.append('- '+r['ticker']+': '+'; '.join(y['start_jst']+' ～ '+y['end_jst'] for y in r['gaps']))
     return '\n'.join(lines)+'\n'
+
+def recovery_start(records,ticker,now,prior_success):
+    """Recheck historical gaps, including the gap before the last success.
+    Do not make the normal gap between prior collection and now a recovery."""
+    start,end=morning_window(now)
+    previous=dt(prior_success) if prior_success else end
+    if previous<=start:return None
+    intervals=[(dt(r['start_jst']),dt(r['end_jst'])) for r in records.get(ticker,[]) if r.get('receipt_sha256') and r.get('run_id')]
+    missing=gaps(intervals,start,min(previous,end))
+    return missing[0][0].isoformat() if missing else None

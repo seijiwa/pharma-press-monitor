@@ -16,3 +16,12 @@ def test_unconfirmed_run_does_not_erase_prior_or_fill_gap():
     e['status']='未確認'
     second=record(first,audit,z+timedelta(hours=1))
     assert first==second
+
+def test_recovery_uses_earliest_missing_interval():
+    from pharma71_unified.coverage_history import recovery_start,morning_window
+    z=datetime(2026,11,28,3,30,tzinfo=timezone(timedelta(hours=9)))
+    a,_=morning_window(z);b=a+timedelta(hours=1);c=b+timedelta(hours=1)
+    rows={'LLY':[{'start_jst':b.isoformat(),'end_jst':c.isoformat(),'receipt_sha256':'abc','run_id':'1'}]}
+    assert recovery_start(rows,'LLY',z,c.isoformat())==a.isoformat()
+    rows['LLY'][0]['start_jst']=a.isoformat()
+    assert recovery_start(rows,'LLY',z,c.isoformat()) is None

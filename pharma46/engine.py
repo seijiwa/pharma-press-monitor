@@ -174,6 +174,9 @@ def process_company(company,fetcher,now_dt,state,evidence_dir,max_pages=12):
     prev_success=previous.get('last_verified_success_jst')
     pending=previous.get('pending_baseline_jst')
     baseline=iso_dt(prev_success) or iso_dt(pending) or (now_dt-timedelta(hours=24))
+    override=iso_dt(company.get('coverage_recovery_start_jst'))
+    recovery=bool(override and override<baseline)
+    if recovery:baseline=override
     result={'ticker':ticker,'company_name':company['name'],'batch_id':company['batch_id'],
             'audit_date_jst':now_dt.date().isoformat(),'official_listing_url':None,
             'official_urls_configured':company['official_indexes'],
@@ -181,7 +184,7 @@ def process_company(company,fetcher,now_dt,state,evidence_dir,max_pages=12):
             'attempt_end_jst':None,'tool_evidence_ref':None,
             'previous_success_jst':prev_success,
             'comparison_period':{'start_jst':baseline.isoformat(), 'end_jst':now_dt.isoformat(),
-                                 'type':'last_success' if prev_success else ('unresolved_baseline' if pending else 'provisional_24h')},
+                                 'type':'coverage_gap_recovery' if recovery else ('last_success' if prev_success else ('unresolved_baseline' if pending else 'provisional_24h'))},
             'status':'未確認','reason':'未実査','latest_publication_date':None,
             'oldest_publication_date':None,'listing_page_urls_checked':[],
             'pagination_complete':False,'alternative_attempts':[],
