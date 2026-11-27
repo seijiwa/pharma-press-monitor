@@ -42,3 +42,9 @@ def live_probe():
     if not create_once(p,{'state':'test-only','run_id':run}):raise RuntimeError('first reservation probe failed')
     if create_once(p,{'state':'test-only-duplicate','run_id':run}):raise RuntimeError('duplicate unexpectedly accepted')
     print('LIVE_LEDGER_PROBE_PASS: first creation accepted, second rejected; no email')
+    from concurrent.futures import ThreadPoolExecutor
+    race='tests/race-'+run+'-'+attempt+'.json'
+    with ThreadPoolExecutor(max_workers=2) as pool:
+        claims=list(pool.map(lambda i:create_once(race,{'state':'test-only','claim':i}),[1,2]))
+    if sum(claims)!=1:raise RuntimeError('concurrent reservation failed safety gate')
+    print('LIVE_CONCURRENT_RESERVATION_PASS: exactly one winner; no email')

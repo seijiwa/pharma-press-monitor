@@ -75,3 +75,25 @@ class TestFreshness(unittest.TestCase):
         with tempfile.TemporaryDirectory() as t:
             p=Path(t);(p/'audit.json').write_text(json.dumps({'start_jst':'2026-11-28T03:30:00'}))
             with self.assertRaisesRegex(ValueError,'UNZONED'):validated_audit(p,datetime(2026,11,28,5,21,tzinfo=ZoneInfo('Asia/Tokyo')),set())
+
+    def test_daily_send_failure_does_not_acknowledge_or_retry(self):
+        from unittest.mock import patch
+        from smtplib import SMTPServerDisconnected
+        import pharma71_email as m
+        now=datetime(2026,11,28,5,21,tzinfo=ZoneInfo('Asia/Tokyo'))
+        with patch.dict('os.environ',{'PHARMA71_GMAIL_USER':'test@example.org','PHARMA71_GMAIL_APP_PASSWORD':'fake'}),patch.object(m,'datetime') as clock,patch.object(m,'request_ref',return_value=404),patch.object(m,'reserve',return_value=True) as claim,patch.object(m,'mark_accepted') as ack,patch.object(m.smtplib,'SMTP') as smtp:
+            clock.now.return_value=now
+            smtp.return_value.__enter__.return_value.send_message.side_effect=SMTPServerDisconnected('unknown outcome')
+            with self.assertRaises(SMTPServerDisconnected):m.deliver('daily',now,'test','body')
+            claim.assert_called_once()
+            ack.assert_not_called()
+            smtp.return_value.__enter__.return_value.send_message.assert_called_once()
+    def test_lost_reservation_does_not_send(self):
+        from unittest.mock import patch
+        import pharma71_email as m
+        now=datetime(2026,11,28,5,21,tzinfo=ZoneInfo('Asia/Tokyo'))
+        with patch.dict('os.environ',{'PHARMA71_GMAIL_USER':'test@example.org','PHARMA71_GMAIL_APP_PASSWORD':'fake'}),patch.object(m,'datetime') as clock,patch.object(m,'request_ref',return_value=404),patch.object(m,'reserve',return_value=False),patch.object(m,'mark_accepted') as ack,patch.object(m.smtplib,'SMTP') as smtp:
+            clock.now.return_value=now
+            m.deliver('daily',now,'test','body')
+            smtp.return_value.__enter__.return_value.send_message.assert_not_called()
+            ack.assert_not_called()

@@ -108,14 +108,16 @@ def deliver(mode, now, subject, body):
                 raise SystemExit('Outside approved morning delivery window before reservation.')
             if not reserve(actual):
                 return
-        if request_ref(tag + "-reserved", create=True) != 201:
+        if mode != 'daily' and request_ref(tag + "-reserved", create=True) != 201:
             raise SystemExit("The date could not be reserved. Delivery stopped.")
         if smtp.send_message(message):
             raise SystemExit("Gmail did not accept the recipient.")
-        if request_ref(tag + "-accepted", create=True) != 201:
-            raise SystemExit("Gmail accepted the message. Check Gmail before retrying.")
+        # Shared reservation is the sole daily send lock. Write its acceptance
+        # before the compatibility tag, so tag failure cannot conceal acceptance.
         if mode == "daily" and not mark_accepted(datetime.now(TOKYO), now.date()):
             raise SystemExit("Gmail accepted; ledger acknowledgement failed. Never resend.")
+        if request_ref(tag + "-accepted", create=True) != 201:
+            raise SystemExit("Gmail accepted the message. Check Gmail before retrying.")
         print("Gmail accepted the message.")
 
 

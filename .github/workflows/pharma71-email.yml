@@ -49,6 +49,27 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: PYTHONPATH=scripts python3 -c 'from pharma71_delivery_lock import live_probe; live_probe()'
+      - name: SMTP authentication smoke test (no email)
+        if: github.event_name == 'push'
+        env:
+          PHARMA71_GMAIL_USER: ${{ secrets.PHARMA71_GMAIL_USER }}
+          PHARMA71_GMAIL_APP_PASSWORD: ${{ secrets.PHARMA71_GMAIL_APP_PASSWORD }}
+        run: |
+          python3 - <<'PY'
+          import os, smtplib, ssl
+          address=os.environ.get('PHARMA71_GMAIL_USER','').strip()
+          password=''.join(os.environ.get('PHARMA71_GMAIL_APP_PASSWORD','').split())
+          if not address or not password:raise SystemExit('SMTP credentials unavailable')
+          try:
+              with smtplib.SMTP('smtp.gmail.com',587,timeout=20) as smtp:
+                  smtp.starttls(context=ssl.create_default_context())
+                  smtp.ehlo()
+                  smtp.user,smtp.password=address,password
+                  smtp.auth('LOGIN',smtp.auth_login,initial_response_ok=False)
+              print('SMTP_AUTH_PASS: authentication only, no email sent')
+          except Exception as exc:
+              raise SystemExit('SMTP_AUTH_FAILED: '+type(exc).__name__) from None
+          PY
       - name: Prepare or deliver report
         env:
           DELIVERY_MODE: ${{ github.event_name == 'schedule' && 'daily' || inputs.mode || 'preview' }}
