@@ -10,6 +10,24 @@ UNTICKERED={'C2N Diagnostics':'C2N','Catalent':'CATALENT','Daiichi Sankyo':'4568
  'Reata Pharmaceuticals':'REATA','Santen Pharmaceutical':'4536 JP','Sumitomo Pharma':'4506 JP'}
 HISTORICAL={'RNA','REATA'}
 
+# Alternative public corporate newsroom URLs, not access-control bypasses.
+# Candidate addresses inherited from the running 71 monitor plus the actual
+# recorded FUJIFILM official relocation; audit success requires live receipts.
+ALTERNATES={
+ 'DNLI':['https://investors.denalitherapeutics.com/investors'],
+ 'LONN':['https://www.lonza.com/news-and-media'],
+ 'REGN':['https://investor.regeneron.com/news/press-releases'],
+ 'SRRK':['https://scholarrock.com/investors-media/press-releases/'],
+ 'BIIB':['https://www.biogen.com/home.html'],
+ 'HRMY':['https://www.harmonybiosciences.com/newsroom/'],
+ 'ALKS':['https://investor.alkermes.com/press-releases'],
+ 'EXEL':['https://ir.exelixis.com/news-releases'],
+ 'KURA':['https://ir.kuraoncology.com/news-releases'],
+ 'NBIX':['https://neurocrine.gcs-web.com/investors/news-releases'],
+ 'FUJIFILM-CDMO':['https://fujifilmbiotechnologies.fujifilm.com/about/news/'],
+}
+
+
 def load_registry(csv_path='companies.csv', base_path='pharma46/sources.json'):
     base=json.loads(Path(base_path).read_text(encoding='utf-8'))['companies']
     if [c['ticker'] for c in base]!=ORDER:
@@ -32,6 +50,8 @@ def load_registry(csv_path='companies.csv', base_path='pharma46/sources.json'):
         # keep user-designated Lilly/Jazz/Kelun source first.
         if source and source not in urls:
             urls=([source]+urls) if ticker not in {'LLY','JAZZ','6990 HK'} else ([urls[0],source]+urls[1:])
+        if ticker in ALTERNATES:
+            urls=list(dict.fromkeys(ALTERNATES[ticker]+urls))
         if not urls or not all(x.startswith('https://') for x in urls):
             raise ValueError('missing or invalid official source '+ticker)
         company.update(ticker=ticker,name=row['Company'],official_indexes=urls[:3],

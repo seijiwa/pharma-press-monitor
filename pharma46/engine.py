@@ -127,6 +127,9 @@ def scan_index(fetcher,company,index_url,baseline,run_dt,evidence_dir,max_pages=
     since=baseline.date().isoformat()
     # Never treat future-dated content as already-published news.
     tomorrow=(run_dt+timedelta(days=1)).date().isoformat()
+    if any(v['listing_date']>tomorrow for v in all_entries.values()):
+        failures.append({'failure':'FUTURE_DATED_LISTING_ENTRY'})
+        coverage=False
     recent=[v for v in all_entries.values() if since<=v['listing_date']<=tomorrow]
     recent=sorted(recent,key=lambda x:(x['listing_date'],x['url']),reverse=True)
     if len(recent)>max_primary:

@@ -64,10 +64,70 @@ def _closest_date(anchor):
             return parse_date(dates[0])
     return None
 
+
+# Site-scoped row selectors derived from captured official HTML in run 45913588099.
+# Never use dates mentioned in headlines or unrelated tabs as publication dates.
+def _row_listing(page_url,soup):
+    host=(urlparse(page_url).hostname or '').lower()
+    path=urlparse(page_url).path
+    spec=None
+    if host=='news.abbvie.com':
+        spec=('.wd_item_wrapper','.wd_title a[href]','.wd_date',None,'mdy')
+    elif host=='ir.vikingtherapeutics.com':
+        spec=('li.wd_item','.wd_title a[href]','.wd_date',None,'mdy')
+    elif host=='www.novartis.com' and path.rstrip('/')=='/news':
+        spec=('#tab-all li.each-item','a[href]','time','h3','mdy')
+    elif host in ('www.galderma.com','galderma.com') and path.rstrip('/') in ('/news','/newsroom'):
+        spec=('a.news-teaser',None,'.header p','h2.title','mdy')
+    elif host in ('news.bms.com','investors.hims.com','smmttx.com','ir.tevapharm.com'):
+        spec=('.module_item:has(.module_headline-link)','.module_headline-link[href]','.module_date-time',None,'mdy')
+    elif host=='www.biomarin.com' and '/news/press-releases' in path:
+        spec=('article.press-release','h3 a[href]','p.date',None,'mdy')
+    elif host=='c2n.com' and '/news-releases' in path:
+        spec=('article.blog-item','.blog-title a[href]','time.blog-date',None,'short_mdy')
+    elif host=='www.sumitomo-pharma.com' and path.rstrip('/')=='/news':
+        spec=('li:has(.date-container)','.text a[href], .pdf-link a[href]','.date-container .date','.text','mdy')
+    elif host=='www.daiichisankyo.com' and '/media/press_release' in path:
+        spec=('li.active:has(.newsDate)','.newsTitle a[href]','.newsDate','.newsTitle','mdy')
+    if spec is None:return None
+    rows,anchor_sel,date_sel,title_sel,date_kind=spec
+    nodes=soup.select(rows)
+    if not nodes:
+        return None if soup.select('main article time[datetime]') else []
+    result={}
+    for row in nodes:
+        a=row.select_one(anchor_sel) if anchor_sel else row
+        dn=row.select_one(date_sel)
+        tn=row.select_one(title_sel) if title_sel else a
+        if a is None or dn is None or tn is None or not a.get('href'):return []
+        url=canonical(urljoin(page_url,a['href']))
+        if not host_matches(page_url,url) or url==canonical(page_url):return []
+        date_text=dn.get('datetime') or dn.get_text(' ',strip=True)
+        # Only this dedicated date field can supply the two-digit or spaced year.
+        compact=re.sub(r'\s*([./-])\s*',r'\1',date_text)
+        if date_kind=='short_mdy' and re.fullmatch(r'\d{1,2}/\d{1,2}/\d{2}',compact):
+            m,d,y=map(int,compact.split('/'))
+            try:published=date(2000+y,m,d).isoformat()
+            except ValueError:return []
+        elif re.fullmatch(r'\d{1,2}[./-]\d{1,2}[./-]20\d{2}',compact):
+            m,d,y=map(int,re.split(r'[./-]',compact))
+            try:published=date(y,m,d).isoformat()
+            except ValueError:return []
+        else:published=parse_date(date_text)
+        title=' '.join(tn.get_text(' ',strip=True).split())
+        if not published or not title:return []
+        if url in result and result[url]['listing_date']!=published:
+            return []  # inconsistent duplicated row is not coverage evidence
+        result.setdefault(url,{'url':url,'title':title[:500],'listing_date':published})
+    return list(result.values())
+
 def listing_entries(page_url, html, preserve_order=False):
     soup=BeautifulSoup(html,'html.parser')
     for el in soup.select('header,footer,nav,[role="navigation"]'):
         el.decompose()
+    scoped=_row_listing(page_url,soup)
+    if scoped is not None:
+        return scoped if preserve_order else sorted(scoped,key=lambda x:(x['listing_date'],x['url']),reverse=True)
     entries={}
     for a in soup.find_all('a',href=True):
         href=a['href'].strip()
