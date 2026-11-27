@@ -2,6 +2,13 @@ name: Pharma71 morning email
 on:
   schedule:
     - cron: '21 20 * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/pharma71_email.py'
+      - 'scripts/pharma71_unified_mail.py'
+      - 'tests_mail/**'
+      - '.github/workflows/pharma71-email.yml'
   workflow_dispatch:
     inputs:
       mode:
@@ -36,7 +43,7 @@ jobs:
         run: python3 -m unittest discover -s tests_mail -q
       - name: Prepare or deliver report
         env:
-          DELIVERY_MODE: ${{ github.event_name == 'schedule' && 'daily' || inputs.mode }}
+          DELIVERY_MODE: ${{ github.event_name == 'schedule' && 'daily' || inputs.mode || 'preview' }}
           GH_TOKEN: ${{ github.token }}
           PHARMA71_GMAIL_USER: ${{ secrets.PHARMA71_GMAIL_USER }}
           PHARMA71_GMAIL_APP_PASSWORD: ${{ secrets.PHARMA71_GMAIL_APP_PASSWORD }}

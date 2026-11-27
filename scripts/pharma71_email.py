@@ -115,7 +115,11 @@ if __name__ == "__main__":
     if mode not in {"preview", "test", "daily"}:
         raise SystemExit("Invalid delivery mode")
     now = datetime.now(TOKYO)
-    subject, body = report(now)
+    try:
+        subject, body = report(now)
+    except (OSError, ValueError, TypeError, KeyError) as exc:
+        subject = f'【製薬71社】{now:%Y/%m/%d} 公式発表監視【従来監視未確認】'
+        body = f'従来監視の集計を取得できませんでした ({type(exc).__name__})。発表なしとは判定できません。\n'
     label, integrated = section(now)
     subject += label
     body = integrated + '\n' + body
