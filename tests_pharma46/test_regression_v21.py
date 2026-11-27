@@ -84,7 +84,8 @@ def test_unresolved_load_more_even_with_page_links_cannot_pass(tmp_path):
 
 def test_unseen_same_day_release_does_not_claim_exact_post_baseline_timestamp(tmp_path):
     registry=json.loads(Path('pharma46/sources.json').read_text())
-    from test_end_to_end import SyntheticCompanyFetcher
+    from test_end_to_end import SyntheticCompanyFetcher,synthetic_registry
+    registry=synthetic_registry(registry)
     state={'companies':{}}
     for t in ORDER:state['companies'][t]={'last_verified_success_jst':'2026-11-25T06:00:00+09:00'}
     fetched,errors,new_state=collect(registry,state,asof=NOW,
