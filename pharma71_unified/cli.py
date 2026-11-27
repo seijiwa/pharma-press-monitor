@@ -51,7 +51,9 @@ def main(argv=None):
         evidence_dir=root/'evidence'/now.strftime('%Y-%m-%dT%H%M%S'),
         workers=args.workers,max_pages=args.max_pages,expected_order=order)
     for e in entries:
-        supplement(e,now,root/'evidence'/now.strftime('%Y-%m-%dT%H%M%S'))
+        supplement(e,now,root/'evidence'/now.strftime('%Y-%m-%dT%H%M%S'),state=new_state)
+        if e.get('source_classification')=='PERIOD_VERIFIED_OFFICIAL_API':
+            new_state['companies'].setdefault(e['ticker'],{})['last_verified_success_jst']=e['new_success_jst']
         if e['ticker'] in HISTORICAL:
             e.update(status='未確認',reason='HISTORICAL_PARENT_SCOPE_NOT_INDEPENDENT',new_success_jst=None,
                      primary_releases=[],source_classification='PARENT_ONLY_UNVERIFIED')
@@ -66,7 +68,17 @@ def main(argv=None):
     save_json(root/(now.strftime('%Y-%m-%dT%H%M%S')+'_audit.json'),audit)
     save_json(state_path,new_state)
     (root/'report.md').write_text(body,encoding='utf-8')
-    verified_feeds(entries,root/'feeds')
+    # Persist a bounded rolling original ledger. Failed or empty runs cannot
+    # erase verified entries from prior runs; keep latest 500 per company.
+    history_path=root/'verified_original_history.json'
+    history=json.loads(history_path.read_text()) if history_path.exists() else {}
+    for e in entries:
+        ledger={x['url']:x for x in history.get(e['ticker'],[]) if x.get('original_confirmed') and x.get('url')}
+        for p in e['primary_releases']:
+            if p.get('original_confirmed') and p.get('url'):ledger.setdefault(p['url'],p)
+        history[e['ticker']]=sorted(ledger.values(),key=lambda x:x.get('published_date') or '',reverse=True)[:500]
+    save_json(history_path,history)
+    verified_feeds([dict(e,primary_releases=history[e['ticker']]) for e in entries],root/'feeds')
     print(json.dumps(summary,ensure_ascii=False))
     return 0 if not errors else 2
 

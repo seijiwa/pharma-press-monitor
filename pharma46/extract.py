@@ -97,6 +97,10 @@ def _row_listing(page_url,soup):
         spec=('div','p a[href*="investor.alkermes.com/news-releases/news-release-details/"]','p strong span','p','mdy')
     elif host=='www.zealandpharma.com' and path.rstrip('/')=='/news-media':
         spec=('.card.card-list.card-article','.card-list__cta a[href]','.card__meta time','.card-list__main h2','mdy')
+    elif host=='investors.biogen.com' and path.rstrip('/')=='/news/news-releases':
+        spec=('.card.cmp-card-tile','.card-body a[href*="/news-releases/news-release-details/"]','.news-date','.card-title','mdy')
+    elif host=='ir.ionis.com' and path.rstrip('/') in ('/news-releases','/investor-news/press-releases'):
+        spec=('.llf-row:has(.nir-widget--news--date-time)','.nir-widget--news--headline a[href]','.nir-widget--news--date-time','.nir-widget--news--headline','mdy')
     if spec is None:return None
     rows,anchor_sel,date_sel,title_sel,date_kind=spec
     # Avoid nested :has() selectors: SoupSieve strict-mode rejects them.
