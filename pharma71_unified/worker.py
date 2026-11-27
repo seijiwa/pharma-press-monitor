@@ -1,6 +1,7 @@
 """Portable external collector. No inbound listener or GitHub write credentials."""
 import os,sys,time,subprocess,uuid,fcntl
 from pathlib import Path
+from .comparison_receipt import emit
 def main():
     root=Path(os.getenv('PHARMA71_DATA_DIR','/data/pharma71'));root.mkdir(parents=True,exist_ok=True)
     interval=max(1200,int(os.getenv('PHARMA71_INTERVAL_SECONDS','1200')))
@@ -15,6 +16,7 @@ def main():
             cmd=[sys.executable,'-m','pharma71_unified.cli','--root',str(root/'newsroom'),'--workers','3']
             if rc==0 and (reg/'regulatory.json').exists():cmd+=['--regulatory-file',str(reg/'regulatory.json')]
             rc=subprocess.run(cmd,env=env).returncode
+            if rc==0:emit(root/'newsroom',env['GITHUB_RUN_ID'])
             print('external worker completed:',rc,flush=True)
             if os.getenv('PHARMA71_RUN_ONCE')=='1':return rc
             time.sleep(max(10,interval-(time.monotonic()-started)))

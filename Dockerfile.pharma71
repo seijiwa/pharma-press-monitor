@@ -7,5 +7,4 @@ COPY pharma46 ./pharma46
 COPY pharma71_unified ./pharma71_unified
 COPY companies.csv .
 RUN useradd --uid 10001 --create-home collector && mkdir -p /data/pharma71 && chown -R collector:collector /data
-USER collector
-CMD ["python","-m","pharma71_unified.worker"]
+CMD ["python","-m","pharma71_unified.bootstrap"]
