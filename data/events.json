@@ -1753,5 +1753,14 @@
     "url": "https://www.grifols.com/en/view-news/-/news/grifols-acquires-biotests-plasma-collection-centers-for-euros-220m-to-streamline-plasma-sourcing-in-europe",
     "detected_at": "2026-11-27T13:42:50.573853+00:00",
     "source_page": "https://www.grifols.com/en/newsroom"
+  },
+  {
+    "id": "04814a58612085e3f240cea2dcd39df48331a8ba772498a0a413a3a8c729b5f1",
+    "company": "Lupin",
+    "ticker": "",
+    "title": "Lupin Announces U.S. FDA Approval and Launch of Sitagliptin Tablets, USP in the United States",
+    "url": "https://www.lupin.com/investors/press-releases/lupin-announces-u-s-fda-approval-and-launch-of-sitagliptin-tablets-usp-in-the-united-states",
+    "detected_at": "2026-11-27T22:21:13.335092+00:00",
+    "source_page": "https://www.lupin.com/investors/news-events/"
   }
 ]
