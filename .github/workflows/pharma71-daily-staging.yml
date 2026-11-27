@@ -11,7 +11,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: pharma71-unified-staging
+  group: pharma71-daily-publication
   cancel-in-progress: false
 jobs:
   audit:
