@@ -69,6 +69,38 @@
       "receipt_sha256": "28305fdb85794fee220f2a24de3e0d52a5755cd3efe83dabacc9edcf8e96b475",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:16.569239+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "22bf631652cc3da5b602511c7c10d7ce4d4062da3c42fec76ac4a0df8a37944c",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:53:45.645088+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "f6e5a0e59061a56c985f06fae46b4ee2b347806b02abb1edf7f20824d6f4ea12",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:28:32.602902+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "91a0e075f47616f353afd7a3782917c0943c3d044272f4e0f2fee41dedbfc432",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:31:30.080040+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "f3fb5300212245912cb0608ca7e72cd29db1852840c68e0de72cca3db4d45dca",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
   "ABBV": [
@@ -141,6 +173,38 @@
       "receipt_sha256": "e2ee13a1af127600e4724a6ad267dff4470c63473f80416042154ae2df316070",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:10.573832+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "1b970d42069d23391d414734b92109ab2bcdf2d3b217f67c9f9becddeda44639",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:53:40.849837+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "b178fd183c14f6d3cf75f618f51dae90342669c5dbe184102b8b0958fa0f63d4",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:28:26.929810+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "ae9dd46bfd4fd5ea68cf0077d18e01149441a59d88b5ee9d8e86bc883466c15d",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:31:29.957150+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "077a767e45e5a76a67150e516cec432e221aed44a09390f6acbbb838c8a42624",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
   "AMGN": [
@@ -183,6 +247,38 @@
       "receipt_sha256": "7f219e737feeef025400a050c4dc4a1b37357918ddab12f4e46781a908e6ddff",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:18.520692+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "7f219e737feeef025400a050c4dc4a1b37357918ddab12f4e46781a908e6ddff",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:53:47.447969+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "7f219e737feeef025400a050c4dc4a1b37357918ddab12f4e46781a908e6ddff",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:28:34.732586+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "7f219e737feeef025400a050c4dc4a1b37357918ddab12f4e46781a908e6ddff",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:31:38.569991+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "7f219e737feeef025400a050c4dc4a1b37357918ddab12f4e46781a908e6ddff",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
   "BIIB": [
@@ -200,6 +296,14 @@
       "run_id": "45924047490",
       "receipt_sha256": "fa552dbf80f402ad8649870bef7b2a5d390209d6058b6a6e0fa6c8247ffd60e5",
       "source_commit": "73d8eb36b73d1c2155cfebde9a03b20d108d2c18",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T10:42:44.778263+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "fa552dbf80f402ad8649870bef7b2a5d390209d6058b6a6e0fa6c8247ffd60e5",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
@@ -273,6 +377,38 @@
       "receipt_sha256": "fcad4cfdf8ea49995cbf8cf45a055d674b641fa7af64571c2f50f11e54f31013",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:20.511890+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "fcad4cfdf8ea49995cbf8cf45a055d674b641fa7af64571c2f50f11e54f31013",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:53:48.344930+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "fcad4cfdf8ea49995cbf8cf45a055d674b641fa7af64571c2f50f11e54f31013",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:28:38.779829+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "fcad4cfdf8ea49995cbf8cf45a055d674b641fa7af64571c2f50f11e54f31013",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:31:35.940442+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "acd3fe6f8417267a32403451d1503efffaa15d689b3e12cdc85d2515c8fcd691",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
   "GILD": [
@@ -344,6 +480,38 @@
       "run_id": "45930241559",
       "receipt_sha256": "58d1c5ca83c710ebf19d159f39e00fba44aeeb012693974f96fe738d592c16fc",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:19.536759+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "58d1c5ca83c710ebf19d159f39e00fba44aeeb012693974f96fe738d592c16fc",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:53:49.135476+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "58d1c5ca83c710ebf19d159f39e00fba44aeeb012693974f96fe738d592c16fc",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:28:35.957229+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "58d1c5ca83c710ebf19d159f39e00fba44aeeb012693974f96fe738d592c16fc",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:31:37.936749+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "58d1c5ca83c710ebf19d159f39e00fba44aeeb012693974f96fe738d592c16fc",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
@@ -417,6 +585,38 @@
       "receipt_sha256": "048ee3832e9d91c1a8962fa3e9b2630a22bd090f08de638da79ba6a9986d0b53",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:18.959877+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "04d1689f1fd4ba6ca7cc6bdcfd4dc91cf8fcb4b7939967c4d8579b16f6966760",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:53:47.884966+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "9505c9a1c5935fa4e0ad52a02ab6c6df420b40d636504d2bb58704cd7b263e61",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:28:35.255213+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "3b99fd8c7a95dbba9a0dedf1387c28c2bc62a31707627e5c3b3945e91f78f789",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:31:36.782229+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "e0c96ebe80f78ef80e98904dc0410cc9c11c41580550a41390f3fe0ae698af9e",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
   "MRK": [
@@ -488,6 +688,38 @@
       "run_id": "45930241559",
       "receipt_sha256": "ce0833d4fb427f3b56afd9c3aa3d7163cdbdf1178dd9586b7f93ebd7d065e6e9",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:19.066729+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "ce0833d4fb427f3b56afd9c3aa3d7163cdbdf1178dd9586b7f93ebd7d065e6e9",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:53:47.989976+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "ce0833d4fb427f3b56afd9c3aa3d7163cdbdf1178dd9586b7f93ebd7d065e6e9",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:28:35.361610+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "ce0833d4fb427f3b56afd9c3aa3d7163cdbdf1178dd9586b7f93ebd7d065e6e9",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:31:36.928452+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "ce0833d4fb427f3b56afd9c3aa3d7163cdbdf1178dd9586b7f93ebd7d065e6e9",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
@@ -561,6 +793,38 @@
       "receipt_sha256": "27646c41e317a0e8646d023898bd219beaa708279919d378e9eb1a0c99201078",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:19.258366+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "27509020dcd669a64270112494783e14f24e9767b286b81ce7999383ed711776",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:53:48.176408+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "57fe8fea9c46ae0ac915a2fd1090f70697b7b936d326899086d56ac01da999ba",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:28:35.560595+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "3ab4d2847244e5f2e5e749aa2e62988873746303cf252263337606ce9d2d8ba7",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:31:37.164177+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "8683b9c0fab2f73d3aebf2770501bf828c9882d410331c8553ab53fb475022dc",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
   "REGN": [
@@ -578,6 +842,14 @@
       "run_id": "45924047490",
       "receipt_sha256": "6a123cb84cf0be77abd42168c7a80914a4a431a2b5733e2f7b08f55ae146d0b0",
       "source_commit": "73d8eb36b73d1c2155cfebde9a03b20d108d2c18",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T10:42:46.500258+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "6a123cb84cf0be77abd42168c7a80914a4a431a2b5733e2f7b08f55ae146d0b0",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
@@ -651,6 +923,38 @@
       "receipt_sha256": "870de1d1c14730aa54628c80e78e0a680788fd582765fd28f25c15b786bf921c",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:22.077092+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "28b41066a379af5bfdcd6354b129943d8d53d1a3d784174389e5953c273c00bc",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:53:50.633952+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "fbd7835645a02e35d48fbbc6ed562c5f3d138cb390e66c4a5b7121d36fe74a80",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:28:38.106255+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "e25c32df2ca311bba7e33fb200634acf14138fdd77b8004f7778f6e4cd4d1ae8",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:31:40.015616+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "ed98112fa30a4c816f03b901501e39691f16758756194b2f48195dfc85785d3d",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
   "GSK": [
@@ -722,6 +1026,38 @@
       "run_id": "45930241559",
       "receipt_sha256": "46c73bf860818636d3b097715e5b78ad671a68770d958108299a3be9ebd4b5b1",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:23.139095+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "46c73bf860818636d3b097715e5b78ad671a68770d958108299a3be9ebd4b5b1",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:53:51.910246+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "237f50250b8b75435a48179708478aa2bada5c51378adc465033f6d16c2447de",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:28:41.114782+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "46c73bf860818636d3b097715e5b78ad671a68770d958108299a3be9ebd4b5b1",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:31:41.073094+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "46c73bf860818636d3b097715e5b78ad671a68770d958108299a3be9ebd4b5b1",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
@@ -795,6 +1131,38 @@
       "receipt_sha256": "0c11412c5814972f298eabcc60f5c3d452d0f6bae80e35f6c692fc12ed436b42",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:22.062561+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "0c11412c5814972f298eabcc60f5c3d452d0f6bae80e35f6c692fc12ed436b42",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:53:51.006948+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "0c11412c5814972f298eabcc60f5c3d452d0f6bae80e35f6c692fc12ed436b42",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:28:38.644425+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "0c11412c5814972f298eabcc60f5c3d452d0f6bae80e35f6c692fc12ed436b42",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:31:39.143764+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "0c11412c5814972f298eabcc60f5c3d452d0f6bae80e35f6c692fc12ed436b42",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
   "NOVOB": [
@@ -862,6 +1230,38 @@
       "run_id": "45930241559",
       "receipt_sha256": "bd2a906d590d2b1548e1bd2e696a8f9cdf30b87930471a1c9c5fbfe9295a55a8",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:10.335136+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "bd2a906d590d2b1548e1bd2e696a8f9cdf30b87930471a1c9c5fbfe9295a55a8",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:53:40.613076+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "bd2a906d590d2b1548e1bd2e696a8f9cdf30b87930471a1c9c5fbfe9295a55a8",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:28:26.684298+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "bd2a906d590d2b1548e1bd2e696a8f9cdf30b87930471a1c9c5fbfe9295a55a8",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:31:29.681923+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "bd2a906d590d2b1548e1bd2e696a8f9cdf30b87930471a1c9c5fbfe9295a55a8",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
@@ -935,6 +1335,38 @@
       "receipt_sha256": "81c93b343e7b0ecab81df8a7918c6629ea4cfad7f8b34dec79b97f2e596f691b",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:25.553047+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "81c93b343e7b0ecab81df8a7918c6629ea4cfad7f8b34dec79b97f2e596f691b",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:53:55.085327+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "81c93b343e7b0ecab81df8a7918c6629ea4cfad7f8b34dec79b97f2e596f691b",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:28:42.747737+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "81c93b343e7b0ecab81df8a7918c6629ea4cfad7f8b34dec79b97f2e596f691b",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:31:44.423805+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "81c93b343e7b0ecab81df8a7918c6629ea4cfad7f8b34dec79b97f2e596f691b",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
   "SAN": [
@@ -1006,6 +1438,38 @@
       "run_id": "45930241559",
       "receipt_sha256": "79be47b5ff5a49613e6831da6e2e8b325e38575a32e594a0c6e7221e438d96ea",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:23.311535+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "79be47b5ff5a49613e6831da6e2e8b325e38575a32e594a0c6e7221e438d96ea",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:53:52.079234+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "79be47b5ff5a49613e6831da6e2e8b325e38575a32e594a0c6e7221e438d96ea",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:28:41.252082+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "79be47b5ff5a49613e6831da6e2e8b325e38575a32e594a0c6e7221e438d96ea",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:31:41.880076+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "79be47b5ff5a49613e6831da6e2e8b325e38575a32e594a0c6e7221e438d96ea",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
@@ -1079,6 +1543,38 @@
       "receipt_sha256": "ff3a73de30edafb5c8ab4b0a6feddbb283f76a4a170da2232aef363ebd5c203b",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:23.759849+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "2b0a6f91d07c5e898965ec2704c9fb874c48d8cebcf6cbce12c72f06aee4425b",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:53:52.495523+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "2b0a6f91d07c5e898965ec2704c9fb874c48d8cebcf6cbce12c72f06aee4425b",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:28:41.661967+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "2b0a6f91d07c5e898965ec2704c9fb874c48d8cebcf6cbce12c72f06aee4425b",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:31:42.394739+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "2b0a6f91d07c5e898965ec2704c9fb874c48d8cebcf6cbce12c72f06aee4425b",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
   "LONN": [],
@@ -1097,6 +1593,14 @@
       "run_id": "45924047490",
       "receipt_sha256": "281dbca27f07643a82de2d7872bdb2efde069982f5b1834e2e6d60338c6d9c80",
       "source_commit": "73d8eb36b73d1c2155cfebde9a03b20d108d2c18",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T10:42:55.271025+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "281dbca27f07643a82de2d7872bdb2efde069982f5b1834e2e6d60338c6d9c80",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
@@ -1170,6 +1674,38 @@
       "receipt_sha256": "995127f883b8198861113328a649339bd65b88ee52f6194b93e4057b0c57f138",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:26.236550+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "995127f883b8198861113328a649339bd65b88ee52f6194b93e4057b0c57f138",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:53:54.860623+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "995127f883b8198861113328a649339bd65b88ee52f6194b93e4057b0c57f138",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:28:44.215611+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "995127f883b8198861113328a649339bd65b88ee52f6194b93e4057b0c57f138",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:31:49.283976+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "995127f883b8198861113328a649339bd65b88ee52f6194b93e4057b0c57f138",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
   "ALKS": [
@@ -1241,6 +1777,38 @@
       "run_id": "45930241559",
       "receipt_sha256": "bcac986b734cfbf974c9011ce3c664d47c884411371ed129974b306f0758a55b",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:26.568819+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "bcac986b734cfbf974c9011ce3c664d47c884411371ed129974b306f0758a55b",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:53:55.781999+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "bcac986b734cfbf974c9011ce3c664d47c884411371ed129974b306f0758a55b",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:28:44.543887+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "bcac986b734cfbf974c9011ce3c664d47c884411371ed129974b306f0758a55b",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:31:45.497750+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "bcac986b734cfbf974c9011ce3c664d47c884411371ed129974b306f0758a55b",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
@@ -1314,6 +1882,38 @@
       "receipt_sha256": "9197125ef3e2b044e4175a5015431a667669227e6e02fe784ea69d6d12b43f63",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:29.162774+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "841cc55c2d215e1d52cc3dd1740bf48775c78a5b636d637405213036b505a3a9",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:53:58.155960+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "583d51b80b54a749a37baf65180b6401bef69b07e081ef6a0de4becb78a04a53",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:28:46.773741+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "b6163b7a6761b118ddf3574d650f9d1e6d1b7c543a71f9e2a5a1d8eb56cd901f",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:31:47.742777+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "1e707b1adb0455110e31c44e2362157026ca498452921aa9b66b7526e5d96e4c",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
   "VKTX": [
@@ -1385,6 +1985,38 @@
       "run_id": "45930241559",
       "receipt_sha256": "6b3076d7c3c50a2df9d5e707197c79e84785e0e07c15f4cdf069460a17434ec6",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:26.707411+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "8c3a9b42e1609af6748d9c057e9f04c5f3495e0af41046e36bd0bfaf94c270d3",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:53:55.293122+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "61eb94ba2a3025f5edae8859d22c136a8bcbc20c2dc40067b21963c6e88222e3",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:28:44.384934+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "f9bddbb47f8f00bdaf2cda8183287fbc04b971b5343b1dd7ee8630432135dcd8",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:31:45.862088+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "b25434c242e7404408a34c601422eea7b9024874fd28d04c84b0a9ab3f1603ec",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
@@ -1458,6 +2090,38 @@
       "receipt_sha256": "0840234e9381779f2e4538761bdc79356bde844145427bd527f6acaecd562d2b",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:27.339843+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "0840234e9381779f2e4538761bdc79356bde844145427bd527f6acaecd562d2b",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:53:55.694492+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "0840234e9381779f2e4538761bdc79356bde844145427bd527f6acaecd562d2b",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:28:44.982553+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "0840234e9381779f2e4538761bdc79356bde844145427bd527f6acaecd562d2b",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:31:46.379462+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "0840234e9381779f2e4538761bdc79356bde844145427bd527f6acaecd562d2b",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
   "CAPR": [
@@ -1530,6 +2194,38 @@
       "receipt_sha256": "3f1cfacfe0ee3a0695e76ec4a1aeb21488ebea92bd58ead0e967a99379d4f7a7",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:26.855836+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "3f1cfacfe0ee3a0695e76ec4a1aeb21488ebea92bd58ead0e967a99379d4f7a7",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:53:55.873103+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "6be982a66c2e21c3db035055828f9bd69dd2e63208f68d6942edd96fd8721254",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:28:44.681730+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "6be982a66c2e21c3db035055828f9bd69dd2e63208f68d6942edd96fd8721254",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:31:46.636369+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "6be982a66c2e21c3db035055828f9bd69dd2e63208f68d6942edd96fd8721254",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
   "KURA": [
@@ -1539,6 +2235,14 @@
       "run_id": "45924047490",
       "receipt_sha256": "de31cc95f545a68e094d7bf2623ce3ee7cba0060862bc5d0e6befd4bb01bcf07",
       "source_commit": "73d8eb36b73d1c2155cfebde9a03b20d108d2c18",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T10:42:58.178599+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "de31cc95f545a68e094d7bf2623ce3ee7cba0060862bc5d0e6befd4bb01bcf07",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
@@ -1612,6 +2316,38 @@
       "receipt_sha256": "27d128f84677b9d3203453de99e11e003b503420d91d342a641c50cfe55ba98f",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:30.711470+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "27d128f84677b9d3203453de99e11e003b503420d91d342a641c50cfe55ba98f",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:53:59.325550+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "27d128f84677b9d3203453de99e11e003b503420d91d342a641c50cfe55ba98f",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:28:51.864944+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "27d128f84677b9d3203453de99e11e003b503420d91d342a641c50cfe55ba98f",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:31:51.053303+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "7d4e8fbbb218e825c9bf84609691dc0d2e690b8a39fec4a341a3f6bfda8a6681",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
   "ZEAL": [
@@ -1684,6 +2420,38 @@
       "receipt_sha256": "0b109cd2763a9d3afd11f166ad338253281b486240294b790c79d9125b6c2867",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:31.052740+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "47145b9635180bc51f26eeca40f1657b4c3f02fc08cd5bde58235536cd762a04",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:53:59.714946+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "132e029e6b1fae23f626c3747d34e945bfae4337c103d1e5ea82adcea76128d4",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:28:49.019346+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "b5eae6a0a12241115a5991f894cddd63973c63044c647da51e878b928a4ac1d4",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:31:50.823172+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "6fa254a6f1a19ca28345850566af1e5a91d27290af164281da7741ea834d00e0",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
   "SUPN": [
@@ -1701,6 +2469,14 @@
       "run_id": "45924047490",
       "receipt_sha256": "87d013079421481aea38ee9846a4da5a6623bf238cee393b6c3c11f09f693ae0",
       "source_commit": "73d8eb36b73d1c2155cfebde9a03b20d108d2c18",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T10:43:02.854585+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "87d013079421481aea38ee9846a4da5a6623bf238cee393b6c3c11f09f693ae0",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
@@ -1774,6 +2550,38 @@
       "receipt_sha256": "7b5ef11f989492e103ced3159954784e73b5ef0aa0b465f53f608b09e0701a20",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:30.949290+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "7b5ef11f989492e103ced3159954784e73b5ef0aa0b465f53f608b09e0701a20",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:53:59.435847+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "7b5ef11f989492e103ced3159954784e73b5ef0aa0b465f53f608b09e0701a20",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:28:48.539546+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "7b5ef11f989492e103ced3159954784e73b5ef0aa0b465f53f608b09e0701a20",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:31:51.095594+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "7b5ef11f989492e103ced3159954784e73b5ef0aa0b465f53f608b09e0701a20",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
   "HRMY": [
@@ -1791,6 +2599,14 @@
       "run_id": "45924047490",
       "receipt_sha256": "e208eb48467ed19563874e8295aaebb16847cd93633bf065abdd99bc085a0cae",
       "source_commit": "73d8eb36b73d1c2155cfebde9a03b20d108d2c18",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T10:43:05.872357+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "e208eb48467ed19563874e8295aaebb16847cd93633bf065abdd99bc085a0cae",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
@@ -1864,6 +2680,38 @@
       "receipt_sha256": "f6b7b9c332f72e57c5d47f1337edea522a62c64f40fcca295dea604ab2344c7d",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:36.724092+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "f6b7b9c332f72e57c5d47f1337edea522a62c64f40fcca295dea604ab2344c7d",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:54:05.150101+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "f6b7b9c332f72e57c5d47f1337edea522a62c64f40fcca295dea604ab2344c7d",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:28:54.364278+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "f6b7b9c332f72e57c5d47f1337edea522a62c64f40fcca295dea604ab2344c7d",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:31:56.181346+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "187d029641d1961fc9f13fb310aa247a1ac94d51c52cd539387715af533e9a60",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
   "RVMD": [
@@ -1935,6 +2783,38 @@
       "run_id": "45930241559",
       "receipt_sha256": "919facc856c633fe7899e7058ea8526bc049e6b0f443eedf6dc0e2d28b399a79",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:33.421884+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "3df76ef5304546d1560c639b67bdebe7496a44eb9ca814443d0982f0ae7482ed",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:54:02.468068+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "f0cd63856abde4baf8d0cdf22927862b90f1817852190fc6596a486689b9f857",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:28:54.985314+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "93bdb9c4772bbb0f1e1a79fabe23d64422885f59ebdf56beb339eb9bfd8bc952",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:31:55.107442+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "f715dd7846d0852a0cd7df5773f3caa5068ceffa78587d40e4ff426b751f1241",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
@@ -2008,6 +2888,38 @@
       "receipt_sha256": "47d243b0674fbdda78f000e3357180b9855c9fb82b084a55d5c0f8f6f6d182c3",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:33.657918+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "b52fe4364b82f6ac6c4bb15f1f36e492cf93a636077e4cc683d8aac37a2d3238",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:54:02.673673+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "4d3e9db9b2d5bd520a1df548e06249bb88cab29269d7dd8783b76b63f43b178c",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:28:53.250451+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "c3ab0761e38d96ada64b60a85dc7711e42a946011395277925de89c23a46a22e",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:31:54.820059+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "869c290b233bd5e536c04e0f421b817acee100c9447f60f42f21987823adcbc7",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
   "ORKA": [
@@ -2080,6 +2992,38 @@
       "receipt_sha256": "911dff27dfee4538a8dfcb4d57274f12f7486273305f1301b2510775e2b763ed",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:33.737702+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "911dff27dfee4538a8dfcb4d57274f12f7486273305f1301b2510775e2b763ed",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:54:02.779095+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "911dff27dfee4538a8dfcb4d57274f12f7486273305f1301b2510775e2b763ed",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:28:53.345210+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "911dff27dfee4538a8dfcb4d57274f12f7486273305f1301b2510775e2b763ed",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:31:55.014517+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "911dff27dfee4538a8dfcb4d57274f12f7486273305f1301b2510775e2b763ed",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
   "ERAS": [
@@ -2089,6 +3033,14 @@
       "run_id": "45924047490",
       "receipt_sha256": "bb2fc7441b3bde8361b3d23ba2d72db606aea9e75259737a8e2acd29b13240d5",
       "source_commit": "73d8eb36b73d1c2155cfebde9a03b20d108d2c18",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T10:43:06.755846+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "e6812f1a556181b304356e15693ea7f949c49ffa241a540e92e2614c47f499c2",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
@@ -2107,6 +3059,14 @@
       "run_id": "45924047490",
       "receipt_sha256": "ffedc728cbb6363aa9ea0fcb39e7067a2f57dbe77c67f5416c4e16280d82e7c5",
       "source_commit": "73d8eb36b73d1c2155cfebde9a03b20d108d2c18",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T10:43:09.499089+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "ffedc728cbb6363aa9ea0fcb39e7067a2f57dbe77c67f5416c4e16280d82e7c5",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
@@ -2148,6 +3108,38 @@
       "receipt_sha256": "dd1f24dc5c04e1de53c030e5c45eb3d61a3ce99c7e0a6ccaa47b050d2114901d",
       "source_commit": "994e3385061b0160c16a56957bf79f9432a9e270",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:40:59.246942+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "616ab46578e7eccabd8f5ce86e910dec946d33c81a68f63408ddb1d983b3757e",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:54:05.385207+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "da31915a9bfa18dfdd57744bdd4838c7a553ac51b8bcba92e391db68dd3a0520",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:28:55.274799+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "1ced3ab9797b3694d4573cd0f893776365cde48b06d6ea7910f98a09b9911560",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:31:55.964890+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "e6904a7583f81a7f2f000f0a4d7ccb85aeca7f3d34ad613629acf98f45b91e72",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
   "GPCR": [
@@ -2165,6 +3157,14 @@
       "run_id": "45924047490",
       "receipt_sha256": "da9b998a78fbcfd84137b66322de247531036edce9e186a63daf77bcfc56c9f3",
       "source_commit": "73d8eb36b73d1c2155cfebde9a03b20d108d2c18",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T10:43:08.308477+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "da9b998a78fbcfd84137b66322de247531036edce9e186a63daf77bcfc56c9f3",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
@@ -2238,6 +3238,38 @@
       "receipt_sha256": "c5f2a52b23f80884b837781cd8bf32bc3b23657f2454a2671497be2a95eae158",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:38.499273+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "c5f2a52b23f80884b837781cd8bf32bc3b23657f2454a2671497be2a95eae158",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:54:06.118065+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "f25598ac7ad5246961c8e3ff9020322d6d1667025f6fba002a8ed31a7032f71e",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:28:56.242256+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "f25598ac7ad5246961c8e3ff9020322d6d1667025f6fba002a8ed31a7032f71e",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:31:56.411587+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "f25598ac7ad5246961c8e3ff9020322d6d1667025f6fba002a8ed31a7032f71e",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
   "DNLI": [
@@ -2255,6 +3287,14 @@
       "run_id": "45924047490",
       "receipt_sha256": "a72ab6c381559ab58584fd00a77ebfdf5842f6d1adbbf15189779fca70cbf25e",
       "source_commit": "73d8eb36b73d1c2155cfebde9a03b20d108d2c18",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T10:43:09.053387+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "a72ab6c381559ab58584fd00a77ebfdf5842f6d1adbbf15189779fca70cbf25e",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
@@ -2319,6 +3359,38 @@
       "run_id": "45930241559",
       "receipt_sha256": "1a76152739139d2454e7e3105f0a92072749f692569db4a77a2e1478f00370a4",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:44.539443+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "1a76152739139d2454e7e3105f0a92072749f692569db4a77a2e1478f00370a4",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:54:08.433534+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "1a76152739139d2454e7e3105f0a92072749f692569db4a77a2e1478f00370a4",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:28:59.794235+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "1a76152739139d2454e7e3105f0a92072749f692569db4a77a2e1478f00370a4",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:31:58.219925+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "1a76152739139d2454e7e3105f0a92072749f692569db4a77a2e1478f00370a4",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
@@ -2392,6 +3464,38 @@
       "receipt_sha256": "f3f7c5937db1ff3494faa355c0ef827fce34a17ee921ea367bf08217761b6db4",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:40.173952+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "f3f7c5937db1ff3494faa355c0ef827fce34a17ee921ea367bf08217761b6db4",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:54:08.152784+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "4a24357f931e17e6330e7e9c13fc5971c960c28780fcd002663a19b63a625229",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:28:59.262836+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "4a24357f931e17e6330e7e9c13fc5971c960c28780fcd002663a19b63a625229",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:31:57.892350+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "4a24357f931e17e6330e7e9c13fc5971c960c28780fcd002663a19b63a625229",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
   "1801 HK": [
@@ -2455,6 +3559,38 @@
       "run_id": "45930241559",
       "receipt_sha256": "64394ed30896348baa57c34ea41e2c648351f41182bb8d6a1f10f8d31ea83ce3",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:43.794706+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "cae558e5b811b4ec1e8d40cd52c395af9196b427489dcb889867c8dd48417ff3",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:54:11.523249+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "cae558e5b811b4ec1e8d40cd52c395af9196b427489dcb889867c8dd48417ff3",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:29:02.727236+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "cae558e5b811b4ec1e8d40cd52c395af9196b427489dcb889867c8dd48417ff3",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:32:00.265088+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "cae558e5b811b4ec1e8d40cd52c395af9196b427489dcb889867c8dd48417ff3",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
@@ -2528,6 +3664,38 @@
       "receipt_sha256": "7ed484929cc40a734ddbda9f4fa481d74a388a6a42c541b63fac07d207e3b242",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:42.583255+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "b9ecb6e78e7c74e3d17d91f72efd17144e87d1a0b3d4f49b654752a5e88db425",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:54:10.275069+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "b2e0a954f358a630f149f5013cc22627cc13bddf54eb23d5faf5bb1eac707542",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:29:01.895516+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "1658bb6a0ea8907493f1f20cbb0eee70f6a9e0665edfcc6771a4c067a5a524aa",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:32:00.774158+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "1217bfa7c9acf6256c07aaccbfe13b1468a218467f07ba973d5db5271769cb52",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
   "207940 KS": [
@@ -2595,6 +3763,38 @@
       "run_id": "45930241559",
       "receipt_sha256": "8dc2cc2231effd60ec72faa1184039fb50ad81139770e79f304700c52f313895",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:10.335136+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "8dc2cc2231effd60ec72faa1184039fb50ad81139770e79f304700c52f313895",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:53:40.613076+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "8dc2cc2231effd60ec72faa1184039fb50ad81139770e79f304700c52f313895",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:28:26.684298+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "8dc2cc2231effd60ec72faa1184039fb50ad81139770e79f304700c52f313895",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:31:29.681923+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "8dc2cc2231effd60ec72faa1184039fb50ad81139770e79f304700c52f313895",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
@@ -2667,6 +3867,38 @@
       "run_id": "45930241559",
       "receipt_sha256": "06264aeae4a8724fd0b1fbd5d164e75703644e10bbf6c565a14c8dc6b489c1d0",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:44.983332+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "06264aeae4a8724fd0b1fbd5d164e75703644e10bbf6c565a14c8dc6b489c1d0",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:54:11.494215+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "06264aeae4a8724fd0b1fbd5d164e75703644e10bbf6c565a14c8dc6b489c1d0",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:29:03.422778+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "06264aeae4a8724fd0b1fbd5d164e75703644e10bbf6c565a14c8dc6b489c1d0",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:32:02.132729+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "06264aeae4a8724fd0b1fbd5d164e75703644e10bbf6c565a14c8dc6b489c1d0",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
@@ -2742,6 +3974,38 @@
       "receipt_sha256": "47b0e1adc084a5a1d0f2ecb07a2ab2dd26efd00779581d883688c4ec37ec7651",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:48.560224+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "e77fd3ca91a18a4bbd3457d5002403c169a27fe0af2b1623b4436b20f340d026",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:54:15.575931+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "dc252d9ffc3694d071732d171277e4259a7117464e57742ef3e2689c68d0fb28",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:29:06.827779+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "47b0e1adc084a5a1d0f2ecb07a2ab2dd26efd00779581d883688c4ec37ec7651",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:32:05.561547+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "47b0e1adc084a5a1d0f2ecb07a2ab2dd26efd00779581d883688c4ec37ec7651",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
   "C2N": [
@@ -2813,6 +4077,38 @@
       "run_id": "45930241559",
       "receipt_sha256": "55296d9dd68c5931ae267833429b81d01823f03cc8c071502f6b0ed79feea233",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:50.108968+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "55296d9dd68c5931ae267833429b81d01823f03cc8c071502f6b0ed79feea233",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:54:15.211678+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "55296d9dd68c5931ae267833429b81d01823f03cc8c071502f6b0ed79feea233",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:29:07.402457+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "c9b10311b9c6a4e1b744fd65b4172a9c0b185fe5d2e6aed85475d5f836a21cbf",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:32:06.017370+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "55296d9dd68c5931ae267833429b81d01823f03cc8c071502f6b0ed79feea233",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
@@ -2886,6 +4182,38 @@
       "receipt_sha256": "62defbc049a57a8739182db632d4488898aa8e1c64b5fe346943f2d3f0ba5d8d",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:48.800325+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "b1746590f89bf48b6b8aaa7e7dffca12ba649792b35d18f40082948ceece860f",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:54:15.482519+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "d2540a4e4df910144c019696dcb64388ce308c26b41e8612743fdb3b2444c60f",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:29:07.121865+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "7bfc9b86c5f0d774c7e4dad4cff0f4f774f817c7f12e31ecab7272e7f78ca37c",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:32:06.335094+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "e3f980080f6903fd50ec0cf54d13059c128ce75f18eead753096c5c9814dc027",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
   "CATALENT": [
@@ -2894,6 +4222,14 @@
       "end_jst": "2026-11-27T14:05:22.508888+09:00",
       "run_id": "45943520870",
       "receipt_sha256": "83f3fa8a591e0a314bdb6c81ddc4c2ff5ce5305ee259211474320c5874f32070"
+    },
+    {
+      "start_jst": "2026-11-26T12:37:07.814787+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "83f3fa8a591e0a314bdb6c81ddc4c2ff5ce5305ee259211474320c5874f32070",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
   "4568 JP": [
@@ -2965,6 +4301,38 @@
       "run_id": "45930241559",
       "receipt_sha256": "4a4dc4f021214543cd7765d06451708af11dc9f4b4f04420a095a3a8278b4658",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:55.207950+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "4a4dc4f021214543cd7765d06451708af11dc9f4b4f04420a095a3a8278b4658",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:54:21.960858+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "4a4dc4f021214543cd7765d06451708af11dc9f4b4f04420a095a3a8278b4658",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:29:14.042995+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "4a4dc4f021214543cd7765d06451708af11dc9f4b4f04420a095a3a8278b4658",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:32:13.264976+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "4a4dc4f021214543cd7765d06451708af11dc9f4b4f04420a095a3a8278b4658",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
@@ -3038,6 +4406,38 @@
       "receipt_sha256": "eebe1119b56dde8c96e67bb70e9198f7ff533972ca1c570f19d7fb05c4140c24",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:50.235180+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "3156f91d397f2afa781d3b97148bd29fa2e5dbea07a4d74998344eb933125f3a",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:54:15.825805+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "d25cff6d8bf6fb525309c39159cd06ca369f5daa212d7a8a136e2ce5206283f8",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:29:07.557733+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "2f7fcc96d954f4a82dc4703de19d2728fbf2a3e00d59aac5d63b11234cd4d65c",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:32:06.852343+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "b62d0723001793c3b4b3602dca8648b8ba41cf2ce8e6c56ce6f99994b951025b",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
   "EXEL": [
@@ -3047,6 +4447,14 @@
       "run_id": "45924047490",
       "receipt_sha256": "d367c299820e77a61313b73d4aeb72d4d451457b3a277e11d5ed71942705b6cc",
       "source_commit": "73d8eb36b73d1c2155cfebde9a03b20d108d2c18",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T10:43:18.275565+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "673290803d9697e051d3f505765022b8bfee5dea55db733aa6f547c3670bcae3",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
@@ -3120,6 +4528,38 @@
       "receipt_sha256": "918b441764074e63e33c193d23e4e87d034a0409fd83bad5bfda504f558f048a",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:55.792006+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "612b902fb7d924a0c93a1ec212ec9d94d740c45b3a65855778e0882122cbc454",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:54:21.504484+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "1f78fd8450ff282cbd4165756ba7c88612314bc655a675bfcb8da7fe1c356dc5",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:29:13.545184+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "2cca9fbb96603fa1d139340a31d588a005256653e2a0574c3bc5c76bc9602f7c",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:32:10.561154+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "c6a3a474950372d65018289256affbb78e334c5fef110ff7b0e2de32f5557a1a",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
   "FRE": [
@@ -3192,6 +4632,38 @@
       "receipt_sha256": "76ffde7a7db214ef5d85e133f53d3c570a78fb8b074c47419f1e8779938702d9",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:48:08.781353+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "fbdefa715060c1b7ab7ae20ed016a3ae01cdad786f62fad3196d86d2281e8691",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:54:35.051636+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "f06f82a05e0016f08d625fd33623d5c7e5576f2b1f61cf5871c7f1499f744f1b",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:29:30.093095+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "0eaf0c35d0174c45a33fff36499677b7ce6161ecff2dc58c52e9b2a0113ce7d6",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:32:21.708386+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "dfeeb3723a1d8a298030b44082893da0c2effe10840b5b75305db7402a8a47e2",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
   "GENENTECH": [
@@ -3255,6 +4727,38 @@
       "run_id": "45930241559",
       "receipt_sha256": "34d3a0b7fc1f7ba36f836c55fb10a5bf399f84bbeb9816ac91f76e4d660259a2",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:57.366240+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "34d3a0b7fc1f7ba36f836c55fb10a5bf399f84bbeb9816ac91f76e4d660259a2",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:54:23.038600+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "34d3a0b7fc1f7ba36f836c55fb10a5bf399f84bbeb9816ac91f76e4d660259a2",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:29:15.761064+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "34d3a0b7fc1f7ba36f836c55fb10a5bf399f84bbeb9816ac91f76e4d660259a2",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:32:11.659842+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "34d3a0b7fc1f7ba36f836c55fb10a5bf399f84bbeb9816ac91f76e4d660259a2",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
@@ -3328,6 +4832,38 @@
       "receipt_sha256": "85889c964032646f138fd6fa70f252cc62126327482f1c966525afdd7c03d35c",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:59.325573+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "f216ae5707b36de5664ae3ea1ebd08a26fd71314e9009af3970eae101fada9c7",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:54:26.197187+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "b5b331d4320b2e74d02cc44dfe20132197664d648d1051733b1b1dfaa80645e9",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:29:17.196958+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "d516e1d0557bd92363ff999f3c872621ea26effc4ecf5c1533f260118e69f054",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:32:15.766607+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "f54b21819a4fc0ab285b5bc09ebdf3f14857863ae943b68aa485269b093e4543",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
   "IONS": [
@@ -3345,6 +4881,14 @@
       "run_id": "45924047490",
       "receipt_sha256": "00a157ddfcee7cb9876ef251327cab7b5c556178c05d49c424e0cf9203cd7034",
       "source_commit": "73d8eb36b73d1c2155cfebde9a03b20d108d2c18",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T10:43:23.807098+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "00a157ddfcee7cb9876ef251327cab7b5c556178c05d49c424e0cf9203cd7034",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
@@ -3419,6 +4963,38 @@
       "receipt_sha256": "c67276355ac87d5b60562e15cb8a2e57bb60fc94a42088b55faeb4a60f33c86f",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:48:01.619686+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "c67276355ac87d5b60562e15cb8a2e57bb60fc94a42088b55faeb4a60f33c86f",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:54:30.240466+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "c67276355ac87d5b60562e15cb8a2e57bb60fc94a42088b55faeb4a60f33c86f",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:29:19.541947+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "c67276355ac87d5b60562e15cb8a2e57bb60fc94a42088b55faeb4a60f33c86f",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:32:18.244319+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "c67276355ac87d5b60562e15cb8a2e57bb60fc94a42088b55faeb4a60f33c86f",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
   "HLUN": [
@@ -3436,6 +5012,30 @@
       "run_id": "45930241559",
       "receipt_sha256": "fbd1b8a6c18fe6d7dae14d4104678a9d66e083d53de2e98741a68d0782c4eb9a",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:47:10.335136+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "fbd1b8a6c18fe6d7dae14d4104678a9d66e083d53de2e98741a68d0782c4eb9a",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:53:40.613076+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "fbd1b8a6c18fe6d7dae14d4104678a9d66e083d53de2e98741a68d0782c4eb9a",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:28:26.684298+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "fbd1b8a6c18fe6d7dae14d4104678a9d66e083d53de2e98741a68d0782c4eb9a",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
@@ -3509,6 +5109,38 @@
       "receipt_sha256": "b01081c9aab52608057948758dcd469e020ce062374c46b7afddd6a2d957cc26",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:48:04.030010+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "b01081c9aab52608057948758dcd469e020ce062374c46b7afddd6a2d957cc26",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:54:32.386963+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "b01081c9aab52608057948758dcd469e020ce062374c46b7afddd6a2d957cc26",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:29:21.744351+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "b01081c9aab52608057948758dcd469e020ce062374c46b7afddd6a2d957cc26",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:32:20.351518+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "b01081c9aab52608057948758dcd469e020ce062374c46b7afddd6a2d957cc26",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
   "NBIX": [
@@ -3518,6 +5150,14 @@
       "run_id": "45924047490",
       "receipt_sha256": "06d7b59614734ccbc4f7fa70ea94a64f5ec39ee8d389673c355a2a556d4c8dda",
       "source_commit": "73d8eb36b73d1c2155cfebde9a03b20d108d2c18",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T10:43:29.897968+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "06d7b59614734ccbc4f7fa70ea94a64f5ec39ee8d389673c355a2a556d4c8dda",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
@@ -3592,6 +5232,38 @@
       "receipt_sha256": "2bb5bd7cf26d5121ed85b8f7430072968d17ea4ab0ba2469ff5ff9d3280bcb5f",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:48:05.989760+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "2bb5bd7cf26d5121ed85b8f7430072968d17ea4ab0ba2469ff5ff9d3280bcb5f",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:54:33.670991+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "2bb5bd7cf26d5121ed85b8f7430072968d17ea4ab0ba2469ff5ff9d3280bcb5f",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:29:22.609060+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "2bb5bd7cf26d5121ed85b8f7430072968d17ea4ab0ba2469ff5ff9d3280bcb5f",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:32:20.471214+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "2bb5bd7cf26d5121ed85b8f7430072968d17ea4ab0ba2469ff5ff9d3280bcb5f",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
   "4506 JP": [
@@ -3663,6 +5335,38 @@
       "run_id": "45930241559",
       "receipt_sha256": "a713b0bcc74dbe23ec4e2f431dc77011bf3bb1acb536efec9ff5eec981e529b8",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:48:09.357964+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "a713b0bcc74dbe23ec4e2f431dc77011bf3bb1acb536efec9ff5eec981e529b8",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:54:36.992629+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "a713b0bcc74dbe23ec4e2f431dc77011bf3bb1acb536efec9ff5eec981e529b8",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:29:27.004679+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "a713b0bcc74dbe23ec4e2f431dc77011bf3bb1acb536efec9ff5eec981e529b8",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:32:24.069531+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "a713b0bcc74dbe23ec4e2f431dc77011bf3bb1acb536efec9ff5eec981e529b8",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
@@ -3736,6 +5440,38 @@
       "receipt_sha256": "3365d7016ee1ac9b669a9a57c8aa725dd3a5d6708e5b5bef18d73e21cf7d6f23",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:48:12.866094+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "d98429b51c56744f70dd0bd649724e1b0499c95eeacf18763bc1656401500c3d",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:54:37.787324+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "ad1cb04418d759e263e643fa68e2421231579cf376fec2a2c56e13fd2083aaa1",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:29:26.918205+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "4a6f5e177369c826e93379a0a0a35fe6b2bd9597e0aa9f28dc5fc76ec4f25cff",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:32:23.141546+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "1ba842a781e757ad1620a6aa70af9344f3117be688fc3d6e8299d8ba217cc00c",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ],
   "RARE": [
@@ -3807,6 +5543,38 @@
       "run_id": "45930241559",
       "receipt_sha256": "a42eef85e97944ceca5fdc4d3cedad326477bd0ff9b4596d1b94f7ee748a5bfb",
       "source_commit": "2a44c2b112cd4915a4b2a7091586603093394bb6",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:48:11.634542+09:00",
+      "end_jst": "2026-11-27T11:53:40.613076+09:00",
+      "run_id": "45930863851",
+      "receipt_sha256": "0adc5e0f20f7cfdd08828abc473e3cda9a6326ba8577f624a3a328cb3bae9ae3",
+      "source_commit": "a8ffca3f82c5fac9a06d97572b46404d3bb8e76d",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T11:54:37.503980+09:00",
+      "end_jst": "2026-11-27T12:28:26.684298+09:00",
+      "run_id": "45934255858",
+      "receipt_sha256": "53d2a13c52e5653eb89d6fd505b411cf8eec212b7fe87692024fcbe5a1d9a5f2",
+      "source_commit": "07e9d45dbe3cbf04d4914c9c865d291aad0abce2",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:29:29.466381+09:00",
+      "end_jst": "2026-11-27T12:31:29.681923+09:00",
+      "run_id": "45934511216",
+      "receipt_sha256": "d26bc873de3699a414158aded9b901294beab05da60c019d1d43d871f5350f69",
+      "source_commit": "9c2ee8a77838526cda7180ac5695d0a7877131f5",
+      "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
+    },
+    {
+      "start_jst": "2026-11-27T12:32:24.688602+09:00",
+      "end_jst": "2026-11-27T12:37:07.814787+09:00",
+      "run_id": "45935066622",
+      "receipt_sha256": "a4eee6a5cc65769d19a8aa8ad3c24a1fb4abfd082caf8b68fe6dbd820acf2516",
+      "source_commit": "67347146657da266e8d30567135c30b14925416c",
       "provenance": "PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED"
     }
   ]
