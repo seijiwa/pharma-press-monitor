@@ -1,0 +1,57 @@
+name: Pharma71 one-time inbox receipt test (2026-11-27)
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/pharma71-receipt-test-20261127.yml'
+permissions:
+  contents: write
+concurrency:
+  group: pharma71-morning-email
+  cancel-in-progress: false
+jobs:
+  test-receipt:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: pharma71-unified-20261127
+          path: unified-staging
+          persist-credentials: false
+      - name: Wait for the completed daily audit (read only)
+        run: |
+          set -euo pipefail
+          for attempt in $(seq 1 20); do
+            if python3 -c 'import json; assert json.load(open("unified-staging/data/pharma71_unified/audit.json"))["run_id"]=="45945774735"'; then exit 0; fi
+            sleep 10
+            git -C unified-staging fetch --depth=1 origin pharma71-unified-20261127
+            git -C unified-staging checkout --detach FETCH_HEAD
+          done
+          echo '::error::Expected persisted audit not available; no test email'
+          exit 1
+      - name: Validate complete report and date before sending
+        run: |
+          python3 -m unittest discover -s tests_mail -q
+          PYTHONPATH=scripts python3 - <<'PY'
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          from pharma71_unified_mail import section
+          now=datetime.now(ZoneInfo('Asia/Tokyo'))
+          assert now.date().isoformat()=='2026-11-27', 'One-time test expired'
+          label,body=section(now)
+          assert label!='【統合監査未確認】' and '【全71対象の判定】' in body
+          rows=body.split('【全71対象の判定】',1)[1].split('【以下は従来監視',1)[0]
+          assert sum(s.startswith('・') for s in rows.splitlines())==71
+          print('TEST_MAIL_71_ROWS_VERIFIED')
+          PY
+      - name: Send one explicitly marked test to configured mailbox
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PHARMA71_GMAIL_USER: ${{ secrets.PHARMA71_GMAIL_USER }}
+          PHARMA71_GMAIL_APP_PASSWORD: ${{ secrets.PHARMA71_GMAIL_APP_PASSWORD }}
+        run: python3 scripts/pharma71_email.py test
