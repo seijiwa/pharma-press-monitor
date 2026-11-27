@@ -14,7 +14,28 @@ concurrency:
   group: pharma71-unified-staging
   cancel-in-progress: false
 jobs:
+  regulatory:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements-pharma46.txt
+      - name: Independent SEC disclosure observations
+        env:
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+        run: python -m pharma71_unified.regulatory --root data/pharma71_regulatory
+      - uses: actions/upload-artifact@v4
+        with:
+          name: regulatory-evidence-${{ github.run_id }}
+          path: data/pharma71_regulatory/
+          if-no-files-found: error
   audit:
+    needs: regulatory
     runs-on: ubuntu-24.04
     timeout-minutes: 180
     steps:
@@ -28,9 +49,13 @@ jobs:
       - name: Install Chromium
         continue-on-error: true
         run: python -m playwright install --with-deps chromium
+      - uses: actions/download-artifact@v4
+        with:
+          name: regulatory-evidence-${{ github.run_id }}
+          path: data/pharma71_regulatory/
       - name: Live audit 71 (no email)
         id: collect
-        run: python -m pharma71_unified.cli --workers 3 --max-pages 12
+        run: python -m pharma71_unified.cli --workers 3 --max-pages 12 --regulatory-file data/pharma71_regulatory/regulatory.json
       - name: Preserve report, original receipts and verified RSS
         if: always() && steps.collect.outcome != 'skipped' && steps.collect.outcome != ''
         uses: actions/upload-artifact@v4

@@ -10,6 +10,7 @@ from pharma46.cli import save_json
 from .registry import load_registry,ticker_order,HISTORICAL
 from .api_observations import supplement
 from .official_fallback import collect_fallback,update_original_state
+from .ledger import persist
 
 def verified_feeds(entries,folder):
     folder=Path(folder);folder.mkdir(parents=True,exist_ok=True)
@@ -39,11 +40,13 @@ def main(argv=None):
     p=argparse.ArgumentParser()
     p.add_argument('--workers',type=int,default=3)
     p.add_argument('--max-pages',type=int,default=12)
+    p.add_argument('--root',default=os.getenv('PHARMA71_DATA_DIR','data/pharma71_unified'))
+    p.add_argument('--regulatory-file',default=None)
     args=p.parse_args(argv)
     registry=load_registry()
     order=ticker_order(registry)
     now=datetime.now(JST)
-    root=Path('data/pharma71_unified')
+    root=Path(args.root)
     root.mkdir(parents=True,exist_ok=True)
     state_path=root/'state.json'
     state=json.loads(state_path.read_text()) if state_path.exists() else {'companies':{}}
@@ -82,6 +85,15 @@ def main(argv=None):
         'independent_scope_verified':sum(e['status']!='未確認' and e['ticker'] not in HISTORICAL for e in entries),
         'historical_scope_pending_review':sorted(HISTORICAL),
         'unresolved':unresolved,'production_delivery_verified':False}
+    regulatory={'status':'NOT_RUN','newsroom_coverage_credit':False}
+    if args.regulatory_file:
+        regulatory=json.loads(Path(args.regulatory_file).read_text(encoding='utf-8'))
+        if regulatory.get('newsroom_coverage_credit') is not False:
+            raise ValueError('regulatory observations cannot confer newsroom credit')
+        if os.getenv('GITHUB_RUN_ID') and regulatory.get('run_id')!=os.getenv('GITHUB_RUN_ID'):
+            raise ValueError('regulatory report is not from current run')
+    audit['regulatory_observations']=regulatory
+    audit['execution_environment']=os.getenv('PHARMA71_ENVIRONMENT','github-hosted-or-local')
     save_json(root/'audit.json',audit)
     save_json(root/(now.strftime('%Y-%m-%dT%H%M%S')+'_audit.json'),audit)
     save_json(state_path,new_state)
@@ -97,6 +109,7 @@ def main(argv=None):
         history[e['ticker']]=sorted(ledger.values(),key=lambda x:x.get('published_date') or '',reverse=True)[:500]
     save_json(history_path,history)
     verified_feeds([dict(e,primary_releases=history[e['ticker']]) for e in entries],root/'feeds')
+    persist(root/'audit_ledger.sqlite3',audit)
     print(json.dumps(summary,ensure_ascii=False))
     return 0 if not errors else 2
 

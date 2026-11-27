@@ -1,0 +1,11 @@
+FROM python:3.12-slim
+WORKDIR /app
+ENV PYTHONUNBUFFERED=1 PLAYWRIGHT_BROWSERS_PATH=/ms-playwright PHARMA71_DATA_DIR=/data/pharma71 PHARMA71_ENVIRONMENT=external-worker
+COPY requirements-pharma46.txt .
+RUN pip install --no-cache-dir -r requirements-pharma46.txt && python -m playwright install --with-deps chromium
+COPY pharma46 ./pharma46
+COPY pharma71_unified ./pharma71_unified
+COPY companies.csv .
+RUN useradd --uid 10001 --create-home collector && mkdir -p /data/pharma71 && chown -R collector:collector /data
+USER collector
+CMD ["python","-m","pharma71_unified.worker"]
