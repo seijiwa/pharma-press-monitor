@@ -12,6 +12,7 @@ from pathlib import Path
 from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
+from pharma71_unified_mail import section
 
 TOKYO = ZoneInfo("Asia/Tokyo")
 SITE = "https://seijiwa.github.io/pharma-press-monitor/"
@@ -115,6 +116,9 @@ if __name__ == "__main__":
         raise SystemExit("Invalid delivery mode")
     now = datetime.now(TOKYO)
     subject, body = report(now)
+    label, integrated = section(now)
+    subject += label
+    body = integrated + '\n' + body
     if mode == "preview":
         print(subject)
         print(body)

@@ -25,6 +25,15 @@ jobs:
         with:
           ref: main
           persist-credentials: false
+      - name: Read latest unified audit (supplement only)
+        continue-on-error: true
+        uses: actions/checkout@v4
+        with:
+          ref: pharma71-unified-20261127
+          path: unified-staging
+          persist-credentials: false
+      - name: Test mail audit freshness and scope
+        run: python3 -m unittest discover -s tests_mail -q
       - name: Prepare or deliver report
         env:
           DELIVERY_MODE: ${{ github.event_name == 'schedule' && 'daily' || inputs.mode }}
