@@ -1,7 +1,7 @@
-# 製薬公式監視 2026-11-27【暫定・未確認19社】
+# 製薬公式監視 2026-11-27【暫定・未確認20社】
 
-- レポート日付(JST): 2026-11-27T12:42:35.804035+09:00
-- 対象71社 / 直接取得試行記録 71社 / 期間網羅確認 52社 / 未確認 19社
+- レポート日付(JST): 2026-11-27T12:49:30.466959+09:00
+- 対象71社 / 直接取得試行記録 71社 / 期間網羅確認 51社 / 未確認 20社
 - 一次原文で確認した発表: 0件 / 新規、既報、初回観測を別々に表示
 - 収集エンジン: GitHub Pharma71 unified staging / 構造QAコード: 実行済み（エラー0件） / 期間網羅QA: 未達
 - キャッシュ疑い: 0社
@@ -16,7 +16,7 @@
 |---|---|---|---|---|---|
 |LLY|なし|成功|2026-11-23|True|COMPLETE_DATED_LISTING_NO_NEW_RELEASES|
 |ABBV|なし|成功|2026-11-23|True|COMPLETE_DATED_LISTING_NO_NEW_RELEASES|
-|AMGN|なし|成功|2026-11-24|True|COMPLETE_DATED_LISTING_NO_NEW_RELEASES|
+|AMGN|未確認|成功|null|False|INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL|
 |BIIB|未確認|成功|null|False|INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL|
 |BMY|なし|成功|2026-11-25|True|COMPLETE_DATED_LISTING_NO_NEW_RELEASES|
 |GILD|なし|成功|2026-11-25|True|COMPLETE_DATED_LISTING_NO_NEW_RELEASES|
@@ -113,14 +113,14 @@
 - LONN: ARCHIVE_CANDIDATES_ONLY, 原文 0件
 
 ## 複数取得経路の統合監査（71対象、範囲別）
-- 独立企業 68 / 公式一覧確認 52 / SECのみ確認 0 / いずれも未確認 16
+- 独立企業 68 / 公式一覧確認 51 / SECのみ確認 0 / いずれも未確認 17
 - 買収済み監視対象 3 / 親会社一覧の限定確認 1 / 未確認 2
 - SECのみの確認は公式ニュースの不存在証明ではありません。
 |Ticker|監視範囲|判定|SEC|TDnet候補|HKEX候補|
 |---|---|---|---|---:|---:|
 |LLY|INDEPENDENT|NEWSROOM_PERIOD_VERIFIED|NOT_RUN|0|0|
 |ABBV|INDEPENDENT|NEWSROOM_PERIOD_VERIFIED|NOT_RUN|0|0|
-|AMGN|INDEPENDENT|NEWSROOM_PERIOD_VERIFIED|NOT_RUN|0|0|
+|AMGN|INDEPENDENT|NO_VERIFIED_PERIOD|NOT_RUN|0|0|
 |BIIB|INDEPENDENT|NO_VERIFIED_PERIOD|NOT_RUN|0|0|
 |BMY|INDEPENDENT|NEWSROOM_PERIOD_VERIFIED|NOT_RUN|0|0|
 |GILD|INDEPENDENT|NEWSROOM_PERIOD_VERIFIED|NOT_RUN|0|0|
