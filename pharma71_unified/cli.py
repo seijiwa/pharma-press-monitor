@@ -11,6 +11,7 @@ from .registry import load_registry,ticker_order,HISTORICAL
 from .api_observations import supplement
 from .official_fallback import collect_fallback,update_original_state
 from .ledger import persist
+from .wire import collect_wire
 
 def verified_feeds(entries,folder):
     folder=Path(folder);folder.mkdir(parents=True,exist_ok=True)
@@ -61,6 +62,8 @@ def main(argv=None):
         supplement(e,now,root/'evidence'/now.strftime('%Y-%m-%dT%H%M%S'),state=new_state)
         if e['ticker'] not in HISTORICAL:
             collect_fallback(e,by_ticker[e['ticker']],now,root/'evidence'/now.strftime('%Y-%m-%dT%H%M%S'),state=prior_state)
+        if e['ticker'] not in HISTORICAL:
+            collect_wire(e,now,root/'evidence'/now.strftime('%Y-%m-%dT%H%M%S'))
         if e.get('source_classification')=='PERIOD_VERIFIED_OFFICIAL_API':
             new_state['companies'].setdefault(e['ticker'],{})['last_verified_success_jst']=e['new_success_jst']
         if e['ticker'] in HISTORICAL:
