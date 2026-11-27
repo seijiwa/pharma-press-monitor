@@ -30,7 +30,7 @@ jobs:
         run: python -m playwright install --with-deps chromium
       - name: Live audit 71 (no email)
         id: collect
-        run: python -m pharma71_unified.cli --workers 8 --max-pages 12
+        run: python -m pharma71_unified.cli --workers 3 --max-pages 12
       - name: Preserve report, original receipts and verified RSS
         if: always() && steps.collect.outcome != 'skipped' && steps.collect.outcome != ''
         uses: actions/upload-artifact@v4

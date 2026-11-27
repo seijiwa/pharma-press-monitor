@@ -1,6 +1,7 @@
 """Staging unified audit; the same original receipts feed JSON, Markdown and RSS.
 No email or public Pages changes in this first test."""
 import argparse,json,os,sys
+from copy import deepcopy
 from pathlib import Path
 from datetime import datetime
 from xml.etree.ElementTree import Element,SubElement,ElementTree
@@ -8,6 +9,7 @@ from pharma46.engine import JST,collect,render_report,validate_report
 from pharma46.cli import save_json
 from .registry import load_registry,ticker_order,HISTORICAL
 from .api_observations import supplement
+from .official_fallback import collect_fallback,update_original_state
 
 def verified_feeds(entries,folder):
     folder=Path(folder);folder.mkdir(parents=True,exist_ok=True)
@@ -35,7 +37,7 @@ def verified_feeds(entries,folder):
 
 def main(argv=None):
     p=argparse.ArgumentParser()
-    p.add_argument('--workers',type=int,default=8)
+    p.add_argument('--workers',type=int,default=3)
     p.add_argument('--max-pages',type=int,default=12)
     args=p.parse_args(argv)
     registry=load_registry()
@@ -45,6 +47,8 @@ def main(argv=None):
     root.mkdir(parents=True,exist_ok=True)
     state_path=root/'state.json'
     state=json.loads(state_path.read_text()) if state_path.exists() else {'companies':{}}
+    prior_state=deepcopy(state)
+    by_ticker={x['ticker']:x for x in registry['companies']}
     # Separate parent-only historical rows are explicitly unconfirmed; never
     # report a parent's release as a publication by a former independent entity.
     entries,errors,new_state=collect(registry,state,asof=now,
@@ -52,12 +56,15 @@ def main(argv=None):
         workers=args.workers,max_pages=args.max_pages,expected_order=order)
     for e in entries:
         supplement(e,now,root/'evidence'/now.strftime('%Y-%m-%dT%H%M%S'),state=new_state)
+        if e['ticker'] not in HISTORICAL:
+            collect_fallback(e,by_ticker[e['ticker']],now,root/'evidence'/now.strftime('%Y-%m-%dT%H%M%S'))
         if e.get('source_classification')=='PERIOD_VERIFIED_OFFICIAL_API':
             new_state['companies'].setdefault(e['ticker'],{})['last_verified_success_jst']=e['new_success_jst']
         if e['ticker'] in HISTORICAL:
             e.update(status='未確認',reason='HISTORICAL_PARENT_SCOPE_NOT_INDEPENDENT',new_success_jst=None,
                      primary_releases=[],source_classification='PARENT_ONLY_UNVERIFIED')
             new_state['companies'].pop(e['ticker'],None)
+    update_original_state(entries,new_state,prior_state)
     errors=validate_report(registry,entries,expected_order=order)
     subject,body,summary=render_report(now,entries,errors,'GitHub Pharma71 unified staging')
     audit={'audit_date_jst':now.date().isoformat(),'start_jst':now.isoformat(),
