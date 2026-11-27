@@ -2,47 +2,47 @@
   "companies": {
     "LLY": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:28:32.602902+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:30.080040+09:00"
     },
     "ABBV": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:28:26.929810+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:29.957150+09:00"
     },
     "AMGN": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:28:34.732586+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:38.569991+09:00"
     },
     "BIIB": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T10:42:44.778263+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:35.608945+09:00"
     },
     "BMY": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:28:38.779829+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:35.940442+09:00"
     },
     "GILD": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:28:35.957229+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:37.936749+09:00"
     },
     "JNJ": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:28:35.255213+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:36.782229+09:00"
     },
     "MRK": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:28:35.361610+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:36.928452+09:00"
     },
     "PFE": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:28:35.560595+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:37.164177+09:00"
     },
     "REGN": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T10:42:46.500258+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:37.422123+09:00"
     },
     "AZN": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:28:38.106255+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:40.015616+09:00"
     },
     "GSK": {
       "latest_verified_original": {
@@ -53,114 +53,114 @@
       "seen_verified_urls": [
         "https://www.gsk.com/en-gb/media/press-releases/hibsago-bepirovirsen-approved-in-china-as-a-first-in-class-functional-cure-for-chronic-hepatitis-b-chb/"
       ],
-      "last_verified_success_jst": "2026-11-27T12:28:41.114782+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:41.073094+09:00"
     },
     "NOVN": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:28:38.644425+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:39.143764+09:00"
     },
     "NOVOB": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:28:26.684298+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:29.681923+09:00"
     },
     "ROP": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:28:42.747737+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:44.423805+09:00"
     },
     "SAN": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:28:41.252082+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:41.880076+09:00"
     },
     "GALD": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:28:41.661967+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:42.394739+09:00"
     },
     "LONN": {
       "seen_verified_urls": []
     },
     "VRTX": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T10:42:55.271025+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:43.969192+09:00"
     },
     "JAZZ": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:28:44.215611+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:49.283976+09:00"
     },
     "ALKS": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:28:44.543887+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:45.497750+09:00"
     },
     "SRPT": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:28:46.773741+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:47.742777+09:00"
     },
     "VKTX": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:28:44.384934+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:45.862088+09:00"
     },
     "VERA": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:28:44.982553+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:46.379462+09:00"
     },
     "CAPR": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:28:44.681730+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:46.636369+09:00"
     },
     "KURA": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T10:42:58.178599+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:46.958064+09:00"
     },
     "SMMT": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:28:51.864944+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:51.053303+09:00"
     },
     "ZEAL": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:28:49.019346+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:50.823172+09:00"
     },
     "SUPN": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T10:43:02.854585+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:52.666646+09:00"
     },
     "ALMS": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:28:48.539546+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:51.095594+09:00"
     },
     "HRMY": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T10:43:05.872357+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:54.488625+09:00"
     },
     "HIMS": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:28:54.364278+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:56.181346+09:00"
     },
     "RVMD": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:28:54.985314+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:55.107442+09:00"
     },
     "SRRK": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:28:53.250451+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:54.820059+09:00"
     },
     "ORKA": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:28:53.345210+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:55.014517+09:00"
     },
     "ERAS": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T10:43:06.755846+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:55.404872+09:00"
     },
     "CGEM": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T10:43:09.499089+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:57.716033+09:00"
     },
     "IMNM": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:28:55.274799+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:55.964890+09:00"
     },
     "GPCR": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T10:43:08.308477+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:56.552355+09:00"
     },
     "ALVO": {
       "latest_verified_original": {
@@ -171,120 +171,120 @@
       "seen_verified_urls": [
         "https://www.alvotech.com/newsroom/alvotech-to-appeal-us-preliminary-injunction-decision-relating-to-avt05"
       ],
-      "last_verified_success_jst": "2026-11-27T12:28:56.242256+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:56.411587+09:00"
     },
     "DNLI": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T10:43:09.053387+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:56.865622+09:00"
     },
     "6990 HK": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:28:59.794235+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:58.219925+09:00"
     },
     "9926 HK": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:28:59.262836+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:57.892350+09:00"
     },
     "1801 HK": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:29:02.727236+09:00"
+      "last_verified_success_jst": "2026-11-27T12:32:00.265088+09:00"
     },
     "2269 HK": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:29:01.895516+09:00"
+      "last_verified_success_jst": "2026-11-27T12:32:00.774158+09:00"
     },
     "207940 KS": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:28:26.684298+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:29.681923+09:00"
     },
     "ARWR": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:29:03.422778+09:00"
+      "last_verified_success_jst": "2026-11-27T12:32:02.132729+09:00"
     },
     "BAYN": {
       "seen_verified_urls": []
     },
     "BMRN": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:29:06.827779+09:00"
+      "last_verified_success_jst": "2026-11-27T12:32:05.561547+09:00"
     },
     "C2N": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:29:07.402457+09:00"
+      "last_verified_success_jst": "2026-11-27T12:32:06.017370+09:00"
     },
     "CSL": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:29:07.121865+09:00"
+      "last_verified_success_jst": "2026-11-27T12:32:06.335094+09:00"
     },
     "CATALENT": {
       "seen_verified_urls": []
     },
     "4568 JP": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:29:14.042995+09:00"
+      "last_verified_success_jst": "2026-11-27T12:32:13.264976+09:00"
     },
     "ENTA": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:29:07.557733+09:00"
+      "last_verified_success_jst": "2026-11-27T12:32:06.852343+09:00"
     },
     "EXEL": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T10:43:18.275565+09:00"
+      "last_verified_success_jst": "2026-11-27T12:32:07.599294+09:00"
     },
     "FUJIFILM-CDMO": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:29:13.545184+09:00"
+      "last_verified_success_jst": "2026-11-27T12:32:10.561154+09:00"
     },
     "FRE": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:29:30.093095+09:00"
+      "last_verified_success_jst": "2026-11-27T12:32:21.708386+09:00"
     },
     "GENENTECH": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:29:15.761064+09:00"
+      "last_verified_success_jst": "2026-11-27T12:32:11.659842+09:00"
     },
     "GRF": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:29:17.196958+09:00"
+      "last_verified_success_jst": "2026-11-27T12:32:15.766607+09:00"
     },
     "IONS": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T10:43:23.807098+09:00"
+      "last_verified_success_jst": "2026-11-27T12:32:13.794794+09:00"
     },
     "JNANA": {
       "seen_verified_urls": []
     },
     "4151 JP": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:29:19.541947+09:00"
+      "last_verified_success_jst": "2026-11-27T12:32:18.244319+09:00"
     },
     "HLUN": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:28:26.684298+09:00"
+      "last_verified_success_jst": "2026-11-27T12:31:29.681923+09:00"
     },
     "LUPIN": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:29:21.744351+09:00"
+      "last_verified_success_jst": "2026-11-27T12:32:20.351518+09:00"
     },
     "NBIX": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T10:43:29.897968+09:00"
+      "last_verified_success_jst": "2026-11-27T12:32:19.340750+09:00"
     },
     "4536 JP": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:29:22.609060+09:00"
+      "last_verified_success_jst": "2026-11-27T12:32:20.471214+09:00"
     },
     "4506 JP": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:29:27.004679+09:00"
+      "last_verified_success_jst": "2026-11-27T12:32:24.069531+09:00"
     },
     "TEVA": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:29:26.918205+09:00"
+      "last_verified_success_jst": "2026-11-27T12:32:23.141546+09:00"
     },
     "RARE": {
       "seen_verified_urls": [],
-      "last_verified_success_jst": "2026-11-27T12:29:29.466381+09:00"
+      "last_verified_success_jst": "2026-11-27T12:32:24.688602+09:00"
     }
   }
 }
