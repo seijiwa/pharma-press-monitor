@@ -14,6 +14,7 @@ from .ledger import persist
 from .wire import collect_wire
 from .sec_exhibits import report_lines
 from .tdnet import report_lines as tdnet_report_lines
+from .integration import parent_scope,matrix,report as integration_report
 
 def verified_feeds(entries,folder):
     folder=Path(folder);folder.mkdir(parents=True,exist_ok=True)
@@ -98,11 +99,12 @@ def main(argv=None):
         if os.getenv('GITHUB_RUN_ID') and regulatory.get('run_id')!=os.getenv('GITHUB_RUN_ID'):
             raise ValueError('regulatory report is not from current run')
     audit['regulatory_observations']=regulatory
+    audit['integrated_monitoring']=matrix(entries,regulatory,parent_scope(entries,prior_state,now))
     audit['execution_environment']=os.getenv('PHARMA71_ENVIRONMENT','github-hosted-or-local')
     save_json(root/'audit.json',audit)
     save_json(root/(now.strftime('%Y-%m-%dT%H%M%S')+'_audit.json'),audit)
     save_json(state_path,new_state)
-    (root/'report.md').write_text(body+report_lines(regulatory)+tdnet_report_lines(regulatory),encoding='utf-8')
+    (root/'report.md').write_text(body+report_lines(regulatory)+tdnet_report_lines(regulatory)+integration_report(audit['integrated_monitoring']),encoding='utf-8')
     # Persist a bounded rolling original ledger. Failed or empty runs cannot
     # erase verified entries from prior runs; keep latest 500 per company.
     history_path=root/'verified_original_history.json'

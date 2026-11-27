@@ -18,9 +18,11 @@ def receipt(root,expected_run_id):
             'summary':audit['summary'],'strict_qa_pass':audit['qa_pass'],
             'regulatory_status':audit.get('regulatory_observations',{}).get('status'),
             'regulatory_summary':summarize(audit.get('regulatory_observations',{})),
+            'integrated_summary':audit.get('integrated_monitoring',{}).get('summary',{}),
             'tdnet_summary':audit.get('regulatory_observations',{}).get('tdnet',{}).get('summary',{}),
             'regulatory_entries':[{'ticker':e['ticker'],'status':e['status'],'sec_ticker':e.get('sec_ticker'),'issuer_identity_verified':e.get('issuer_identity_verified',False),'filings':len(e.get('filings',[])),
                 'verified_exhibits':sum(bool(x.get('original_confirmed')) for d in e.get('exhibit_results',[]) for x in d.get('exhibits',[]))} for e in audit.get('regulatory_observations',{}).get('entries',[])],
+            'integrated_rows':audit.get('integrated_monitoring',{}).get('rows',[]),
             'entries':[{'ticker':e['ticker'],'status':e['status'],'reason':e['reason'],
                         'period':e['comparison_period'],'receipt_sha256':e.get('tool_evidence_ref'),
                         'originals':sum(bool(p.get('original_confirmed')) for p in e['primary_releases']),
@@ -30,8 +32,11 @@ def emit(root,run_id):
     r=receipt(root,run_id)
     entries=r.pop('entries')
     regulatory=r.pop('regulatory_entries')
+    integrated=r.pop('integrated_rows')
     print('PHARMA71_RUN '+json.dumps(r,ensure_ascii=False,separators=(',',':')),flush=True)
     for entry in regulatory:
         print('PHARMA71_SEC '+json.dumps(dict(entry,run_id=run_id),ensure_ascii=False,separators=(',',':')),flush=True)
+    for entry in integrated:
+        print('PHARMA71_SCOPE '+json.dumps(dict(entry,run_id=run_id),ensure_ascii=False,separators=(',',':')),flush=True)
     for entry in entries:
         print('PHARMA71_COMPANY '+json.dumps(dict(entry,run_id=run_id),ensure_ascii=False,separators=(',',':')),flush=True)
