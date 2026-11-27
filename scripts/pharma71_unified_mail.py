@@ -5,6 +5,20 @@ from datetime import datetime,timedelta
 from zoneinfo import ZoneInfo
 TOKYO=ZoneInfo("Asia/Tokyo")
 HISTORICAL={'RNA','REATA','JNANA'}
+# Match the explicitly registered historical and nonlisted identifiers.
+UNTICKERED={'C2N Diagnostics':'C2N','Catalent':'CATALENT','Daiichi Sankyo':'4568 JP',
+ 'FUJIFILM Diosynth Biotechnologies':'FUJIFILM-CDMO','Genentech':'GENENTECH',
+ 'Jnana Therapeutics':'JNANA','Kyowa Kirin':'4151 JP','Lupin':'LUPIN',
+ 'Reata Pharmaceuticals':'REATA','Santen Pharmaceutical':'4536 JP','Sumitomo Pharma':'4506 JP'}
+
+def canonical_mapping(companies):
+    mapping={}
+    for r in companies:
+        ticker=r['Ticker'].strip() or UNTICKERED[r['Company']]
+        ticker='ROP' if ticker=='ROG' else ticker
+        if ticker in mapping:raise ValueError('DUPLICATE_FIXED_TICKER')
+        mapping[ticker]=r['Company']
+    return mapping
 
 def validated_audit(root,now,expected_names,expected_mapping=None):
     root=Path(root)
@@ -142,7 +156,7 @@ def section(now,root='unified-staging/data/pharma71_unified',csv_path='companies
     try:
         with open(csv_path,encoding='utf-8-sig',newline='') as f:companies=list(csv.DictReader(f))
         expected={r['Company'] for r in companies}
-        mapping={r['Ticker']:r['Company'] for r in companies}
+        mapping=canonical_mapping(companies)
         if len(companies)!=71 or len(mapping)!=71:raise ValueError('INVALID_FIXED_UNIVERSE')
         a=validated_audit(root,now,expected,mapping)
     except (OSError,ValueError,TypeError,KeyError,AttributeError) as exc:

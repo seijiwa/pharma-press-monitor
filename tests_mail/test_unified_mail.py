@@ -183,3 +183,8 @@ class TestFreshness(unittest.TestCase):
             warnings=[]
             self.assertEqual([r[2]['url'] for r in rolling_originals(t,now,set(),warnings)],[p['url']])
             self.assertEqual(warnings,['LLY'])
+
+    def test_registry_canonical_mapping(self):
+        from pharma71_unified_mail import canonical_mapping
+        self.assertEqual(canonical_mapping([{'Ticker':'ROG','Company':'Roche'},{'Ticker':'','Company':'Daiichi Sankyo'}]),{'ROP':'Roche','4568 JP':'Daiichi Sankyo'})
+        with self.assertRaisesRegex(ValueError,'DUPLICATE'):canonical_mapping([{'Ticker':'ROG','Company':'Roche'},{'Ticker':'ROP','Company':'Roche duplicate'}])
