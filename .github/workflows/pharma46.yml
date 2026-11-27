@@ -16,8 +16,8 @@ on:
         required: false
         default: false
   schedule:
-    # 02:00 JST daily. GitHub scheduled jobs may start later than their cron time.
-    - cron: '0 17 * * *'
+    # 04:07 JST daily; non-hour boundary reduces scheduler congestion.
+    - cron: '7 19 * * *'
 
 permissions:
   contents: write
@@ -32,9 +32,9 @@ jobs:
     timeout-minutes: 150
     env:
       PYTHONUNBUFFERED: '1'
-      MAIL_USER: ${{ secrets.PHARMA_MAIL_USER }}
-      MAIL_APP_PASSWORD: ${{ secrets.PHARMA_MAIL_APP_PASSWORD }}
-      MAIL_TO: ${{ vars.PHARMA_REPORT_TO || secrets.PHARMA_MAIL_USER }}
+      MAIL_USER: ${{ secrets.PHARMA_MAIL_USER || secrets.PHARMA71_GMAIL_USER }}
+      MAIL_APP_PASSWORD: ${{ secrets.PHARMA_MAIL_APP_PASSWORD || secrets.PHARMA71_GMAIL_APP_PASSWORD }}
+      MAIL_TO: ${{ vars.PHARMA_REPORT_TO || secrets.PHARMA_MAIL_USER || secrets.PHARMA71_GMAIL_USER }}
       # Prevent duplicate delivery while the legacy ChatGPT automation is still active.
       # Only enable scheduled delivery after an observed successful dry run and cutover.
       SHOULD_SEND_EMAIL: ${{ (github.event_name == 'workflow_dispatch' && inputs.send_email == true) || (github.event_name == 'schedule' && vars.PHARMA_ENABLE_DELIVERY == 'true' && false) }}
