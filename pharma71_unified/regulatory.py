@@ -7,6 +7,7 @@ import requests
 from pharma46.fetch import JST
 from pharma46.cli import save_json
 from .registry import load_registry
+from .sec_exhibits import collect_exhibits,summarize
 
 FORMS={'8-K','8-K/A','6-K','6-K/A'}
 def parse_tickers(data):
@@ -49,11 +50,12 @@ def fetch_json(session,url,folder,label,ua):
 def run(root,now=None,ua=None,session=None):
     now=now or datetime.now(JST);root=Path(root);root.mkdir(parents=True,exist_ok=True)
     start=(now-timedelta(days=3)).date().isoformat();end=now.date().isoformat()
-    result={'scope':'SEC_8K_6K_FILING_METADATA_ONLY','run_id':os.getenv('GITHUB_RUN_ID'),
+    result={'scope':'SEC_8K_6K_FILING_AND_HTML_EXHIBITS','run_id':os.getenv('GITHUB_RUN_ID'),
         'collected_jst':now.isoformat(),'start_date':start,'end_date':end,'newsroom_coverage_credit':False,'entries':[]}
     ua=ua or os.getenv('SEC_USER_AGENT','')
     if not re.search(r'[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}',ua):
         result.update(status='NOT_CONFIGURED',reason='SEC_USER_AGENT_WITH_CONTACT_REQUIRED')
+        result['summary']=summarize(result)
         save_json(root/'regulatory.json',result);return result
     own=session is None;session=session or requests.Session()
     evidence=root/'evidence'/now.strftime('%Y%m%dT%H%M%S')
@@ -71,6 +73,8 @@ def run(root,now=None,ua=None,session=None):
                 e['receipt']=receipt;rows,boundary,count=parse_submissions(data,t,cik,start,end)
                 e.update(status='FILING_METADATA_RETRIEVED' if boundary else 'FILING_WINDOW_NOT_PROVEN',
                     filings=rows,record_count=count,filing_date_boundary_reached=boundary)
+                e['exhibit_results']=[collect_exhibits(session,row,evidence/t/row['accession'],ua) for row in rows[:10]]
+                e['exhibit_filing_cap_exceeded']=len(rows)>10
             except (requests.RequestException,ValueError,KeyError,TypeError) as exc:
                 e.update(status='UNCONFIRMED',error=type(exc).__name__+':'+str(exc)[:150])
         result['status']='COLLECTION_FINISHED'
@@ -78,8 +82,9 @@ def run(root,now=None,ua=None,session=None):
         result.update(status='SOURCE_UNAVAILABLE',reason=type(exc).__name__+':'+str(exc)[:150])
     finally:
         if own:session.close()
+    result['summary']=summarize(result)
     save_json(root/'regulatory.json',result);return result
 
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--root',default='data/pharma71_regulatory')
-    r=run(p.parse_args().root);print(json.dumps({'status':r['status'],'entries':len(r['entries'])}))
+    r=run(p.parse_args().root);print(json.dumps({'status':r['status'],'summary':r['summary']}))

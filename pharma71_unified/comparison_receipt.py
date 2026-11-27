@@ -1,6 +1,7 @@
 """Compact comparison receipt. This is diagnostics, not transferable raw evidence."""
 import hashlib,json,sqlite3
 from pathlib import Path
+from .sec_exhibits import summarize
 
 def receipt(root,expected_run_id):
     root=Path(root)
@@ -16,6 +17,9 @@ def receipt(root,expected_run_id):
             'start_jst':audit['start_jst'],'audit_sha256':hashlib.sha256(raw).hexdigest(),
             'summary':audit['summary'],'strict_qa_pass':audit['qa_pass'],
             'regulatory_status':audit.get('regulatory_observations',{}).get('status'),
+            'regulatory_summary':summarize(audit.get('regulatory_observations',{})),
+            'regulatory_entries':[{'ticker':e['ticker'],'status':e['status'],'filings':len(e.get('filings',[])),
+                'verified_exhibits':sum(bool(x.get('original_confirmed')) for d in e.get('exhibit_results',[]) for x in d.get('exhibits',[]))} for e in audit.get('regulatory_observations',{}).get('entries',[])],
             'entries':[{'ticker':e['ticker'],'status':e['status'],'reason':e['reason'],
                         'period':e['comparison_period'],'receipt_sha256':e.get('tool_evidence_ref'),
                         'originals':sum(bool(p.get('original_confirmed')) for p in e['primary_releases']),
@@ -24,6 +28,9 @@ def receipt(root,expected_run_id):
 def emit(root,run_id):
     r=receipt(root,run_id)
     entries=r.pop('entries')
+    regulatory=r.pop('regulatory_entries')
     print('PHARMA71_RUN '+json.dumps(r,ensure_ascii=False,separators=(',',':')),flush=True)
+    for entry in regulatory:
+        print('PHARMA71_SEC '+json.dumps(dict(entry,run_id=run_id),ensure_ascii=False,separators=(',',':')),flush=True)
     for entry in entries:
         print('PHARMA71_COMPANY '+json.dumps(dict(entry,run_id=run_id),ensure_ascii=False,separators=(',',':')),flush=True)

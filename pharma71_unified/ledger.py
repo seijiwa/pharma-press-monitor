@@ -10,6 +10,7 @@ def persist(db_path,audit):
         with con:
             con.execute('CREATE TABLE IF NOT EXISTS runs (run_key TEXT PRIMARY KEY, started TEXT NOT NULL, payload TEXT NOT NULL)')
             con.execute('CREATE TABLE IF NOT EXISTS originals (ticker TEXT NOT NULL, url TEXT NOT NULL, payload TEXT NOT NULL, PRIMARY KEY(ticker,url))')
+            con.execute('CREATE TABLE IF NOT EXISTS sec_exhibits (ticker TEXT NOT NULL, url TEXT NOT NULL, payload TEXT NOT NULL, PRIMARY KEY(ticker,url))')
             key=str(audit.get('run_id') or audit['start_jst'])
             raw=json.dumps(audit,ensure_ascii=False,sort_keys=True)
             prior=con.execute('SELECT payload FROM runs WHERE run_key=?',(key,)).fetchone()
@@ -19,5 +20,10 @@ def persist(db_path,audit):
                 for p in e['primary_releases']:
                     if p.get('original_confirmed') and p.get('url'):
                         con.execute('INSERT OR IGNORE INTO originals VALUES(?,?,?)',(e['ticker'],p['url'],json.dumps(p,ensure_ascii=False)))
+            for e in audit.get('regulatory_observations',{}).get('entries',[]):
+                for d in e.get('exhibit_results',[]):
+                    for x in d.get('exhibits',[]):
+                        if x.get('original_confirmed') and x.get('url'):
+                            con.execute('INSERT OR IGNORE INTO sec_exhibits VALUES(?,?,?)',(e['ticker'],x['url'],json.dumps(dict(x,accession=d['accession'],filing_date=d['filing_date']),ensure_ascii=False)))
         con.execute('PRAGMA wal_checkpoint(TRUNCATE)')
     finally:con.close()

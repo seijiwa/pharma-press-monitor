@@ -12,6 +12,7 @@ from .api_observations import supplement
 from .official_fallback import collect_fallback,update_original_state
 from .ledger import persist
 from .wire import collect_wire
+from .sec_exhibits import report_lines
 
 def verified_feeds(entries,folder):
     folder=Path(folder);folder.mkdir(parents=True,exist_ok=True)
@@ -100,7 +101,7 @@ def main(argv=None):
     save_json(root/'audit.json',audit)
     save_json(root/(now.strftime('%Y-%m-%dT%H%M%S')+'_audit.json'),audit)
     save_json(state_path,new_state)
-    (root/'report.md').write_text(body,encoding='utf-8')
+    (root/'report.md').write_text(body+report_lines(regulatory),encoding='utf-8')
     # Persist a bounded rolling original ledger. Failed or empty runs cannot
     # erase verified entries from prior runs; keep latest 500 per company.
     history_path=root/'verified_original_history.json'
