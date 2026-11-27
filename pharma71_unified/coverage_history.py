@@ -58,11 +58,16 @@ def evaluate(records,order,now):
         missing=gaps(valid,start,end)
         rows.append({'ticker':ticker,'status':'VERIFIED_TO_COLLECTION' if not missing else 'GAP_UNVERIFIED',
              'gaps':[{'start_jst':s.isoformat(),'end_jst':e.isoformat()} for s,e in missing]})
-    return {'window_start_jst':start.isoformat(),'window_end_jst':end.isoformat(),'scope':'NEWSROOM_ONLY_TO_COLLECTION_START','rows':rows,'verified':sum(r['status']=='VERIFIED_TO_COLLECTION' for r in rows),'unconfirmed':sum(r['status']=='GAP_UNVERIFIED' for r in rows)}
+    native_rows=[]
+    for ticker in order:
+        native=[(dt(r['start_jst']),dt(r['end_jst'])) for r in records.get(ticker,[]) if r.get('receipt_sha256') and r.get('run_id') and r.get('provenance')!='PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED']
+        if not gaps(native,start,end):native_rows.append(ticker)
+    return {'window_start_jst':start.isoformat(),'window_end_jst':end.isoformat(),'scope':'NEWSROOM_ONLY_TO_COLLECTION_START','rows':rows,'verified':sum(r['status']=='VERIFIED_TO_COLLECTION' for r in rows),'unconfirmed':sum(r['status']=='GAP_UNVERIFIED' for r in rows),'without_recovered_receipts_verified':len(native_rows),'without_recovered_receipts_tickers':native_rows,'recovered_receipts_raw_rechecked':False}
 
 def report(x):
     lines=['','## 前回朝05:30から今回取得基準時刻までの公式一覧期間連結',
            f'- {x["window_start_jst"]} ～ {x["window_end_jst"]} / 連続確認 {x["verified"]} / 未確認区間あり {x["unconfirmed"]}',
+           f'- 過去監査の復元記録に依存しない連続確認: {x.get("without_recovered_receipts_verified",0)}社。復元した監査記録の原文は再照合していない。',
            '- SEC・親会社限定確認はこの網羅率に加算しない。取得基準時刻から実配信までの区間は未確認。']
     for r in x['rows']:
         if r['gaps']:lines.append('- '+r['ticker']+': '+'; '.join(y['start_jst']+' ～ '+y['end_jst'] for y in r['gaps']))

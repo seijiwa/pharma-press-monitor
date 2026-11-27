@@ -28,7 +28,15 @@ jobs:
       - name: Independent SEC disclosure observations
         env:
           SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
-        run: python -m pharma71_unified.regulatory --root data/pharma71_regulatory
+          SEC_APPROVED_CONTACT: ${{ secrets.PHARMA71_GMAIL_USER }}
+        run: |
+          set -euo pipefail
+          if [ -z "${SEC_USER_AGENT:-}" ] && [ -n "${SEC_APPROVED_CONTACT:-}" ]; then
+            export SEC_USER_AGENT="Pharma71Monitor/3.0 (${SEC_APPROVED_CONTACT})"
+            echo '::add-mask::'"$SEC_USER_AGENT"
+          fi
+          unset SEC_APPROVED_CONTACT
+          python -m pharma71_unified.regulatory --root data/pharma71_regulatory
       - uses: actions/upload-artifact@v4
         with:
           name: regulatory-evidence-${{ github.run_id }}
@@ -37,7 +45,7 @@ jobs:
   audit:
     needs: regulatory
     runs-on: ubuntu-24.04
-    timeout-minutes: 180
+    timeout-minutes: 50
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -63,7 +71,7 @@ jobs:
           name: pharma71-unified-evidence-${{ github.run_id }}
           path: data/pharma71_unified/
           if-no-files-found: warn
-          retention-days: 30
+          retention-days: 7
       - name: Validate execution and publish explicit coverage gate
         if: steps.collect.outcome == 'success' && !cancelled()
         run: |

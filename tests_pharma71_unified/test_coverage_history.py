@@ -25,3 +25,13 @@ def test_recovery_uses_earliest_missing_interval():
     assert recovery_start(rows,'LLY',z,c.isoformat())==a.isoformat()
     rows['LLY'][0]['start_jst']=a.isoformat()
     assert recovery_start(rows,'LLY',z,c.isoformat()) is None
+
+def test_recovered_receipts_are_reported_separately():
+    from pharma71_unified.coverage_history import morning_window
+    z=datetime(2026,11,28,3,30,tzinfo=timezone(timedelta(hours=9)))
+    start,end=morning_window(z)
+    r={'start_jst':start.isoformat(),'end_jst':end.isoformat(),'receipt_sha256':'abc','run_id':'1','provenance':'PERSISTED_AUDIT_RECEIPT_RAW_NOT_RECHECKED'}
+    result=evaluate({'LLY':[r]},['LLY'],z)
+    assert result['verified']==1
+    assert result['without_recovered_receipts_verified']==0
+    assert result['recovered_receipts_raw_rechecked'] is False
