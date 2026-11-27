@@ -252,6 +252,20 @@ def page_has_unresolved_load_more(html,page_url=None,found_boundary=False):
             controls[0].decompose()
             remaining=soup.get_text(' ',strip=True).lower()
             return any(x in remaining for x in ('load more','show more releases','load additional','view more news'))
+    if host=='www.catalent.com' and urlparse(page_url).path.rstrip('/')=='/news' and found_boundary:
+        panel=soup.select_one('#tabpanel-news-listing')
+        if panel:
+            controls=[b for b in panel.select('button') if b.get_text(' ',strip=True).lower()=='load more press releases']
+            counts=[re.fullmatch(r'Showing\s+(\d+)\s+of\s+(\d+)\s+Press Releases',p.get_text(' ',strip=True),re.I) for p in panel.select('p')]
+            counts=[m for m in counts if m]
+            if len(controls)==1 and len(counts)==1:
+                visible,total=map(int,counts[0].groups())
+                articles=panel.select('article')
+                scoped=_row_listing(page_url,soup)
+                if 0<visible==len(articles)==len(scoped or [])<total:
+                    controls[0].decompose()
+                    remaining=soup.get_text(' ',strip=True).lower()
+                    return any(x in remaining for x in ('load more','show more releases','load additional','view more news'))
     # Viking has a declared offset/count on the exact chronological list.
     # Only resolve the continuation after the audited date boundary is reached,
     # with a complete visible page and no other unresolved load-more control.

@@ -14,8 +14,9 @@ HISTORICAL={'RNA','REATA'}
 # Candidate addresses inherited from the running 71 monitor plus the actual
 # recorded FUJIFILM official relocation; audit success requires live receipts.
 ALTERNATES={
+ 'BAYN':['https://www.bayer.com/media/en-us/','https://www.bayer.com/en/investors/investor-news'],
  'DNLI':['https://investors.denalitherapeutics.com/investors'],
- 'LONN':['https://www.lonza.com/news-and-media'],
+ 'LONN':['https://www.lonza.com/news-and-media/news-archive','https://www.lonza.com/media','https://www.lonza.com/investors'],
  'REGN':['https://investor.regeneron.com/news/press-releases'],
  'SRRK':['https://scholarrock.com/investors-media/press-releases/'],
  'BIIB':['https://www.biogen.com/home.html'],

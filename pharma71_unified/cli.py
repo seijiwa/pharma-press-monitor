@@ -57,7 +57,7 @@ def main(argv=None):
     for e in entries:
         supplement(e,now,root/'evidence'/now.strftime('%Y-%m-%dT%H%M%S'),state=new_state)
         if e['ticker'] not in HISTORICAL:
-            collect_fallback(e,by_ticker[e['ticker']],now,root/'evidence'/now.strftime('%Y-%m-%dT%H%M%S'))
+            collect_fallback(e,by_ticker[e['ticker']],now,root/'evidence'/now.strftime('%Y-%m-%dT%H%M%S'),state=prior_state)
         if e.get('source_classification')=='PERIOD_VERIFIED_OFFICIAL_API':
             new_state['companies'].setdefault(e['ticker'],{})['last_verified_success_jst']=e['new_success_jst']
         if e['ticker'] in HISTORICAL:
