@@ -71,7 +71,7 @@ def main(argv=None):
     # report a parent's release as a publication by a former independent entity.
     entries,errors,new_state=collect(registry,state,asof=now,
         evidence_dir=root/'evidence'/now.strftime('%Y-%m-%dT%H%M%S'),
-        workers=args.workers,max_pages=args.max_pages,expected_order=order)
+        workers=args.workers,max_pages=args.max_pages,expected_order=order,retry_transient=True)
     historical_parent_attempts={}
     for e in entries:
         if e['ticker'] in HISTORICAL:

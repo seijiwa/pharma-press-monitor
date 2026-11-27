@@ -311,7 +311,29 @@ def render_report(now_dt,results,errors,engine):
         'primary_originals':len(originals),'qa_errors':len(errors)}
 
 
-def collect(registry,state,asof=None,fetcher=None,evidence_dir='data/evidence',workers=5,max_pages=12,expected_order=None):
+def transient_failure(e):
+    if e.get('status')!='未確認' or e.get('stale_cache_status'):return False
+    failures=' '.join(str(x.get('failure','')) for a in e.get('index_attempts',[]) for x in a.get('errors',[]))
+    # No repeated request against explicit denial, throttling or missing pages.
+    if re.search(r'HTTP_(?:401|403|404|429)\b',failures):return False
+    return bool(re.search(r'HTTP_5\d\d|Timeout|ConnectionError|ERR_CONNECTION_RESET|ERR_TIMED_OUT',failures,re.I))
+
+def merge_retry(first,second):
+    if first['ticker']!=second['ticker'] or first['comparison_period']!=second['comparison_period']:
+        raise ValueError('retry scope mismatch')
+    chosen=second if second['status']!='未確認' else first
+    result=dict(chosen)
+    result['retry_observation']={'first_reason':first['reason'],'second_reason':second['reason'],'second_status':second['status'],'attempted':True}
+    result['index_attempts']=first['index_attempts']+second['index_attempts']
+    result['alternative_attempts']=first['alternative_attempts']+second['alternative_attempts']
+    releases={}
+    for p in first['primary_releases']+second['primary_releases']:
+        if p['url'] not in releases or (p.get('original_confirmed') and not releases[p['url']].get('original_confirmed')):
+            releases[p['url']]=p
+    result['primary_releases']=list(releases.values())
+    return result
+
+def collect(registry,state,asof=None,fetcher=None,evidence_dir='data/evidence',workers=5,max_pages=12,expected_order=None,retry_transient=False):
     """Execute all 46 direct collections, always preserve the fixed batch order."""
     now_dt=asof or datetime.now(JST)
     f=fetcher or LiveFetcher()
@@ -354,6 +376,17 @@ def collect(registry,state,asof=None,fetcher=None,evidence_dir='data/evidence',w
             except OSError:
                 LOG.exception('Checkpoint write failed for %s; retaining in memory',ticker)
             LOG.info('%s: %s / %s',ticker,completed[ticker]['status'],completed[ticker]['reason'])
+    if retry_transient:
+        # Bound retries to 4 companies; never change the comparison interval.
+        targets=[c for c in companies if transient_failure(completed[c['ticker']])][:4]
+        for c in targets:
+            ticker=c['ticker']
+            try:
+                retry=process_company(c,f,now_dt,state,Path(evidence_dir)/'retry',max_pages)
+                completed[ticker]=merge_retry(completed[ticker],retry)
+                (checkpoint/(ticker.replace(' ','_')+'.json')).write_text(json.dumps(completed[ticker],ensure_ascii=False,indent=2),encoding='utf-8')
+            except Exception as exc:
+                LOG.warning('Bounded retry failed for %s: %s',ticker,type(exc).__name__)
     results=[completed[t] for t in order]
     # Persist verified original URLs even when a company's index-coverage QA fails.
     # On the first-ever baseline, 'first observed' is not equivalent to newly published.
