@@ -17,6 +17,7 @@ from .tdnet import report_lines as tdnet_report_lines
 from .hkex import report_lines as hkex_report_lines
 from .eqs import report as eqs_report
 from .integration import parent_scope,matrix,report as integration_report
+from .coverage_history import record,evaluate,report as coverage_report
 
 def verified_feeds(entries,folder):
     folder=Path(folder);folder.mkdir(parents=True,exist_ok=True)
@@ -116,10 +117,15 @@ def main(argv=None):
     audit['regulatory_observations']=regulatory
     audit['integrated_monitoring']=matrix(entries,regulatory,parent_scope(entries,prior_state,now,parent_attempts=historical_parent_attempts))
     audit['execution_environment']=os.getenv('PHARMA71_ENVIRONMENT','github-hosted-or-local')
+    coverage_path=root/'coverage_history.json'
+    old_coverage=json.loads(coverage_path.read_text()) if coverage_path.exists() else {}
+    coverage=record(old_coverage,audit,now)
+    audit['daily_newsroom_coverage']=evaluate(coverage,order,now)
+    if not errors:save_json(coverage_path,coverage)
     save_json(root/'audit.json',audit)
     save_json(root/(now.strftime('%Y-%m-%dT%H%M%S')+'_audit.json'),audit)
     save_json(state_path,new_state)
-    (root/'report.md').write_text(body+report_lines(regulatory)+tdnet_report_lines(regulatory)+hkex_report_lines(regulatory)+eqs_report(regulatory)+integration_report(audit['integrated_monitoring']),encoding='utf-8')
+    (root/'report.md').write_text(body+report_lines(regulatory)+tdnet_report_lines(regulatory)+hkex_report_lines(regulatory)+eqs_report(regulatory)+integration_report(audit['integrated_monitoring'])+coverage_report(audit['daily_newsroom_coverage']),encoding='utf-8')
     # Persist a bounded rolling original ledger. Failed or empty runs cannot
     # erase verified entries from prior runs; keep latest 500 per company.
     history_path=root/'verified_original_history.json'

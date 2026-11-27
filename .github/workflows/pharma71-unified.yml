@@ -97,7 +97,7 @@ jobs:
             echo 'Baseline publication: SUPERSEDED (evidence artifact retained)' >> "$GITHUB_STEP_SUMMARY"
             exit 0
           fi
-          git add -f data/pharma71_unified/state.json data/pharma71_unified/verified_original_history.json data/pharma71_unified/audit.json data/pharma71_unified/report.md data/pharma71_unified/feeds/
+          git add -f data/pharma71_unified/state.json data/pharma71_unified/coverage_history.json data/pharma71_unified/verified_original_history.json data/pharma71_unified/audit.json data/pharma71_unified/report.md data/pharma71_unified/feeds/
           if ! git diff --cached --quiet; then
             git commit -m 'Persist staging audit and verified release history'
             if ! git push origin HEAD:pharma71-unified-20261127; then
