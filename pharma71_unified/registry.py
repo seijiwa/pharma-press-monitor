@@ -8,7 +8,7 @@ UNTICKERED={'C2N Diagnostics':'C2N','Catalent':'CATALENT','Daiichi Sankyo':'4568
  'FUJIFILM Diosynth Biotechnologies':'FUJIFILM-CDMO','Genentech':'GENENTECH',
  'Jnana Therapeutics':'JNANA','Kyowa Kirin':'4151 JP','Lupin':'LUPIN',
  'Reata Pharmaceuticals':'REATA','Santen Pharmaceutical':'4536 JP','Sumitomo Pharma':'4506 JP'}
-HISTORICAL={'RNA','REATA'}
+HISTORICAL={'RNA','REATA','JNANA'}
 
 # Alternative public corporate newsroom URLs, not access-control bypasses.
 # Candidate addresses inherited from the running 71 monitor plus the actual
@@ -60,6 +60,8 @@ def load_registry(csv_path='companies.csv', base_path='pharma46/sources.json'):
         company.update(ticker=ticker,name=row['Company'],official_indexes=urls[:3],
                        batch_id=company.get('batch_id','D'),source_status='CANDIDATES_NOT_VERIFIED',
                        legacy_feed_url=row['Feed URL'],legacy_fallback=row['Fallback'])
+        if ticker=='JNANA':
+            company['official_indexes']=['https://www.otsuka.co.jp/en/company/newsreleases/','https://www.otsuka.co.jp/company/newsreleases/']
         if ticker in HISTORICAL:
             company['scope_note']='Historical bookmark: parent disclosure only, not independent company coverage'
         merged[ticker]=company

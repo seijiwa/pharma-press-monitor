@@ -62,7 +62,10 @@ def main(argv=None):
     entries,errors,new_state=collect(registry,state,asof=now,
         evidence_dir=root/'evidence'/now.strftime('%Y-%m-%dT%H%M%S'),
         workers=args.workers,max_pages=args.max_pages,expected_order=order)
+    historical_parent_attempts={}
     for e in entries:
+        if e['ticker'] in HISTORICAL:
+            historical_parent_attempts[e['ticker']]=deepcopy(e)
         supplement(e,now,root/'evidence'/now.strftime('%Y-%m-%dT%H%M%S'),state=new_state)
         if e['ticker'] not in HISTORICAL:
             collect_fallback(e,by_ticker[e['ticker']],now,root/'evidence'/now.strftime('%Y-%m-%dT%H%M%S'),state=prior_state)
@@ -100,7 +103,7 @@ def main(argv=None):
         if os.getenv('GITHUB_RUN_ID') and regulatory.get('run_id')!=os.getenv('GITHUB_RUN_ID'):
             raise ValueError('regulatory report is not from current run')
     audit['regulatory_observations']=regulatory
-    audit['integrated_monitoring']=matrix(entries,regulatory,parent_scope(entries,prior_state,now))
+    audit['integrated_monitoring']=matrix(entries,regulatory,parent_scope(entries,prior_state,now,parent_attempts=historical_parent_attempts))
     audit['execution_environment']=os.getenv('PHARMA71_ENVIRONMENT','github-hosted-or-local')
     save_json(root/'audit.json',audit)
     save_json(root/(now.strftime('%Y-%m-%dT%H%M%S')+'_audit.json'),audit)

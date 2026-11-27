@@ -5,7 +5,7 @@ ADR={'NOVN':'NVS','NOVOB':'NVO','SAN':'SNY','GRF':'GRFS',
      'ROP':'RHHBY','BAYN':'BAYRY','CSL':'CSLLY','FRE':'FSNUY',
      'LONN':'LZAGY','HLUN':'HLUYY','GALD':'GALDY','ZEAL':'ZLDPF'}
 US=set('ABBV ALKS ALMS ALVO AMGN ARWR AZN BMRN BIIB BMY CAPR CGEM DNLI LLY ENTA ERAS EXEL GSK GILD HRMY HIMS IMNM IONS JAZZ JNJ KURA MRK NBIX ORKA PFE REGN RVMD SRPT SRRK GPCR SMMT SUPN TEVA RARE VERA VRTX VKTX'.split())
-NAMES={'ROP':('Roche Holding','Roche Holdings'),'CSL':('CSL Limited','CSL Ltd'),
+NAMES={'SUPN':('Supernus Pharmaceuticals','Supernus Inc'),'ROP':('Roche Holding','Roche Holdings'),'CSL':('CSL Limited','CSL Ltd'),
        'FRE':('Fresenius SE','Fresenius SE & Co'),'LONN':('Lonza Group',),
        'HLUN':('H Lundbeck','Lundbeck'),'GALD':('Galderma Group',),
        'NOVN':('Novartis',),'NOVOB':('Novo Nordisk',),'SAN':('Sanofi',),'GRF':('Grifols',),
@@ -22,6 +22,7 @@ def resolve(company,tickers):
     symbol=ADR.get(t) or (t if t in US else None)
     if not symbol or symbol not in tickers:return None
     cik=tickers[symbol]
+    if t=='SUPN' and cik not in (1356576,1625297):return None
     return {'sec_ticker':symbol,'cik':cik,'expected_names':NAMES.get(t,(company['name'],))}
 def verify_identity(data,mapping):
     return (int(data['cik'])==mapping['cik'] and mapping['sec_ticker'] in [s.upper() for s in data['tickers']]

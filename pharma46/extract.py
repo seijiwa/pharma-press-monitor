@@ -257,9 +257,9 @@ def page_has_unresolved_load_more(html,page_url=None,found_boundary=False):
         if panel:
             controls=[b for b in panel.select('button') if b.get_text(' ',strip=True).lower()=='load more press releases']
             counts=[re.fullmatch(r'Showing\s+(\d+)\s+of\s+(\d+)\s+Press Releases',p.get_text(' ',strip=True),re.I) for p in panel.select('p')]
-            counts=[m for m in counts if m]
+            counts={tuple(map(int,m.groups())) for m in counts if m}
             if len(controls)==1 and len(counts)==1:
-                visible,total=map(int,counts[0].groups())
+                visible,total=next(iter(counts))
                 articles=panel.select('article')
                 scoped=_row_listing(page_url,soup)
                 if 0<visible==len(articles)==len(scoped or [])<total:

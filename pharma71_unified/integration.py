@@ -8,11 +8,15 @@ PARENT={'RNA':('NOVN','Novartis',r'\bavidity\b|\bdel-desiran\b|\bdel-brax\b|\bde
 def iso(s):
     try:return datetime.fromisoformat(s)
     except (ValueError,TypeError):return None
-def parent_scope(entries,prior_state,now):
+def parent_scope(entries,prior_state,now,parent_attempts=None):
     by={e['ticker']:e for e in entries}
     out=[]
     for ticker,(parent,name,pattern) in PARENT.items():
         child=by[ticker];p=by.get(parent)
+        # A historical row was collected directly against a configured parent
+        # archive at the historical baseline before its independent status was reset.
+        alt=(parent_attempts or {}).get(ticker)
+        if alt and alt.get('status')!='未確認':p=alt
         r={'ticker':ticker,'parent_ticker':parent,'parent_name':name,'status':'PARENT_SCOPE_UNCONFIRMED',
            'scope':'Named parent newsroom disclosures mentioning the historical company or registered assets; not independent-company news',
            'period':child['comparison_period'],'matched_originals':[]}
@@ -28,7 +32,7 @@ def parent_scope(entries,prior_state,now):
             # Full article bodies are not retained in parsed release objects.
             r['parent_listing_period_verified']=bool(p['status']!='未確認' and ps and cs and pe and ce and ps<=cs and pe>=ce)
             r['status']='PARENT_LISTING_VERIFIED_KEYWORD_SCOPE_LIMITED' if r['parent_listing_period_verified'] else 'PARENT_SCOPE_UNCONFIRMED'
-        else:r['reason']='PARENT_OUTSIDE_CURRENT_UNIVERSE'
+        else:r['reason']='PARENT_ARCHIVE_UNCONFIRMED' if alt else 'PARENT_OUTSIDE_CURRENT_UNIVERSE'
         out.append(r)
     return out
 
