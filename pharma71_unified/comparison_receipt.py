@@ -19,6 +19,7 @@ def receipt(root,expected_run_id):
             'regulatory_status':audit.get('regulatory_observations',{}).get('status'),
             'regulatory_summary':summarize(audit.get('regulatory_observations',{})),
             'integrated_summary':audit.get('integrated_monitoring',{}).get('summary',{}),
+            'hkex_summary':audit.get('regulatory_observations',{}).get('hkex',{}).get('summary',{}),
             'tdnet_summary':audit.get('regulatory_observations',{}).get('tdnet',{}).get('summary',{}),
             'regulatory_entries':[{'ticker':e['ticker'],'status':e['status'],'sec_ticker':e.get('sec_ticker'),'issuer_identity_verified':e.get('issuer_identity_verified',False),'filings':len(e.get('filings',[])),
                 'verified_exhibits':sum(bool(x.get('original_confirmed')) for d in e.get('exhibit_results',[]) for x in d.get('exhibits',[]))} for e in audit.get('regulatory_observations',{}).get('entries',[])],

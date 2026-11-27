@@ -14,6 +14,7 @@ from .ledger import persist
 from .wire import collect_wire
 from .sec_exhibits import report_lines
 from .tdnet import report_lines as tdnet_report_lines
+from .hkex import report_lines as hkex_report_lines
 from .integration import parent_scope,matrix,report as integration_report
 
 def verified_feeds(entries,folder):
@@ -104,7 +105,7 @@ def main(argv=None):
     save_json(root/'audit.json',audit)
     save_json(root/(now.strftime('%Y-%m-%dT%H%M%S')+'_audit.json'),audit)
     save_json(state_path,new_state)
-    (root/'report.md').write_text(body+report_lines(regulatory)+tdnet_report_lines(regulatory)+integration_report(audit['integrated_monitoring']),encoding='utf-8')
+    (root/'report.md').write_text(body+report_lines(regulatory)+tdnet_report_lines(regulatory)+hkex_report_lines(regulatory)+integration_report(audit['integrated_monitoring']),encoding='utf-8')
     # Persist a bounded rolling original ledger. Failed or empty runs cannot
     # erase verified entries from prior runs; keep latest 500 per company.
     history_path=root/'verified_original_history.json'

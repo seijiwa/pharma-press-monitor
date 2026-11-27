@@ -38,6 +38,8 @@ def matrix(entries,reg,parents):
     td=reg.get('tdnet',{})
     td_candidates={}
     for x in td.get('entries',[]):td_candidates[x['ticker']]=td_candidates.get(x['ticker'],0)+1
+    hk_candidates={}
+    for x in reg.get('hkex',{}).get('entries',[]):hk_candidates[x['ticker']]=hk_candidates.get(x['ticker'],0)+1
     rows=[]
     for e in entries:
         t=e['ticker'];s=sec.get(t,{})
@@ -53,6 +55,7 @@ def matrix(entries,reg,parents):
                      'sec_filing_window_verified':regulatory,'sec_status':s.get('status','NOT_RUN'),
                      'sec_filing_count':len(s.get('filings',[])),
                      'tdnet_candidates':td_candidates.get(t,0),
+                     'hkex_candidates':hk_candidates.get(t,0),
                      'parent_status':parent.get(t,{}).get('status'),
                      'original_count':sum(bool(x.get('original_confirmed')) for x in e.get('primary_releases',[]))})
     active=[x for x in rows if x['scope']=='INDEPENDENT']
@@ -70,9 +73,9 @@ def report(m):
            f'- 独立企業 {s["independent"]} / 公式一覧確認 {s["independent_newsroom_verified"]} / SECのみ確認 {s["independent_sec_only"]} / いずれも未確認 {s["independent_no_verified_period"]}',
            f'- 買収済み監視対象 {s["historical"]} / 親会社一覧の限定確認 {s["parent_limited"]} / 未確認 {s["parent_unconfirmed"]}',
            '- SECのみの確認は公式ニュースの不存在証明ではありません。',
-           '|Ticker|監視範囲|判定|SEC|TDnet候補|','|---|---|---|---|---:|']
+           '|Ticker|監視範囲|判定|SEC|TDnet候補|HKEX候補|','|---|---|---|---|---:|---:|']
     for x in m['rows']:
-        lines.append(f'|{x["ticker"]}|{x["scope"]}|{x["status"]}|{x["sec_status"]}|{x["tdnet_candidates"]}|')
+        lines.append(f'|{x["ticker"]}|{x["scope"]}|{x["status"]}|{x["sec_status"]}|{x["tdnet_candidates"]}|{x["hkex_candidates"]}|')
     for p in m['parent_scopes']:
         lines.append(f'- {p["ticker"]}: 親会社 {p["parent_name"]} / {p["status"]} / 原文候補 {len(p["matched_originals"])}件')
     return '\n'.join(lines)+'\n'
