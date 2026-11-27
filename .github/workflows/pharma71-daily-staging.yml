@@ -1,0 +1,96 @@
+name: Pharma71 daily low-cost staging audit
+on:
+  schedule:
+    - cron: '30 18 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/pharma71-daily-staging.yml'
+permissions:
+  contents: write
+concurrency:
+  group: pharma71-unified-staging
+  cancel-in-progress: false
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: pharma71-unified-20261127
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements-pharma46.txt pytest==8.4.2
+      - name: Offline tests
+        run: python -m pytest tests_pharma46 tests_pharma71_unified -q
+      - name: Install Chromium
+        continue-on-error: true
+        run: python -m playwright install --with-deps chromium
+      - name: SEC and exchange observations
+        env:
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+        run: python -m pharma71_unified.regulatory --root data/pharma71_regulatory
+      - name: Live audit 71 (no email)
+        id: collect
+        run: python -m pharma71_unified.cli --workers 3 --max-pages 12 --regulatory-file data/pharma71_regulatory/regulatory.json
+      - name: Preserve staged evidence
+        if: always() && steps.collect.outcome != 'skipped' && steps.collect.outcome != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: pharma71-daily-evidence-${{ github.run_id }}
+          path: |
+            data/pharma71_regulatory/
+            data/pharma71_unified/
+          if-no-files-found: warn
+          retention-days: 7
+      - name: Validate execution and publish explicit coverage gate
+        if: steps.collect.outcome == 'success' && !cancelled()
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          a=json.loads(Path('data/pharma71_unified/audit.json').read_text())
+          assert a['run_id']==os.environ['GITHUB_RUN_ID']
+          assert len(a['entries'])==71
+          print(a['summary'])
+          assert not a['qa_errors'], 'Structural QA failed'
+          assert len(a['integrated_monitoring']['rows'])==71
+          assert not a['integrated_monitoring']['production_ready'], 'Unexpected production readiness'
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as f:
+              f.write('## Coverage gate: '+('PASS' if a['qa_pass'] else 'NOT READY')+'\n\n')
+              f.write('Execution and evidence preservation are distinct from coverage. No production cutover.\n\n')
+              f.write('```json\n'+json.dumps(a['integrated_monitoring']['summary'],indent=2)+'\n```\n')
+          if not a['qa_pass']:
+              print('::warning::Coverage gate NOT READY; no production cutover. This is not a successful full-coverage audit.')
+          PY
+
+      - name: Persist staging baselines and verified RSS (no production change)
+        if: steps.collect.outcome == 'success' && !cancelled()
+        run: |
+          set -euo pipefail
+          git config user.name 'pharma71-staging[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git fetch origin pharma71-unified-20261127
+          if [ "$(git rev-parse HEAD)" != "$(git rev-parse FETCH_HEAD)" ]; then
+            echo "::warning::Staging branch advanced during this run. Evidence artifact retained; stale baseline publication skipped."
+            echo 'Baseline publication: SUPERSEDED (evidence artifact retained)' >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          git add -f data/pharma71_unified/state.json data/pharma71_unified/verified_original_history.json data/pharma71_unified/audit.json data/pharma71_unified/report.md data/pharma71_unified/feeds/
+          if ! git diff --cached --quiet; then
+            git commit -m 'Persist staging audit and verified release history'
+            if ! git push origin HEAD:pharma71-unified-20261127; then
+              git fetch origin pharma71-unified-20261127
+              if [ "$(git rev-parse HEAD^)" != "$(git rev-parse FETCH_HEAD)" ]; then
+                echo "::warning::Staging branch advanced before push; evidence artifact retained, no overwrite."
+                echo 'Baseline publication: SUPERSEDED (evidence artifact retained)' >> "$GITHUB_STEP_SUMMARY"
+                exit 0
+              fi
+              echo "::error::Baseline publication failed without concurrent branch change"
+              exit 1
+            fi
+          fi
+          echo 'Baseline publication: SUCCESS' >> "$GITHUB_STEP_SUMMARY"
