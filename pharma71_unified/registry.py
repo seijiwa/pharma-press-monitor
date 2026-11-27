@@ -21,9 +21,11 @@ ALTERNATES={
  'BIIB':['https://www.biogen.com/home.html'],
  'HRMY':['https://www.harmonybiosciences.com/newsroom/'],
  'ALKS':['https://investor.alkermes.com/press-releases'],
- 'EXEL':['https://ir.exelixis.com/news-releases'],
- 'KURA':['https://ir.kuraoncology.com/news-releases'],
+ 'EXEL':['https://ir.exelixis.com/press-releases','https://ir.exelixis.com/news-releases'],
+ 'KURA':['https://ir.kuraoncology.com/press-releases','https://ir.kuraoncology.com/news-releases'],
  'NBIX':['https://neurocrine.gcs-web.com/investors/news-releases'],
+ 'ERAS':['https://investors.erasca.com/news-events/news-releases'],
+ 'GENENTECH':['https://www.gene.com/media/press-releases'],
  'FUJIFILM-CDMO':['https://fujifilmbiotechnologies.fujifilm.com/about/news/'],
 }
 

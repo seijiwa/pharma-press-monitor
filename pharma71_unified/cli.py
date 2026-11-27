@@ -64,6 +64,17 @@ def main(argv=None):
            'run_id':os.getenv('GITHUB_RUN_ID'),'expected_tickers':order,'entries':entries,
            'summary':summary,'qa_errors':errors,'qa_pass':summary['period_verified']==71 and not errors,
            'delivery':{'status':'NOT_REQUESTED_STAGING'},'subject':subject}
+    # Separate strict 71-row coverage from successor-only monitoring scope.
+    # These diagnostics never change the existing final QA gate.
+    unresolved=[{'ticker':e['ticker'],'company':e['company_name'],'reason':e['reason'],
+                 'source_errors':[{'url':a['official_listing_url'],'errors':a['errors'],
+                                   'unresolved_load_more':a['incomplete_load_more']}
+                                  for a in e['index_attempts']]} for e in entries if e['status']=='未確認']
+    audit['migration_readiness']={'strict_period_qa':audit['qa_pass'],
+        'independent_scope_total':len(order)-len(HISTORICAL),
+        'independent_scope_verified':sum(e['status']!='未確認' and e['ticker'] not in HISTORICAL for e in entries),
+        'historical_scope_pending_review':sorted(HISTORICAL),
+        'unresolved':unresolved,'production_delivery_verified':False}
     save_json(root/'audit.json',audit)
     save_json(root/(now.strftime('%Y-%m-%dT%H%M%S')+'_audit.json'),audit)
     save_json(state_path,new_state)

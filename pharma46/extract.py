@@ -101,6 +101,30 @@ def _row_listing(page_url,soup):
         spec=('.card.cmp-card-tile','.card-body a[href*="/news-releases/news-release-details/"]','.news-date','.card-title','mdy')
     elif host=='ir.ionis.com' and path.rstrip('/') in ('/news-releases','/investor-news/press-releases'):
         spec=('.llf-row:has(.nir-widget--news--date-time)','.nir-widget--news--headline a[href]','.nir-widget--news--date-time','.nir-widget--news--headline','mdy')
+    elif host=='neurocrine.gcs-web.com' and path.rstrip('/')=='/investors/news-releases':
+        spec=('div.py-5.border-b.border-brand-green-deep','.nir-widget--news--read-more a[href]','.investor-news-date','.investor-event-title','short_mdy')
+    elif host=='en.innoventbio.com' and path.rstrip('/')=='/InvestorsAndMedia/PressRelease':
+        spec=('.data_list .data_row','a.neibujump[href]','.data_title','.div_content','mdy')
+    elif host=='www.catalent.com' and path.rstrip('/')=='/news':
+        spec=('#tabpanel-news-listing article','a[href]','p','h2','mdy')
+    elif host in ('www.kelun-biotech.com','en.kelun-biotech.com') and path.lower()=='/newscenter.aspx':
+        # Official archive provides the actual publisher link in a hidden input;
+        # do not confuse the javascript "More" control with an article.
+        nodes=soup.select('.text-box:has(p.time)')
+        if not nodes:return []
+        entries={}
+        for row in nodes:
+            dn=row.select_one('p.time');tn=row.select_one('h3.title');a=row.select_one('input.otherlinks[value]')
+            if not (dn and tn and a):return []
+            url=a['value'];u=urlparse(url)
+            valid=(u.scheme=='https' and ((host=='www.kelun-biotech.com' and u.hostname=='mp.weixin.qq.com' and u.path.startswith('/s/'))
+                   or (host=='en.kelun-biotech.com' and u.hostname=='www.prnewswire.com' and '/news-releases/' in u.path)))
+            dt=parse_date(dn.get_text(' ',strip=True));title=tn.get_text(' ',strip=True)
+            if not valid or not dt or not title or url in entries:return []
+            entries[url]={'url':url,'title':title[:500],'listing_date':dt}
+        # This recognizes only directly linked listing entries. The engine still
+        # requires original verification for every release in the window.
+        return list(entries.values())
     if spec is None:return None
     rows,anchor_sel,date_sel,title_sel,date_kind=spec
     # Avoid nested :has() selectors: SoupSieve strict-mode rejects them.
