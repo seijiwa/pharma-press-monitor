@@ -1744,5 +1744,14 @@
     "url": "https://www.lupin.com/investors/press-releases/lupin-receives-approval-from-u-s-fda-for-sitagliptin-and-metformin-hydrochloride-tablets-in-the-united-states",
     "detected_at": "2026-11-26T12:17:44.824203+00:00",
     "source_page": "https://www.lupin.com/investors/news-events/"
+  },
+  {
+    "id": "6214492033f5457a7dec04398b8f6bba457f84ccb845cd2bdb2121de62ec89c9",
+    "company": "Grifols",
+    "ticker": "GRF",
+    "title": "Grifols acquires Biotest’s plasma collection centers for €220M to streamline plasma sourcing in Europe",
+    "url": "https://www.grifols.com/en/view-news/-/news/grifols-acquires-biotests-plasma-collection-centers-for-euros-220m-to-streamline-plasma-sourcing-in-europe",
+    "detected_at": "2026-11-27T13:42:50.573853+00:00",
+    "source_page": "https://www.grifols.com/en/newsroom"
   }
 ]
