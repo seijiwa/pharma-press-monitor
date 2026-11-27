@@ -1,6 +1,7 @@
 name: Pharma71 daily low-cost staging audit
 on:
   schedule:
+    - cron: '40 16 * * *'
     - cron: '30 18 * * *'
   workflow_dispatch:
   push:

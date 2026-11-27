@@ -13,6 +13,7 @@ from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
 from pharma71_unified_mail import section
+from pharma71_delivery_lock import reserve
 
 TOKYO = ZoneInfo("Asia/Tokyo")
 SITE = "https://seijiwa.github.io/pharma-press-monitor/"
@@ -101,6 +102,8 @@ def deliver(mode, now, subject, body):
         smtp.ehlo()
         smtp.user, smtp.password = address, password
         smtp.auth("LOGIN", smtp.auth_login, initial_response_ok=False)
+        if mode == 'daily' and not reserve(now):
+            return
         if request_ref(tag + "-reserved", create=True) != 201:
             raise SystemExit("The date could not be reserved. Delivery stopped.")
         if smtp.send_message(message):
@@ -123,6 +126,18 @@ if __name__ == "__main__":
     label, integrated = section(now)
     subject += label
     body = integrated + '\n' + body
+    if mode == 'daily':
+        # Earlier retries wait for the fresh audit; after 05:25 deliver the
+        # available result rather than silently missing the whole morning.
+        if now.hour < 5 or (now.hour == 5 and now.minute < 10):
+            print('Before morning delivery window; no email sent.')
+            sys.exit(0)
+        if label == '【統合監査未確認】' and now.hour == 5 and now.minute < 25:
+            print('Current audit unavailable; defer to next morning attempt.')
+            sys.exit(0)
+        if now.hour > 5 or (now.hour == 5 and now.minute > 30):
+            subject += '【配信遅延】'
+            body = '05:30 JSTの配信目標を超過しました。\n' + body
     if mode == "preview":
         print(subject)
         print(body)

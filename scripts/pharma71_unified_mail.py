@@ -11,7 +11,7 @@ def validated_audit(root,now,expected_names):
     a=json.loads((root/'audit.json').read_text(encoding='utf-8'))
     started=datetime.fromisoformat(a['start_jst']).astimezone(TOKYO)
     # The daily 03:30 JST collection must be current, not an old manual run.
-    if started.date()!=now.date() or started.hour<3 or started>now or now-started>timedelta(hours=3):
+    if started.date()!=now.date() or started.hour<1 or started>now or now-started>timedelta(hours=5):
         raise ValueError('STALE_OR_OUTSIDE_MORNING_WINDOW')
     if a.get('audit_date_jst')!=now.date().isoformat():raise ValueError('WRONG_AUDIT_DATE')
     if a.get('qa_errors'):raise ValueError('STRUCTURAL_QA_FAILURE')

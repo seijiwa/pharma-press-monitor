@@ -1,12 +1,15 @@
 name: Pharma71 morning email
 on:
   schedule:
+    - cron: '11 20 * * *'
     - cron: '21 20 * * *'
+    - cron: '27 20 * * *'
   push:
     branches: [main]
     paths:
       - 'scripts/pharma71_email.py'
       - 'scripts/pharma71_unified_mail.py'
+      - 'scripts/pharma71_delivery_lock.py'
       - 'tests_mail/**'
       - '.github/workflows/pharma71-email.yml'
   workflow_dispatch:

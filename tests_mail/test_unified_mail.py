@@ -36,3 +36,17 @@ class TestFreshness(unittest.TestCase):
             a['summary']['period_verified']+=1
             (q/'audit.json').write_text(json.dumps(a))
             with self.assertRaisesRegex(ValueError,'COUNTS'):validated_audit(q,dt+timedelta(hours=1),expected)
+
+    def test_cross_platform_reservation(self):
+        from unittest.mock import patch,MagicMock
+        from urllib.error import HTTPError
+        from pharma71_delivery_lock import reserve
+        now=datetime(2026,11,28,5,21,tzinfo=ZoneInfo('Asia/Tokyo'))
+        with patch.dict('os.environ',{'GITHUB_REPOSITORY':'owner/repo','GH_TOKEN':'test'}),patch('pharma71_delivery_lock.urlopen') as op:
+            op.return_value.__enter__.return_value.status=201
+            self.assertTrue(reserve(now))
+            req=op.call_args.args[0]
+            self.assertTrue(req.full_url.endswith('/delivery/2026-11-28.json'))
+            self.assertEqual(json.loads(req.data)['branch'],'pharma71-delivery-ledger')
+            op.side_effect=HTTPError(req.full_url,422,'already exists',None,None)
+            self.assertFalse(reserve(now))
