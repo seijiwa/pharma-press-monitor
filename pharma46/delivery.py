@@ -1,10 +1,10 @@
-"""Gmail SMTP delivery with IMAP Sent-folder de-duplication. Fail closed if verification fails."""
-import email.utils,imaplib,json,os,smtplib,ssl
+"""Pharma46 SMTP delivery with a repository-wide, date-scoped reservation."""
+import email.utils,imaplib,os,smtplib,ssl
 from email import policy
 from email.parser import BytesParser
 from datetime import datetime,timedelta,timezone
 from email.message import EmailMessage
-from pathlib import Path
+from scripts.pharma71_delivery_lock import create_once
 
 
 def _sent_folder(conn):
@@ -25,8 +25,10 @@ JST=timezone(timedelta(hours=9))
 
 def scheduled_window(day,now=None):
     now=now or datetime.now(JST)
+    if now.utcoffset() is None:
+        return False
     now=now.astimezone(JST)
-    return now.date().isoformat()==day and 240 <= now.hour*60+now.minute < 320
+    return now.date().isoformat()==day and 310 <= now.hour*60+now.minute < 320
 
 def same_report_subject(subject,day):
     # Exclude the separate 71-name digest and explicitly labeled tests.
@@ -60,50 +62,63 @@ def already_sent(user,password,report_key):
         return False
 
 
-def send_report(subject,body,day,ledger_path='data/pharma46_mail_ledger.json'):
-    """No secrets => not sent. IMAP unavailable => do not risk duplicate."""
+def send_report(subject,body,day):
+    """Use the same reservation for every participating Pharma46 sender."""
     user=os.getenv('MAIL_USER','').strip()
-    password=os.getenv('MAIL_APP_PASSWORD','').strip()
+    password=''.join(os.getenv('MAIL_APP_PASSWORD','').split())
     recipient=os.getenv('MAIL_TO','').strip()
+    if not (user and password and recipient):
+        return {'status':'NOT_CONFIGURED'}
+    if not scheduled_window(day):
+        return {'status':'NOT_SENT_OUTSIDE_WINDOW'}
+
     key=day.replace('-','')
     message_id=f'<pharma46-{key}@pharma-monitor.local>'
-    ledgerfile=Path(ledger_path)
-    try:ledger=json.loads(ledgerfile.read_text(encoding='utf-8'))
-    except (FileNotFoundError,ValueError):ledger={}
-    if os.getenv('DELIVERY_MODE')=='scheduled' and not scheduled_window(day):
-        return {'status':'NOT_SENT_OUTSIDE_WINDOW','message_id':None}
-    if not (user and password and recipient):
-        return {'status':'NOT_CONFIGURED','message_id':None,
-                'reason':'MAIL_USER, MAIL_APP_PASSWORD, and MAIL_TO must be configured as GitHub secrets/vars'}
     try:
-        found=already_sent(user,password,key)
-    except Exception as e:
-        return {'status':'NOT_SENT_IMAP_CHECK_FAILED','message_id':None,'error':str(e)[:220]}
-    if found:
-        ledger[key]={'status':'sent','message_id':message_id,'source':'imap_existing'}
-        ledgerfile.parent.mkdir(parents=True,exist_ok=True)
-        ledgerfile.write_text(json.dumps(ledger,indent=2),encoding='utf-8')
-        return {'status':'ALREADY_SENT_IMAP','message_id':message_id}
-    if key in ledger and ledger[key].get('status')=='sent':
-        return {'status':'NOT_SENT_LEDGER_UNCONFIRMED','message_id':ledger[key].get('message_id')}
+        if already_sent(user,password,key):
+            return {'status':'ALREADY_SENT_IMAP','recipient_inbox_verified':False}
+    except Exception as exc:
+        return {'status':'NOT_SENT_IMAP_CHECK_FAILED','error_type':type(exc).__name__}
+
     msg=EmailMessage()
-    msg['From']=user;msg['To']=recipient;msg['Subject']=subject;msg['Date']=email.utils.formatdate(localtime=False)
+    msg['From']=user
+    msg['To']=recipient
+    msg['Subject']=subject
+    msg['Date']=email.utils.formatdate(localtime=False)
     msg['Message-ID']=message_id
     msg['X-Pharma-Audit-ID']=key
     msg.set_content(body,subtype='plain',charset='utf-8')
+    reserved=False
+    accepted=False
     try:
         with smtplib.SMTP('smtp.gmail.com',587,timeout=25) as smtp:
             smtp.starttls(context=ssl.create_default_context())
             smtp.ehlo()
-            smtp.user,smtp.password=user,''.join(password.split())
+            smtp.user,smtp.password=user,password
             smtp.auth('LOGIN',smtp.auth_login,initial_response_ok=False)
-            if os.getenv('DELIVERY_MODE')=='scheduled' and not scheduled_window(day):
-                return {'status':'NOT_SENT_OUTSIDE_WINDOW','message_id':None}
-            refused=smtp.send_message(msg)
-            if refused:raise RuntimeError('SMTP_RECIPIENT_REFUSED')
-    except Exception as e:
-        return {'status':'NOT_SENT_SMTP_FAILED','message_id':None,'error':type(e).__name__+':'+str(e)[:180]}
-    ledger[key]={'status':'sent','message_id':message_id,'source':'smtp'}
-    ledgerfile.parent.mkdir(parents=True,exist_ok=True)
-    ledgerfile.write_text(json.dumps(ledger,indent=2),encoding='utf-8')
-    return {'status':'SENT','message_id':message_id,'smtp_accepted':True,'recipient_inbox_verified':False}
+            if not scheduled_window(day):
+                return {'status':'NOT_SENT_OUTSIDE_WINDOW'}
+            reserved=create_once(f'delivery46/{day}.json',{
+                'date_jst':day,'state':'reserved','message_id':message_id,
+                'reserved_jst':datetime.now(JST).isoformat(),'run_id':os.getenv('GITHUB_RUN_ID'),
+            },message='Reserve daily Pharma46 delivery')
+            if not reserved:
+                return {'status':'NOT_SENT_ALREADY_RESERVED'}
+            if not scheduled_window(day):
+                return {'status':'RESERVED_WINDOW_CLOSED','message_id':message_id}
+            if smtp.send_message(msg):
+                raise RuntimeError('SMTP_RECIPIENT_REFUSED')
+            accepted=True
+    except Exception as exc:
+        if not accepted:
+            return {'status':'RESERVED_SMTP_OUTCOME_UNKNOWN' if reserved else 'NOT_SENT_PREPARATION_FAILED',
+                    'message_id':message_id,'error_type':type(exc).__name__}
+    try:
+        recorded=create_once(f'delivery46/{day}-accepted.json',{
+            'date_jst':day,'state':'accepted','message_id':message_id,
+            'accepted_jst':datetime.now(JST).isoformat(),'run_id':os.getenv('GITHUB_RUN_ID'),
+        },message='Record Pharma46 SMTP acceptance')
+    except Exception:
+        recorded=False
+    return {'status':'SMTP_ACCEPTED','message_id':message_id,'acceptance_recorded':recorded,
+            'smtp_accepted':True,'recipient_inbox_verified':False}

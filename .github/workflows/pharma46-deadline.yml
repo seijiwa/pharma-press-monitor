@@ -1,0 +1,68 @@
+name: Pharma46 deadline report
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/pharma46-deadline.yml'
+      - 'pharma46/deadline.py'
+      - 'pharma46/delivery.py'
+  schedule:
+    - cron: '12 20 * * *' # 05:12 JST
+    - cron: '17 20 * * *' # 05:17 JST retry (shared reservation)
+
+permissions:
+  contents: read
+
+jobs:
+  deadline:
+    # Manual and push previews never send.
+    if: github.event_name == 'workflow_dispatch' || github.event_name == 'push'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements-pharma46.txt
+      - name: Generate deadline preview (no mail)
+        run: python -m pharma46.deadline
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pharma46-deadline-${{ github.run_id }}
+          path: pharma46-deadline-report.md
+          if-no-files-found: warn
+  send:
+    if: github.event_name == 'schedule' && vars.PHARMA46_DEADLINE_DELIVERY != 'false' && vars.PHARMA_ENABLE_DELIVERY != 'false'
+    permissions:
+      contents: write
+    concurrency:
+      group: pharma46-deadline-send
+      cancel-in-progress: false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements-pharma46.txt
+      - name: Send once using saved independent evidence
+        env:
+          PHARMA46_DEADLINE_DELIVERY: 'true'
+          GH_TOKEN: ${{ github.token }}
+          MAIL_USER: ${{ secrets.PHARMA_MAIL_USER || secrets.PHARMA71_GMAIL_USER }}
+          MAIL_APP_PASSWORD: ${{ secrets.PHARMA_MAIL_APP_PASSWORD || secrets.PHARMA71_GMAIL_APP_PASSWORD }}
+          MAIL_TO: ${{ vars.PHARMA_REPORT_TO || secrets.PHARMA_MAIL_USER || secrets.PHARMA71_GMAIL_USER }}
+        run: python -m pharma46.deadline --send
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pharma46-deadline-${{ github.run_id }}
+          path: pharma46-deadline-report.md
+          if-no-files-found: warn

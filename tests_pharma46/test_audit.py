@@ -87,4 +87,4 @@ def test_original_confirmed_but_index_incomplete_is_unconfirmed(tmp_path):
 
 def test_no_email_without_secrets(monkeypatch,tmp_path):
     for k in ('MAIL_USER','MAIL_APP_PASSWORD','MAIL_TO'):monkeypatch.delenv(k,raising=False)
-    assert send_report('subject','body','2026-11-25',tmp_path/'ledger.json')['status']=='NOT_CONFIGURED'
+    assert send_report('subject','body','2026-11-25')['status']=='NOT_CONFIGURED'

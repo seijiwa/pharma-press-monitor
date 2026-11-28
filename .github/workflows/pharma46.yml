@@ -8,43 +8,38 @@ on:
       - 'tests_pharma46/**'
       - 'requirements-pharma46.txt'
       - '.github/workflows/pharma46.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'pharma46/**'
+      - 'tests_pharma46/**'
+      - 'scripts/pharma71_delivery_lock.py'
+      - '.github/workflows/pharma46*.yml'
   workflow_dispatch:
-    inputs:
-      send_email:
-        description: 'Send report (IMAP de-duplication enforced)'
-        type: boolean
-        required: false
-        default: false
   schedule:
-    # 04:07 JST daily; non-hour boundary reduces scheduler congestion.
-    - cron: '7 19 * * *'
+    # 03:37 JST daily; allow margin for delayed GitHub scheduling and separate mail delivery.
+    - cron: '37 18 * * *'
 
 permissions:
   contents: write
 
 concurrency:
-  group: pharma46-daily
+  group: pharma46-${{ github.event_name == 'pull_request' && github.ref || 'daily' }}
   cancel-in-progress: false
 
 jobs:
   monitor:
     runs-on: ubuntu-24.04
-    timeout-minutes: 150
+    timeout-minutes: 45
     env:
       PYTHONUNBUFFERED: '1'
-      MAIL_USER: ${{ secrets.PHARMA_MAIL_USER || secrets.PHARMA71_GMAIL_USER }}
-      MAIL_APP_PASSWORD: ${{ secrets.PHARMA_MAIL_APP_PASSWORD || secrets.PHARMA71_GMAIL_APP_PASSWORD }}
-      MAIL_TO: ${{ vars.PHARMA_REPORT_TO || secrets.PHARMA_MAIL_USER || secrets.PHARMA71_GMAIL_USER }}
-      # Scheduled send is time-gated before the separate ChatGPT fallback; push tests never send.
-      SHOULD_SEND_EMAIL: ${{ (github.event_name == 'workflow_dispatch' && inputs.send_email == true) || (github.event_name == 'schedule' && vars.PHARMA_ENABLE_DELIVERY != 'false') }}
-      DELIVERY_MODE: ${{ github.event_name == 'schedule' && 'scheduled' || 'manual' }}
     steps:
       - uses: actions/checkout@v4
         with:
           # Resolve main when this serialized job actually starts, not its queued push SHA.
-          ref: main
+          ref: ${{ github.event_name == 'pull_request' && github.sha || 'main' }}
           fetch-depth: 0
-          persist-credentials: true
+          persist-credentials: ${{ github.event_name != 'pull_request' }}
       - name: Record checked-out revision
         run: git rev-parse HEAD
       - uses: actions/setup-python@v5
@@ -58,37 +53,10 @@ jobs:
         run: python -m playwright install --with-deps chromium
       - name: Run fixture and schema tests before live collection
         run: python -m pytest tests_pharma46/ -q
-      - name: Verify mail authentication without sending (push only)
-        if: github.event_name == 'push'
-        continue-on-error: true
-        run: |
-          python - <<'PY'
-          import os, smtplib, ssl
-          from pharma46.delivery import already_sent,JST
-          from datetime import datetime
-          user=os.getenv('MAIL_USER','').strip()
-          password=''.join(os.getenv('MAIL_APP_PASSWORD','').split())
-          if not user or not password:raise SystemExit('MAIL_CREDENTIALS_MISSING')
-          try:
-              already_sent(user,password,datetime.now(JST).strftime('%Y%m%d'))
-              with smtplib.SMTP('smtp.gmail.com',587,timeout=25) as smtp:
-                  smtp.starttls(context=ssl.create_default_context())
-                  smtp.ehlo()
-                  smtp.user,smtp.password=user,password
-                  smtp.auth('LOGIN',smtp.auth_login,initial_response_ok=False)
-          except Exception as exc:
-              raise SystemExit('MAIL_AUTH_OR_SENT_SEARCH_FAILED: '+type(exc).__name__) from None
-          print('MAIL_AUTH_AND_SENT_SEARCH_PASS (no message sent)')
-          PY
-      - name: Collect all 46 directly, audit and optionally email
+      - name: Collect all 46 directly (no mail)
         id: collect
         continue-on-error: true
-        run: |
-          if [ "$SHOULD_SEND_EMAIL" = 'true' ]; then
-            python -m pharma46.cli --send --workers 4 --max-pages 12
-          else
-            python -m pharma46.cli --workers 4 --max-pages 12
-          fi
+        run: python -m pharma46.cli --workers 4 --max-pages 12
       - name: Upload full raw HTML evidence and reports
         if: always()
         uses: actions/upload-artifact@v4
@@ -102,12 +70,11 @@ jobs:
           retention-days: 30
           if-no-files-found: warn
       - name: Commit audit data and verified baselines
-        if: steps.collect.outcome == 'success' && github.ref == 'refs/heads/main'
+        if: steps.collect.outcome == 'success' && github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         run: |
           git config user.name 'pharma46-monitor[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add data/pharma46_state.json data/pharma_monitor_*_batch_*.json data/pharma_monitor_*_audit.json data/pharma_monitor_*_report.md
-          if [ -f data/pharma46_mail_ledger.json ]; then git add data/pharma46_mail_ledger.json; fi
           if ! git diff --cached --quiet; then
             git commit -m 'Record evidence-based pharma46 audit'
             if ! git pull --rebase origin main; then
@@ -117,7 +84,7 @@ jobs:
             fi
             git push origin HEAD:main
           fi
-      - name: Mark incomplete or unsent audits as failed
+      - name: Mark incomplete audits as failed
         if: always()
         env:
           COLLECT_OUTCOME: ${{ steps.collect.outcome }}
@@ -133,8 +100,8 @@ jobs:
           data=json.loads(audit.read_text())
           print('Coverage:',data['summary']['period_verified'],'/46; unconfirmed:',data['summary']['unconfirmed'])
           print('Email:',data.get('delivery',{}).get('status'))
-          if os.getenv('COLLECT_OUTCOME')!='success':sys.exit(2)
-          if data['summary']['period_verified'] != 46:sys.exit(2)
-          if os.getenv('SHOULD_SEND_EMAIL')=='true' and data.get('delivery',{}).get('status') not in ('SENT','ALREADY_SENT_IMAP','ALREADY_SENT_LEDGER'):
+          if os.getenv('COLLECT_OUTCOME')!='success' or data.get('run_id')!=os.getenv('GITHUB_RUN_ID') or data['qa_errors']:sys.exit(2)
+          if data['summary']['period_verified'] != 46:
+              print('::warning::Pharma46 coverage NOT READY')
               sys.exit(2)
           PY
