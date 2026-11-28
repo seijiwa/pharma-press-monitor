@@ -29,28 +29,78 @@ def add_recent_originals(body, data_dir, cutoff):
     return body + '\n## 最近確認した一次原文（配信済みかは未照合）\n' + '\n'.join(sorted(lines)) + '\n'
 
 
-def build_report(data_dir, registry, now):
-    cutoff = datetime.combine(now.date(), time(5, 30), JST)
-    path = data_dir / f'pharma_monitor_{now.date().isoformat()}_audit.json'
+def load_independent_audit(data_dir, registry, day, latest):
+    path = data_dir / f'pharma_monitor_{day.isoformat()}_audit.json'
     try:
         audit = json.loads(path.read_text(encoding='utf-8'))
         started = iso_dt(audit['start_jst'])
         completed = iso_dt(audit['completed_jst'])
-        entries = audit['entries']
-        if (audit['audit_date_jst'] == now.date().isoformat()
+        if (audit['audit_date_jst'] == day.isoformat()
                 and audit['expected_tickers'] == ORDER
                 and audit['source_scope'] == 'pharma46-independent'
                 and audit['is_live_direct_http'] is True
-                and cutoff - timedelta(hours=24) <= started <= completed <= min(cutoff, now)
+                and started is not None and completed is not None
+                and started.astimezone(JST).date() == day
+                and started <= completed <= latest
                 and not audit['qa_errors']
-                and not validate_report(registry, entries)):
-            subject, body, summary = render_report(cutoff, entries, [], 'Pharma46 独立収集の保存済み監査')
-            note = (f'収集の基準時刻（JST） {started.isoformat()}。'
-                    '期間網羅の判定は収集の基準時刻まで。基準時刻から配信締切までは未確認。')
-            body = body.replace('\n\n', f'\n\n{note}\n\n', 1)
-            return subject, add_recent_originals(body, data_dir, cutoff), summary
+                and not validate_report(registry, audit['entries'])):
+            return started, audit['entries']
     except (OSError, ValueError, TypeError, KeyError, AttributeError):
         pass
+    return None, []
+
+
+def verified_interval(entry, collection_time):
+    if (entry['status'] == '未確認' or not entry.get('tool_evidence_ref')
+            or not entry.get('new_success_jst')):
+        return None
+    period = entry.get('comparison_period', {})
+    start = iso_dt(period.get('start_jst'))
+    end = iso_dt(period.get('end_jst'))
+    if start is not None and end is not None and start <= end <= collection_time:
+        return start, end
+    return None
+
+
+def continuously_verified(intervals, start, end):
+    cursor = start
+    for left, right in sorted(i for i in intervals if i is not None):
+        if left > cursor:
+            break
+        cursor = max(cursor, right)
+        if cursor >= end:
+            return True
+    return False
+
+
+def build_report(data_dir, registry, now):
+    cutoff = datetime.combine(now.date(), time(5, 30), JST)
+    yesterday = cutoff - timedelta(days=1)
+    started, entries = load_independent_audit(data_dir, registry, cutoff.date(), min(cutoff, now))
+    if started:
+        earlier_start, earlier = load_independent_audit(data_dir, registry, yesterday.date(), started)
+        prior = {item['ticker']: item for item in earlier}
+        rows = []
+        for entry in entries:
+            previous = prior.get(entry['ticker'])
+            current_interval = verified_interval(entry, started)
+            prior_interval = verified_interval(previous, earlier_start) if previous else None
+            if entry['status'] != '未確認' and not continuously_verified(
+                    [prior_interval, current_interval], yesterday, started):
+                entry = dict(entry, status='未確認', pagination_complete=False,
+                             reason='前日05:30から収集基準時刻までに未確認区間あり')
+            elif (entry['status'] == 'なし' and current_interval[0] > yesterday
+                  and previous['status'] == 'あり'):
+                # A prior run bridges the interval, but day-only publication dates
+                # cannot establish which side of 05:30 its reports belong to.
+                entry = dict(entry, status='未確認', reason='前回確認記事の公開時刻と05:30境界を照合できず',
+                             primary_releases=previous['primary_releases'] + entry['primary_releases'])
+            rows.append(entry)
+        subject, body, summary = render_report(cutoff, rows, [], 'Pharma46 独立収集の保存済み監査')
+        note = (f'報告対象（JST） {yesterday.isoformat()} ～ {cutoff.isoformat()}。'
+                f'期間網羅の判定は {started.isoformat()} まで。収集基準時刻から締切までは未確認。')
+        body = body.replace('\n\n', f'\n\n{note}\n\n', 1)
+        return subject, add_recent_originals(body, data_dir, cutoff), summary
 
     entries = [{
         'ticker': ticker,

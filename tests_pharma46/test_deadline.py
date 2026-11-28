@@ -4,7 +4,7 @@ from pathlib import Path
 from unittest.mock import MagicMock
 
 from pharma46 import delivery
-from pharma46.deadline import build_report
+from pharma46.deadline import build_report, continuously_verified
 
 
 def test_missing_or_cross_scope_audit_is_unconfirmed(tmp_path):
@@ -12,6 +12,9 @@ def test_missing_or_cross_scope_audit_is_unconfirmed(tmp_path):
     now = datetime(2026, 11, 28, 5, 30, tzinfo=delivery.JST)
     old = json.loads(Path('data/pharma_monitor_2026-11-28_audit.json').read_text())
     old.update(start_jst='2026-11-28T04:07:00+09:00', completed_jst='2026-11-28T05:29:59+09:00')
+    for item in old['entries']:
+        item['comparison_period'] = {'start_jst': '2026-11-27T05:30:00+09:00',
+                                     'end_jst': '2026-11-28T04:07:00+09:00'}
     path = tmp_path / 'pharma_monitor_2026-11-28_audit.json'
     for scope, verified in [('pharma71', 0), ('pharma46-independent', old['summary']['period_verified'])]:
         old['source_scope'] = scope
@@ -96,3 +99,13 @@ def test_originals_remain_available_without_current_audit(tmp_path):
     assert 'https://example.invalid/confirmed' in body
     assert 'https://example.invalid/late' not in body
     assert summary['unconfirmed'] == 46
+
+
+
+def test_interval_merge_requires_touching_or_overlap():
+    start = datetime(2026, 11, 27, 5, 30, tzinfo=delivery.JST)
+    middle = start.replace(hour=8)
+    end = start.replace(day=28, hour=4)
+    assert continuously_verified([(middle, end), (start, middle)], start, end)
+    assert not continuously_verified([(start, middle), (middle.replace(minute=31), end)], start, end)
+    assert not continuously_verified([(middle, end)], start, end)
