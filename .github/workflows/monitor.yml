@@ -1,6 +1,10 @@
 name: Monitor and publish official press releases
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/monitor.yml'
   schedule:
     - cron: '7,27,47 * * * *'
 permissions:
