@@ -113,7 +113,32 @@
   "JNANA": [],
   "4151 JP": [],
   "HLUN": [],
-  "LUPIN": [],
+  "LUPIN": [
+    {
+      "ticker": "LUPIN",
+      "name": "Lupin",
+      "url": "https://www.lupin.com/investors/press-releases/lupin-announces-u-s-fda-approval-and-launch-of-sitagliptin-tablets-usp-in-the-united-states",
+      "listing_title": "Lupin Announces U.S. FDA Approval and Launch of Sitagliptin Tablets, USP in the United States",
+      "listing_date": "2026-11-27",
+      "original_title": "Lupin Announces U.S. FDA Approval and Launch of Sitagliptin Tablets, USP in the United States - Lupin | Press Release",
+      "published_date": "2026-11-27",
+      "body_excerpt": "Mumbai, India, Naples, Fla, November 27, 2026: Global pharma major Lupin Limited (Lupin) today announced that following the approval from the U.S. Food and Drug Administration (U.S. FDA) for its Abbreviated New Drug Application (ANDA), the company launched Sitagliptin Tablets USP, 25 mg, 50 mg and 100 mg in the United States. Sitagliptin Tablets USP, 25 mg, 50 mg and 100 mg, are bioequivalent to the reference listed drug (RLD), Januvia® Tablets of Merck Sharp and Dohme LLC (Merck). Sitagliptin Tablets, USP are indicated for use as an adjunct to diet and exercise to improve glycemic control in ",
+      "original_confirmed": true,
+      "receipt": {
+        "requested_url": "https://www.lupin.com/investors/press-releases/lupin-announces-u-s-fda-approval-and-launch-of-sitagliptin-tablets-usp-in-the-united-states",
+        "final_url": "https://www.lupin.com/investors/press-releases/lupin-announces-u-s-fda-approval-and-launch-of-sitagliptin-tablets-usp-in-the-united-states",
+        "http_status": 200,
+        "method": "requests",
+        "fetched_jst": "2026-11-28T09:15:59.625038+09:00",
+        "sha256": "daf61c52310dc96248acf1965a08c3bd718fe4842563868ff0c57bcfe48ce19c",
+        "response_date": "2026-11-28T00:15:59+00:00",
+        "age_seconds": 0,
+        "last_modified": null,
+        "snapshot_path": "data/pharma71_unified/evidence/2026-11-28T091449/LUPIN/requests-daf61c52310dc962-ch-of-sitagliptin-tablets-usp-in-the-united-states_63f721001907cddd51.html.gz"
+      },
+      "new_status": "UNSEEN_IN_DATE_WINDOW_TIME_UNCERTAIN"
+    }
+  ],
   "NBIX": [],
   "REATA": [],
   "4536 JP": [],
