@@ -291,7 +291,7 @@ def render_report(now_dt,results,errors,engine):
     subject=f'製薬公式監視 {now_dt.date().isoformat()}【暫定・未確認{unconfirmed}社】' if (unconfirmed or errors) else f'製薬公式監視 {now_dt.date().isoformat()}【{total}社監査】'
     lines=[f'# {subject}','',f'- レポート日付(JST): {now_dt.isoformat()}',
         f'- 対象{total}社 / 直接取得試行記録 {direct}社 / 期間網羅確認 {passed}社 / 未確認 {unconfirmed}社',
-        f'- 一次原文で確認した発表: {len(originals)}件 / 新規、既報、初回観測を別々に表示',
+        f'- 一次原文で確認した発表: {len(originals)}件 / 初回観測と過去の確認を別々に表示',
         f'- 収集エンジン: {engine} / 構造QAコード: 実行済み（エラー{len(errors)}件） / 期間網羅QA: {"合格" if passed==total and not errors else "未達"}',
         f'- キャッシュ疑い: {sum(bool(x["stale_cache_status"]) for x in results)}社',
         '- 注意: 未確認は「新規発表なし」を意味しない。GitHub上の直接HTTP収集はweb.openのクロールキャッシュとは別。',
@@ -408,11 +408,6 @@ def collect(registry,state,asof=None,fetcher=None,evidence_dir='data/evidence',w
             if not prev_floor or (item.get('published_date') or '')>(prev_floor.get('date') or ''):
                 st['latest_verified_original']={'date':item['published_date'],'url':item['url'],
                                                'purpose':'verified original retained for stale-index detection'}
-        if e['status']=='あり' and not any(p.get('new_status') in
-            ('UNSEEN_IN_DATE_WINDOW_TIME_UNCERTAIN','FIRST_OBSERVED_NOT_PROVEN_NEW')
-            for p in e['primary_releases'] if p.get('original_confirmed')):
-            e['status']='なし'
-            e['reason']='COMPLETE_LISTING_ALL_RELEASES_ALREADY_REPORTED'
         st['seen_verified_urls']=sorted(seen)[-500:]
         if e['new_success_jst'] and e['status'] in ('あり','なし'):
             st['last_verified_success_jst']=e['new_success_jst']

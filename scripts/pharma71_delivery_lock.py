@@ -28,9 +28,9 @@ def ledger_exists(path):
             if attempt<2:time.sleep(.25)
     return False
 
-def create_once(path,payload):
+def create_once(path,payload,*,message="Reserve daily Pharma71 delivery"):
     request=Request('https://api.github.com/repos/'+os.environ['GITHUB_REPOSITORY']+'/contents/'+path,
-        data=json.dumps({'message':'Reserve daily Pharma71 delivery','branch':BRANCH,
+        data=json.dumps({'message':message,'branch':BRANCH,
              'content':base64.b64encode(json.dumps(payload).encode()).decode()}).encode(),
         headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json','Content-Type':'application/json'},
         method='PUT')
