@@ -1762,5 +1762,14 @@
     "url": "https://www.lupin.com/investors/press-releases/lupin-announces-u-s-fda-approval-and-launch-of-sitagliptin-tablets-usp-in-the-united-states",
     "detected_at": "2026-11-27T22:21:13.335092+00:00",
     "source_page": "https://www.lupin.com/investors/news-events/"
+  },
+  {
+    "id": "7408cc39afd58ef872089d79849d2ee9510955f538e9aa1500b5a84b60159fcf",
+    "company": "Alvotech",
+    "ticker": "ALVO",
+    "title": "Information filed with the U.S. Securities and Exchange Commission (SEC)",
+    "url": "https://www.alvotech.com/newsroom/information-filed-with-the-u-s-securities-and-exchange-commission-sec",
+    "detected_at": "2026-11-28T12:52:10.323251+00:00",
+    "source_page": "https://www.alvotech.com/newsroom"
   }
 ]
