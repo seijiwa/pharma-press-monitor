@@ -91,22 +91,11 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          # The upload response may precede visibility in the REST API used by deploy-pages.
-          # Poll this exact run, not a prior run or a cached artifact.
+          # Poll the exact run until the upload is visible to the deployment API.
           for attempt in $(seq 1 12); do
             if gh api --method GET "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/artifacts?name=github-pages" \
               --jq '.artifacts[] | select(.name == "github-pages" and .expired == false and .size_in_bytes > 0) | .id' > "$RUNNER_TEMP/pages-artifact-ids"; then
-              if grep -Eq '^[0-9]+
-          python - <<'PY'
-          import json, os, sys
-          s=json.load(open('data/status.json'))
-          failed={k:v for k,v in s.items() if v['status']!='OK'}
-          with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as f:
-              f.write('## Source health: '+str(71-len(failed))+'/71 OK'+chr(10)+chr(10))
-              for k,v in failed.items(): f.write('- '+k+': '+v['detail']+chr(10))
-          sys.exit(1 if failed else 0)
-          PY
- "$RUNNER_TEMP/pages-artifact-ids"; then
+              if grep -Eq '^[0-9]+$' "$RUNNER_TEMP/pages-artifact-ids"; then
                 echo "Pages artifact is visible (attempt $attempt)."
                 exit 0
               fi
