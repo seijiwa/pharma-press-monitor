@@ -30,13 +30,13 @@
         "https://www.galderma.com/newsroom"
       ],
       "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:58:06.858664+09:00",
-      "attempt_end_jst": "2026-11-28T08:58:07.300147+09:00",
-      "tool_evidence_ref": "9d4ced1c0d689581f782b0ebbc7ca088b8dfdae08cd17397ed80d8487f31e008",
-      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "attempt_start_jst": "2026-11-28T22:08:02.771407+09:00",
+      "attempt_end_jst": "2026-11-28T22:08:03.271018+09:00",
+      "tool_evidence_ref": "8113e6580e2a6dfa9e2317ed5ce6c6ec3a3aaf184e077231877385a7442f7947",
+      "previous_success_jst": "2026-11-28T08:57:57.322477+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-28T08:56:24.664623+09:00",
-        "end_jst": "2026-11-28T08:57:57.322477+09:00",
+        "start_jst": "2026-11-28T08:57:57.322477+09:00",
+        "end_jst": "2026-11-28T22:07:51.564118+09:00",
         "type": "last_success"
       },
       "status": "なし",
@@ -49,7 +49,7 @@
       "pagination_complete": true,
       "alternative_attempts": [],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:57:57.322477+09:00",
+      "new_success_jst": "2026-11-28T22:07:51.564118+09:00",
       "stale_cache_status": null,
       "source_classification": "PERIOD_VERIFIED",
       "index_attempts": [
@@ -62,12 +62,12 @@
               "final_url": "https://www.galderma.com/newsroom",
               "http_status": 200,
               "method": "requests",
-              "fetched_jst": "2026-11-28T08:58:07.198809+09:00",
-              "sha256": "9d4ced1c0d689581f782b0ebbc7ca088b8dfdae08cd17397ed80d8487f31e008",
-              "response_date": "2026-11-27T23:58:07+00:00",
+              "fetched_jst": "2026-11-28T22:08:03.135904+09:00",
+              "sha256": "8113e6580e2a6dfa9e2317ed5ce6c6ec3a3aaf184e077231877385a7442f7947",
+              "response_date": "2026-11-28T13:08:03+00:00",
               "age_seconds": 0,
               "last_modified": null,
-              "snapshot_path": "data/evidence/2026-11-28/GALD/requests-9d4ced1c0d689581-_newsroom_216e2d2e1a007b3871.html.gz"
+              "snapshot_path": "data/evidence/2026-11-28/GALD/requests-8113e6580e2a6dfa-_newsroom_216e2d2e1a007b3871.html.gz"
             }
           ],
           "listing_page_urls_checked": [
@@ -108,13 +108,13 @@
         "https://www.lonza.com/news"
       ],
       "homepage_visit_status": "失敗",
-      "attempt_start_jst": "2026-11-28T08:58:07.300203+09:00",
-      "attempt_end_jst": "2026-11-28T08:58:08.713880+09:00",
+      "attempt_start_jst": "2026-11-28T22:08:03.271061+09:00",
+      "attempt_end_jst": "2026-11-28T22:08:04.823567+09:00",
       "tool_evidence_ref": null,
       "previous_success_jst": null,
       "comparison_period": {
         "start_jst": "2026-11-26T08:47:16.626229+09:00",
-        "end_jst": "2026-11-28T08:57:57.322477+09:00",
+        "end_jst": "2026-11-28T22:07:51.564118+09:00",
         "type": "unresolved_baseline"
       },
       "status": "未確認",
@@ -206,13 +206,13 @@
         "https://investors.vrtx.com/news-releases"
       ],
       "homepage_visit_status": "失敗",
-      "attempt_start_jst": "2026-11-28T08:58:07.963376+09:00",
-      "attempt_end_jst": "2026-11-28T08:58:09.306025+09:00",
+      "attempt_start_jst": "2026-11-28T22:08:03.500381+09:00",
+      "attempt_end_jst": "2026-11-28T22:08:04.957482+09:00",
       "tool_evidence_ref": null,
       "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
       "comparison_period": {
         "start_jst": "2026-11-28T08:56:24.664623+09:00",
-        "end_jst": "2026-11-28T08:57:57.322477+09:00",
+        "end_jst": "2026-11-28T22:07:51.564118+09:00",
         "type": "last_success"
       },
       "status": "未確認",
@@ -305,13 +305,13 @@
         "https://investor.jazzpharma.com/news"
       ],
       "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:58:08.713922+09:00",
-      "attempt_end_jst": "2026-11-28T08:58:09.827536+09:00",
+      "attempt_start_jst": "2026-11-28T22:08:04.451474+09:00",
+      "attempt_end_jst": "2026-11-28T22:08:05.863909+09:00",
       "tool_evidence_ref": "995127f883b8198861113328a649339bd65b88ee52f6194b93e4057b0c57f138",
-      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "previous_success_jst": "2026-11-28T08:57:57.322477+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-28T08:56:24.664623+09:00",
-        "end_jst": "2026-11-28T08:57:57.322477+09:00",
+        "start_jst": "2026-11-28T08:57:57.322477+09:00",
+        "end_jst": "2026-11-28T22:07:51.564118+09:00",
         "type": "last_success"
       },
       "status": "なし",
@@ -332,7 +332,7 @@
         }
       ],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:57:57.322477+09:00",
+      "new_success_jst": "2026-11-28T22:07:51.564118+09:00",
       "stale_cache_status": null,
       "source_classification": "PERIOD_VERIFIED",
       "index_attempts": [
@@ -370,9 +370,9 @@
               "final_url": "https://www.jazzpharma.com/",
               "http_status": 200,
               "method": "requests",
-              "fetched_jst": "2026-11-28T08:58:09.622817+09:00",
+              "fetched_jst": "2026-11-28T22:08:05.709536+09:00",
               "sha256": "995127f883b8198861113328a649339bd65b88ee52f6194b93e4057b0c57f138",
-              "response_date": "2026-11-27T23:58:09+00:00",
+              "response_date": "2026-11-28T13:08:05+00:00",
               "age_seconds": 0,
               "last_modified": null,
               "snapshot_path": "data/evidence/2026-11-28/JAZZ/requests-995127f883b81988-__0c98944af05d289b70.html.gz"
@@ -417,13 +417,13 @@
         "https://alkermes.gcs-web.com/news-releases"
       ],
       "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:58:09.306066+09:00",
-      "attempt_end_jst": "2026-11-28T08:58:09.510778+09:00",
+      "attempt_start_jst": "2026-11-28T22:08:04.823613+09:00",
+      "attempt_end_jst": "2026-11-28T22:08:05.080280+09:00",
       "tool_evidence_ref": "bb86a43cfe4ea9508433543b95f917fe6ae11374a8e1ee2cfc64e35774fa9407",
-      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "previous_success_jst": "2026-11-28T08:57:57.322477+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-28T08:56:24.664623+09:00",
-        "end_jst": "2026-11-28T08:57:57.322477+09:00",
+        "start_jst": "2026-11-28T08:57:57.322477+09:00",
+        "end_jst": "2026-11-28T22:07:51.564118+09:00",
         "type": "last_success"
       },
       "status": "なし",
@@ -436,7 +436,7 @@
       "pagination_complete": true,
       "alternative_attempts": [],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:57:57.322477+09:00",
+      "new_success_jst": "2026-11-28T22:07:51.564118+09:00",
       "stale_cache_status": null,
       "source_classification": "PERIOD_VERIFIED",
       "index_attempts": [
@@ -449,9 +449,9 @@
               "final_url": "https://www.alkermes.com/news",
               "http_status": 200,
               "method": "requests",
-              "fetched_jst": "2026-11-28T08:58:09.469069+09:00",
+              "fetched_jst": "2026-11-28T22:08:05.009140+09:00",
               "sha256": "bb86a43cfe4ea9508433543b95f917fe6ae11374a8e1ee2cfc64e35774fa9407",
-              "response_date": "2026-11-27T23:58:09+00:00",
+              "response_date": "2026-11-28T13:08:04+00:00",
               "age_seconds": 0,
               "last_modified": null,
               "snapshot_path": "data/evidence/2026-11-28/ALKS/requests-bb86a43cfe4ea950-_news_403a59395e3290f9d9.html.gz"
@@ -495,13 +495,13 @@
         "https://sarepta.gcs-web.com/news-releases"
       ],
       "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:58:09.510809+09:00",
-      "attempt_end_jst": "2026-11-28T08:58:12.761227+09:00",
-      "tool_evidence_ref": "2d61d6f76719aff9f34913a1b1f2e43d78165233c3179e6c6252e0bbca6a3e8b",
-      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "attempt_start_jst": "2026-11-28T22:08:04.957526+09:00",
+      "attempt_end_jst": "2026-11-28T22:08:08.348201+09:00",
+      "tool_evidence_ref": "e4158da115faf2a0d3ea649c07a59190a5caf4c7bca70f0aaa71e25d1108bf7d",
+      "previous_success_jst": "2026-11-28T08:57:57.322477+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-28T08:56:24.664623+09:00",
-        "end_jst": "2026-11-28T08:57:57.322477+09:00",
+        "start_jst": "2026-11-28T08:57:57.322477+09:00",
+        "end_jst": "2026-11-28T22:07:51.564118+09:00",
         "type": "last_success"
       },
       "status": "なし",
@@ -515,7 +515,7 @@
       "pagination_complete": true,
       "alternative_attempts": [],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:57:57.322477+09:00",
+      "new_success_jst": "2026-11-28T22:07:51.564118+09:00",
       "stale_cache_status": null,
       "source_classification": "PERIOD_VERIFIED",
       "index_attempts": [
@@ -528,24 +528,24 @@
               "final_url": "https://www.sarepta.com/newsroom",
               "http_status": 200,
               "method": "requests",
-              "fetched_jst": "2026-11-28T08:58:09.656507+09:00",
-              "sha256": "2d61d6f76719aff9f34913a1b1f2e43d78165233c3179e6c6252e0bbca6a3e8b",
-              "response_date": "2026-11-27T23:58:09+00:00",
-              "age_seconds": 710574,
+              "fetched_jst": "2026-11-28T22:08:05.088328+09:00",
+              "sha256": "e4158da115faf2a0d3ea649c07a59190a5caf4c7bca70f0aaa71e25d1108bf7d",
+              "response_date": "2026-11-28T13:08:05+00:00",
+              "age_seconds": 757970,
               "last_modified": "2026-11-19T18:33:32+00:00",
-              "snapshot_path": "data/evidence/2026-11-28/SRPT/requests-2d61d6f76719aff9-_newsroom_531a6e4b43aef47d63.html.gz"
+              "snapshot_path": "data/evidence/2026-11-28/SRPT/requests-e4158da115faf2a0-_newsroom_531a6e4b43aef47d63.html.gz"
             },
             {
               "requested_url": "https://www.sarepta.com/newsroom",
               "final_url": "https://www.sarepta.com/newsroom",
               "http_status": 200,
               "method": "playwright",
-              "fetched_jst": "2026-11-28T08:58:12.413371+09:00",
-              "sha256": "0f6273992af7440711d66181fffe64905175d9da42af4e5dc5cc5deadf822d07",
+              "fetched_jst": "2026-11-28T22:08:07.799574+09:00",
+              "sha256": "90cb2e01920db32101eae3ca99257bf665e33b36e240f86447f93db7531c7c42",
               "response_date": null,
               "age_seconds": 0,
               "last_modified": null,
-              "snapshot_path": "data/evidence/2026-11-28/SRPT/playwright-0f6273992af74407-_newsroom_531a6e4b43aef47d63.html.gz"
+              "snapshot_path": "data/evidence/2026-11-28/SRPT/playwright-90cb2e01920db321-_newsroom_531a6e4b43aef47d63.html.gz"
             }
           ],
           "listing_page_urls_checked": [
@@ -586,13 +586,13 @@
         "https://ir.vikingtherapeutics.com/press-releases"
       ],
       "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:58:09.651846+09:00",
-      "attempt_end_jst": "2026-11-28T08:58:10.059842+09:00",
-      "tool_evidence_ref": "048e7ae440f118a9b7ad5c29147decda4c0abad2335d3cc708831ed6787645be",
-      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "attempt_start_jst": "2026-11-28T22:08:05.080315+09:00",
+      "attempt_end_jst": "2026-11-28T22:08:07.304960+09:00",
+      "tool_evidence_ref": "23c37334ba07c5101ede46b057fa5d325b4985d575004173c584e48f696e4e1f",
+      "previous_success_jst": "2026-11-28T08:57:57.322477+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-28T08:56:24.664623+09:00",
-        "end_jst": "2026-11-28T08:57:57.322477+09:00",
+        "start_jst": "2026-11-28T08:57:57.322477+09:00",
+        "end_jst": "2026-11-28T22:07:51.564118+09:00",
         "type": "last_success"
       },
       "status": "なし",
@@ -605,7 +605,7 @@
       "pagination_complete": true,
       "alternative_attempts": [],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:57:57.322477+09:00",
+      "new_success_jst": "2026-11-28T22:07:51.564118+09:00",
       "stale_cache_status": null,
       "source_classification": "PERIOD_VERIFIED",
       "index_attempts": [
@@ -617,13 +617,13 @@
               "requested_url": "https://ir.vikingtherapeutics.com/press-releases",
               "final_url": "https://ir.vikingtherapeutics.com/press-releases",
               "http_status": 200,
-              "method": "requests",
-              "fetched_jst": "2026-11-28T08:58:09.963434+09:00",
-              "sha256": "048e7ae440f118a9b7ad5c29147decda4c0abad2335d3cc708831ed6787645be",
-              "response_date": "2026-11-27T23:58:09+00:00",
-              "age_seconds": 1784,
-              "last_modified": "2026-11-27T23:29:19+00:00",
-              "snapshot_path": "data/evidence/2026-11-28/VKTX/requests-048e7ae440f118a9-_press-releases_fe69ad67fc431e3506.html.gz"
+              "method": "playwright",
+              "fetched_jst": "2026-11-28T22:08:07.216660+09:00",
+              "sha256": "23c37334ba07c5101ede46b057fa5d325b4985d575004173c584e48f696e4e1f",
+              "response_date": null,
+              "age_seconds": 0,
+              "last_modified": null,
+              "snapshot_path": "data/evidence/2026-11-28/VKTX/playwright-23c37334ba07c510-_press-releases_fe69ad67fc431e3506.html.gz"
             }
           ],
           "listing_page_urls_checked": [
@@ -664,13 +664,13 @@
         "https://ir.veratx.com/news-events/press-releases"
       ],
       "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:58:09.827565+09:00",
-      "attempt_end_jst": "2026-11-28T08:58:10.409824+09:00",
+      "attempt_start_jst": "2026-11-28T22:08:05.587673+09:00",
+      "attempt_end_jst": "2026-11-28T22:08:06.424527+09:00",
       "tool_evidence_ref": "0840234e9381779f2e4538761bdc79356bde844145427bd527f6acaecd562d2b",
-      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "previous_success_jst": "2026-11-28T08:57:57.322477+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-28T08:56:24.664623+09:00",
-        "end_jst": "2026-11-28T08:57:57.322477+09:00",
+        "start_jst": "2026-11-28T08:57:57.322477+09:00",
+        "end_jst": "2026-11-28T22:07:51.564118+09:00",
         "type": "last_success"
       },
       "status": "なし",
@@ -683,7 +683,7 @@
       "pagination_complete": true,
       "alternative_attempts": [],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:57:57.322477+09:00",
+      "new_success_jst": "2026-11-28T22:07:51.564118+09:00",
       "stale_cache_status": null,
       "source_classification": "PERIOD_VERIFIED",
       "index_attempts": [
@@ -696,11 +696,11 @@
               "final_url": "https://ir.veratx.com/news-events/press-releases",
               "http_status": 200,
               "method": "requests",
-              "fetched_jst": "2026-11-28T08:58:10.292278+09:00",
+              "fetched_jst": "2026-11-28T22:08:06.240816+09:00",
               "sha256": "0840234e9381779f2e4538761bdc79356bde844145427bd527f6acaecd562d2b",
-              "response_date": "2026-11-27T23:58:10+00:00",
+              "response_date": "2026-11-28T13:08:06+00:00",
               "age_seconds": 0,
-              "last_modified": "2026-11-23T21:39:05+00:00",
+              "last_modified": "2026-11-23T21:37:45+00:00",
               "snapshot_path": "data/evidence/2026-11-28/VERA/requests-0840234e9381779f-_news-events_press-releases_32c73aa0f43f905949.html.gz"
             }
           ],
@@ -742,13 +742,13 @@
         "https://www.capricor.com/investors/news-events"
       ],
       "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:58:10.059875+09:00",
-      "attempt_end_jst": "2026-11-28T08:58:10.289208+09:00",
+      "attempt_start_jst": "2026-11-28T22:08:05.863940+09:00",
+      "attempt_end_jst": "2026-11-28T22:08:06.096926+09:00",
       "tool_evidence_ref": "6be982a66c2e21c3db035055828f9bd69dd2e63208f68d6942edd96fd8721254",
-      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "previous_success_jst": "2026-11-28T08:57:57.322477+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-28T08:56:24.664623+09:00",
-        "end_jst": "2026-11-28T08:57:57.322477+09:00",
+        "start_jst": "2026-11-28T08:57:57.322477+09:00",
+        "end_jst": "2026-11-28T22:07:51.564118+09:00",
         "type": "last_success"
       },
       "status": "なし",
@@ -761,7 +761,7 @@
       "pagination_complete": true,
       "alternative_attempts": [],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:57:57.322477+09:00",
+      "new_success_jst": "2026-11-28T22:07:51.564118+09:00",
       "stale_cache_status": null,
       "source_classification": "PERIOD_VERIFIED",
       "index_attempts": [
@@ -774,9 +774,9 @@
               "final_url": "https://www.capricor.com/investors/news-events/press-releases",
               "http_status": 200,
               "method": "requests",
-              "fetched_jst": "2026-11-28T08:58:10.201717+09:00",
+              "fetched_jst": "2026-11-28T22:08:05.972594+09:00",
               "sha256": "6be982a66c2e21c3db035055828f9bd69dd2e63208f68d6942edd96fd8721254",
-              "response_date": "2026-11-27T23:58:10+00:00",
+              "response_date": "2026-11-28T13:08:05+00:00",
               "age_seconds": 0,
               "last_modified": null,
               "snapshot_path": "data/evidence/2026-11-28/CAPR/requests-6be982a66c2e21c3-_investors_news-events_press-releases_f362f48ad5e7320218.html.gz"
@@ -820,13 +820,13 @@
         "https://kuraoncology.gcs-web.com/news-releases"
       ],
       "homepage_visit_status": "失敗",
-      "attempt_start_jst": "2026-11-28T08:58:10.200457+09:00",
-      "attempt_end_jst": "2026-11-28T08:58:11.875864+09:00",
+      "attempt_start_jst": "2026-11-28T22:08:06.096978+09:00",
+      "attempt_end_jst": "2026-11-28T22:08:07.568284+09:00",
       "tool_evidence_ref": null,
       "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
       "comparison_period": {
         "start_jst": "2026-11-28T08:56:24.664623+09:00",
-        "end_jst": "2026-11-28T08:57:57.322477+09:00",
+        "end_jst": "2026-11-28T22:07:51.564118+09:00",
         "type": "last_success"
       },
       "status": "未確認",
@@ -918,13 +918,13 @@
         "https://www.smmttx.com/investors/news-events/press-releases"
       ],
       "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:58:10.289231+09:00",
-      "attempt_end_jst": "2026-11-28T08:58:14.296468+09:00",
-      "tool_evidence_ref": "27d128f84677b9d3203453de99e11e003b503420d91d342a641c50cfe55ba98f",
-      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "attempt_start_jst": "2026-11-28T22:08:06.424575+09:00",
+      "attempt_end_jst": "2026-11-28T22:08:09.798772+09:00",
+      "tool_evidence_ref": "ed57620ee1c10f91436624e91b7a88ef44e0a8160d25601a3727349ed1f38afb",
+      "previous_success_jst": "2026-11-28T08:57:57.322477+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-28T08:56:24.664623+09:00",
-        "end_jst": "2026-11-28T08:57:57.322477+09:00",
+        "start_jst": "2026-11-28T08:57:57.322477+09:00",
+        "end_jst": "2026-11-28T22:07:51.564118+09:00",
         "type": "last_success"
       },
       "status": "なし",
@@ -937,7 +937,7 @@
       "pagination_complete": true,
       "alternative_attempts": [],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:57:57.322477+09:00",
+      "new_success_jst": "2026-11-28T22:07:51.564118+09:00",
       "stale_cache_status": null,
       "source_classification": "PERIOD_VERIFIED",
       "index_attempts": [
@@ -950,12 +950,12 @@
               "final_url": "https://smmttx.com/news/press-releases/default.aspx",
               "http_status": 200,
               "method": "playwright",
-              "fetched_jst": "2026-11-28T08:58:13.918827+09:00",
-              "sha256": "27d128f84677b9d3203453de99e11e003b503420d91d342a641c50cfe55ba98f",
+              "fetched_jst": "2026-11-28T22:08:09.506178+09:00",
+              "sha256": "ed57620ee1c10f91436624e91b7a88ef44e0a8160d25601a3727349ed1f38afb",
               "response_date": null,
               "age_seconds": 0,
               "last_modified": null,
-              "snapshot_path": "data/evidence/2026-11-28/SMMT/playwright-27d128f84677b9d3-_news_press-releases_default_aspx_d7aaf8677ede3b1691.html.gz"
+              "snapshot_path": "data/evidence/2026-11-28/SMMT/playwright-ed57620ee1c10f91-_news_press-releases_default_aspx_d7aaf8677ede3b1691.html.gz"
             }
           ],
           "listing_page_urls_checked": [
@@ -995,13 +995,13 @@
         "https://www.zealandpharma.com/news-media/"
       ],
       "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:58:10.409863+09:00",
-      "attempt_end_jst": "2026-11-28T08:58:13.330467+09:00",
-      "tool_evidence_ref": "eef75bba0475a5a4e80e98feca90aee8a679b7e7cde6ddbb0e13859b3cecf685",
-      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "attempt_start_jst": "2026-11-28T22:08:07.304990+09:00",
+      "attempt_end_jst": "2026-11-28T22:08:10.480691+09:00",
+      "tool_evidence_ref": "7a40296d4a6c0f3e711fe13d2c4248c2e0a188467fb63354f444a3c1d2e31481",
+      "previous_success_jst": "2026-11-28T08:57:57.322477+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-28T08:56:24.664623+09:00",
-        "end_jst": "2026-11-28T08:57:57.322477+09:00",
+        "start_jst": "2026-11-28T08:57:57.322477+09:00",
+        "end_jst": "2026-11-28T22:07:51.564118+09:00",
         "type": "last_success"
       },
       "status": "なし",
@@ -1014,7 +1014,7 @@
       "pagination_complete": true,
       "alternative_attempts": [],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:57:57.322477+09:00",
+      "new_success_jst": "2026-11-28T22:07:51.564118+09:00",
       "stale_cache_status": null,
       "source_classification": "PERIOD_VERIFIED",
       "index_attempts": [
@@ -1027,12 +1027,12 @@
               "final_url": "https://www.zealandpharma.com/news-media/",
               "http_status": 200,
               "method": "playwright",
-              "fetched_jst": "2026-11-28T08:58:13.021325+09:00",
-              "sha256": "eef75bba0475a5a4e80e98feca90aee8a679b7e7cde6ddbb0e13859b3cecf685",
+              "fetched_jst": "2026-11-28T22:08:09.908778+09:00",
+              "sha256": "7a40296d4a6c0f3e711fe13d2c4248c2e0a188467fb63354f444a3c1d2e31481",
               "response_date": null,
               "age_seconds": 0,
               "last_modified": null,
-              "snapshot_path": "data/evidence/2026-11-28/ZEAL/playwright-eef75bba0475a5a4-_news-media__400b4201428abd03d0.html.gz"
+              "snapshot_path": "data/evidence/2026-11-28/ZEAL/playwright-7a40296d4a6c0f3e-_news-media__400b4201428abd03d0.html.gz"
             }
           ],
           "listing_page_urls_checked": [
@@ -1073,13 +1073,13 @@
         "https://ir.supernus.com/news-releases"
       ],
       "homepage_visit_status": "失敗",
-      "attempt_start_jst": "2026-11-28T08:58:11.875900+09:00",
-      "attempt_end_jst": "2026-11-28T08:58:13.182104+09:00",
+      "attempt_start_jst": "2026-11-28T22:08:07.568324+09:00",
+      "attempt_end_jst": "2026-11-28T22:08:09.149512+09:00",
       "tool_evidence_ref": null,
       "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
       "comparison_period": {
         "start_jst": "2026-11-28T08:56:24.664623+09:00",
-        "end_jst": "2026-11-28T08:57:57.322477+09:00",
+        "end_jst": "2026-11-28T22:07:51.564118+09:00",
         "type": "last_success"
       },
       "status": "未確認",
@@ -1172,13 +1172,13 @@
         "https://investors.alumis.com/news-releases"
       ],
       "homepage_visit_status": "成功",
-      "attempt_start_jst": "2026-11-28T08:58:12.761258+09:00",
-      "attempt_end_jst": "2026-11-28T08:58:12.860016+09:00",
+      "attempt_start_jst": "2026-11-28T22:08:08.348268+09:00",
+      "attempt_end_jst": "2026-11-28T22:08:08.470725+09:00",
       "tool_evidence_ref": "7b5ef11f989492e103ced3159954784e73b5ef0aa0b465f53f608b09e0701a20",
-      "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
+      "previous_success_jst": "2026-11-28T08:57:57.322477+09:00",
       "comparison_period": {
-        "start_jst": "2026-11-28T08:56:24.664623+09:00",
-        "end_jst": "2026-11-28T08:57:57.322477+09:00",
+        "start_jst": "2026-11-28T08:57:57.322477+09:00",
+        "end_jst": "2026-11-28T22:07:51.564118+09:00",
         "type": "last_success"
       },
       "status": "なし",
@@ -1191,7 +1191,7 @@
       "pagination_complete": true,
       "alternative_attempts": [],
       "primary_releases": [],
-      "new_success_jst": "2026-11-28T08:57:57.322477+09:00",
+      "new_success_jst": "2026-11-28T22:07:51.564118+09:00",
       "stale_cache_status": null,
       "source_classification": "PERIOD_VERIFIED",
       "index_attempts": [
@@ -1204,11 +1204,11 @@
               "final_url": "https://www.alumis.com/",
               "http_status": 200,
               "method": "requests",
-              "fetched_jst": "2026-11-28T08:58:12.814651+09:00",
+              "fetched_jst": "2026-11-28T22:08:08.419588+09:00",
               "sha256": "7b5ef11f989492e103ced3159954784e73b5ef0aa0b465f53f608b09e0701a20",
-              "response_date": "2026-11-27T23:58:12+00:00",
+              "response_date": "2026-11-28T13:08:08+00:00",
               "age_seconds": 0,
-              "last_modified": "2026-11-27T00:41:03+00:00",
+              "last_modified": "2026-11-28T00:44:03+00:00",
               "snapshot_path": "data/evidence/2026-11-28/ALMS/requests-7b5ef11f989492e1-__07efc29415959931a2.html.gz"
             }
           ],
@@ -1250,13 +1250,13 @@
         "https://ir.harmonybiosciences.com/"
       ],
       "homepage_visit_status": "失敗",
-      "attempt_start_jst": "2026-11-28T08:58:12.860047+09:00",
-      "attempt_end_jst": "2026-11-28T08:58:14.553026+09:00",
+      "attempt_start_jst": "2026-11-28T22:08:08.470762+09:00",
+      "attempt_end_jst": "2026-11-28T22:08:10.057389+09:00",
       "tool_evidence_ref": null,
       "previous_success_jst": "2026-11-28T08:56:24.664623+09:00",
       "comparison_period": {
         "start_jst": "2026-11-28T08:56:24.664623+09:00",
-        "end_jst": "2026-11-28T08:57:57.322477+09:00",
+        "end_jst": "2026-11-28T22:07:51.564118+09:00",
         "type": "last_success"
       },
       "status": "未確認",

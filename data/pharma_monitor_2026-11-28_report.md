@@ -1,8 +1,8 @@
 # 製薬公式監視 2026-11-28【暫定・未確認12社】
 
-- レポート日付(JST): 2026-11-28T08:57:57.322477+09:00
+- レポート日付(JST): 2026-11-28T22:07:51.564118+09:00
 - 対象46社 / 直接取得試行記録 46社 / 期間網羅確認 34社 / 未確認 12社
-- 一次原文で確認した発表: 0件 / 新規、既報、初回観測を別々に表示
+- 一次原文で確認した発表: 0件 / 初回観測と過去の確認を別々に表示
 - 収集エンジン: GitHub Actions direct HTTP/Playwright / 構造QAコード: 実行済み（エラー0件） / 期間網羅QA: 未達
 - キャッシュ疑い: 0社
 - 注意: 未確認は「新規発表なし」を意味しない。GitHub上の直接HTTP収集はweb.openのクロールキャッシュとは別。
@@ -53,7 +53,7 @@
 |CGEM|未確認|失敗|null|False|INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL|
 |IMNM|未確認|成功|null|False|INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL|
 |GPCR|未確認|失敗|null|False|INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL|
-|ALVO|なし|成功|2026-11-26|True|COMPLETE_DATED_LISTING_NO_NEW_RELEASES|
+|ALVO|なし|成功|2026-11-27|True|COMPLETE_DATED_LISTING_NO_NEW_RELEASES|
 |DNLI|未確認|失敗|null|False|INCOMPLETE_PAGINATION_OR_LISTING_OR_ORIGINAL|
 |6990 HK|なし|成功|2026-11-16|True|COMPLETE_DATED_LISTING_NO_NEW_RELEASES|
 |9926 HK|なし|成功|2026-11-16|True|COMPLETE_DATED_LISTING_NO_NEW_RELEASES|
