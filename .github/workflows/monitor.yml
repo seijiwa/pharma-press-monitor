@@ -5,6 +5,7 @@ on:
     - cron: '7,27,47 * * * *'
 permissions:
   contents: write
+  actions: read
   pages: write
   id-token: write
 concurrency:
@@ -40,6 +41,7 @@ jobs:
             *) exit "$result" ;;
           esac
       - name: Validate RSS and health output
+        id: validate_output
         run: |
           python - <<'PY'
           import csv, json, pathlib, xml.etree.ElementTree as ET
@@ -82,10 +84,43 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: docs
+      - name: Wait for uploaded Pages artifact to become visible
+        id: pages_artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          # The upload response may precede visibility in the REST API used by deploy-pages.
+          # Poll this exact run, not a prior run or a cached artifact.
+          for attempt in $(seq 1 12); do
+            if gh api --method GET "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/artifacts?name=github-pages" \
+              --jq '.artifacts[] | select(.name == "github-pages" and .expired == false and .size_in_bytes > 0) | .id' > "$RUNNER_TEMP/pages-artifact-ids"; then
+              if grep -Eq '^[0-9]+
+          python - <<'PY'
+          import json, os, sys
+          s=json.load(open('data/status.json'))
+          failed={k:v for k,v in s.items() if v['status']!='OK'}
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as f:
+              f.write('## Source health: '+str(71-len(failed))+'/71 OK'+chr(10)+chr(10))
+              for k,v in failed.items(): f.write('- '+k+': '+v['detail']+chr(10))
+          sys.exit(1 if failed else 0)
+          PY
+ "$RUNNER_TEMP/pages-artifact-ids"; then
+                echo "Pages artifact is visible (attempt $attempt)."
+                exit 0
+              fi
+            fi
+            echo "Pages artifact not visible yet (attempt $attempt/12)."
+            if [ "$attempt" -lt 12 ]; then sleep 5; fi
+          done
+          echo "::error::Uploaded Pages artifact not visible in this run after bounded wait; saved audit remains available."
+          exit 1
       - name: Publish site and RSS
         id: deployment
         uses: actions/deploy-pages@v4
-      - name: Report source failures
+      - name: Report source failures independently of Pages
+        if: always() && steps.validate_output.outcome == 'success'
         run: |
           python - <<'PY'
           import json, os, sys
